@@ -1,4 +1,4 @@
-"""LaTeX tables for the RQ1 paper from the reference sets v3 (adjudicated, PR #45).
+"""LaTeX tables for the RQ1 paper from the reference sets v3 (adjudicated, audit pass A).
 
 Writes
   table-benchmark.tex      Table 2 (summary per case), drop-in replacement in main.tex
@@ -11,7 +11,7 @@ import re
 import sys
 
 REF = os.environ.get('RQ1_REF', os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))  # reference-sets-v3
-COMMIT = os.environ.get('RQ1_REF_COMMIT', '671c60a')
+COMMIT = os.environ.get('RQ1_REF_COMMIT', 'adjudicated-snapshot')
 OUT = os.path.dirname(os.path.abspath(__file__))
 
 CASES = [  # order of Table 2: test cases first

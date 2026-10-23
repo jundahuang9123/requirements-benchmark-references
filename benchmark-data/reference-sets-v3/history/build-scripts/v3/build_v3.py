@@ -1,8 +1,8 @@
-"""Build the v3 merged benchmark reference sets (v1 rows + Claude v2 completion + PR #45 audit)."""
+"""Build the v3 merged benchmark reference sets (v1 rows + Claude v2 completion + audit pass A audit)."""
 import collections, csv, json, os, re, sys
 
-sys.path.insert(0, '/home/claude/analysis')
-sys.path.insert(0, '/home/claude/merge')
+sys.path.insert(0, 'workspace/analysis')
+sys.path.insert(0, 'workspace/merge')
 from codes import CODES, DERIV
 from plan_health import HEALTH, PARENT_CHANGES as H_CHANGES, NEW_PARENTS as H_NEW
 from plan_other import STAT, GEO, JRC, STAT_PARENT_CHANGES, GEO_PARENT_CHANGES, JRC_PARENT_CHANGES
@@ -22,7 +22,7 @@ def anchor_page(case, anchor):
     for f in SRC[case]:
         key = (case, f)
         if key not in _pages:
-            _pages[key] = [norm(p) for p in open('/home/claude/analysis/' + f, encoding='utf-8').read().split('\f')]
+            _pages[key] = [norm(p) for p in open('workspace/analysis/' + f, encoding='utf-8').read().split('\f')]
         pages = _pages[key]
         for i, p in enumerate(pages):
             if a in p or a in p.replace('- ', '-'):
@@ -33,11 +33,11 @@ def anchor_page(case, anchor):
                 return i + 1
     return None
 
-REPO = '/home/claude/jundahuang9123/profile-requirements-extraction/benchmark-data'
-V2 = '/home/claude/analysis/out/v2'
-PR = '/home/claude/pr45/benchmark-data/reference-audit-2026-10-22'
-OUT = '/home/claude/merge/out/reference-sets-v3'
-LABELS = '/home/claude/merge/label/labels-merged.json'
+REPO = 'workspace/upstream-corpus/benchmark-data'
+V2 = 'workspace/analysis/out/v2'
+PR = 'workspace/pr45/benchmark-data/reference-audit-2026-10-22'
+OUT = 'workspace/merge/out/reference-sets-v3'
+LABELS = 'workspace/merge/label/labels-merged.json'
 CONSOLIDATION_CASES = ('healthdcat', 'mobilitydcat')
 LABELLED_BY = 'Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed'
 
@@ -68,8 +68,8 @@ pr_clauses = json.load(open(f'{PR}/mobility-clause-draft.json'))['atoms']
 
 MERGE_RULES = [
  'Rows: all v1 rows and all Claude v2 rows keep their IDs. A row statement, locator or status changes only where a source check showed it wrong; the earlier value is kept in statement_before_v3, source_locator_before_v3 or status_in_source_before_v3.',
- 'Atoms are the scoring units and every atom belongs to exactly one row. PR #45 splits are used where PR #45 split a need; PR #45 items that state the same need for another data group are merged into one atom whose applicability lists the groups.',
- 'Content found only in Claude v2 is split into atoms; content found only in PR #45 is added; a few needs found while checking anchors are added and marked added_in_merge.',
+ 'Atoms are the scoring units and every atom belongs to exactly one row. audit pass A splits are used where audit pass A split a need; audit pass A items that state the same need for another data group are merged into one atom whose applicability lists the groups.',
+ 'Content found only in Claude v2 is split into atoms; content found only in audit pass A is added; a few needs found while checking anchors are added and marked added_in_merge.',
  'Requirements that only restate DCAT-AP (relation_to_base = restates_base) are kept and flagged with restates_dcat_ap so they can be left out at scoring time.',
  'Source inconsistencies and source errors are recorded on the atom (source_flags), not resolved.',
  'Overlapping atoms point to each other in overlaps; under one-to-one matching a prediction can be credited to only one of them.',
@@ -118,7 +118,7 @@ def build_case(case, cfg):
                          level=n['level'], relation_to_base=n['relation_to_base'], status_in_source=n['status_in_source'],
                          origin=n['origin'], problem=n['problem'],
                          reuse_or_alignment_rule=False, added_in='v3', note=n['note'],
-                         curated_by='Claude (Anthropic), 2026-10-22, merge of Claude v2 and PR #45; not independently adjudicated',
+                         curated_by='Claude (Anthropic), 2026-10-22, merge of Claude v2 and audit pass A; not independently adjudicated',
                          adjudication_status='not_independently_adjudicated'))
     for r in rows:
         if case == 'mobilitydcat':
@@ -177,7 +177,7 @@ def build_case(case, cfg):
             prs = [pr_items[i] for i in a['pr45']]
             status = a['status'] or p['status_in_source']
             modality = a['modality'] or (prs[0]['source_modality'] if prs else STATUS_MODALITY[status])
-            # D6.2 presents the §5.3 minimum elements as "discussed and proposed" (PR #45 finding): mark them proposed.
+            # D6.2 presents the §5.3 minimum elements as "discussed and proposed" (audit pass A finding): mark them proposed.
             if not a['status'] and status == 'requirement' and (modality.startswith('proposed_') or modality in ('conditional_mandatory', 'optional')):
                 status = 'proposed'
             app = a['app'] if a['app'] is not None else (prs[0]['applicability'] if prs else '')
@@ -218,11 +218,11 @@ def build_case(case, cfg):
         elif pv['claude_v2_rows']:
             fb = 'Claude v2 only'
         elif case == 'mobilitydcat':
-            fb = 'v1 row (PR #45 clause, checked against Table 1)' if pv['pr45_ids'] else 'v1 row (added from Table 1)'
+            fb = 'v1 row (audit pass A clause, checked against Table 1)' if pv['pr45_ids'] else 'v1 row (added from Table 1)'
         elif pv['pr45_ids'] and pv['v1_row']:
-            fb = 'v1 row (split by PR #45)'
+            fb = 'v1 row (split by audit pass A)'
         elif pv['pr45_ids']:
-            fb = 'PR #45 only'
+            fb = 'audit pass A only'
         else:
             fb = 'v1 row'
         pv['found_by'] = fb
@@ -375,11 +375,11 @@ def main():
          'built_from': {
            'v1': f'{case}/reference-requirements/{cfg["v1"]} (published identities kept)',
            'claude_v2': cfg['v1'].replace('.json', '-v2.json') + ' (Claude completion, 2026-10-22)' if v2_rows else 'none for this case',
-           'pr45': 'benchmark-data/reference-audit-2026-10-22 (PR #45, commit 7fec154)'},
-         'decisions': ['Mobility is scored at clause level (the PR #45 clauses, checked against NAPCORE Table 1).',
+           'pr45': 'benchmark-data/reference-audit-2026-10-22 (audit pass A, commit audit-snapshot)'},
+         'decisions': ['Mobility is scored at clause level (the audit pass A clauses, checked against NAPCORE Table 1).',
                        'Requirements that restate DCAT-AP are included and flagged (restates_dcat_ap); they may be left out at scoring time.']
                       + (['Geo restatement tags stay as coded: the INSPIRE and ISO obligation levels are kept as fields but are not part of each need, '
-                          'since requirements are scored on the need and implementations may differ later (Junda, 2026-10-22).'] if case == 'geodcat' else []),
+                          'since requirements are scored on the need and implementations may differ later (Curator, 2026-10-22).'] if case == 'geodcat' else []),
          'adjudication': ADJ_SUMMARY[case],
          'merge_rules': MERGE_RULES,
          'scoring': SCORING,
@@ -395,10 +395,10 @@ def main():
             all_atoms.append((case, a))
         for r in rows:
             all_rows.append((case, r))
-    # every PR #45 item and Mobility clause used
+    # every audit pass A item and Mobility clause used
     expected = set(pr_items) | {c['id'] for c in pr_clauses}
-    problems += [f'PR #45 item {k} not used' for k in sorted(expected - set(used_pr))]
-    problems += [f'PR #45 item {k} used {v} times' for k, v in used_pr.items() if v > 1 and k not in ('JC-006', 'MA-01-01')]
+    problems += [f'audit pass A item {k} not used' for k in sorted(expected - set(used_pr))]
+    problems += [f'audit pass A item {k} used {v} times' for k, v in used_pr.items() if v > 1 and k not in ('JC-006', 'MA-01-01')]
 
     # review table (atoms)
     cols = ['case', 'parent_id', 'id', 'statement', 'stratum', 'status_in_source', 'modality', 'relation_to_base', 'restates_dcat_ap',
@@ -421,7 +421,7 @@ def main():
     ledger = []
     for case, a in all_atoms:
         for p in a['provenance']['pr45_ids']:
-            ledger.append(dict(input='PR #45', input_id=p, case=case, atom_id=a['id']))
+            ledger.append(dict(input='audit pass A', input_id=p, case=case, atom_id=a['id']))
         for r in a['provenance']['claude_v2_rows']:
             ledger.append(dict(input='Claude v2', input_id=r, case=case, atom_id=a['id']))
     for case, r in all_rows:

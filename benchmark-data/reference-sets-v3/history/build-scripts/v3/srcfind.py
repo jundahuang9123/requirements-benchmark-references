@@ -8,7 +8,7 @@ SRC = {'health': ['d6.2-requirements-and-profile.txt', 'd62-raw.txt'], 'stat': [
 _cache = {}
 def texts(case):
     if case not in _cache:
-        ts = [norm(open('/home/claude/analysis/' + f, encoding='utf-8').read()) for f in SRC[case]]
+        ts = [norm(open('workspace/analysis/' + f, encoding='utf-8').read()) for f in SRC[case]]
         ts += [t.replace('- ', '-') for t in ts]
         _cache[case] = ts
     return _cache[case]

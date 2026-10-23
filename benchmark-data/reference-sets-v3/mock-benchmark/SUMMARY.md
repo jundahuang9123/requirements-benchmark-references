@@ -1,6 +1,6 @@
 # Mock benchmark on evidence-eligible atoms: discussion v6–v11 against reference sets v3
 
-Machine-made: two blind AI reviewers and an AI adjudicator, no people. JRC and Stat are development cases; nothing here is a test result. Reference: v3 with the 23 October adjudication (commit 671c60a). Only atoms that the staged raw inputs support are scored: `supported` (primary) or `supported` or `partial` (secondary). Method: `METHOD.md`.
+Machine-made: two blind AI reviewers and an AI adjudicator, no people. JRC and Stat are development cases; nothing here is a test result. Reference: v3 with the 23 October adjudication (commit adjudicated-snapshot). Only atoms that the staged raw inputs support are scored: `supported` (primary) or `supported` or `partial` (secondary). Method: `METHOD.md`.
 
 ## Key results
 

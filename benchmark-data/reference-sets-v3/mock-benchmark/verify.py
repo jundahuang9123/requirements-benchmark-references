@@ -9,7 +9,7 @@ import json
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-REF = os.environ.get('RQ1_REF', os.path.join(HERE, '..'))  # reference-sets-v3 (results here: commit 671c60a)
+REF = os.environ.get('RQ1_REF', os.path.join(HERE, '..'))  # reference-sets-v3 (results here: commit adjudicated-snapshot)
 data = json.load(open(os.path.join(HERE, 'runs.json'), encoding='utf-8'))
 res = json.load(open(os.path.join(HERE, 'out/mock-benchmark-results.json'), encoding='utf-8'))
 pairs = list(csv.DictReader(open(os.path.join(HERE, 'out/pair-labels.csv'), encoding='utf-8')))

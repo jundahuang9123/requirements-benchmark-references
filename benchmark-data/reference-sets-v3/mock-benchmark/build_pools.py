@@ -1,6 +1,6 @@
 """Build blind judging packets: per case, every statement seen in any scored run, under random IDs.
 
-The packets in judge/ are the ones the reviewers saw (built on 22 October from v3 at 8e81e5b).
+The packets in judge/ are the ones the reviewers saw (built on 22 October from v3 at pre-adjudication-snapshot).
 Rebuilding overwrites them, so it needs --force.
 """
 import json

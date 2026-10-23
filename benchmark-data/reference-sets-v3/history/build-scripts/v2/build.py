@@ -1,6 +1,6 @@
 import json, html, collections, sys
-sys.path.insert(0, '/home/claude/analysis')
-rows = json.load(open('/home/claude/analysis/rows.json'))
+sys.path.insert(0, 'workspace/analysis')
+rows = json.load(open('workspace/analysis/rows.json'))
 E = html.escape
 
 CASES = [('Mobility', 'mobilityDCAT-AP', 'DCAT-AP 2.0.1'), ('Health', 'HealthDCAT-AP', 'DCAT-AP 3.0.0'),
@@ -170,7 +170,7 @@ data_json = json.dumps([{k: r.get(k) for k in ['id', 'case', 'caseName', 'statem
 
 SEGCSS = ''.join(f'.s-{g}{{background:var(--c-{g})}}.s-{g} .seglab{{color:var(--t-{g})}}' for g, _ in GROUPS)
 HEATCSS = ''.join(f'.hb{i}{{background:var(--h{i});color:var(--ht{i})}}' for i in range(6))
-page = open('/home/claude/analysis/template.html', encoding='utf-8').read()
+page = open('workspace/analysis/template.html', encoding='utf-8').read()
 page = (page.replace('%%SEGCSS%%', SEGCSS).replace('%%HEATCSS%%', HEATCSS)
         .replace('%%TOK_LIGHT%%', tokens('light')).replace('%%TOK_DARK%%', tokens('dark'))
         .replace('%%FIG1%%', ''.join(fig1)).replace('%%LEGEND%%', legend).replace('%%T1%%', ''.join(t1))
@@ -179,12 +179,12 @@ page = (page.replace('%%SEGCSS%%', SEGCSS).replace('%%HEATCSS%%', HEATCSS)
         .replace('%%PROB%%', json.dumps(dict(PROB))).replace('%%DER%%', json.dumps(dict(DER)))
         .replace('%%LEVEL%%', json.dumps(LEVEL)).replace('%%KIND%%', json.dumps(KIND)).replace('%%GLABEL%%', json.dumps(GLABEL)))
 import os
-os.makedirs('/home/claude/analysis/out', exist_ok=True)
-open('/home/claude/analysis/out/reference-requirements-comparison.html', 'w', encoding='utf-8').write(page)
+os.makedirs('workspace/analysis/out', exist_ok=True)
+open('workspace/analysis/out/reference-requirements-comparison.html', 'w', encoding='utf-8').write(page)
 
 # CSV export
 import csv
-with open('/home/claude/analysis/out/reference-requirements-coding.csv', 'w', newline='', encoding='utf-8') as f:
+with open('workspace/analysis/out/reference-requirements-coding.csv', 'w', newline='', encoding='utf-8') as f:
     w = csv.writer(f)
     w.writerow(['id', 'case', 'statement_curator_paraphrase', 'source_locator', 'level', 'problem', 'derived_from', 'response', 'response_group',
                 'terms', 'confidence', 'items_in_row', 'reuse_or_alignment_rule', 'napcore_type', 'napcore_importance', 'napcore_source', 'napcore_contributor',

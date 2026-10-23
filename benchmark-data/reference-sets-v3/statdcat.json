@@ -7,16 +7,16 @@
  "built_from": {
   "v1": "statdcat/reference-requirements/requirements-and-resolutions.json (published identities kept)",
   "claude_v2": "requirements-and-resolutions-v2.json (Claude completion, 2026-10-22)",
-  "pr45": "benchmark-data/reference-audit-2026-10-22 (PR #45, commit 7fec154)"
+  "pr45": "benchmark-data/reference-audit-2026-10-22 (audit pass A, commit audit-snapshot)"
  },
  "decisions": [
-  "Mobility is scored at clause level (the PR #45 clauses, checked against NAPCORE Table 1).",
+  "Mobility is scored at clause level (the audit pass A clauses, checked against NAPCORE Table 1).",
   "Requirements that restate DCAT-AP are included and flagged (restates_dcat_ap); they may be left out at scoring time."
  ],
  "adjudication": {
   "date": "2026-10-23",
   "source": "reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
-  "by": "Junda, provisional adjudication with ChatGPT/Codex assistance; applied by Claude",
+  "by": "Curator, provisional adjudication with ChatGPT/Codex assistance; applied by Claude",
   "status": "provisional; not an independent human adjudication of the whole set",
   "changes": [
    "Overlap review: 4 pairs classified (0 equivalent, 1 subsumption, 3 related)."
@@ -24,8 +24,8 @@
  },
  "merge_rules": [
   "Rows: all v1 rows and all Claude v2 rows keep their IDs. A row statement, locator or status changes only where a source check showed it wrong; the earlier value is kept in statement_before_v3, source_locator_before_v3 or status_in_source_before_v3.",
-  "Atoms are the scoring units and every atom belongs to exactly one row. PR #45 splits are used where PR #45 split a need; PR #45 items that state the same need for another data group are merged into one atom whose applicability lists the groups.",
-  "Content found only in Claude v2 is split into atoms; content found only in PR #45 is added; a few needs found while checking anchors are added and marked added_in_merge.",
+  "Atoms are the scoring units and every atom belongs to exactly one row. audit pass A splits are used where audit pass A split a need; audit pass A items that state the same need for another data group are merged into one atom whose applicability lists the groups.",
+  "Content found only in Claude v2 is split into atoms; content found only in audit pass A is added; a few needs found while checking anchors are added and marked added_in_merge.",
   "Requirements that only restate DCAT-AP (relation_to_base = restates_base) are kept and flagged with restates_dcat_ap so they can be left out at scoring time.",
   "Source inconsistencies and source errors are recorded on the atom (source_flags), not resolved.",
   "Overlapping atoms point to each other in overlaps; under one-to-one matching a prediction can be credited to only one of them.",
@@ -67,7 +67,7 @@
    "not_term_level": 11
   },
   "atoms_by_found_by": {
-   "v1 row (split by PR #45)": 9,
+   "v1 row (split by audit pass A)": 9,
    "v1 row": 2,
    "Claude v2 only": 11,
    "both": 5
@@ -668,7 +668,7 @@
      "SC-006"
     ],
     "added_in_merge": false,
-    "found_by": "v1 row (split by PR #45)"
+    "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "SC-006 adds the format independence stated in §7.2.1.",
    "restates_dcat_ap": false,
@@ -748,7 +748,7 @@
      "SC-007"
     ],
     "added_in_merge": false,
-    "found_by": "v1 row (split by PR #45)"
+    "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "",
    "restates_dcat_ap": false,
@@ -833,7 +833,7 @@
      "SC-009"
     ],
     "added_in_merge": false,
-    "found_by": "v1 row (split by PR #45)"
+    "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "",
    "restates_dcat_ap": false,
@@ -890,7 +890,7 @@
      "SC-008"
     ],
     "added_in_merge": false,
-    "found_by": "v1 row (split by PR #45)"
+    "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "",
    "restates_dcat_ap": false,
@@ -939,7 +939,7 @@
      "SC-010"
     ],
     "added_in_merge": false,
-    "found_by": "v1 row (split by PR #45)"
+    "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "",
    "restates_dcat_ap": false,
@@ -1033,7 +1033,7 @@
      "SC-011"
     ],
     "added_in_merge": false,
-    "found_by": "v1 row (split by PR #45)"
+    "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "",
    "restates_dcat_ap": false,
@@ -1150,7 +1150,7 @@
      "SC-012"
     ],
     "added_in_merge": false,
-    "found_by": "v1 row (split by PR #45)"
+    "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "",
    "restates_dcat_ap": true,
@@ -1206,7 +1206,7 @@
      "SC-013"
     ],
     "added_in_merge": false,
-    "found_by": "v1 row (split by PR #45)"
+    "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "",
    "restates_dcat_ap": true,
@@ -1262,7 +1262,7 @@
      "SC-014"
     ],
     "added_in_merge": false,
-    "found_by": "v1 row (split by PR #45)"
+    "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "",
    "restates_dcat_ap": true,

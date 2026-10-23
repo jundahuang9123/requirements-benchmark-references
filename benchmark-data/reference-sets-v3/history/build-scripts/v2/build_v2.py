@@ -1,10 +1,10 @@
 import json, re, os, csv, sys, collections
-sys.path.insert(0, '/home/claude/analysis')
+sys.path.insert(0, 'workspace/analysis')
 from completion import CASES
 from codes import CODES
 
-REPO = '/home/claude/jundahuang9123/profile-requirements-extraction/benchmark-data'
-OUT = '/home/claude/analysis/out/v2'
+REPO = 'workspace/upstream-corpus/benchmark-data'
+OUT = 'workspace/analysis/out/v2'
 LEVEL = {'M': 'content', 'G': 'profile', 'S': 'system'}
 REL_FROM_RESP = {'A': 'beyond_base', 'B': 'beyond_base', 'C': 'beyond_base', 'D': 'extends_base', 'E': 'tightens_base',
                  'F': 'restates_base', 'G': 'not_term_level'}
@@ -20,7 +20,7 @@ summary = []
 review = []
 for case, cfg in CASES.items():
     v1 = json.load(open(f'{REPO}/{case}/reference-requirements/{cfg["v1"]}', encoding='utf-8'))
-    texts = [norm(open('/home/claude/analysis/' + f, encoding='utf-8').read()) for f in cfg['src']]
+    texts = [norm(open('workspace/analysis/' + f, encoding='utf-8').read()) for f in cfg['src']]
     texts += [t.replace('- ', '-') for t in texts]  # tolerate hyphenated line breaks
     rows = []
     for r in v1['requirements']:
@@ -77,7 +77,7 @@ for case, cfg in CASES.items():
 print('anchor problems:', len(problems))
 for p in problems: print('  ', p)
 for s in summary: print(s)
-with open('/home/claude/analysis/out/v2/reference-completion-review.csv', 'w', newline='', encoding='utf-8') as f:
+with open('workspace/analysis/out/v2/reference-completion-review.csv', 'w', newline='', encoding='utf-8') as f:
     cols = ['case', 'id', 'statement', 'source_locator', 'anchor_quote', 'anchor_check', 'level', 'problem', 'origin', 'relation_to_base',
             'status_in_source', 'atoms', 'overlaps', 'reuse_or_alignment_rule', 'note', 'inspire_obligation', 'iso19115_core_obligation',
             'dcat_ap_coverage', 'added_in', 'your_decision', 'your_note']

@@ -1,10 +1,10 @@
 """Verify and merge the input-evidence labels returned by the labelling agents."""
 import json, os, re, sys, collections
-sys.path.insert(0, '/home/claude/merge')
+sys.path.insert(0, 'workspace/merge')
 from srcfind import norm
 
 LBL = '/tmp/claude-0/-home-claude/52db0194-1e75-558e-bfb2-4f590f0a248c/scratchpad/label'
-INP = '/home/claude/merge/inputs'
+INP = 'workspace/merge/inputs'
 RANK = {'supported': 3, 'partial': 2, 'uncertain': 1, 'unsupported': 0}
 _text = {}
 
@@ -78,7 +78,7 @@ def main():
                                                  by_input_group={tag: b['label'] for tag, b in gs})
     nf = sum(1 for m in merged.values() for k in ('raw', 'consolidation') if m.get(k) for s in m[k]['sources'] if s['quote_check'] == 'NOT_FOUND')
     tot = sum(1 for m in merged.values() for k in ('raw', 'consolidation') if m.get(k) for s in m[k]['sources'])
-    json.dump(merged, open('/home/claude/merge/label/labels-merged.json', 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
+    json.dump(merged, open('workspace/merge/label/labels-merged.json', 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
     print('atoms labelled', len(merged), '| quotes', tot, 'not found', nf, '| problems', dict(problems))
     for k in ('raw', 'consolidation'):
         print(k, collections.Counter(m[k]['label'] for m in merged.values() if m.get(k)))

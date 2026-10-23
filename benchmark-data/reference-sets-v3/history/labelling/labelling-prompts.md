@@ -10,17 +10,17 @@ Started 2026-10-22T19:50:49.721Z (UTC). Prompt, verbatim:
 You are labelling benchmark reference requirements with the evidence for them in a fixed set of input documents. This supports an "evidence-eligible recall" denominator: a requirement can only be expected from an extraction pipeline if its input documents contain support for it.
 
 ## Atoms
-File: /home/claude/merge/label/atoms-healthdcat.json. Label ONLY the atoms whose atom_id starts with H-1. through H-33. (rows H-1 to H-33; e.g. H-1.1, H-5.9, H-17.3, H-33.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes.
+File: workspace/merge/label/atoms-healthdcat.json. Label ONLY the atoms whose atom_id starts with H-1. through H-33. (rows H-1 to H-33; e.g. H-1.1, H-5.9, H-17.3, H-33.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes.
 
 ## Inputs (plain-text extractions; PDF texts contain page markers like "=== [page 12] ===")
 Raw inputs (runtime path -> text file):
-- healthdcat/input-raw/ehds-proposal.html -> /home/claude/merge/inputs/healthdcat/input-raw/ehds-proposal.html.txt
-- healthdcat/input-raw/gdpr.html -> /home/claude/merge/inputs/healthdcat/input-raw/gdpr.html.txt
-- healthdcat/input-raw/w3c-dcat-2-2020.html -> /home/claude/merge/inputs/healthdcat/input-raw/w3c-dcat-2-2020.html.txt
-- healthdcat/input-raw/dcat-ap-2.1.1.pdf -> /home/claude/merge/inputs/healthdcat/input-raw/dcat-ap-2.1.1.pdf.txt
-- healthdcat/input-raw/landscape-analysis-ms6.1.pdf -> /home/claude/merge/inputs/healthdcat/input-raw/landscape-analysis-ms6.1.pdf.txt
+- healthdcat/input-raw/ehds-proposal.html -> workspace/merge/inputs/healthdcat/input-raw/ehds-proposal.html.txt
+- healthdcat/input-raw/gdpr.html -> workspace/merge/inputs/healthdcat/input-raw/gdpr.html.txt
+- healthdcat/input-raw/w3c-dcat-2-2020.html -> workspace/merge/inputs/healthdcat/input-raw/w3c-dcat-2-2020.html.txt
+- healthdcat/input-raw/dcat-ap-2.1.1.pdf -> workspace/merge/inputs/healthdcat/input-raw/dcat-ap-2.1.1.pdf.txt
+- healthdcat/input-raw/landscape-analysis-ms6.1.pdf -> workspace/merge/inputs/healthdcat/input-raw/landscape-analysis-ms6.1.pdf.txt
 Consolidation input:
-- healthdcat/input-preconsolidation/twg-observations.json -> /home/claude/merge/inputs/healthdcat/input-preconsolidation/twg-observations.json.txt (8 observations TWG-1..TWG-8)
+- healthdcat/input-preconsolidation/twg-observations.json -> workspace/merge/inputs/healthdcat/input-preconsolidation/twg-observations.json.txt (8 observations TWG-1..TWG-8)
 
 ## Labels (give one for raw and one for consolidation)
 - supported: a passage states this need, or a rule, obligation or purpose from which a metadata-profile designer would directly derive it (same information item and same purpose or obligation; wording may differ). A specification that defines the property (e.g. DCAT-AP making title mandatory) supports a requirement that restates it.
@@ -45,17 +45,17 @@ Started 2026-10-22T19:51:00.276Z (UTC). Prompt, verbatim:
 You are labelling benchmark reference requirements with the evidence for them in a fixed set of input documents. This supports an "evidence-eligible recall" denominator: a requirement can only be expected from an extraction pipeline if its input documents contain support for it.
 
 ## Atoms
-File: /home/claude/merge/label/atoms-healthdcat.json. Label ONLY the atoms of rows H-34 to H-69 (atom_id H-34.1 ... H-69.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes.
+File: workspace/merge/label/atoms-healthdcat.json. Label ONLY the atoms of rows H-34 to H-69 (atom_id H-34.1 ... H-69.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes.
 
 ## Inputs (plain-text extractions; PDF texts contain page markers like "=== [page 12] ===")
 Raw inputs (runtime path -> text file):
-- healthdcat/input-raw/ehds-proposal.html -> /home/claude/merge/inputs/healthdcat/input-raw/ehds-proposal.html.txt
-- healthdcat/input-raw/gdpr.html -> /home/claude/merge/inputs/healthdcat/input-raw/gdpr.html.txt
-- healthdcat/input-raw/w3c-dcat-2-2020.html -> /home/claude/merge/inputs/healthdcat/input-raw/w3c-dcat-2-2020.html.txt
-- healthdcat/input-raw/dcat-ap-2.1.1.pdf -> /home/claude/merge/inputs/healthdcat/input-raw/dcat-ap-2.1.1.pdf.txt
-- healthdcat/input-raw/landscape-analysis-ms6.1.pdf -> /home/claude/merge/inputs/healthdcat/input-raw/landscape-analysis-ms6.1.pdf.txt
+- healthdcat/input-raw/ehds-proposal.html -> workspace/merge/inputs/healthdcat/input-raw/ehds-proposal.html.txt
+- healthdcat/input-raw/gdpr.html -> workspace/merge/inputs/healthdcat/input-raw/gdpr.html.txt
+- healthdcat/input-raw/w3c-dcat-2-2020.html -> workspace/merge/inputs/healthdcat/input-raw/w3c-dcat-2-2020.html.txt
+- healthdcat/input-raw/dcat-ap-2.1.1.pdf -> workspace/merge/inputs/healthdcat/input-raw/dcat-ap-2.1.1.pdf.txt
+- healthdcat/input-raw/landscape-analysis-ms6.1.pdf -> workspace/merge/inputs/healthdcat/input-raw/landscape-analysis-ms6.1.pdf.txt
 Consolidation input:
-- healthdcat/input-preconsolidation/twg-observations.json -> /home/claude/merge/inputs/healthdcat/input-preconsolidation/twg-observations.json.txt (8 observations TWG-1..TWG-8)
+- healthdcat/input-preconsolidation/twg-observations.json -> workspace/merge/inputs/healthdcat/input-preconsolidation/twg-observations.json.txt (8 observations TWG-1..TWG-8)
 
 ## Labels (give one for raw and one for consolidation)
 - supported: a passage states this need, or a rule, obligation or purpose from which a metadata-profile designer would directly derive it (same information item and same purpose or obligation; wording may differ). A specification that defines the property (e.g. DCAT-AP making title mandatory) supports a requirement that restates it.
@@ -80,14 +80,14 @@ Started 2026-10-22T19:51:09.974Z (UTC). Prompt, verbatim:
 You are labelling benchmark reference requirements with the evidence for them in a fixed set of input documents. This supports an "evidence-eligible recall" denominator: a requirement can only be expected from an extraction pipeline if its input documents contain support for it. You cover one group of the inputs; other reviewers cover the other groups, so judge only against yours.
 
 ## Atoms
-File: /home/claude/merge/label/atoms-mobilitydcat.json (all 98 atoms, Req-1.1 ... Req-40.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes. The requirements are for a metadata profile for National Access Points (NAPs) for transport data.
+File: workspace/merge/label/atoms-mobilitydcat.json (all 98 atoms, Req-1.1 ... Req-40.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes. The requirements are for a metadata profile for National Access Points (NAPs) for transport data.
 
 ## Your inputs: legal and policy texts (runtime path -> text file)
-- mobilitydcat/input-raw/open-data-directive.html -> /home/claude/merge/inputs/mobilitydcat/input-raw/open-data-directive.html.txt
-- mobilitydcat/input-raw/inspire-directive.html -> /home/claude/merge/inputs/mobilitydcat/input-raw/inspire-directive.html.txt
-- mobilitydcat/input-raw/inspire-metadata.html -> /home/claude/merge/inputs/mobilitydcat/input-raw/inspire-metadata.html.txt
-- mobilitydcat/input-raw/dga-proposal.html -> /home/claude/merge/inputs/mobilitydcat/input-raw/dga-proposal.html.txt
-- mobilitydcat/input-raw/data-strategy.html -> /home/claude/merge/inputs/mobilitydcat/input-raw/data-strategy.html.txt
+- mobilitydcat/input-raw/open-data-directive.html -> workspace/merge/inputs/mobilitydcat/input-raw/open-data-directive.html.txt
+- mobilitydcat/input-raw/inspire-directive.html -> workspace/merge/inputs/mobilitydcat/input-raw/inspire-directive.html.txt
+- mobilitydcat/input-raw/inspire-metadata.html -> workspace/merge/inputs/mobilitydcat/input-raw/inspire-metadata.html.txt
+- mobilitydcat/input-raw/dga-proposal.html -> workspace/merge/inputs/mobilitydcat/input-raw/dga-proposal.html.txt
+- mobilitydcat/input-raw/data-strategy.html -> workspace/merge/inputs/mobilitydcat/input-raw/data-strategy.html.txt
 
 ## Labels
 - supported: a passage states this need, or a rule, obligation or purpose from which a metadata-profile designer would directly derive it (same information item and same purpose or obligation; wording may differ).
@@ -112,15 +112,15 @@ Started 2026-10-22T19:51:20.830Z (UTC). Prompt, verbatim:
 You are labelling benchmark reference requirements with the evidence for them in a fixed set of input documents. This supports an "evidence-eligible recall" denominator: a requirement can only be expected from an extraction pipeline if its input documents contain support for it. You cover one group of the inputs; other reviewers cover the other groups, so judge only against yours.
 
 ## Atoms
-File: /home/claude/merge/label/atoms-mobilitydcat.json (all 98 atoms, Req-1.1 ... Req-40.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes. The requirements are for a metadata profile for National Access Points (NAPs) for transport data.
+File: workspace/merge/label/atoms-mobilitydcat.json (all 98 atoms, Req-1.1 ... Req-40.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes. The requirements are for a metadata profile for National Access Points (NAPs) for transport data.
 
 ## Your inputs: metadata standards and specifications (runtime path -> text file; PDF texts contain page markers like "=== [page 12] ===")
-- mobilitydcat/input-raw/w3c-dcat-2-2020.html -> /home/claude/merge/inputs/mobilitydcat/input-raw/w3c-dcat-2-2020.html.txt
-- mobilitydcat/input-raw/dcat-ap-2.0.0.pdf -> /home/claude/merge/inputs/mobilitydcat/input-raw/dcat-ap-2.0.0.pdf.txt
-- mobilitydcat/input-raw/dcat-ap-2.1.0.pdf -> /home/claude/merge/inputs/mobilitydcat/input-raw/dcat-ap-2.1.0.pdf.txt
-- mobilitydcat/input-raw/geodcat-ap-1.0.1-prior-extension.pdf -> /home/claude/merge/inputs/mobilitydcat/input-raw/geodcat-ap-1.0.1-prior-extension.pdf.txt
-- mobilitydcat/input-raw/inspire-metadata-guidelines-1.3.pdf -> /home/claude/merge/inputs/mobilitydcat/input-raw/inspire-metadata-guidelines-1.3.pdf.txt
-- mobilitydcat/input-raw/cmc-2019-concept-inventory.json -> /home/claude/merge/inputs/mobilitydcat/input-raw/cmc-2019-concept-inventory.json.txt
+- mobilitydcat/input-raw/w3c-dcat-2-2020.html -> workspace/merge/inputs/mobilitydcat/input-raw/w3c-dcat-2-2020.html.txt
+- mobilitydcat/input-raw/dcat-ap-2.0.0.pdf -> workspace/merge/inputs/mobilitydcat/input-raw/dcat-ap-2.0.0.pdf.txt
+- mobilitydcat/input-raw/dcat-ap-2.1.0.pdf -> workspace/merge/inputs/mobilitydcat/input-raw/dcat-ap-2.1.0.pdf.txt
+- mobilitydcat/input-raw/geodcat-ap-1.0.1-prior-extension.pdf -> workspace/merge/inputs/mobilitydcat/input-raw/geodcat-ap-1.0.1-prior-extension.pdf.txt
+- mobilitydcat/input-raw/inspire-metadata-guidelines-1.3.pdf -> workspace/merge/inputs/mobilitydcat/input-raw/inspire-metadata-guidelines-1.3.pdf.txt
+- mobilitydcat/input-raw/cmc-2019-concept-inventory.json -> workspace/merge/inputs/mobilitydcat/input-raw/cmc-2019-concept-inventory.json.txt
 
 ## Labels
 - supported: a passage states this need, or a rule, obligation or purpose from which a metadata-profile designer would directly derive it (same information item and same purpose or obligation; wording may differ). A specification that defines the property (e.g. DCAT-AP making title mandatory) supports a requirement that restates it.
@@ -145,14 +145,14 @@ Started 2026-10-22T19:51:31.177Z (UTC). Prompt, verbatim:
 You are labelling benchmark reference requirements with the evidence for them in a fixed set of input documents. This supports an "evidence-eligible recall" denominator: a requirement can only be expected from an extraction pipeline if its input documents contain support for it. You cover one group of the inputs; other reviewers cover the other groups, so judge only against yours.
 
 ## Atoms
-File: /home/claude/merge/label/atoms-mobilitydcat.json (all 98 atoms, Req-1.1 ... Req-40.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes. The requirements are for a metadata profile for National Access Points (NAPs) for transport data.
+File: workspace/merge/label/atoms-mobilitydcat.json (all 98 atoms, Req-1.1 ... Req-40.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes. The requirements are for a metadata profile for National Access Points (NAPs) for transport data.
 
 ## Your inputs: literature and project documents (runtime path -> text file; PDF texts contain page markers like "=== [page 12] ===")
-- mobilitydcat/input-raw/turning-fair-into-reality-2018.pdf -> /home/claude/merge/inputs/mobilitydcat/input-raw/turning-fair-into-reality-2018.pdf.txt
-- mobilitydcat/input-raw/fair-cost-benefit-2018.pdf -> /home/claude/merge/inputs/mobilitydcat/input-raw/fair-cost-benefit-2018.pdf.txt
-- mobilitydcat/input-raw/niso-understanding-metadata-2017.pdf -> /home/claude/merge/inputs/mobilitydcat/input-raw/niso-understanding-metadata-2017.pdf.txt
-- mobilitydcat/input-raw/sprint-nap-federation-2021.pdf -> /home/claude/merge/inputs/mobilitydcat/input-raw/sprint-nap-federation-2021.pdf.txt
-- mobilitydcat/input-raw/sprint-competency-tasks.json -> /home/claude/merge/inputs/mobilitydcat/input-raw/sprint-competency-tasks.json.txt
+- mobilitydcat/input-raw/turning-fair-into-reality-2018.pdf -> workspace/merge/inputs/mobilitydcat/input-raw/turning-fair-into-reality-2018.pdf.txt
+- mobilitydcat/input-raw/fair-cost-benefit-2018.pdf -> workspace/merge/inputs/mobilitydcat/input-raw/fair-cost-benefit-2018.pdf.txt
+- mobilitydcat/input-raw/niso-understanding-metadata-2017.pdf -> workspace/merge/inputs/mobilitydcat/input-raw/niso-understanding-metadata-2017.pdf.txt
+- mobilitydcat/input-raw/sprint-nap-federation-2021.pdf -> workspace/merge/inputs/mobilitydcat/input-raw/sprint-nap-federation-2021.pdf.txt
+- mobilitydcat/input-raw/sprint-competency-tasks.json -> workspace/merge/inputs/mobilitydcat/input-raw/sprint-competency-tasks.json.txt
 
 ## Labels
 - supported: a passage states this need, or a rule, obligation or purpose from which a metadata-profile designer would directly derive it (same information item and same purpose or obligation; wording may differ).
@@ -177,12 +177,12 @@ Started 2026-10-22T19:51:40.332Z (UTC). Prompt, verbatim:
 You are labelling benchmark reference requirements with the evidence for them in a fixed set of input documents. This supports an "evidence-eligible recall" denominator for a consolidation experiment: the pipeline receives pre-consolidation candidate requirements and must consolidate them into final requirements. A final requirement is only expected if the pre-consolidation inputs contain support for it.
 
 ## Atoms
-File: /home/claude/merge/label/atoms-mobilitydcat.json (all 98 atoms, Req-1.1 ... Req-40.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes. The requirements are for a metadata profile for National Access Points (NAPs) for transport data.
+File: workspace/merge/label/atoms-mobilitydcat.json (all 98 atoms, Req-1.1 ... Req-40.1). Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes. The requirements are for a metadata profile for National Access Points (NAPs) for transport data.
 
 ## Your inputs: pre-consolidation material (runtime path -> text file; each is a JSON file pretty-printed as text)
-- mobilitydcat/input-preconsolidation/partner-requirements.json -> /home/claude/merge/inputs/mobilitydcat/input-preconsolidation/partner-requirements.json.txt (60 partner candidates with ids such as DE-00, IT-03)
-- mobilitydcat/input-preconsolidation/expert-and-cmc-observations.json -> /home/claude/merge/inputs/mobilitydcat/input-preconsolidation/expert-and-cmc-observations.json.txt (EX-1 ... observations)
-- mobilitydcat/input-preconsolidation/literature-review-observations.json -> /home/claude/merge/inputs/mobilitydcat/input-preconsolidation/literature-review-observations.json.txt (17 observations; use the source_locator as the locator)
+- mobilitydcat/input-preconsolidation/partner-requirements.json -> workspace/merge/inputs/mobilitydcat/input-preconsolidation/partner-requirements.json.txt (60 partner candidates with ids such as DE-00, IT-03)
+- mobilitydcat/input-preconsolidation/expert-and-cmc-observations.json -> workspace/merge/inputs/mobilitydcat/input-preconsolidation/expert-and-cmc-observations.json.txt (EX-1 ... observations)
+- mobilitydcat/input-preconsolidation/literature-review-observations.json -> workspace/merge/inputs/mobilitydcat/input-preconsolidation/literature-review-observations.json.txt (17 observations; use the source_locator as the locator)
 These files are small: read all three in full before labelling.
 
 ## Labels
@@ -208,14 +208,14 @@ Started 2026-10-22T19:51:50.377Z (UTC). Prompt, verbatim:
 You are labelling benchmark reference requirements with the evidence for them in a fixed set of input documents. This supports an "evidence-eligible recall" denominator: a requirement can only be expected from an extraction pipeline if its input documents contain support for it.
 
 ## Atoms
-File: /home/claude/merge/label/atoms-geodcat.json (all 56 atoms). Each has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes. The requirements are for an RDF/DCAT-AP-based profile for geospatial metadata (INSPIRE and ISO 19115 elements).
+File: workspace/merge/label/atoms-geodcat.json (all 56 atoms). Each has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes. The requirements are for an RDF/DCAT-AP-based profile for geospatial metadata (INSPIRE and ISO 19115 elements).
 
 ## Inputs (runtime path -> text file; PDF texts contain page markers like "=== [page 12] ===")
-- geodcat/input-raw/inspire-directive.html -> /home/claude/merge/inputs/geodcat/input-raw/inspire-directive.html.txt
-- geodcat/input-raw/inspire-metadata.html -> /home/claude/merge/inputs/geodcat/input-raw/inspire-metadata.html.txt (INSPIRE Metadata Regulation)
-- geodcat/input-raw/inspire-interoperability.html -> /home/claude/merge/inputs/geodcat/input-raw/inspire-interoperability.html.txt (INSPIRE data and services interoperability regulation)
-- geodcat/input-raw/w3c-dcat-2014.html -> /home/claude/merge/inputs/geodcat/input-raw/w3c-dcat-2014.html.txt
-- geodcat/input-raw/inspire-metadata-guidelines-1.3.pdf -> /home/claude/merge/inputs/geodcat/input-raw/inspire-metadata-guidelines-1.3.pdf.txt
+- geodcat/input-raw/inspire-directive.html -> workspace/merge/inputs/geodcat/input-raw/inspire-directive.html.txt
+- geodcat/input-raw/inspire-metadata.html -> workspace/merge/inputs/geodcat/input-raw/inspire-metadata.html.txt (INSPIRE Metadata Regulation)
+- geodcat/input-raw/inspire-interoperability.html -> workspace/merge/inputs/geodcat/input-raw/inspire-interoperability.html.txt (INSPIRE data and services interoperability regulation)
+- geodcat/input-raw/w3c-dcat-2014.html -> workspace/merge/inputs/geodcat/input-raw/w3c-dcat-2014.html.txt
+- geodcat/input-raw/inspire-metadata-guidelines-1.3.pdf -> workspace/merge/inputs/geodcat/input-raw/inspire-metadata-guidelines-1.3.pdf.txt
 
 ## Labels
 - supported: a passage states this need, or a rule, obligation or purpose from which a metadata-profile designer would directly derive it (same information item and same purpose or obligation; wording may differ). A regulation or guideline that defines the metadata element supports a requirement to provide that element.
@@ -240,16 +240,16 @@ Started 2026-10-22T19:52:00.323Z (UTC). Prompt, verbatim:
 You are labelling benchmark reference requirements with the evidence for them in a fixed set of input documents. This supports an "evidence-eligible recall" denominator: a requirement can only be expected from an extraction pipeline if its input documents contain support for it. There are two separate cases; judge each only against its own inputs.
 
 ## Case 1: statistical data profile
-Atoms: /home/claude/merge/label/atoms-statdcat.json (27 atoms). Inputs (runtime path -> text file):
-- statdcat/input-raw/w3c-dcat-2014.html -> /home/claude/merge/inputs/statdcat/input-raw/w3c-dcat-2014.html.txt
-- statdcat/input-raw/w3c-data-cube-2014.html -> /home/claude/merge/inputs/statdcat/input-raw/w3c-data-cube-2014.html.txt
+Atoms: workspace/merge/label/atoms-statdcat.json (27 atoms). Inputs (runtime path -> text file):
+- statdcat/input-raw/w3c-dcat-2014.html -> workspace/merge/inputs/statdcat/input-raw/w3c-dcat-2014.html.txt
+- statdcat/input-raw/w3c-data-cube-2014.html -> workspace/merge/inputs/statdcat/input-raw/w3c-data-cube-2014.html.txt
 Do not use outside knowledge of StatDCAT-AP; it is not an input.
 
 ## Case 2: research data profile (JRC)
-Atoms: /home/claude/merge/label/atoms-jrc-research.json (17 atoms). Inputs (runtime path -> text file; PDF text has page markers like "=== [page 3] ==="):
-- jrc-research/input-raw/w3c-dcat-2014.html -> /home/claude/merge/inputs/jrc-research/input-raw/w3c-dcat-2014.html.txt
-- jrc-research/input-raw/jrc-data-policy-2015.pdf -> /home/claude/merge/inputs/jrc-research/input-raw/jrc-data-policy-2015.pdf.txt
-- jrc-research/input-raw/datacite-3.1-field-context.json -> /home/claude/merge/inputs/jrc-research/input-raw/datacite-3.1-field-context.json.txt
+Atoms: workspace/merge/label/atoms-jrc-research.json (17 atoms). Inputs (runtime path -> text file; PDF text has page markers like "=== [page 3] ==="):
+- jrc-research/input-raw/w3c-dcat-2014.html -> workspace/merge/inputs/jrc-research/input-raw/w3c-dcat-2014.html.txt
+- jrc-research/input-raw/jrc-data-policy-2015.pdf -> workspace/merge/inputs/jrc-research/input-raw/jrc-data-policy-2015.pdf.txt
+- jrc-research/input-raw/datacite-3.1-field-context.json -> workspace/merge/inputs/jrc-research/input-raw/datacite-3.1-field-context.json.txt
 Do not use outside knowledge of the paper "Using DCAT-AP for research data" (Perego et al. 2016); it is not an input.
 
 Each atom has atom_id, statement (the requirement to label), row_statement (its parent, for context), stratum, applicability, notes.

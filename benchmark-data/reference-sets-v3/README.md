@@ -6,11 +6,11 @@ Version 3 merges three sources into one reference set per case:
 
 - the published v1 rows (75 identities, unchanged IDs);
 - Claude's completion pass (v2, 22 October 2026: 109 added rows with verified source quotes);
-- the ChatGPT/Codex completeness audit first proposed in this PR (commit 7fec154: 157 candidates and 99 Mobility clauses).
+- the ChatGPT/Codex completeness audit first proposed in this PR (commit audit-snapshot: 157 candidates and 99 Mobility clauses).
 
 ## Decisions
 
-- Mobility is scored at clause level. The PR #45 clauses were checked against the original NAPCORE Table 1 (see below).
+- Mobility is scored at clause level. The audit pass A clauses were checked against the original NAPCORE Table 1 (see below).
 - Requirements that only restate DCAT-AP are included and flagged (`restates_dcat_ap`), so they can be left out at scoring time.
 - Geo restatement tags stay as coded. INSPIRE and ISO obligation levels are kept as fields but are not part of each need, because requirements are scored on the need and implementations may differ later.
 - A provisional adjudication of reviewed items was applied on 23 October 2026 (see below).
@@ -20,7 +20,7 @@ Version 3 merges three sources into one reference set per case:
 - `<case>.json`: the merged set for one case. `requirements` holds the rows (v1, v2 and four new v3 rows), for a separate row-level analysis. `atoms` holds the scoring units. Each atom belongs to exactly one row (`parent_id`); atom IDs are the row ID plus a number (`H-5.3`).
 - `atoms-review.csv`: all atoms, with your_decision and your_note columns for review.
 - `reference-coverage.csv`: the input-evidence labels per atom, in the columns of `../REFERENCE-COVERAGE-TEMPLATE.csv`.
-- `coverage-ledger.csv`: where every v1 row, Claude v2 row and PR #45 item went.
+- `coverage-ledger.csv`: where every v1 row, Claude v2 row and audit pass A item went.
 - `counts.json`: counts per case.
 - `INDEPENDENT-CHECK.md`: the independent source check and how each finding was resolved.
 - `validate_v3.py`: integrity checks. With pdftotext installed it also re-checks every anchor against the reference PDF and every evidence quote against its input.
@@ -43,11 +43,11 @@ Version 3 merges three sources into one reference set per case:
 - `umbrella_of`: an atom that only bundles separately scored atoms; not scored by default.
 - `adjudication`: the review items applied to the atom, with date and source.
 - `source_flags`: source inconsistencies or errors, recorded but not resolved.
-- `provenance`: the v1 row, Claude v2 rows and PR #45 items behind the atom, `added_in_merge`, and a `found_by` summary.
+- `provenance`: the v1 row, Claude v2 rows and audit pass A items behind the atom, `added_in_merge`, and a `found_by` summary.
 
 ## Adjudication, 23 October 2026
 
-Junda's provisional adjudication with ChatGPT/Codex assistance (`CODEX-REVIEW-2026-10-23.md`, review of `8e81e5b`), applied here:
+Curator's provisional adjudication with ChatGPT/Codex assistance (`CODEX-REVIEW-2026-10-23.md`, review of `pre-adjudication-snapshot`), applied here:
 
 - **Duplicate scoring targets (P1):** Req-24.1 is merged into Req-19.7 (same georeferencing need; both rows kept as provenance). No separate service atom: no source passage or property supports one.
 - **Overlap review (P1):** all 39 overlap pairs are classified: 1 equivalent (merged), 7 subsumption, 31 related. H-4.1 bundles the five free-text needs D6.2 lists on p. 32 (description, population, purpose, provenance, publisher note), all scored separately, so it is no longer scored by default. Req-28.4 and Req-30.1 stay distinct.
@@ -61,8 +61,8 @@ The default selection includes 50 atoms whose status is proposed, open issue or 
 ## Merge rules
 
 - Rows: all v1 rows and all Claude v2 rows keep their IDs. A row statement, locator or status changes only where a source check showed it wrong; the earlier value is kept in statement_before_v3, source_locator_before_v3 or status_in_source_before_v3.
-- Atoms are the scoring units and every atom belongs to exactly one row. PR #45 splits are used where PR #45 split a need; PR #45 items that state the same need for another data group are merged into one atom whose applicability lists the groups.
-- Content found only in Claude v2 is split into atoms; content found only in PR #45 is added; a few needs found while checking anchors are added and marked added_in_merge.
+- Atoms are the scoring units and every atom belongs to exactly one row. audit pass A splits are used where audit pass A split a need; audit pass A items that state the same need for another data group are merged into one atom whose applicability lists the groups.
+- Content found only in Claude v2 is split into atoms; content found only in audit pass A is added; a few needs found while checking anchors are added and marked added_in_merge.
 - Requirements that only restate DCAT-AP (relation_to_base = restates_base) are kept and flagged with restates_dcat_ap so they can be left out at scoring time.
 - Source inconsistencies and source errors are recorded on the atom (source_flags), not resolved.
 - Overlapping atoms point to each other in overlaps; under one-to-one matching a prediction can be credited to only one of them.
@@ -99,7 +99,7 @@ Report full-reference recall over all scored atoms, and evidence-eligible recall
 
 ## Mobility clauses checked against NAPCORE Table 1
 
-The PR #45 clauses were decomposed from curator paraphrases. They were compared with the original Table 1 text, read from the NAPCORE report via WebFetch on 22 October 2026. Each row now carries `table1_text` (short exact excerpts), `table1_source`, `table1_contributor` and `table1_perspective`.
+The audit pass A clauses were decomposed from curator paraphrases. They were compared with the original Table 1 text, read from the NAPCORE report via WebFetch on 22 October 2026. Each row now carries `table1_text` (short exact excerpts), `table1_source`, `table1_contributor` and `table1_perspective`.
 
 Changes:
 
@@ -110,7 +110,7 @@ Changes:
 - **Req-34:** controlled vocabularies are an example, not the requirement.
 - **Wording:** several clauses were reworded to keep the Table 1 qualifiers (for example "where possible", "without proprietary licences", "Delegated Regulations").
 
-Result: 98 clauses (99 in the PR #45 draft).
+Result: 98 clauses (99 in the audit pass A draft).
 
 ## Changes to existing rows
 
@@ -128,7 +128,7 @@ Result: 98 clauses (99 in the PR #45 draft).
 - **H-68:** frequency.
 - **H-69:** a harmonised data validator (proposed).
 
-H-66 to H-68 come from PR #45 items. H-69 was found while checking anchors, as was atom H-15.4 (a standardised quality description).
+H-66 to H-68 come from audit pass A items. H-69 was found while checking anchors, as was atom H-15.4 (a standardised quality description).
 
 ## Not done
 

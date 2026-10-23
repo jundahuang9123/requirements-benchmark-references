@@ -1,6 +1,6 @@
 {
  "format": "rq1-mock-benchmark-runs-v1",
- "fetched_from": "http://127.0.0.1:8013/api/rq1/v2",
+ "fetched_from": "saved-workbench-api/rq1/v2",
  "fetched_at": "2026-10-22",
  "sha256_statements": "8fac274b6b180075ad110cd2d0366207f2fbc2d5c77f6925ab6c9b367eb94a61",
  "sha256_runs_encoded": "24d96c61ce1e983f7d6d3e3974b163890054db3f74368b629cba9b44503b4f6b",

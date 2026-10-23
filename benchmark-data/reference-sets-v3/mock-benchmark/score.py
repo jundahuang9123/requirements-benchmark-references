@@ -5,7 +5,7 @@ Inputs (all local, read-only):
   private/need-id-map.json        blind need IDs -> statement index
   judge/out/<case>-{A,B}.json     two independent reviewers' pair labels
   judge/out/<case>-adjudicated.json  adjudicator's labels for the pairs A and B disagree on
-  reference-sets-v3/<case>.json   frozen atoms (commit 8e81e5b)
+  reference-sets-v3/<case>.json   frozen atoms (commit pre-adjudication-snapshot)
 
 Scoring follows benchmark-data/BENCHMARK-METHODOLOGY.md: atoms are the unit, only
 `equivalent` earns recovery credit, matching is one-to-one (maximum bipartite matching, computed
@@ -22,7 +22,7 @@ import json
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-REF = os.environ.get('RQ1_REF', os.path.join(HERE, '..'))  # reference-sets-v3 (results here: commit 671c60a)
+REF = os.environ.get('RQ1_REF', os.path.join(HERE, '..'))  # reference-sets-v3 (results here: commit adjudicated-snapshot)
 CASES = {'jrc': 'jrc-research', 'stat': 'statdcat'}
 LABELS = ('equivalent', 'narrower', 'broader', 'partial', 'conflicts')
 RANK = {'equivalent': 5, 'broader': 4, 'narrower': 3, 'partial': 2, 'conflicts': 1, None: 0}
@@ -291,7 +291,7 @@ def main(write=True):
                     diff_rows.append({'case': case, 'run': r['label'], 'atom_id': a,
                                       'pre_discussion': r['_pre_best'][a] or 'none', 'after_discussion': r['_best'][a] or 'none',
                                       'why': '; '.join(sorted(why))})
-    report['reference'] = {'set': 'benchmark-data/reference-sets-v3', 'commit': '671c60a', 'note': 'v3 with the 23 October adjudication applied'}
+    report['reference'] = {'set': 'benchmark-data/reference-sets-v3', 'commit': 'adjudicated-snapshot', 'note': 'v3 with the 23 October adjudication applied'}
     if write:
         os.makedirs(os.path.join(HERE, 'out'), exist_ok=True)
         json.dump(report, open(os.path.join(HERE, 'out/mock-benchmark-results.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False, default=dict, sort_keys=True)

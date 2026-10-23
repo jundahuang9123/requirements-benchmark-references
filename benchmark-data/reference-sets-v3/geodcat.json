@@ -7,17 +7,17 @@
  "built_from": {
   "v1": "geodcat/reference-requirements/alignment-requirements.json (published identities kept)",
   "claude_v2": "alignment-requirements-v2.json (Claude completion, 2026-10-22)",
-  "pr45": "benchmark-data/reference-audit-2026-10-22 (PR #45, commit 7fec154)"
+  "pr45": "benchmark-data/reference-audit-2026-10-22 (audit pass A, commit audit-snapshot)"
  },
  "decisions": [
-  "Mobility is scored at clause level (the PR #45 clauses, checked against NAPCORE Table 1).",
+  "Mobility is scored at clause level (the audit pass A clauses, checked against NAPCORE Table 1).",
   "Requirements that restate DCAT-AP are included and flagged (restates_dcat_ap); they may be left out at scoring time.",
-  "Geo restatement tags stay as coded: the INSPIRE and ISO obligation levels are kept as fields but are not part of each need, since requirements are scored on the need and implementations may differ later (Junda, 2026-10-22)."
+  "Geo restatement tags stay as coded: the INSPIRE and ISO obligation levels are kept as fields but are not part of each need, since requirements are scored on the need and implementations may differ later (Curator, 2026-10-22)."
  ],
  "adjudication": {
   "date": "2026-10-23",
   "source": "reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
-  "by": "Junda, provisional adjudication with ChatGPT/Codex assistance; applied by Claude",
+  "by": "Curator, provisional adjudication with ChatGPT/Codex assistance; applied by Claude",
   "status": "provisional; not an independent human adjudication of the whole set",
   "changes": [
    "Overlap review: 5 pairs classified (0 equivalent, 0 subsumption, 5 related).",
@@ -26,8 +26,8 @@
  },
  "merge_rules": [
   "Rows: all v1 rows and all Claude v2 rows keep their IDs. A row statement, locator or status changes only where a source check showed it wrong; the earlier value is kept in statement_before_v3, source_locator_before_v3 or status_in_source_before_v3.",
-  "Atoms are the scoring units and every atom belongs to exactly one row. PR #45 splits are used where PR #45 split a need; PR #45 items that state the same need for another data group are merged into one atom whose applicability lists the groups.",
-  "Content found only in Claude v2 is split into atoms; content found only in PR #45 is added; a few needs found while checking anchors are added and marked added_in_merge.",
+  "Atoms are the scoring units and every atom belongs to exactly one row. audit pass A splits are used where audit pass A split a need; audit pass A items that state the same need for another data group are merged into one atom whose applicability lists the groups.",
+  "Content found only in Claude v2 is split into atoms; content found only in audit pass A is added; a few needs found while checking anchors are added and marked added_in_merge.",
   "Requirements that only restate DCAT-AP (relation_to_base = restates_base) are kept and flagged with restates_dcat_ap so they can be left out at scoring time.",
   "Source inconsistencies and source errors are recorded on the atom (source_flags), not resolved.",
   "Overlapping atoms point to each other in overlaps; under one-to-one matching a prediction can be credited to only one of them.",
@@ -1223,7 +1223,7 @@
    "dcat_ap_coverage": "—",
    "overlaps_v2": [],
    "derived_from": "INSPIRE metadata elements and ISO 19115 core profile (Annex I, Table 5)",
-   "v3_note": "Conceptual and domain consistency are separate rows of Annex I Table 5 and become separate atoms (as in PR #45).",
+   "v3_note": "Conceptual and domain consistency are separate rows of Annex I Table 5 and become separate atoms (as in audit pass A).",
    "atom_ids": [
     "G-41.1",
     "G-41.2"

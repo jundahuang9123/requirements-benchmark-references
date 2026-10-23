@@ -6,8 +6,8 @@ by an extraction system) and label how each need relates to each atom.
 
 You do not know which system or version produced the needs, and you must not try to find out.
 Read only the two files named in your task and this file. Do not open anything else under
-`/home/claude` (in particular nothing under `/home/claude/mock/private`, `/home/claude/merge`,
-`/home/claude/profile-requirements-extraction`, or another reviewer's output).
+`workspace` (in particular nothing under `workspace/mock/private`, `workspace/merge`,
+`workspace/upstream-corpus`, or another reviewer's output).
 
 ## Files
 

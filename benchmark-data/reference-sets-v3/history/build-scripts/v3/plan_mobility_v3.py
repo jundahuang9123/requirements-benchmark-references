@@ -1,4 +1,4 @@
-# Mobility atoms after checking the PR #45 clause draft against the original NAPCORE Table 1
+# Mobility atoms after checking the audit pass A clause draft against the original NAPCORE Table 1
 # (NAPCORE 4.4.2.1 Requirement analysis v1.0, Table 1, read via WebFetch on 2026-10-22; quotes are short exact excerpts).
 # M(id, statement, pr45 clause ids, relation for content rows, modality, note, rq2 override, stratum override)
 
@@ -52,16 +52,16 @@ def M(id, statement, pr45=(), rel=None, modality='should', note='', rq2=None, st
 
 ATOMS = [
  M('Req-1.1', 'Make metadata descriptions expressive.', ['MA-01-01'], anchor_idx=1),
- M('Req-1.2', 'Make metadata descriptions rich.', [], anchor_idx=1, note='In Table 1; missing from the v1 paraphrase and the PR #45 draft.'),
- M('Req-1.3', 'Describe the data adequately.', [], anchor_idx=1, note='In Table 1; missing from the v1 paraphrase and the PR #45 draft.'),
- M('Req-1.4', 'Support easy access to the data.', [], anchor_idx=1, note='In Table 1; missing from the v1 paraphrase and the PR #45 draft.'),
+ M('Req-1.2', 'Make metadata descriptions rich.', [], anchor_idx=1, note='In Table 1; missing from the v1 paraphrase and the audit pass A draft.'),
+ M('Req-1.3', 'Describe the data adequately.', [], anchor_idx=1, note='In Table 1; missing from the v1 paraphrase and the audit pass A draft.'),
+ M('Req-1.4', 'Support easy access to the data.', [], anchor_idx=1, note='In Table 1; missing from the v1 paraphrase and the audit pass A draft.'),
  M('Req-1.5', 'Make metadata descriptions context-sensitive.', ['MA-01-01'], anchor_idx=1),
  M('Req-1.6', 'Make metadata descriptions modular.', ['MA-01-02'], anchor_idx=1),
  M('Req-1.7', 'Give metadata descriptions a detailed structure.', ['MA-01-03'], anchor_idx=2),
  M('Req-1.8', 'Use strong typing and rules in metadata descriptions.', ['MA-01-04', 'MA-01-05'], anchor_idx=2,
    note='"strong typing and ruling" is one item of the Table 1 list.'),
  M('Req-1.9', 'Keep referential integrity.', ['MA-01-06', 'MA-01-07'], anchor_idx=2,
-   note='PR #45 clause "Distinguish entity identities" has no counterpart in Table 1 and is folded into referential integrity.'),
+   note='audit pass A clause "Distinguish entity identities" has no counterpart in Table 1 and is folded into referential integrity.'),
  M('Req-1.10', 'Enable persistent identifiers.', ['MA-01-08'], anchor_idx=2),
  M('Req-2.1', 'Make datasets discoverable and searchable.', ['MA-02-01'], anchor_idx=0),
  M('Req-2.2', 'Make datasets reusable.', ['MA-02-02'], anchor_idx=0),

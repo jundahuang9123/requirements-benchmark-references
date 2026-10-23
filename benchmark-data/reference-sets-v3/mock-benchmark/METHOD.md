@@ -1,7 +1,7 @@
 # Mock benchmark: method
 
 A dry run of the scoring protocol in `benchmark-data/BENCHMARK-METHODOLOGY.md` on the saved
-needs runs, against the reference sets v3 with the 23 October adjudication applied (PR #45, commit `671c60a`).
+needs runs, against the reference sets v3 with the 23 October adjudication applied (audit pass A, commit `adjudicated-snapshot`).
 Only evidence-eligible atoms are scored. Machine-made throughout: the pair labels come from AI
 reviewers, not from people.
 

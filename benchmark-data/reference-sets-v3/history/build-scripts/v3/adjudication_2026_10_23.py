@@ -1,13 +1,13 @@
 """Provisional adjudication of 23 October 2026, applied to the merged v3 sets.
 
-Source: benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md (Junda's adjudication with
-ChatGPT/Codex assistance, review of head 8e81e5b). Every change below names the review item it
+Source: benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md (Curator's adjudication with
+ChatGPT/Codex assistance, review of head pre-adjudication-snapshot). Every change below names the review item it
 implements. Changes that the register accepts as they are only get a log entry.
 """
 import copy
 import sys
 
-sys.path.insert(0, '/home/claude/merge')
+sys.path.insert(0, 'workspace/merge')
 from integrate_labels import quote_ok
 
 REVIEW = 'CODEX-REVIEW-2026-10-23.md'
@@ -278,5 +278,5 @@ def apply(case, rows, atoms):
     summary.append(f'Overlap review: {len(review)} pairs classified ({sum(r[2] == "equivalent" for r in review)} equivalent, '
                    f'{sum(r[2] == "subsumes" for r in review)} subsumption, {sum(r[2] == "related" for r in review)} related).')
     summary += CASE_NOTES.get(case, [])
-    return dict(date=DATE, source=f'reference-sets-v3/{REVIEW}', by='Junda, provisional adjudication with ChatGPT/Codex assistance; applied by Claude',
+    return dict(date=DATE, source=f'reference-sets-v3/{REVIEW}', by='Curator, provisional adjudication with ChatGPT/Codex assistance; applied by Claude',
                 status='provisional; not an independent human adjudication of the whole set', changes=summary)

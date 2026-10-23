@@ -2,7 +2,7 @@
 
 A separate reviewer, who had not built the set, checked the draft v3 atoms against the source texts and the DCAT-AP base files:
 
-- every atom found only by PR #45 or added in the merge;
+- every atom found only by audit pass A or added in the merge;
 - every merged atom and every changed row;
 - all 45 atoms coded as DCAT-AP restatements;
 - all 111 term-level content atoms;
@@ -60,7 +60,7 @@ Claude verified the high-severity claims against the sources before applying the
 | 39 | H-49.1, H-15.4, H-54.2, H-65.1, H-2.1 | Status or modality stronger than the source | Proposed or recommendation; language-tag clause dropped from H-54.2 |
 | 40 | H-1.1, H-30.2, H-38.1 | Minor fidelity | Reworded; note; open-question flag |
 | 41 | H-30.3 | A system need outside its row | Moved to a new row, H-69 (atom H-69.1) |
-| 42 | Page numbers | PR #45 pages did not always match the quote | New field `anchor_page`, computed from the PDF page breaks; PR #45 pages kept as `pr45_pdf_pages` |
+| 42 | Page numbers | audit pass A pages did not always match the quote | New field `anchor_page`, computed from the PDF page breaks; audit pass A pages kept as `pr45_pdf_pages` |
 | 43 | Overlaps | 17 one-way links | All overlap links made symmetric |
 | 44 | Rows H-3, H-6 and several Mobility rows | Row-level relation reflects the v1 response coding | Not changed: row relations keep the v1 coding of how the published profile answered the row. Atom relations are coded per atom. |
 | 45 | Req-1, Req-11, Req-21, Req-23, Req-30, Req-31 | Qualifiers lost when the rows were split | Superseded by the full check of all clauses against NAPCORE Table 1 (README) |
@@ -71,4 +71,4 @@ Claude verified the high-severity claims against the sources before applying the
 
 The reviewer asked whether INSPIRE's M/C/O obligation levels belong to each Geo need. If they did, restatements of elements that are mandatory in INSPIRE would become tightens_base. Examples are G-10.1, G-23.1 and G-36.1.
 
-Decision (Junda, 22 October 2026): keep the coding. Requirements are scored on the need, and implementations may differ later. GeoDCAT-AP itself keeps DCAT-AP obligations. The INSPIRE and ISO levels stay available in `geo.inspire_obligation` and `geo.iso19115_core_obligation`.
+Decision (Curator, 22 October 2026): keep the coding. Requirements are scored on the need, and implementations may differ later. GeoDCAT-AP itself keeps DCAT-AP obligations. The INSPIRE and ISO levels stay available in `geo.inspire_obligation` and `geo.iso19115_core_obligation`.

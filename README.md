@@ -2,7 +2,9 @@
 
 Curated reference requirements, source traceability, adjudication documentation and supporting source corpus for requirement-extraction benchmarks.
 
-Imported from [PR #45](https://github.com/jundahuang9123/profile-requirements-extraction/pull/45) of `jundahuang9123/profile-requirements-extraction` on 23 October 2026, at source commit [`0444d9c3f876202719f6edfa433edc0422f79b20`](https://github.com/jundahuang9123/profile-requirements-extraction/commit/0444d9c3f876202719f6edfa433edc0422f79b20). The original `benchmark-data/` layout and all imported file bytes are preserved. `IMPORT-PROVENANCE.json` records the source and SHA-256 of every imported file. This repository starts with a snapshot; earlier source history remains in the linked repository.
+This standalone corpus combines independently collected requirement sets, source checks and provisional adjudication. The original `benchmark-data/` layout is retained. Curator identifiers and upstream repository identifiers have been replaced with neutral labels for later anonymous distribution. `IMPORT-PROVENANCE.json` records integrity hashes for the sanitized files.
+
+See [anonymous export instructions](ANONYMIZATION.md) to create a history-free copy for a separate repository. The current hosting account and earlier Git commits are identifiable.
 
 ## Start here
 

@@ -118,7 +118,7 @@
   }
  },
  "reference": {
-  "commit": "671c60a",
+  "commit": "adjudicated-snapshot",
   "note": "v3 with the 23 October adjudication applied",
   "set": "benchmark-data/reference-sets-v3"
  },

@@ -1,4 +1,4 @@
-# Coding of the 75 benchmark reference rows (Junda's RQ1 benchmark, repo snapshot 69f3c26).
+# Coding of the 75 benchmark reference rows (Curator's RQ1 benchmark, base snapshot).
 # Statements are loaded from the repo JSON files; everything below is analyst coding.
 #
 # level:    M = metadata content (what records should carry)

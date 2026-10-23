@@ -1,6 +1,6 @@
 import json
 
-OUT = '/home/claude/merge/out/reference-sets-v3'
+OUT = 'workspace/merge/out/reference-sets-v3'
 C = json.load(open(f'{OUT}/counts.json'))
 ORDER = [('mobilitydcat', 'Mobility', 40), ('healthdcat', 'Health', 16), ('statdcat', 'Stat', 7), ('geodcat', 'Geo', 7), ('jrc-research', 'JRC', 5)]
 MERGE_RULES = json.load(open(f'{OUT}/healthdcat.json'))['merge_rules']
@@ -37,11 +37,11 @@ Version 3 merges three sources into one reference set per case:
 
 - the published v1 rows (75 identities, unchanged IDs);
 - Claude's completion pass (v2, 22 October 2026: 109 added rows with verified source quotes);
-- the ChatGPT/Codex completeness audit first proposed in this PR (commit 7fec154: 157 candidates and 99 Mobility clauses).
+- the ChatGPT/Codex completeness audit first proposed in this PR (commit audit-snapshot: 157 candidates and 99 Mobility clauses).
 
 ## Decisions
 
-- Mobility is scored at clause level. The PR #45 clauses were checked against the original NAPCORE Table 1 (see below).
+- Mobility is scored at clause level. The audit pass A clauses were checked against the original NAPCORE Table 1 (see below).
 - Requirements that only restate DCAT-AP are included and flagged (`restates_dcat_ap`), so they can be left out at scoring time.
 - Geo restatement tags stay as coded. INSPIRE and ISO obligation levels are kept as fields but are not part of each need, because requirements are scored on the need and implementations may differ later.
 - A provisional adjudication of reviewed items was applied on 23 October 2026 (see below).
@@ -51,7 +51,7 @@ Version 3 merges three sources into one reference set per case:
 - `<case>.json`: the merged set for one case. `requirements` holds the rows (v1, v2 and four new v3 rows), for a separate row-level analysis. `atoms` holds the scoring units. Each atom belongs to exactly one row (`parent_id`); atom IDs are the row ID plus a number (`H-5.3`).
 - `atoms-review.csv`: all atoms, with your_decision and your_note columns for review.
 - `reference-coverage.csv`: the input-evidence labels per atom, in the columns of `../REFERENCE-COVERAGE-TEMPLATE.csv`.
-- `coverage-ledger.csv`: where every v1 row, Claude v2 row and PR #45 item went.
+- `coverage-ledger.csv`: where every v1 row, Claude v2 row and audit pass A item went.
 - `counts.json`: counts per case.
 - `INDEPENDENT-CHECK.md`: the independent source check and how each finding was resolved.
 - `validate_v3.py`: integrity checks. With pdftotext installed it also re-checks every anchor against the reference PDF and every evidence quote against its input.
@@ -74,11 +74,11 @@ Version 3 merges three sources into one reference set per case:
 - `umbrella_of`: an atom that only bundles separately scored atoms; not scored by default.
 - `adjudication`: the review items applied to the atom, with date and source.
 - `source_flags`: source inconsistencies or errors, recorded but not resolved.
-- `provenance`: the v1 row, Claude v2 rows and PR #45 items behind the atom, `added_in_merge`, and a `found_by` summary.
+- `provenance`: the v1 row, Claude v2 rows and audit pass A items behind the atom, `added_in_merge`, and a `found_by` summary.
 
 ## Adjudication, 23 October 2026
 
-Junda's provisional adjudication with ChatGPT/Codex assistance (`CODEX-REVIEW-2026-10-23.md`, review of `8e81e5b`), applied here:
+Curator's provisional adjudication with ChatGPT/Codex assistance (`CODEX-REVIEW-2026-10-23.md`, review of `pre-adjudication-snapshot`), applied here:
 
 - **Duplicate scoring targets (P1):** Req-24.1 is merged into Req-19.7 (same georeferencing need; both rows kept as provenance). No separate service atom: no source passage or property supports one.
 - **Overlap review (P1):** all {n_pairs} overlap pairs are classified: {n_eq} equivalent (merged), {n_sub} subsumption, {n_rel} related. H-4.1 bundles the five free-text needs D6.2 lists on p. 32 (description, population, purpose, provenance, publisher note), all scored separately, so it is no longer scored by default. Req-28.4 and Req-30.1 stay distinct.
@@ -115,7 +115,7 @@ Report full-reference recall over all scored atoms, and evidence-eligible recall
 
 ## Mobility clauses checked against NAPCORE Table 1
 
-The PR #45 clauses were decomposed from curator paraphrases. They were compared with the original Table 1 text, read from the NAPCORE report via WebFetch on 22 October 2026. Each row now carries `table1_text` (short exact excerpts), `table1_source`, `table1_contributor` and `table1_perspective`.
+The audit pass A clauses were decomposed from curator paraphrases. They were compared with the original Table 1 text, read from the NAPCORE report via WebFetch on 22 October 2026. Each row now carries `table1_text` (short exact excerpts), `table1_source`, `table1_contributor` and `table1_perspective`.
 
 Changes:
 
@@ -126,7 +126,7 @@ Changes:
 - **Req-34:** controlled vocabularies are an example, not the requirement.
 - **Wording:** several clauses were reworded to keep the Table 1 qualifiers (for example "where possible", "without proprietary licences", "Delegated Regulations").
 
-Result: 98 clauses (99 in the PR #45 draft).
+Result: 98 clauses (99 in the audit pass A draft).
 
 ## Changes to existing rows
 
@@ -144,7 +144,7 @@ Result: 98 clauses (99 in the PR #45 draft).
 - **H-68:** frequency.
 - **H-69:** a harmonised data validator (proposed).
 
-H-66 to H-68 come from PR #45 items. H-69 was found while checking anchors, as was atom H-15.4 (a standardised quality description).
+H-66 to H-68 come from audit pass A items. H-69 was found while checking anchors, as was atom H-15.4 (a standardised quality description).
 
 ## Not done
 

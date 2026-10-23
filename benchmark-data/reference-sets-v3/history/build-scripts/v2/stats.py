@@ -1,7 +1,7 @@
 import json, sys, collections
 sys.path.insert(0,'.')
 from codes import CODES, DERIV, NAP
-B='/home/claude/jundahuang9123/profile-requirements-extraction/benchmark-data/'
+B='workspace/upstream-corpus/benchmark-data/'
 files={'Mobility':'mobilitydcat/reference-requirements/consolidated-requirements.json','Health':'healthdcat/reference-requirements/curated-requirements.json',
 'Stat':'statdcat/reference-requirements/requirements-and-resolutions.json','Geo':'geodcat/reference-requirements/alignment-requirements.json','JRC':'jrc-research/reference-requirements/core-requirements.json'}
 rows=[]

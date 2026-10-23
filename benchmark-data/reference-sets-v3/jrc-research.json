@@ -7,16 +7,16 @@
  "built_from": {
   "v1": "jrc-research/reference-requirements/core-requirements.json (published identities kept)",
   "claude_v2": "core-requirements-v2.json (Claude completion, 2026-10-22)",
-  "pr45": "benchmark-data/reference-audit-2026-10-22 (PR #45, commit 7fec154)"
+  "pr45": "benchmark-data/reference-audit-2026-10-22 (audit pass A, commit audit-snapshot)"
  },
  "decisions": [
-  "Mobility is scored at clause level (the PR #45 clauses, checked against NAPCORE Table 1).",
+  "Mobility is scored at clause level (the audit pass A clauses, checked against NAPCORE Table 1).",
   "Requirements that restate DCAT-AP are included and flagged (restates_dcat_ap); they may be left out at scoring time."
  ],
  "adjudication": {
   "date": "2026-10-23",
   "source": "reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
-  "by": "Junda, provisional adjudication with ChatGPT/Codex assistance; applied by Claude",
+  "by": "Curator, provisional adjudication with ChatGPT/Codex assistance; applied by Claude",
   "status": "provisional; not an independent human adjudication of the whole set",
   "changes": [
    "JRC-6.4 is a conditional requirement; JRC-10.1 has its anchor; JRC-10.3 restores metadata-quality assessment (P2, register).",
@@ -25,8 +25,8 @@
  },
  "merge_rules": [
   "Rows: all v1 rows and all Claude v2 rows keep their IDs. A row statement, locator or status changes only where a source check showed it wrong; the earlier value is kept in statement_before_v3, source_locator_before_v3 or status_in_source_before_v3.",
-  "Atoms are the scoring units and every atom belongs to exactly one row. PR #45 splits are used where PR #45 split a need; PR #45 items that state the same need for another data group are merged into one atom whose applicability lists the groups.",
-  "Content found only in Claude v2 is split into atoms; content found only in PR #45 is added; a few needs found while checking anchors are added and marked added_in_merge.",
+  "Atoms are the scoring units and every atom belongs to exactly one row. audit pass A splits are used where audit pass A split a need; audit pass A items that state the same need for another data group are merged into one atom whose applicability lists the groups.",
+  "Content found only in Claude v2 is split into atoms; content found only in audit pass A is added; a few needs found while checking anchors are added and marked added_in_merge.",
   "Requirements that only restate DCAT-AP (relation_to_base = restates_base) are kept and flagged with restates_dcat_ap so they can be left out at scoring time.",
   "Source inconsistencies and source errors are recorded on the atom (source_flags), not resolved.",
   "Overlapping atoms point to each other in overlaps; under one-to-one matching a prediction can be credited to only one of them.",
@@ -69,7 +69,7 @@
   "atoms_by_found_by": {
    "v1 row": 5,
    "both": 10,
-   "PR #45 only": 2,
+   "audit pass A only": 2,
    "restored in adjudication (JC-006)": 1
   },
   "scored_by_default": 17,
@@ -278,7 +278,7 @@
    "overlaps_v2": [],
    "derived_from": "JRC data access services (APIs, OpenSearch)",
    "statement_before_v3": "Indicate when a distribution gives access through a service or API rather than to the data itself, and which service standard it follows.",
-   "changed_in_v3": "The paper's second API requirement asks for the interface description with its query parameters (found by PR #45, JC-004).",
+   "changed_in_v3": "The paper's second API requirement asks for the interface description with its query parameters (found by audit pass A, JC-004).",
    "atom_ids": [
     "JRC-8.1",
     "JRC-8.2"
@@ -898,7 +898,7 @@
      "JC-009"
     ],
     "added_in_merge": false,
-    "found_by": "PR #45 only"
+    "found_by": "audit pass A only"
    },
    "notes": "A DataCite rule the paper reports for citation generation.",
    "restates_dcat_ap": false,
@@ -976,7 +976,7 @@
      "JC-001"
     ],
     "added_in_merge": false,
-    "found_by": "PR #45 only"
+    "found_by": "audit pass A only"
    },
    "notes": "Met by the base (adms:Identifier carries the scheme); the paper questions this modelling because such identifiers are of little use for linking.",
    "restates_dcat_ap": true,
@@ -1176,7 +1176,7 @@
     "added_in_merge": false,
     "found_by": "both"
    },
-   "notes": "Claude v2 had only \"which service standard it follows\"; completed from PR #45.",
+   "notes": "Claude v2 had only \"which service standard it follows\"; completed from audit pass A.",
    "restates_dcat_ap": false,
    "derived_from": "JRC data access services (APIs, OpenSearch)",
    "origin": [

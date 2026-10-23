@@ -1,8 +1,8 @@
 """Extract text from every allowlisted runtime input (raw + consolidation + background) for evidence labelling."""
 import json, os, subprocess, re
 from bs4 import BeautifulSoup
-BD = '/home/claude/jundahuang9123/profile-requirements-extraction/benchmark-data'
-OUT = '/home/claude/merge/inputs'
+BD = 'workspace/upstream-corpus/benchmark-data'
+OUT = 'workspace/merge/inputs'
 allow = json.load(open(f'{BD}/runtime-inputs.json'))['benchmarks']
 manifest = {}
 for case, cfg in allow.items():

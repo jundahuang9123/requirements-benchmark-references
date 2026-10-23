@@ -1,6 +1,6 @@
 # Stat, Geo and JRC atoms for the v3 merged reference set.
 import sys
-sys.path.insert(0, '/home/claude/analysis')
+sys.path.insert(0, 'workspace/analysis')
 from plan_health import A
 from completion import GEO as GEO_V2
 
@@ -77,7 +77,7 @@ STAT = [
 
 GEO_PARENT_CHANGES = {
  'G-44': dict(note_add='Its "reuse existing vocabularies" and "avoid new terms" parts are the same needs as G-3.1 and G-5.1 and are scored there.'),
- 'G-41': dict(note_add='Conceptual and domain consistency are separate rows of Annex I Table 5 and become separate atoms (as in PR #45).'),
+ 'G-41': dict(note_add='Conceptual and domain consistency are separate rows of Annex I Table 5 and become separate atoms (as in audit pass A).'),
  'G-30': dict(statement='State the temporal reference system of a dataset.', reason='"where it is not the default one" is not in GeoDCAT-AP 1.0 (independent check).'),
  'G-38': dict(statement='State any limitations on public access to a resource.', reason='"and the reasons for them" is not in GeoDCAT-AP 1.0 (independent check).'),
 }
@@ -110,7 +110,7 @@ GEO = [
  A('G-7.2', 'G-7', 'Leave the INSPIRE metadata regulation and technical guidelines, and the collections maintained under them, unchanged.',
    loc=G + '§1', anchor='The GeoDCAT-AP specification does not replace the INSPIRE Metadata Regulation'),
 ]
-# Annex I Table 5 element atoms: one per table row, with the three dates and the two consistency types split (as in PR #45).
+# Annex I Table 5 element atoms: one per table row, with the three dates and the two consistency types split (as in audit pass A).
 _split = {'G-16': [('Give the date of creation of a resource.', 'GC-009', 'beyond_base'),
                    ('Give the date of publication of a resource.', 'GC-010', 'restates_base'),
                    ('Give the date of last revision of a resource.', 'GC-011', 'restates_base')],
@@ -181,7 +181,7 @@ GEO += [
 
 JRC_PARENT_CHANGES = {
  'JRC-8': dict(statement='Indicate when a distribution gives access through a service or API rather than to the data itself, and describe the service interface with the query parameters needed to select data.',
-               reason='The paper\'s second API requirement asks for the interface description with its query parameters (found by PR #45, JC-004).'),
+               reason='The paper\'s second API requirement asks for the interface description with its query parameters (found by audit pass A, JC-004).'),
  'JRC-9': dict(note_add='Reproducibility and usage tracking are two purposes of one provenance need, so one atom.'),
 }
 JRC = [
@@ -220,7 +220,7 @@ JRC = [
  A('JRC-8.2', 'JRC-8', 'Describe the API or service interface, with the query parameters needed to select data, so software agents can use it directly.',
    pr45=['JC-004'], v2=['JRC-8'], modality='explicit_requirement',
    anchor='Provide a description of the API / service interface, along with the relevant query parameters',
-   note='Claude v2 had only "which service standard it follows"; completed from PR #45.'),
+   note='Claude v2 had only "which service standard it follows"; completed from audit pass A.'),
  A('JRC-9.1', 'JRC-9', 'Describe provenance in enough detail to support reproducibility and to track how data are used.', pr45=['JC-005'],
    v2=['JRC-9'], modality='under_investigation', overlaps=['JRC-2.1'],
    anchor='The objectives include (a) data reproducibility and (b) ability to track the usage of data'),

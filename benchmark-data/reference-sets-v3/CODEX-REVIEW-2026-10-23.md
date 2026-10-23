@@ -1,6 +1,6 @@
-# PR #45 — provisional adjudication, 23 October 2026
+# audit pass A — provisional adjudication, 23 October 2026
 
-**Reviewed head:** `8e81e5b373c7f9e8a80693dba71a5804d3429281` on `codex/benchmark-reference-audit`.
+**Reviewed head:** `pre-adjudication-snapshot` on `codex/benchmark-reference-audit`.
 
 **Recommendation:** retain the merged v3 as a substantially improved review corpus, but revise the issues below before freezing a quantitative scoring reference. This is assistant source review, not independent human adjudication. The review was performed read-only. This report was subsequently committed at the user’s request; benchmark data and scoring remain unchanged.
 
@@ -18,7 +18,7 @@ The PR now replaces the original audit with five merged case sets: 188 rows and 
 
 ### P1 — Overlap links do not remove duplicate scoring targets
 
-[Mobility Req-19.7](https://github.com/jundahuang9123/profile-requirements-extraction/blob/8e81e5b373c7f9e8a80693dba71a5804d3429281/benchmark-data/reference-sets-v3/mobilitydcat.json#L7044) and [Req-24.1](https://github.com/jundahuang9123/profile-requirements-extraction/blob/8e81e5b373c7f9e8a80693dba71a5804d3429281/benchmark-data/reference-sets-v3/mobilitydcat.json#L8240) both describe payload location/georeferencing methods. They share CMC-11 evidence and the same intended profile property, are linked as overlapping, and both remain default-scored.
+[Mobility Req-19.7](mobilitydcat.json) and [Req-24.1](mobilitydcat.json) both describe payload location/georeferencing methods. They share CMC-11 evidence and the same intended profile property, are linked as overlapping, and both remain default-scored.
 
 The rule that one prediction cannot match both prevents duplicate credit; it does not remove the duplicate denominator. A single correct statement of the shared need still has two possible targets and can recover only one. A duplicate-heavy output could instead supply two predictions. Single parentage does not solve semantic duplication across parents.
 
@@ -26,9 +26,9 @@ The rule that one prediction cannot match both prevents duplicate credit; it doe
 
 ### P1 — Some “supported” labels overstate the evidence for the full requirement
 
-[H-1.1](https://github.com/jundahuang9123/profile-requirements-extraction/blob/8e81e5b373c7f9e8a80693dba71a5804d3429281/benchmark-data/reference-sets-v3/healthdcat.json#L1855) is a mandatory persistent, dereferenceable identifier for every metadata record. Its cited raw evidence recommends global identifiers and includes a DCAT-AP dataset identifier with cardinality 0..n. This supports identifier practice, but does not establish the full mandatory record-level obligation.
+[H-1.1](healthdcat.json) is a mandatory persistent, dereferenceable identifier for every metadata record. Its cited raw evidence recommends global identifiers and includes a DCAT-AP dataset identifier with cardinality 0..n. This supports identifier practice, but does not establish the full mandatory record-level obligation.
 
-[H-29.1](https://github.com/jundahuang9123/profile-requirements-extraction/blob/8e81e5b373c7f9e8a80693dba71a5804d3429281/benchmark-data/reference-sets-v3/healthdcat.json#L6464) requires every record in an access-body catalogue to carry HEAL. Its raw evidence includes an M6.1 query selecting HEAL records and DCAT-AP's controlled vocabulary rule. A query that finds HEAL-labelled datasets does not establish a requirement to assign HEAL to every catalogue record. The universal requirement is explicit in the evaluator reference, D6.2 §5.3.1.3, physical page 74, which is not an allowed raw input.
+[H-29.1](healthdcat.json) requires every record in an access-body catalogue to carry HEAL. Its raw evidence includes an M6.1 query selecting HEAL records and DCAT-AP's controlled vocabulary rule. A query that finds HEAL-labelled datasets does not establish a requirement to assign HEAL to every catalogue record. The universal requirement is explicit in the evaluator reference, D6.2 §5.3.1.3, physical page 74, which is not an allowed raw input.
 
 **Provisional decision: retain both reference requirements, but downgrade these raw labels to partial pending a stronger input passage.** H-22.1 has a similar scope jump: assigning access-body competence in the inputs is related to, but does not explicitly require, an HDAB metadata field for every personal/non-public dataset. Its raw label also merits partial rather than supported unless an additional passage supplies that metadata obligation.
 
@@ -36,7 +36,7 @@ A reasonable inference may be useful elicitation evidence, but it should be dist
 
 ### P2 — Some scored “atoms” are still compound, and lose the quality-label context
 
-[H-46.1](https://github.com/jundahuang9123/profile-requirements-extraction/blob/8e81e5b373c7f9e8a80693dba71a5804d3429281/benchmark-data/reference-sets-v3/healthdcat.json#L8350) combines population representativeness and average duration of a person's appearance in the data. [H-46.3](https://github.com/jundahuang9123/profile-requirements-extraction/blob/8e81e5b373c7f9e8a80693dba71a5804d3429281/benchmark-data/reference-sets-v3/healthdcat.json#L8487) combines collection-to-inclusion delay and approval-to-delivery delay. These can independently be satisfied or missed.
+[H-46.1](healthdcat.json) combines population representativeness and average duration of a person's appearance in the data. [H-46.3](healthdcat.json) combines collection-to-inclusion delay and approval-to-delivery delay. These can independently be satisfied or missed.
 
 D6.2 §5.2.8, physical page 60, places them in the contents of a data quality and utility label, where applicable. The records' applicability is empty; H-46.3 omits that qualifier altogether. The staged historical EHDS proposal also distinguishes label duties and the publicly funded cohort; these conditions are not interchangeable with an unconditional requirement on every catalogue record.
 
@@ -44,7 +44,7 @@ D6.2 §5.2.8, physical page 60, places them in the contents of a data quality an
 
 ### P2 — The merger drops metadata-quality assessment from JRC coverage
 
-[JRC-10.1](https://github.com/jundahuang9123/profile-requirements-extraction/blob/8e81e5b373c7f9e8a80693dba71a5804d3429281/benchmark-data/reference-sets-v3/jrc-research.json#L1210) concerns dataset quality and JRC-10.2 concerns feedback on data. Original audit item JC-006 explicitly included metadata quality; both mappings are present, but that meaning is absent from the resulting statements. JRC-10.1 also has no anchor quote.
+[JRC-10.1](jrc-research.json) concerns dataset quality and JRC-10.2 concerns feedback on data. Original audit item JC-006 explicitly included metadata quality; both mappings are present, but that meaning is absent from the resulting statements. JRC-10.1 also has no anchor quote.
 
 The author's [paper, “Additional requirements”](https://www.w3.org/2016/11/sdsvoc/SDSVoc16_paper_27), explicitly includes metadata in the quality-assessment scope. **Provisional decision: restore a separate metadata-quality capability or an explicit scope-preserving representation, retain its under-investigation status, and add the source anchor.** This demonstrates why complete ID mapping is not complete semantic coverage.
 

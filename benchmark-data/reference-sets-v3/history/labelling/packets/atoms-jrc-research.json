@@ -101,7 +101,7 @@
   "statement": "Describe the API or service interface, with the query parameters needed to select data, so software agents can use it directly.",
   "stratum": "content",
   "applicability": "Within the cited source scope; not an assertion of universal applicability.",
-  "notes": "Claude v2 had only \"which service standard it follows\"; completed from PR #45."
+  "notes": "Claude v2 had only \"which service standard it follows\"; completed from audit pass A."
  },
  {
   "atom_id": "JRC-9.1",

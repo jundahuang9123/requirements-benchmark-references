@@ -172,7 +172,7 @@ uncertainty. Neither the corpus nor this document contains measured evaluation r
 
 ## Train, development and held-out use
 
-Use JRC and all of Stat for debugging/development (Junda, 16 October 2026: Stat's raw
+Use JRC and all of Stat for debugging/development (Curator, 16 October 2026: Stat's raw
 allowlist has only two sources, both base specifications, so a split is not meaningful).
 Neither is reported as a test result. Any other split is by source and requirement
 family, not random paraphrase rows: duplicates and statements from one source must stay
