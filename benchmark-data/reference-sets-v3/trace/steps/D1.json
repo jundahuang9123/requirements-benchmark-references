@@ -1,0 +1,204 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "D1",
+ "name": "Definition-brief Task 2: stratum wording and the out-of-scope count in Table 2",
+ "time_order": "first new step, after the baseline tag ref-trace-baseline",
+ "actors": [
+  {
+   "actor": "model:claude/d1",
+   "model_id": "claude-opus-5-5",
+   "model_id_status": "recorded",
+   "role": "made the two text edits and the generator change, and ran the generator"
+  },
+  {
+   "actor": "script:benchmark-data/reference-sets-v3/supplement/make_tables.py#66abab4fbe78cf7ea84b020ef8836b707a92476a0d94141ef216714fd0b748cf",
+   "role": "generated table-benchmark.tex"
+  },
+  {
+   "actor": "human:curator",
+   "role": "chose lift B and the defaults on 2026-11-01 (owner decisions record, outside the repository; its sha256 is in session.owner_decisions_sha256); checks before merging that the wording matches how the atoms were labelled"
+  }
+ ],
+ "session": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "6bbe7e06e0ffb9d47a3264cc6a7620dfab303d58b5d45a8a949ad68af92241bc",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T12:29:13.153Z"
+ },
+ "scripts": [
+  {
+   "path": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "rerunnable": "yes",
+   "postdates_step": "no",
+   "run_as": "python3 make_tables.py in supplement/, with RQ1_REF and RQ1_REF_COMMIT unset",
+   "sha256": "66abab4fbe78cf7ea84b020ef8836b707a92476a0d94141ef216714fd0b748cf"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/validate_v3.py",
+   "rerunnable": "yes",
+   "postdates_step": "no",
+   "run_as": "python3 benchmark-data/reference-sets-v3/validate_v3.py (no --report)",
+   "sha256": "ddd67f5fb062aa921965c3f4018d11f11bb470171fee25638bb5d948a9d4a734"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v3/make_readme.py",
+   "rerunnable": "no",
+   "rerunnable_reason": "reads placeholder workspace/ paths; edited by hand at line 64, not run",
+   "postdates_step": "no",
+   "sha256": "50cab7f94dad9c51a1257337f4734018e370a531d7d1a9252ff8663342a0f78b"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "benchmark-data/reference-sets-v3/README.md",
+   "hash_time": "import",
+   "sha256": "db7f8aae0fe4dfb0b35b4f67a2842703710b1e20bcde05cafcc3a58ae92f4cf3",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v3/make_readme.py",
+   "hash_time": "import",
+   "sha256": "e3deba46137603e65230f18cd83f3dbde30b3bba855c04e9aa0432b689a2d883",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "hash_time": "import",
+   "sha256": "53bd3dd148dd54f1dd404dfd79bd14c853be07835c5e3438fc76266727f9b01b",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/supplement/table-benchmark.tex",
+   "hash_time": "import",
+   "sha256": "919ad0fe5d4a436cbcc04d1283bca6ab1402b1722eff81616836dcf7ffd3c12f",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+   "hash_time": "import",
+   "sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/healthdcat.json",
+   "hash_time": "import",
+   "sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/statdcat.json",
+   "hash_time": "import",
+   "sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/geodcat.json",
+   "hash_time": "import",
+   "sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/jrc-research.json",
+   "hash_time": "import",
+   "sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+   "stored": "yes"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "benchmark-data/reference-sets-v3/README.md",
+   "sha256": "e160725d67745fc9f7f76999e1b8b5050aac753a633dec0209f14ad5577c14bc",
+   "hash_time": "step",
+   "stored": "yes",
+   "change": "line 33: the stratum entry replaced by the wording of spec section 10, 2a"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v3/make_readme.py",
+   "sha256": "50cab7f94dad9c51a1257337f4734018e370a531d7d1a9252ff8663342a0f78b",
+   "hash_time": "step",
+   "stored": "yes",
+   "change": "line 64: the same text (the one history edit spec section 10 allows)"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "sha256": "66abab4fbe78cf7ea84b020ef8836b707a92476a0d94141ef216714fd0b748cf",
+   "hash_time": "step",
+   "stored": "yes",
+   "change": "table_benchmark(): sums counts.atoms_by_stratum for profile and system over the five case files; one sentence added to the caption"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/supplement/table-benchmark.tex",
+   "sha256": "9308e828ab9bd14896799b4affb38702efccb1cb3dbbe9c01b684e51cc173d2f",
+   "hash_time": "step",
+   "stored": "yes",
+   "change": "regenerated; the caption gains: The case files also hold 84 profile and 35 system atoms, outside RQ1's scope."
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/supplement/appendix-test-cases.tex",
+   "sha256": "195ef6b0ce439f6c34bc154198bc95400a7d6bac9c50006809986342a0522bfb",
+   "hash_time": "step",
+   "stored": "yes",
+   "change": "regenerated; byte-identical to its input"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.tex",
+   "sha256": "1bf274220830d04f96247d636cd4abb642bed0219770b240bfc3f705784b707c",
+   "hash_time": "step",
+   "stored": "yes",
+   "change": "regenerated; byte-identical to its input"
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-01T12:24:33.146Z",
+  "run_ended": "2026-11-01T12:28:55.376Z",
+  "run_by": "model:claude/d1"
+ },
+ "seeds": {},
+ "counts": {
+  "in": 4,
+  "out": 4,
+  "changed": 4,
+  "regenerated_unchanged": 2
+ },
+ "decision_values": [
+  "text_replaced",
+  "sentence_inserted",
+  "regenerated"
+ ],
+ "rationale_location": "Cleaned spec, section 10 (2a-2c; the 2a wording verbatim); owner decision 0.1 (lift B), 2026-11-01",
+ "evidence": [
+  "benchmark-data/reference-sets-v3/README.md:33",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/make_readme.py:64",
+  "benchmark-data/reference-sets-v3/supplement/make_tables.py:76-83",
+  "benchmark-data/reference-sets-v3/supplement/make_tables.py:91",
+  "benchmark-data/reference-sets-v3/supplement/table-benchmark.tex:5"
+ ],
+ "checks": {
+  "validate_v3": "passed: 204 anchor quotes verified, 116 web anchors not verified locally, 1,320 evidence quotes verified, 0 errors",
+  "table_benchmark_values": {
+   "profile": 84,
+   "system": 35
+  },
+  "regeneration": "only table-benchmark.tex changed (git status)",
+  "latex": "table-benchmark.tex compiles in a minimal document with the paper's llncs class; only the expected undefined-citation warnings"
+ },
+ "gaps": [],
+ "notes": [
+  "The optional clause on content atoms not scored by default (5) was not added.",
+  "make_readme.py cannot run as committed, so README.md and make_readme.py were edited by hand to the same text."
+ ],
+ "manifest_sha256": "4d565fd4f23fed478a068f3c65888085ee0dd635bf0f63225060db9bd442d5f3"
+}

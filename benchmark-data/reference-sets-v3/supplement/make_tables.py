@@ -73,10 +73,14 @@ def counts(d):
 def table_benchmark():
     lines = []
     tot = dict(v1=0, added=0, atoms=0, settled=0, in_base=0, stated=0, stated_or_partly=0)
+    out_of_scope = dict(profile=0, system=0)  # atoms outside RQ1's scope, summed from the case files
     for case, name, ref, _, files, units, base, use in CASES:
-        c = counts(load(case))
+        d = load(case)
+        c = counts(d)
         for k in tot:
             tot[k] += c[k]
+        for k in out_of_scope:
+            out_of_scope[k] += d['counts']['atoms_by_stratum'].get(k, 0)
         rows = f"{c['v1']}" if not c['added'] else f"{c['v1']}+{c['added']}"
         lines.append(f"{name} & {ref} & {files} & {units} & {base} & {rows} & {c['atoms']} & {c['stated']} ({c['stated_or_partly']}) & {use}\\\\")
     body = '\n'.join(lines)
@@ -84,7 +88,7 @@ def table_benchmark():
 % "Stated" uses the raw input-evidence labels of v3: AI labels, human review pending; align Sect. 5 and the
 % Use of Generative AI section with how they were made.
 \\begin{{table}}[t]
-\\caption{{Benchmark cases. Files: evidence files plus base specifications kept as background; units: evidence units; base: the \\dcatap\\ release that the extension's own documents cite. Rows: published reference rows plus rows added from the same document. Atoms: scoring units (content, not deferred, each need once); of all {tot['atoms']}, {tot['in_base']} restate the base and {tot['atoms'] - tot['settled']} are proposals, open issues or guidance in their source. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part).}}
+\\caption{{Benchmark cases. Files: evidence files plus base specifications kept as background; units: evidence units; base: the \\dcatap\\ release that the extension's own documents cite. Rows: published reference rows plus rows added from the same document. Atoms: scoring units (content, not deferred, each need once); of all {tot['atoms']}, {tot['in_base']} restate the base and {tot['atoms'] - tot['settled']} are proposals, open issues or guidance in their source. The case files also hold {out_of_scope['profile']} profile and {out_of_scope['system']} system atoms, outside RQ1's scope. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part).}}
 \\label{{tab:benchmark}}
 \\centering\\scriptsize\\setlength{{\\tabcolsep}}{{4pt}}
 \\begin{{tabularx}}{{\\textwidth}}{{@{{}}lYrrlrrrl@{{}}}}
