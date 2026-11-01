@@ -44,7 +44,7 @@ When a review decides a rule that an earlier batch did not follow, the batch rec
 | 1 | JRC, Stat | 45 | 14 | 3 | applied |
 | 2a | Health, rows H-1 to H-33 | 68 | 21 | 5 | applied |
 | 2b | Health, rows H-34 to H-69 | 53 | 21 | 1 | applied |
-| 3 | Geo | 56 | | | |
+| 3 | Geo | 56 | 2 | 0 | applied |
 | 4 | Mobility | 98 | | | |
 
 Batch 2b also corrects JRC-8.2 from batch 1 to the content rule: "Users and software agents can know …" became "Users can know …, so software agents can use it directly."

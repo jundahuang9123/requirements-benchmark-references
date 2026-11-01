@@ -1,0 +1,100 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "M7",
+ "name": "Refresh files_sha256 in IMPORT-PROVENANCE.json",
+ "time_order": "after the step whose files it covers; see reason",
+ "actors": [
+  {
+   "actor": "script:tools/trace/refresh_hashes.py#a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189"
+  },
+  {
+   "actor": "model:claude/manifest-refresh",
+   "role": "ran the script"
+  }
+ ],
+ "session": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "6847621519896430ba63702e250227fc458af638eba0455afd8c692026dccd29",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "561ad5a874474ef92f1cb00fba42ea9d290bd64a58e4f01c25ca79b6a8fc7c4e",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T19:54:54.555Z"
+ },
+ "scripts": [
+  {
+   "path": "tools/trace/refresh_hashes.py",
+   "sha256": "a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/trace/common.py",
+   "sha256": "ce04c1e3351f6f1532476b1c479545209cc48bc6c1055279ed3e20cd271fe21b",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "dda91c422786a23b36f7e4ff74b157f8b5e95fa74c8847b74d6d27a9a8fa76f9",
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 279
+  }
+ ],
+ "outputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": null,
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 281,
+   "note": "Written after this manifest and containing its hash, so its own hash cannot be recorded here; tools/export_anonymous.py checks every entry."
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-01T19:54:53.865Z",
+  "run_ended": "2026-11-01T19:54:54.556Z",
+  "run_by": "model:claude/manifest-refresh"
+ },
+ "seeds": {},
+ "counts": {
+  "in": 279,
+  "out": 281,
+  "changed": 5
+ },
+ "decision_values": [
+  "entry_added",
+  "entry_changed",
+  "entry_removed"
+ ],
+ "rationale_location": "reason below",
+ "reason": "Standard form, batch 3: Geo (56 atoms); record standard-form/batch-03.json",
+ "entries_added": {
+  "benchmark-data/reference-sets-v3/standard-form/batch-03.json": "60d87f387da3eb4dc83c0d733f8c01e62a74a612b1506933932c5efbd24007f4"
+ },
+ "entries_changed": {
+  "benchmark-data/reference-sets-v3/atoms-review.csv": "7889d2d4337851972a1af1b5393c9432d56c24572607dc357b9bd0a948d80982",
+  "benchmark-data/reference-sets-v3/geodcat.json": "a88694bb2158fd3c7475f397b56567e7bd3e9c380a9631d82f7f52a8d44f64f7",
+  "benchmark-data/reference-sets-v3/standard-form/README.md": "638a1b849a390055fb7cadbb26f2bf62cf56c883d292f6cee5d261a2fe75e891"
+ },
+ "entries_removed": [],
+ "own_entry": "added to IMPORT-PROVENANCE.json after this manifest was written",
+ "evidence": [
+  "tools/export_anonymous.py:60-65"
+ ],
+ "gaps": [],
+ "manifest_sha256": "f3d6e3e73be523bea413215acc6436df47f3d252edb9d02493bce700164f486c"
+}
