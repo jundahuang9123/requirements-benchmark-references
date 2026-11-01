@@ -1,0 +1,100 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "M5",
+ "name": "Refresh files_sha256 in IMPORT-PROVENANCE.json",
+ "time_order": "after the step whose files it covers; see reason",
+ "actors": [
+  {
+   "actor": "script:tools/trace/refresh_hashes.py#a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189"
+  },
+  {
+   "actor": "model:claude/manifest-refresh",
+   "role": "ran the script"
+  }
+ ],
+ "session": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "6847621519896430ba63702e250227fc458af638eba0455afd8c692026dccd29",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "28e12004a64bd74117fae72373e45621b016a43a3c709a8486a5746d5ebd71c4",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T19:06:50.808Z"
+ },
+ "scripts": [
+  {
+   "path": "tools/trace/refresh_hashes.py",
+   "sha256": "a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/trace/common.py",
+   "sha256": "ce04c1e3351f6f1532476b1c479545209cc48bc6c1055279ed3e20cd271fe21b",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "5df759c413201307b71491d10e1674884af4e77cf46dc6543792d95078f62b51",
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 275
+  }
+ ],
+ "outputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": null,
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 277,
+   "note": "Written after this manifest and containing its hash, so its own hash cannot be recorded here; tools/export_anonymous.py checks every entry."
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-01T19:06:49.916Z",
+  "run_ended": "2026-11-01T19:06:50.808Z",
+  "run_by": "model:claude/manifest-refresh"
+ },
+ "seeds": {},
+ "counts": {
+  "in": 275,
+  "out": 277,
+  "changed": 5
+ },
+ "decision_values": [
+  "entry_added",
+  "entry_changed",
+  "entry_removed"
+ ],
+ "rationale_location": "reason below",
+ "reason": "Entries for the standard form, batch 2a (Health rows H-1 to H-33): the Health case file, atoms-review.csv, the batch record and the standard-form README.",
+ "entries_added": {
+  "benchmark-data/reference-sets-v3/standard-form/batch-02a.json": "ad376aad93a5bfdc8caf0dc96b22be35e248c96e5e3ec55a39a9ba1f2d49a00e"
+ },
+ "entries_changed": {
+  "benchmark-data/reference-sets-v3/atoms-review.csv": "a42dfcece18c20f07677c353524e5f3ba5c456d550848ea1b59d733210471668",
+  "benchmark-data/reference-sets-v3/healthdcat.json": "c1537b45a7888f4d2c836101eb36bacca0220a779141e0cb6d58f25156b6a9c2",
+  "benchmark-data/reference-sets-v3/standard-form/README.md": "e15dc033de279a3e44405792e878b83dd67c920694e01337ebfe68e8cb96c4ec"
+ },
+ "entries_removed": [],
+ "own_entry": "added to IMPORT-PROVENANCE.json after this manifest was written",
+ "evidence": [
+  "tools/export_anonymous.py:60-65"
+ ],
+ "gaps": [],
+ "manifest_sha256": "bdcb4fb740f482d6d195964ea5d8c9107fa9b697b3d67b754b56848723caf58a"
+}

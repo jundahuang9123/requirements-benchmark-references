@@ -37,7 +37,8 @@ Content verbs: `know`, `find`, `access`, `cite`, `use`.
 | Batch | Cases | Atoms | Flagged | Changed in review | Status |
 |---|---|---|---|---|---|
 | 1 | JRC, Stat | 45 | 14 | 3 | applied |
-| 2 | Health | 121 | | | drafting |
+| 2a | Health, rows H-1 to H-33 | 68 | 21 | 5 | applied |
+| 2b | Health, rows H-34 to H-69 | 53 | | | drafting |
 | 3 | Geo | 56 | | | |
 | 4 | Mobility | 98 | | | |
 
