@@ -1354,23 +1354,29 @@
   {
    "id": "JRC-8.2",
    "parent_id": "JRC-8",
-   "statement": "Users and software agents can know the API or service interface and the query parameters needed to select data.",
+   "statement": "Users can know the API or service interface and the query parameters needed to select data, so software agents can use it directly.",
    "statement_before_standard": "Describe the API or service interface, with the query parameters needed to select data, so software agents can use it directly.",
    "standard_form": {
-    "actor": "users and software agents",
+    "actor": "users",
     "verb": "know",
     "information": "API or service interface and its query parameters",
     "resource": "distribution",
     "scope": "",
     "condition": "",
     "hint": "",
-    "flag": "The purpose clause ('so software agents can use it directly') became part of the actor.",
-    "proposed": "Users and software agents can know the API or service interface and the query parameters needed to select data.",
-    "decision": "accepted",
+    "flag": "",
+    "proposed": "Users can know the API or service interface and the query parameters needed to select data, so software agents can use it directly.",
+    "decision": "corrected by the owner's rule in the batch 2b review: content atoms always take 'Users' as the subject; the purpose clause of the earlier statement ('so software agents can use it directly') keeps the named actor",
     "drafted_by": "model:claude/standardiser",
     "reviewed_by": "human:curator",
     "date": "2026-11-01",
-    "record": "benchmark-data/reference-sets-v3/standard-form/batch-01.json"
+    "record": "benchmark-data/reference-sets-v3/standard-form/batch-02b.json",
+    "replaces": [
+     {
+      "statement": "Users and software agents can know the API or service interface and the query parameters needed to select data.",
+      "record": "benchmark-data/reference-sets-v3/standard-form/batch-01.json"
+     }
+    ]
    },
    "stratum": "content",
    "status_in_source": "open_issue",
