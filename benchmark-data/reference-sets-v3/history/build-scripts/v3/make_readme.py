@@ -61,7 +61,7 @@ Version 3 merges three sources into one reference set per case:
 
 ## Key atom fields
 
-- `stratum`: content (information a catalogue record should carry), profile (how the profile is specified: principles, scope, reuse and alignment, obligation levels, code lists, documentation) or system (systems and processes around the profile: governance and maintenance, validation, interfaces, exchange, review). Find/access relevance and input support are recorded separately. Only content atoms are scored by default (`scored_by_default`: content, not deferred, not merged, not an umbrella). The pipeline's unit, the need, corresponds to a content atom.
+- `stratum`: content (information a catalogue record should carry), profile (how the profile is specified: principles, scope, reuse and alignment, obligation levels, code lists, documentation) or system (systems and processes around the profile: governance and maintenance, validation, interfaces, exchange, review). Citation needed for these definitions; how each atom's type was assigned is recorded in [ATOM-TYPES.md](ATOM-TYPES.md). Find/access relevance and input support are recorded separately. Only content atoms are scored by default (`scored_by_default`: content, not deferred, not merged, not an umbrella). The pipeline's unit, the need, corresponds to a content atom.
 - `status_in_source`: requirement, proposed, deferred, open_issue or guidance.
 - `modality`: the source's own obligation wording where known. For Mobility this is the Table 1 importance and modal verb.
 - `relation_to_base`: restates_base, tightens_base, extends_base, partly_base, beyond_base, not_term_level or unresolved, measured against the DCAT-AP version the case cites. `restates_dcat_ap` is true exactly when this is restates_base.
