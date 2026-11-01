@@ -36,3 +36,16 @@ Review the host's displayed owner, links and commit metadata before sharing it.
 after changes. Refresh those hashes whenever benchmark files change. Archived
 build scripts record the original workflow; their neutral `workspace/` paths are
 placeholders and require local configuration before reuse.
+
+## Verification without history
+
+The v3 structure/quote validator and mock-result verifier read the exported files.
+The historical trace checker additionally resolves `ref-trace-baseline` through
+Git, so it cannot fully verify a history-free ZIP or a new anonymous repository.
+Do not import the identifiable Git history to work around this limitation. Run
+the trace check in the original full checkout before export and describe that
+verification scope separately. A self-contained anonymous baseline bundle remains
+future work; the ZIP must not be described as reproducing all historical trace checks.
+
+The assistant label-review table under `docs/reviews/` is also evaluator-only.
+It contains no workstation path or curator identity, and is not an extraction input.
