@@ -80,47 +80,74 @@ def pointer_escape(key):
     return str(key).replace('~', '~0').replace('/', '~1')
 
 
-def text_lines(rel, start, end):
+_baseline_files = None
+
+
+def at_baseline(rel):
+    """True if the file exists in the tree of the baseline tag."""
+    global _baseline_files
+    if _baseline_files is None:
+        _baseline_files = set(git('ls-tree', '-r', '--name-only', BASELINE_TAG).decode().split('\n'))
+    return rel in _baseline_files
+
+
+def file_bytes(rel, ref=None):
+    """The file's bytes in the working tree, or at a git tag (never a commit ID) when ref is given."""
+    if ref:
+        return git('show', f'{ref}:{rel}')
+    return (ROOT / rel).read_bytes()
+
+
+def text_lines(rel, start, end, ref=None):
     """Bytes of lines start..end (1-based, inclusive), each with its own line ending."""
-    lines = (ROOT / rel).read_bytes().splitlines(keepends=True)
+    lines = file_bytes(rel, ref).splitlines(keepends=True)
     if not 1 <= start <= end <= len(lines):
         raise ValueError(f'{rel}: lines {start}-{end} out of range (1-{len(lines)})')
     return b''.join(lines[start - 1:end])
 
 
-def csv_row(rel, column, value):
+def csv_row(rel, column, value, ref=None):
     """The single CSV row whose column equals value, as a dict; raises unless exactly one."""
-    rows = [r for r in csv.DictReader(io.StringIO((ROOT / rel).read_text(encoding='utf-8'))) if r.get(column) == value]
+    rows = [r for r in csv.DictReader(io.StringIO(file_bytes(rel, ref).decode('utf-8'))) if r.get(column) == value]
     if len(rows) != 1:
         raise ValueError(f'{rel}: {len(rows)} rows with {column}={value!r}')
     return rows[0]
 
 
-def link(label, kind, rel, **locator):
-    """A link {label, kind, file, file_sha256, locator, target_sha256} resolved against the current tree."""
-    out = {'label': label, 'kind': kind, 'file': rel, 'file_sha256': sha256_file(rel), 'locator': locator}
-    out['target_sha256'] = target_sha256(rel, locator)
+def link(label, kind, rel, ref='auto', **locator):
+    """A link {label, kind, file, git_ref, hash_time, file_sha256, locator, target_sha256}.
+
+    History links resolve at the baseline tag when the file existed there (hash_time "import"), so later
+    steps that change a file do not break them; files created after the baseline resolve in the working
+    tree (hash_time "now")."""
+    if ref == 'auto':
+        ref = BASELINE_TAG if at_baseline(rel) else None
+    out = {'label': label, 'kind': kind, 'file': rel}
+    if ref:
+        out['git_ref'] = ref
+    out.update({'hash_time': 'import' if ref == BASELINE_TAG else 'now', 'file_sha256': sha256_bytes(file_bytes(rel, ref)), 'locator': locator})
+    out['target_sha256'] = target_sha256(rel, locator, ref)
     return out
 
 
-def target_sha256(rel, locator):
+def target_sha256(rel, locator, ref=None):
     if 'json_pointer' in locator:
-        target = json_pointer_get(load_json(rel), locator['json_pointer'])
+        target = json_pointer_get(json.loads(file_bytes(rel, ref)), locator['json_pointer'])
         for k, v in (locator.get('names') or {}).items():
             if not isinstance(target, dict) or target.get(k) != v:
                 raise ValueError(f'{rel}{locator["json_pointer"]}: does not name {k}={v!r}')
         return sha256_json(target)
     if 'lines' in locator:
-        data = text_lines(rel, *locator['lines'])
+        data = text_lines(rel, *locator['lines'], ref=ref)
         for needle in locator.get('names') or []:
             if needle.encode('utf-8') not in data:
                 raise ValueError(f'{rel}:{locator["lines"]}: does not name {needle!r}')
         return sha256_bytes(data)
     if 'csv_key' in locator:
         col, val = locator['csv_key']
-        return sha256_json(csv_row(rel, col, val))
+        return sha256_json(csv_row(rel, col, val, ref))
     if locator.get('whole_file'):
-        return sha256_file(rel)
+        return sha256_bytes(file_bytes(rel, ref))
     raise ValueError(f'unknown locator {locator}')
 
 

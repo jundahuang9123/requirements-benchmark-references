@@ -1,0 +1,117 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "R0",
+ "name": "Repo snapshot",
+ "time_order": "before all other steps in the repository; the sanitising commit is the baseline",
+ "actors": [
+  {
+   "actor": "human:curator",
+   "status": "withheld",
+   "role": "import commit"
+  },
+  {
+   "actor": "script:tools/export_anonymous.py#d37f379807fb462c4edb5140eaf3d3d91adad8a1f626d0affbe53737dec5e223",
+   "role": "sanitised snapshot export (later)"
+  }
+ ],
+ "session": null,
+ "session_note": "historical step: no session record; the backfill session is in written_by",
+ "scripts": [
+  {
+   "path": "tools/export_anonymous.py",
+   "sha256": "d37f379807fb462c4edb5140eaf3d3d91adad8a1f626d0affbe53737dec5e223",
+   "hash_time": "now",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "4076ebc93ee3b50655c94d7373dcf35f8e5f5ec845b289c01e2c042a24d02fbe",
+   "hash_time": "now",
+   "stored": "yes"
+  },
+  {
+   "path": "README.md",
+   "sha256": "09754bf2c227987d7596e3017e8eaa7df958f264eb50bad4d0a2e933f8c41d3d",
+   "hash_time": "now",
+   "stored": "yes"
+  },
+  {
+   "path": "ANONYMIZATION.md",
+   "sha256": "73b5fd640d77164648d8b482b3583623b89668cd26d6c9c3353dbfb31da18344",
+   "hash_time": "now",
+   "stored": "yes"
+  },
+  {
+   "path": "IMPORT-VALIDATION.md",
+   "sha256": "417ed5455cd8de8a33378b3e7d84b2d574c18f59fd4154fe5b2c1d8d9700b66d",
+   "hash_time": "now",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/trace/DECISIONS.json",
+   "sha256": "0b628e3c0d20367767c49985f965999fe76ead4c12cebdaa6f32eea37c2cdaa6",
+   "hash_time": "now",
+   "stored": "yes"
+  }
+ ],
+ "outputs": [],
+ "timing": {
+  "run_started": "2026-10-23T11:58:45Z",
+  "run_ended": "2026-10-23T12:11:19Z",
+  "timing_status": "commit dates of the import and sanitising commits",
+  "run_by": "human:curator"
+ },
+ "seeds": {},
+ "counts": {
+  "entries": 0,
+  "facts": 6
+ },
+ "decision_values": [
+  "snapshot_imported",
+  "sanitised"
+ ],
+ "rationale_location": "backfill/R0.json (facts with reason fields); spec section 2",
+ "evidence": [
+  "ANONYMIZATION.md:11-15",
+  "IMPORT-VALIDATION.md:5-5",
+  "README.md:7-7"
+ ],
+ "facts": [
+  "R0-F01",
+  "R0-F02",
+  "R0-F03",
+  "R0-F04",
+  "R0-F05",
+  "R0-F06"
+ ],
+ "gaps": [
+  "G-001",
+  "G-002",
+  "G-003",
+  "G-065"
+ ],
+ "written_by": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "bb4ae342588d7022ac421a942673cf831387cc496021df140f39e1d447195ac2",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T12:49:27.396Z",
+  "actor": "model:claude/backfill"
+ },
+ "manifest_sha256": "a72b0aa24e488275b024d412af6c572a22b5ee360e19d21792e9ea76f4667120"
+}

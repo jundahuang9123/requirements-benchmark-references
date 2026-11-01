@@ -1,0 +1,328 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R11d",
+ "name": "Non-blind relabel",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R11d-F01",
+   "step": "R11d",
+   "field": "actor",
+   "value": "Claude, not blind to the reference",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "atom",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+     "locator": {
+      "json_pointer": "/atoms/86",
+      "names": {
+       "id": "H-46.1"
+      }
+     },
+     "target_sha256": "55538aef66342c738435903cde2984494e592fdb0c18e231466a397dc369b533"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R11d-F02",
+   "step": "R11d",
+   "field": "model ID and prompt",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+    "outside: no main-session log of 23 Oct"
+   ]
+  },
+  {
+   "fact_id": "R11d-F03",
+   "step": "R11d",
+   "field": "labels written by the adjudication script",
+   "value": "5 atoms",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "H-46",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "509d366eff7c15872b4802727ccfe1a1f8b2754898e7d80cbc0e03922f097ea8",
+     "locator": {
+      "lines": [
+       217,
+       217
+      ]
+     },
+     "target_sha256": "8a38e4b780467a5c7daa4ae299f3f6885620cee0d32781f823ecfcb90b396f6a"
+    },
+    {
+     "label": "JRC-10.3",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "509d366eff7c15872b4802727ccfe1a1f8b2754898e7d80cbc0e03922f097ea8",
+     "locator": {
+      "lines": [
+       252,
+       254
+      ]
+     },
+     "target_sha256": "8c7ace29c962d431a2775de598890e4accfee5d069a11e5a267e4907cd9292ce"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R11d-E",
+   "step": "R11d",
+   "field": "entries",
+   "rule": "One entry per atom labelled by the follow-up: 2 relabelled packet atoms and 3 new atoms.",
+   "status": "reconstructed",
+   "count": 5,
+   "entries": [
+    {
+     "entry_id": "R11d:healthdcat:H-46.1",
+     "step": "R11d",
+     "decision": "relabelled",
+     "value": {
+      "blind": false
+     },
+     "reason": "adjudication follow-up",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/relabel",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-23",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/86",
+        "names": {
+         "id": "H-46.1"
+        }
+       },
+       "target_sha256": "55538aef66342c738435903cde2984494e592fdb0c18e231466a397dc369b533"
+      }
+     ]
+    },
+    {
+     "entry_id": "R11d:healthdcat:H-46.5",
+     "step": "R11d",
+     "decision": "labelled_new_atom",
+     "value": {
+      "blind": false
+     },
+     "reason": "adjudication follow-up",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/relabel",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-23",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/87",
+        "names": {
+         "id": "H-46.5"
+        }
+       },
+       "target_sha256": "bf011a72a9710f696a3e052e5a28c81b17faa6f820d66c9714332acf060103ac"
+      }
+     ]
+    },
+    {
+     "entry_id": "R11d:healthdcat:H-46.3",
+     "step": "R11d",
+     "decision": "relabelled",
+     "value": {
+      "blind": false
+     },
+     "reason": "adjudication follow-up",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/relabel",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-23",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/89",
+        "names": {
+         "id": "H-46.3"
+        }
+       },
+       "target_sha256": "fa817c9559feafcd2d4a5f5f65a9b6bdbeea70054e323f8e1ec9f68b22992fc3"
+      }
+     ]
+    },
+    {
+     "entry_id": "R11d:healthdcat:H-46.6",
+     "step": "R11d",
+     "decision": "labelled_new_atom",
+     "value": {
+      "blind": false
+     },
+     "reason": "adjudication follow-up",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/relabel",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-23",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/90",
+        "names": {
+         "id": "H-46.6"
+        }
+       },
+       "target_sha256": "a38e15f798432fd36139ede66951ead745ef21652d216ffe279cc51856280d3b"
+      }
+     ]
+    },
+    {
+     "entry_id": "R11d:jrc-research:JRC-10.3",
+     "step": "R11d",
+     "decision": "labelled_new_atom",
+     "value": {
+      "blind": false
+     },
+     "reason": "adjudication follow-up",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/relabel",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-23",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/atoms/16",
+        "names": {
+         "id": "JRC-10.3"
+        }
+       },
+       "target_sha256": "9fe54102da12cf242c9ae7e3c03a2a13fe9a2039e20c44806a737c8745fe922b"
+      }
+     ]
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  }
+ ]
+}

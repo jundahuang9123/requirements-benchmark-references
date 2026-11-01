@@ -1,0 +1,210 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R2",
+ "name": "Filing by role, allowlist",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R2-F01",
+   "step": "R2",
+   "field": "roles and allowlists",
+   "value": {
+    "healthdcat": {
+     "raw": 5,
+     "consolidation": 1
+    },
+    "geodcat": {
+     "raw": 5,
+     "consolidation": 0
+    },
+    "epos": {
+     "raw": 0,
+     "consolidation": 0
+    },
+    "statdcat": {
+     "raw": 2,
+     "consolidation": 0
+    },
+    "mobilitydcat": {
+     "background": 3,
+     "raw": 16,
+     "consolidation": 3
+    },
+    "jrc-research": {
+     "raw": 3,
+     "consolidation": 0
+    }
+   },
+   "status": "reconstructed",
+   "links": [
+    {
+     "label": "runtime-inputs.json",
+     "kind": "row",
+     "file": "benchmark-data/runtime-inputs.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "a719e64c2d1d906e0081cfc61ef9d29e220ea4c75ec1a80b83e750b812184761",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "a719e64c2d1d906e0081cfc61ef9d29e220ea4c75ec1a80b83e750b812184761"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R2-F02",
+   "step": "R2",
+   "field": "dated decision: development split",
+   "value": "JRC and all of Stat for development (16 Oct 2026)",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "methodology",
+     "kind": "row",
+     "file": "benchmark-data/BENCHMARK-METHODOLOGY.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "17cd703f9876c3b6c76fd79936b22a6263f4b0484afe3750719c593da8bacf94",
+     "locator": {
+      "lines": [
+       175,
+       176
+      ]
+     },
+     "target_sha256": "36b5994e481dc1fffcb593743765b8677d0b5011de5daf6d7691ce0eed30b9d0"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "The sanitised text says \"Curator\"; the first commit shows it replaced the owner's name, so the actor is the human curator.",
+   "actor_of_decision": {
+    "actor": "human:curator",
+    "status": "attested_log",
+    "evidence": {
+     "label": "The repository's first commit (the import, before sanitising), parent of the baseline tag",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-25",
+     "sha256": null,
+     "reference": "git: parent of tag ref-trace-baseline",
+     "locator": {
+      "file": "benchmark-data/BENCHMARK-METHODOLOGY.md",
+      "line": 175
+     }
+    }
+   }
+  },
+  {
+   "fact_id": "R2-F03",
+   "step": "R2",
+   "field": "who assigned each role, and when",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/runtime-inputs.json",
+    "benchmark-data/*/provenance/manifest.json",
+    "benchmark-data/BENCHMARK-METHODOLOGY.md",
+    "benchmark-data/README.md"
+   ]
+  },
+  {
+   "fact_id": "R2-F04",
+   "step": "R2",
+   "field": "corpus validator: 0 errors at acquisition, 30 at import",
+   "value": "never reconciled",
+   "status": "not_recorded",
+   "links": [
+    {
+     "label": "errors at import",
+     "kind": "row",
+     "file": "IMPORT-CORPUS-VALIDATION.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "fcef695c7090292b67503506548a3b49e51187b215ac03e7f7d6db02e825c00c",
+     "locator": {
+      "json_pointer": "/errors"
+     },
+     "target_sha256": "816f12e85226c04e818d72d827cead9ed0ec04334df7af66d6c41e589608af1e"
+    },
+    {
+     "label": "errors at acquisition",
+     "kind": "row",
+     "file": "benchmark-data/VALIDATION-REPORT.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "f3b51d78f2d000e48a94680f8245297a1b3d242334f8ed90986f7c3d0af2fe8b",
+     "locator": {
+      "json_pointer": "/errors"
+     },
+     "target_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "IMPORT-VALIDATION.md:8",
+    "IMPORT-CORPUS-VALIDATION.json",
+    "benchmark-data/VALIDATION-REPORT.json"
+   ],
+   "note": "30 errors: 26 duplicate-path artefacts, 3 Mobility leakage flags, 1 unregistered use-cases.json. A re-run gives the same 30."
+  },
+  {
+   "fact_id": "R2-F05",
+   "step": "R2",
+   "field": "when the allowlist check was added to validate_v3.py",
+   "value": null,
+   "status": "not_recorded",
+   "links": [
+    {
+     "label": "absent at the Codex review",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "526a342b2820035058f78c06fd16953583e1d2ca4334dc16300d893ca7808641",
+     "locator": {
+      "lines": [
+       79,
+       79
+      ]
+     },
+     "target_sha256": "26aeb4a6a7ff5fd9a163ce9b2f91019dbcd91a5a84f9315d770f91b765a2b9c5"
+    },
+    {
+     "label": "present at import",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/validate_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "ddd67f5fb062aa921965c3f4018d11f11bb470171fee25638bb5d948a9d4a734",
+     "locator": {
+      "lines": [
+       182,
+       183
+      ]
+     },
+     "target_sha256": "95bf66d2be019c633ab297b0e21b014447add67f3a20062e743a2ce62e088d3c"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+    "benchmark-data/reference-sets-v3/validate_v3.py",
+    "benchmark-data/reference-sets-v3/history/"
+   ],
+   "note": "Bounded: absent in the reviewed version (CODEX:79), present at import."
+  }
+ ]
+}

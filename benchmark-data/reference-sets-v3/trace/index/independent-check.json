@@ -1,0 +1,873 @@
+{
+ "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+ "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+ "table_lines": [
+  24,
+  68
+ ],
+ "rows": 45,
+ "findings_numbered": "1-47 (rows 21-22 and 34-35 are combined)",
+ "severity_totals_line": 18,
+ "scope_lines": [
+  3,
+  11
+ ],
+ "items": [
+  {
+   "index_id": "IC-01",
+   "finding_numbers": "1",
+   "lines": [
+    24,
+    24
+   ],
+   "lines_sha256": "e467809eedb6158ff642aee3299ec01ae740f818a9d60f8e989a4d05b3a419ce",
+   "names": [
+    "G-31.1"
+   ],
+   "atoms": [
+    "G-31.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-02",
+   "finding_numbers": "2",
+   "lines": [
+    25,
+    25
+   ],
+   "lines_sha256": "a8b973ad5cfe13262dcd0fa701f4501ba88e138b2671119abb5dfabe092ac129",
+   "names": [
+    "H-17.1"
+   ],
+   "atoms": [
+    "H-17.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-03",
+   "finding_numbers": "3",
+   "lines": [
+    26,
+    26
+   ],
+   "lines_sha256": "41d42d6e6233c6bfe2d102556aecab364a55eae37cabf8b0e3a29a83085fa58c",
+   "names": [
+    "G-13.1"
+   ],
+   "atoms": [
+    "G-13.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-04",
+   "finding_numbers": "4",
+   "lines": [
+    27,
+    27
+   ],
+   "lines_sha256": "0199bec941abd785e95efd435add855ca51f3c3bb886faf04280e86c6daa3883",
+   "names": [
+    "G-14.1"
+   ],
+   "atoms": [
+    "G-14.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-05",
+   "finding_numbers": "5",
+   "lines": [
+    28,
+    28
+   ],
+   "lines_sha256": "3e63b04b8fe6f36bd9f83ade28fdcd866da8c32d5d099dc83f82d18b30750e94",
+   "names": [
+    "S-16.1"
+   ],
+   "atoms": [
+    "S-16.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-06",
+   "finding_numbers": "6",
+   "lines": [
+    29,
+    29
+   ],
+   "lines_sha256": "8412b67e010472a638e8e8d0d19ff4980c5831d3205e745d9462678714b312d5",
+   "names": [
+    "JRC-6.3"
+   ],
+   "atoms": [
+    "JRC-6.3"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-07",
+   "finding_numbers": "7",
+   "lines": [
+    30,
+    30
+   ],
+   "lines_sha256": "940b61d9e838ae9cad55524ca9b8cbee1fa99af47a29ca5b2172dbfd996b54ed",
+   "names": [
+    "H-17.2"
+   ],
+   "atoms": [
+    "H-17.2"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-08",
+   "finding_numbers": "8",
+   "lines": [
+    31,
+    31
+   ],
+   "lines_sha256": "9421964ce4c10470d471e73dd8ab66deeab1e036cace63a695c28738ea34b2d9",
+   "names": [
+    "G-22.1"
+   ],
+   "atoms": [
+    "G-22.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-09",
+   "finding_numbers": "9",
+   "lines": [
+    32,
+    32
+   ],
+   "lines_sha256": "ce4f133743187733cd76c61f2a312679d5edebef8421f7248c8dee6a6048d42f",
+   "names": [
+    "G-8.1",
+    "G-12.1"
+   ],
+   "atoms": [
+    "G-8.1",
+    "G-12.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-10",
+   "finding_numbers": "10",
+   "lines": [
+    33,
+    33
+   ],
+   "lines_sha256": "6ca2613dd517022f77ca7e4f88177c7c958b7bcfb996804dcdb515f5ae8aa66f",
+   "names": [
+    "G-29.1",
+    "G-30.1",
+    "G-30"
+   ],
+   "atoms": [
+    "G-29.1",
+    "G-30.1"
+   ],
+   "rows": [
+    "G-30"
+   ],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-11",
+   "finding_numbers": "11",
+   "lines": [
+    34,
+    34
+   ],
+   "lines_sha256": "e0254007b988a50de56cb2c46ed12d795000934d9c307ff0109c4e5216a7c291",
+   "names": [
+    "JRC-8.1"
+   ],
+   "atoms": [
+    "JRC-8.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-12",
+   "finding_numbers": "12",
+   "lines": [
+    35,
+    35
+   ],
+   "lines_sha256": "b140870c6917762eb111e7f9bd97a2ff47e9872493ea6de91d1341ba7a60bf4f",
+   "names": [
+    "JRC-6.1"
+   ],
+   "atoms": [
+    "JRC-6.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-13",
+   "finding_numbers": "13",
+   "lines": [
+    36,
+    36
+   ],
+   "lines_sha256": "95bfbbf5caabc78485d359e0234a788e105039ac287cca8f4a8551c51de81657",
+   "names": [
+    "JRC-6.5"
+   ],
+   "atoms": [
+    "JRC-6.5"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-14",
+   "finding_numbers": "14",
+   "lines": [
+    37,
+    37
+   ],
+   "lines_sha256": "224fb9c6283177296131ad8219d283f1106df69585d9b848c4ab3b1f2e2eb6b7",
+   "names": [
+    "H-12.2"
+   ],
+   "atoms": [
+    "H-12.2"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-15",
+   "finding_numbers": "15",
+   "lines": [
+    38,
+    38
+   ],
+   "lines_sha256": "bc92e34b9961a3f392e028d1e93d9f2d10450c123e9068dc2029fc155088d02e",
+   "names": [
+    "H-12.1"
+   ],
+   "atoms": [
+    "H-12.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-16",
+   "finding_numbers": "16",
+   "lines": [
+    39,
+    39
+   ],
+   "lines_sha256": "d53028a4e4caeee371ad64c81f86137790d0798b69dc764b167396cf230e9ee1",
+   "names": [
+    "S-17.1"
+   ],
+   "atoms": [
+    "S-17.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-17",
+   "finding_numbers": "17",
+   "lines": [
+    40,
+    40
+   ],
+   "lines_sha256": "811d8ca5d531d30e20f6d65de49a5d0d4ddc315b22c862e223bc3133331f60bf",
+   "names": [
+    "H-56.3"
+   ],
+   "atoms": [
+    "H-56.3"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-18",
+   "finding_numbers": "18",
+   "lines": [
+    41,
+    41
+   ],
+   "lines_sha256": "c7db6cc11f3c8e10a53319849fb667d5552ba39f336249226d46c6b00e25ffe1",
+   "names": [
+    "H-18.1"
+   ],
+   "atoms": [
+    "H-18.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-19",
+   "finding_numbers": "19",
+   "lines": [
+    42,
+    42
+   ],
+   "lines_sha256": "6232238745a5f03603b3a058372b37150fd2351c02a9f6f78ce953ba483d51d7",
+   "names": [
+    "H-33.1",
+    "H-33.2"
+   ],
+   "atoms": [
+    "H-33.1"
+   ],
+   "rows": [],
+   "unresolved": [
+    "H-33.2"
+   ]
+  },
+  {
+   "index_id": "IC-20",
+   "finding_numbers": "20",
+   "lines": [
+    43,
+    43
+   ],
+   "lines_sha256": "69101837ff83ee0f1f1aeade5de1e3cd75f567e91bdd726d09cc1f1e550532c5",
+   "names": [
+    "H-4.1"
+   ],
+   "atoms": [
+    "H-4.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-21",
+   "finding_numbers": "21–22",
+   "lines": [
+    44,
+    44
+   ],
+   "lines_sha256": "ecb81639ee9b9ffe04ae3e2e051ca690a8d199cf62b9717924cf9243c476b390",
+   "names": [
+    "Req-19.7",
+    "Req-24.1",
+    "Req-17.2",
+    "Req-35.1"
+   ],
+   "atoms": [
+    "Req-19.7",
+    "Req-24.1",
+    "Req-17.2",
+    "Req-35.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-22",
+   "finding_numbers": "23",
+   "lines": [
+    45,
+    45
+   ],
+   "lines_sha256": "53dcc472adcc276f3deeb42bf5777c31e33d3405c02b84e8fffd80bf8b07b84f",
+   "names": [
+    "Req-14.1"
+   ],
+   "atoms": [
+    "Req-14.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-23",
+   "finding_numbers": "24",
+   "lines": [
+    46,
+    46
+   ],
+   "lines_sha256": "39fc4a9cfc4d806b9498f929d53f2b1fa4cf229721f923f2248087e03320b638",
+   "names": [
+    "G-38.1",
+    "G-38"
+   ],
+   "atoms": [
+    "G-38.1"
+   ],
+   "rows": [
+    "G-38"
+   ],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-24",
+   "finding_numbers": "25",
+   "lines": [
+    47,
+    47
+   ],
+   "lines_sha256": "748692eb378eff5820712de0c1538ec400faddbb7f8dba3fd1d164151bc09005",
+   "names": [
+    "G-9.1",
+    "G-27.1",
+    "G-39.1",
+    "G-41.1",
+    "G-41.2"
+   ],
+   "atoms": [
+    "G-9.1",
+    "G-27.1",
+    "G-39.1",
+    "G-41.1",
+    "G-41.2"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-25",
+   "finding_numbers": "26",
+   "lines": [
+    48,
+    48
+   ],
+   "lines_sha256": "dbb25831040576fe3e9325f966c8cc788c1c20211b6e96b6ec5cf1f51f382311",
+   "names": [
+    "G-20.1"
+   ],
+   "atoms": [
+    "G-20.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-26",
+   "finding_numbers": "27",
+   "lines": [
+    49,
+    49
+   ],
+   "lines_sha256": "ecac823fd2a7ac58e65d7346975b41dc0079ce72c2a78850a51f6960b4da847a",
+   "names": [
+    "G-16.x"
+   ],
+   "atoms": [],
+   "rows": [
+    "G-16"
+   ],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-27",
+   "finding_numbers": "28",
+   "lines": [
+    50,
+    50
+   ],
+   "lines_sha256": "6c72f98352b10400997881c117cf48dd4712d74dd9e1e600cb4e732d40a9a8a7",
+   "names": [
+    "G-11.1",
+    "G-12.1"
+   ],
+   "atoms": [
+    "G-11.1",
+    "G-12.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-28",
+   "finding_numbers": "29",
+   "lines": [
+    51,
+    51
+   ],
+   "lines_sha256": "5e5b2fe3ee24fa058090e2a01182824aee90263ecb19b741da8eb1cc42286672",
+   "names": [
+    "H-22.1",
+    "H-27.1"
+   ],
+   "atoms": [
+    "H-22.1",
+    "H-27.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-29",
+   "finding_numbers": "30",
+   "lines": [
+    52,
+    52
+   ],
+   "lines_sha256": "a5e8ef752342bbfe90089eceac1c9a667fd865f64842af6b9be379406918dd44",
+   "names": [
+    "H-29.1"
+   ],
+   "atoms": [
+    "H-29.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-30",
+   "finding_numbers": "31",
+   "lines": [
+    53,
+    53
+   ],
+   "lines_sha256": "9be9bfba434f18670d74f2d221c38c038f9c97e76ead1637b22b87ac4686457e",
+   "names": [
+    "H-37.1"
+   ],
+   "atoms": [
+    "H-37.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-31",
+   "finding_numbers": "32",
+   "lines": [
+    54,
+    54
+   ],
+   "lines_sha256": "0a0167a1435e8c26ddc7e417e5b2a8b61028cd0a0dd87e708b50b6dc2425c521",
+   "names": [
+    "H-68.1"
+   ],
+   "atoms": [
+    "H-68.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-32",
+   "finding_numbers": "33",
+   "lines": [
+    55,
+    55
+   ],
+   "lines_sha256": "109cc01ea736a46ea5c8a63e11daf5c3cbd60b316ac830d07a4242cf914c5b41",
+   "names": [
+    "H-23.1",
+    "H-13.4"
+   ],
+   "atoms": [
+    "H-23.1",
+    "H-13.4"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-33",
+   "finding_numbers": "34–35",
+   "lines": [
+    56,
+    56
+   ],
+   "lines_sha256": "a97be7ab7c84977cca628672c6b4229a546846d0fc479151f41837b9c12e4f2b",
+   "names": [
+    "H-11.x",
+    "S-2.1",
+    "H-46.4"
+   ],
+   "atoms": [
+    "S-2.1",
+    "H-46.4"
+   ],
+   "rows": [
+    "H-11"
+   ],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-34",
+   "finding_numbers": "36",
+   "lines": [
+    57,
+    57
+   ],
+   "lines_sha256": "3485dec179b1da46b66eba2baa52644c756bacbeec59425e21895b84cc761d4e",
+   "names": [
+    "H-5.3",
+    "H-28.2"
+   ],
+   "atoms": [
+    "H-5.3",
+    "H-28.2"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-35",
+   "finding_numbers": "37",
+   "lines": [
+    58,
+    58
+   ],
+   "lines_sha256": "48c01c032be951b31fac14feae6c3690c3c444ecbc07b9f568929a558aabf2c4",
+   "names": [
+    "JRC-6.4"
+   ],
+   "atoms": [
+    "JRC-6.4"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-36",
+   "finding_numbers": "38",
+   "lines": [
+    59,
+    59
+   ],
+   "lines_sha256": "0ed7ae86c8020d3b5955f9f58848bf06436b492710b46b446f4c73bbade14edb",
+   "names": [
+    "JRC-1.1",
+    "JRC-5.1"
+   ],
+   "atoms": [
+    "JRC-1.1",
+    "JRC-5.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-37",
+   "finding_numbers": "39",
+   "lines": [
+    60,
+    60
+   ],
+   "lines_sha256": "3325f288f2a3b6bfd620605c30a379d9df12d11f7e57e5e1c5a0fbf11cf8a8a8",
+   "names": [
+    "H-49.1",
+    "H-15.4",
+    "H-54.2",
+    "H-65.1",
+    "H-2.1"
+   ],
+   "atoms": [
+    "H-49.1",
+    "H-15.4",
+    "H-54.2",
+    "H-65.1",
+    "H-2.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-38",
+   "finding_numbers": "40",
+   "lines": [
+    61,
+    61
+   ],
+   "lines_sha256": "a009666e6fdf5cd355dd843f4f7896a00b452c82cd7b3e416f2db14b8aab5ffb",
+   "names": [
+    "H-1.1",
+    "H-30.2",
+    "H-38.1"
+   ],
+   "atoms": [
+    "H-1.1",
+    "H-30.2",
+    "H-38.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-39",
+   "finding_numbers": "41",
+   "lines": [
+    62,
+    62
+   ],
+   "lines_sha256": "9c31400c3f428b59b5e60b1e778abbc96935e6f6ec3e59f4191eba6acd877a9c",
+   "names": [
+    "H-30.3"
+   ],
+   "atoms": [],
+   "rows": [],
+   "unresolved": [
+    "H-30.3"
+   ]
+  },
+  {
+   "index_id": "IC-40",
+   "finding_numbers": "42",
+   "lines": [
+    63,
+    63
+   ],
+   "lines_sha256": "673d2ae9d6fd45b6023c7fd385a8152436a8259e8e4a96594cd042938415029a",
+   "names": [],
+   "atoms": [],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-41",
+   "finding_numbers": "43",
+   "lines": [
+    64,
+    64
+   ],
+   "lines_sha256": "a5d3f472ba48365b207a19be819f44801e24effdf4b75bfc81c3a34f884f2d5e",
+   "names": [],
+   "atoms": [],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-42",
+   "finding_numbers": "44",
+   "lines": [
+    65,
+    65
+   ],
+   "lines_sha256": "5d1c03ba0a4f8f336ac9918843c759b35a2748e384b62cd4b813cfd0551677a8",
+   "names": [
+    "H-3",
+    "H-6"
+   ],
+   "atoms": [],
+   "rows": [
+    "H-3",
+    "H-6"
+   ],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-43",
+   "finding_numbers": "45",
+   "lines": [
+    66,
+    66
+   ],
+   "lines_sha256": "2c5050a45add03621d656b834ed3f44ab7ef10d7477f2cb302291cb9e871a52a",
+   "names": [
+    "Req-1",
+    "Req-11",
+    "Req-21",
+    "Req-23",
+    "Req-30",
+    "Req-31"
+   ],
+   "atoms": [],
+   "rows": [
+    "Req-1",
+    "Req-11",
+    "Req-21",
+    "Req-23",
+    "Req-30",
+    "Req-31"
+   ],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-44",
+   "finding_numbers": "46",
+   "lines": [
+    67,
+    67
+   ],
+   "lines_sha256": "df6a56abf6c84fabfb6efd9fb4e35abe6047be6f29e95a466bb4bb7c67956fbd",
+   "names": [
+    "Req-35.2"
+   ],
+   "atoms": [
+    "Req-35.2"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "IC-45",
+   "finding_numbers": "47",
+   "lines": [
+    68,
+    68
+   ],
+   "lines_sha256": "09837da7a69f3df386c284a47ac9da2e449aa41e5f80f54b0445439df1dc4cb1",
+   "names": [
+    "Req-23.1",
+    "Req-23.2",
+    "Req-28.4",
+    "Req-30.1",
+    "Req-27.2",
+    "Req-27.3"
+   ],
+   "atoms": [
+    "Req-23.1",
+    "Req-23.2",
+    "Req-28.4",
+    "Req-30.1",
+    "Req-27.2",
+    "Req-27.3"
+   ],
+   "rows": [],
+   "unresolved": []
+  }
+ ],
+ "decisions": [
+  {
+   "index_id": "IC-D1",
+   "kind": "framing decision",
+   "lines": [
+    70,
+    74
+   ],
+   "lines_sha256": "00872f6fe81243ba94a3e8f552432a393017117dd3fc4ff14358e9a8fdaf8a1f",
+   "names": [
+    "G-10.1",
+    "G-23.1",
+    "G-36.1"
+   ],
+   "atoms": [
+    "G-10.1",
+    "G-23.1",
+    "G-36.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  }
+ ]
+}

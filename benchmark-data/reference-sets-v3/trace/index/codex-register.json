@@ -1,0 +1,404 @@
+{
+ "file": "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+ "file_sha256": "526a342b2820035058f78c06fd16953583e1d2ca4334dc16300d893ca7808641",
+ "reviewed_head_line": 3,
+ "register_lines": [
+  51,
+  71
+ ],
+ "findings_sections": [
+  {
+   "index_id": "CX-1",
+   "priority": "P1",
+   "lines": [
+    19,
+    25
+   ],
+   "lines_sha256": "02919d20a282fb7403e93543fea5a41f51267c699af4a26887de594ef415fab7",
+   "names": [
+    "Req-19.7",
+    "Req-24.1"
+   ],
+   "atoms": [
+    "Req-19.7",
+    "Req-24.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CX-2",
+   "priority": "P1",
+   "lines": [
+    27,
+    35
+   ],
+   "lines_sha256": "c5dad7df8deb5338806f5c290f4d643f00075065b111e0c18926cf1b171c6605",
+   "names": [
+    "H-1.1",
+    "H-29.1",
+    "H-22.1"
+   ],
+   "atoms": [
+    "H-1.1",
+    "H-29.1",
+    "H-22.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CX-3",
+   "priority": "P2",
+   "lines": [
+    37,
+    43
+   ],
+   "lines_sha256": "5feada360f5af5fc2527b23a716f207c01ab4eeb4609ee9b7ea5a0c85debdea4",
+   "names": [
+    "H-46.1",
+    "H-46.3",
+    "H-46"
+   ],
+   "atoms": [
+    "H-46.1",
+    "H-46.3"
+   ],
+   "rows": [
+    "H-46"
+   ],
+   "unresolved": []
+  },
+  {
+   "index_id": "CX-4",
+   "priority": "P2",
+   "lines": [
+    45,
+    49
+   ],
+   "lines_sha256": "76aeb215f5415b5cbaca523ca074afeff69aeb965bf53eac4c96760904c07cd6",
+   "names": [
+    "JRC-10.1",
+    "JRC-10.2"
+   ],
+   "atoms": [
+    "JRC-10.1",
+    "JRC-10.2"
+   ],
+   "rows": [],
+   "unresolved": []
+  }
+ ],
+ "register": [
+  {
+   "index_id": "CR-01",
+   "item": "H-3.1",
+   "decision": "Accept source correction",
+   "lines": [
+    55,
+    55
+   ],
+   "lines_sha256": "65f78b4bae03e76fe01f603fe62c5bbe87da934548818ec2e414ab04022b39b1",
+   "names": [
+    "H-3.1"
+   ],
+   "atoms": [
+    "H-3.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-02",
+   "item": "H-3.2",
+   "decision": "Retain as proposed/conditional",
+   "lines": [
+    56,
+    56
+   ],
+   "lines_sha256": "28a93a586c88d4f91c5640b9b023cb586df45a3ef8ba8903c1184ffed5a7498d",
+   "names": [
+    "H-3.2"
+   ],
+   "atoms": [
+    "H-3.2"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-03",
+   "item": "H-10.1",
+   "decision": "Accept locator correction",
+   "lines": [
+    57,
+    57
+   ],
+   "lines_sha256": "c6554fa457ab75168504084b1285dbe0ee57372c3514bdd4e36baa9d6b7dbc35",
+   "names": [
+    "H-10.1"
+   ],
+   "atoms": [
+    "H-10.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-04",
+   "item": "H-37.2",
+   "decision": "Accept recovered content",
+   "lines": [
+    58,
+    58
+   ],
+   "lines_sha256": "f466dc0d227299a734eb1a47b2d9aa870bf19d7b5adeaf5ab048b5bc18d2933f",
+   "names": [
+    "H-37.2"
+   ],
+   "atoms": [
+    "H-37.2"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-05",
+   "item": "H-40.1",
+   "decision": "Accept conditional form",
+   "lines": [
+    59,
+    59
+   ],
+   "lines_sha256": "e9f6b1b76f12a57709249f0e3c909222f49eab93071b4a1165e1806f2372ea5a",
+   "names": [
+    "H-40.1"
+   ],
+   "atoms": [
+    "H-40.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-06",
+   "item": "H-1.1, H-29.1",
+   "decision": "Revise evidence labels",
+   "lines": [
+    60,
+    60
+   ],
+   "lines_sha256": "7f852d18fbee0dd3fb917bfc846377f0969ccf065c02722ccdf04edadb2b5844",
+   "names": [
+    "H-1.1",
+    "H-29.1"
+   ],
+   "atoms": [
+    "H-1.1",
+    "H-29.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-07",
+   "item": "H-22.1",
+   "decision": "Revise/recheck evidence label",
+   "lines": [
+    61,
+    61
+   ],
+   "lines_sha256": "87295283897cb471e47d92f70aebb1f34962eaa5363b6fc826a1d29b91f2d6ab",
+   "names": [
+    "H-22.1"
+   ],
+   "atoms": [
+    "H-22.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-08",
+   "item": "H-46.1, H-46.3",
+   "decision": "Split and qualify",
+   "lines": [
+    62,
+    62
+   ],
+   "lines_sha256": "0c6f0527cd8d9a3cdeb0d62c29c7f7a6bcbc8d735825b4c0a22738fc615e2e5a",
+   "names": [
+    "H-46.1",
+    "H-46.3"
+   ],
+   "atoms": [
+    "H-46.1",
+    "H-46.3"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-09",
+   "item": "Req-19.7 / Req-24.1",
+   "decision": "Merge shared need for scoring",
+   "lines": [
+    63,
+    63
+   ],
+   "lines_sha256": "5ce155cef3e0f0976db657ceccc11fc51b35e76f28b8c0562450052f8dbfa35e",
+   "names": [
+    "Req-19.7",
+    "Req-24.1"
+   ],
+   "atoms": [
+    "Req-19.7",
+    "Req-24.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-10",
+   "item": "Req-28.4 / Req-30.1",
+   "decision": "Retain distinction provisionally",
+   "lines": [
+    64,
+    64
+   ],
+   "lines_sha256": "1b354445eb7625fe0dde76f296599a0fe9b88ceb29cf1b2eb0dd297c47ed41e0",
+   "names": [
+    "Req-28.4",
+    "Req-30.1"
+   ],
+   "atoms": [
+    "Req-28.4",
+    "Req-30.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-11",
+   "item": "JRC-8.2",
+   "decision": "Accept restored capability",
+   "lines": [
+    65,
+    65
+   ],
+   "lines_sha256": "795c57349d13ee3b946eb26e7c79cd8c2822fd8f40f0e6828e3aea9329704461",
+   "names": [
+    "JRC-8.2"
+   ],
+   "atoms": [
+    "JRC-8.2"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-12",
+   "item": "JRC-6.4",
+   "decision": "Revise status to conditional requirement",
+   "lines": [
+    66,
+    66
+   ],
+   "lines_sha256": "7771ee5550524d05971de0cfabfc794439dd6943f8e830dfdc62995fce412504",
+   "names": [
+    "JRC-6.4"
+   ],
+   "atoms": [
+    "JRC-6.4"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-13",
+   "item": "JRC-10.1 / JC-006",
+   "decision": "Restore omitted scope",
+   "lines": [
+    67,
+    67
+   ],
+   "lines_sha256": "835ac63d695aa490d7078aed5a9d4b20b5cebbcf50fcec619a12dd487ea0237a",
+   "names": [
+    "JRC-10.1"
+   ],
+   "atoms": [
+    "JRC-10.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-14",
+   "item": "Geo M/C/O scoring choice",
+   "decision": "Leave unresolved as a declared scope choice",
+   "lines": [
+    68,
+    68
+   ],
+   "lines_sha256": "94625372b3057edc29a9c0a6a333965d1a3ea506dccedd7162060bbd05c115c3",
+   "names": [],
+   "atoms": [],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-15",
+   "item": "H-9.1 / H-13.4",
+   "decision": "Unresolved source tension",
+   "lines": [
+    69,
+    69
+   ],
+   "lines_sha256": "8d03623e67c2b45b834e19aa86a22ade6192ca969657e6829b8d4b2ce142d885",
+   "names": [
+    "H-9.1",
+    "H-13.4"
+   ],
+   "atoms": [
+    "H-9.1",
+    "H-13.4"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-16",
+   "item": "Deferred Stat S-19.1–S-21.1",
+   "decision": "Accept exclusion from default scoring",
+   "lines": [
+    70,
+    70
+   ],
+   "lines_sha256": "2466ac77c4e188cd34ca929a16ff56492c44fe6a4ec235c2e6dc0f9c1dceddc7",
+   "names": [
+    "S-19.1",
+    "S-21.1"
+   ],
+   "atoms": [
+    "S-19.1",
+    "S-21.1"
+   ],
+   "rows": [],
+   "unresolved": []
+  },
+  {
+   "index_id": "CR-17",
+   "item": "EPOS",
+   "decision": "Keep excluded",
+   "lines": [
+    71,
+    71
+   ],
+   "lines_sha256": "11a3b3ce354293bae5c5fe7d6e70245b038082c643c09c0e8df4dffd5ea7d2a3",
+   "names": [],
+   "atoms": [],
+   "rows": [],
+   "unresolved": []
+  }
+ ]
+}

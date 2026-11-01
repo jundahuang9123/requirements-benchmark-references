@@ -1,0 +1,130 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "R9",
+ "name": "Independent check",
+ "time_order": "22 Oct 18:57:25Z, before R10",
+ "actors": [
+  {
+   "actor": "model:claude/checker",
+   "model_id": "claude-opus-5-5",
+   "model_id_status": "attested_log"
+  },
+  {
+   "actor": null,
+   "status": "not_recorded",
+   "role": "verified the high-severity claims and applied the resolutions"
+  }
+ ],
+ "session": null,
+ "session_note": "historical step: no session record; the backfill session is in written_by",
+ "scripts": [],
+ "prompts": [
+  "P-R9"
+ ],
+ "inputs": [
+  {
+   "path": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+   "sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/trace/index/prompts.json",
+   "sha256": "3f1ed2ff4f28c6b5e6e4e0f6759cc9655222fc4d0454dc3b28929cd5fc053eee",
+   "hash_time": "now",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/independent-check/independent-check-prompt.md",
+   "sha256": "95d0bfc30c920367aed849e8632e2565819fc37ca260b3b340c3642c48a45d79",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/README.md",
+   "sha256": "db7f8aae0fe4dfb0b35b4f67a2842703710b1e20bcde05cafcc3a58ae92f4cf3",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_health.py",
+   "sha256": "264099369ddbf0f01d06e448d40315fb3d65df0ff25e00e190252a4b16796a6c",
+   "hash_time": "import",
+   "stored": "yes"
+  }
+ ],
+ "outputs": [],
+ "timing": {
+  "run_started": "2026-10-22T18:57:25.027Z",
+  "run_ended": "2026-10-22T19:25:55.167Z",
+  "timing_status": "start recorded; end from the checker log (attested_log)",
+  "run_by": "model:claude/checker"
+ },
+ "seeds": {
+  "sample": 20261022
+ },
+ "counts": {
+  "entries": 47,
+  "facts": 12
+ },
+ "decision_values": [
+  "finding_resolved",
+  "row_changed_after_check"
+ ],
+ "rationale_location": "backfill/R9.json (facts with reason fields); spec section 2",
+ "evidence": [
+  "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md:10-10",
+  "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md:18-18",
+  "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md:20-20",
+  "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md:3-3",
+  "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md:42-42",
+  "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md:62-62",
+  "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md:9-9",
+  "benchmark-data/reference-sets-v3/README.md:113-113",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_health.py:396-396",
+  "benchmark-data/reference-sets-v3/history/independent-check/independent-check-prompt.md:3-3",
+  "benchmark-data/reference-sets-v3/history/independent-check/independent-check-prompt.md:7-7"
+ ],
+ "facts": [
+  "R9-F01",
+  "R9-F02",
+  "R9-F03",
+  "R9-F04",
+  "R9-F05",
+  "R9-F06",
+  "R9-F07",
+  "R9-F08",
+  "R9-F09",
+  "R9-F10",
+  "R9-F11",
+  "R9-E"
+ ],
+ "gaps": [
+  "G-037",
+  "G-038",
+  "G-039",
+  "G-040",
+  "G-041",
+  "G-063"
+ ],
+ "written_by": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "bb4ae342588d7022ac421a942673cf831387cc496021df140f39e1d447195ac2",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T12:49:27.396Z",
+  "actor": "model:claude/backfill"
+ },
+ "manifest_sha256": "463bceee3d825900ecc6e43f6efcca60f27de96c50a97a53542c36191a134e0d"
+}

@@ -1,0 +1,696 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R10",
+ "name": "Input-evidence labels",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R10-F01",
+   "step": "R10",
+   "field": "actors",
+   "value": "eight Claude subagents, then a script",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "README",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/README.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "db7f8aae0fe4dfb0b35b4f67a2842703710b1e20bcde05cafcc3a58ae92f4cf3",
+     "locator": {
+      "lines": [
+       88,
+       88
+      ]
+     },
+     "target_sha256": "c10d414ab514604ea7b938d55b15842d2c89c379b99c9cd75f1188bbbf17b6a8"
+    },
+    {
+     "label": "prompt index",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/trace/index/prompts.json",
+     "hash_time": "now",
+     "file_sha256": "3f1ed2ff4f28c6b5e6e4e0f6759cc9655222fc4d0454dc3b28929cd5fc053eee",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "3f1ed2ff4f28c6b5e6e4e0f6759cc9655222fc4d0454dc3b28929cd5fc053eee"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R10-F02",
+   "step": "R10",
+   "field": "model ID and Claude Code version",
+   "value": {
+    "model_id": [
+     "claude-opus-5-5"
+    ],
+    "claude_code": [
+     "2.1.308"
+    ]
+   },
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "R10 labeller log: Health H-1 to H-33",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-02",
+     "sha256": "866379ab7726c9007e429baf0c33040e282468a69bf44601be6d9a2d453267e1",
+     "locator": {
+      "jsonl_line": 13,
+      "key": "message.model"
+     }
+    },
+    {
+     "label": "R10 labeller log: Health H-34 to H-69",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-03",
+     "sha256": "cc73dfa6601c795bc95b8eb2b56e3f2cca85859ee3f84a42ceba7355d1f5f1a9",
+     "locator": {
+      "jsonl_line": 13,
+      "key": "message.model"
+     }
+    },
+    {
+     "label": "R10 labeller log: Mobility, policy inputs",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-04",
+     "sha256": "545031318bb3b0c91d147a6e94e85d15c34f34a43ab991524dd4d283135a1382",
+     "locator": {
+      "jsonl_line": 13,
+      "key": "message.model"
+     }
+    },
+    {
+     "label": "R10 labeller log: Mobility, standards inputs",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-05",
+     "sha256": "e8d26910dbcbad295ce1791b19cbe1bd3c50ca3bfb7829ad66dc6a255cac533e",
+     "locator": {
+      "jsonl_line": 13,
+      "key": "message.model"
+     }
+    },
+    {
+     "label": "R10 labeller log: Mobility, literature inputs",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-06",
+     "sha256": "241ad1cfacedb96e195fe80f14c65200ce7009bb025853b23059d4ea237f9216",
+     "locator": {
+      "jsonl_line": 13,
+      "key": "message.model"
+     }
+    },
+    {
+     "label": "R10 labeller log: Mobility, partner (consolidation) inputs",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-07",
+     "sha256": "8f8f75f0fb6f0ce27fa25f90f9a2df52bdf8164a34966250cf84fe698678da12",
+     "locator": {
+      "jsonl_line": 13,
+      "key": "message.model"
+     }
+    },
+    {
+     "label": "R10 labeller log: Geo",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-08",
+     "sha256": "663fe9b112c161b332f25c0100105bd54051352469d79d9372123c93a8caf864",
+     "locator": {
+      "jsonl_line": 13,
+      "key": "message.model"
+     }
+    },
+    {
+     "label": "R10 labeller log: Stat and JRC",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-09",
+     "sha256": "6afc4e35928b8ade995b6bd900a9344306dcd54c3dd2ffbde67492cd76ddfea8",
+     "locator": {
+      "jsonl_line": 13,
+      "key": "message.model"
+     }
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R10-F03",
+   "step": "R10",
+   "field": "start and end times",
+   "value": {
+    "OE-02": [
+     "2026-10-22T19:50:51.626Z",
+     "2026-10-22T20:14:35.819Z"
+    ],
+    "OE-03": [
+     "2026-10-22T19:51:02.078Z",
+     "2026-10-22T20:08:38.496Z"
+    ],
+    "OE-04": [
+     "2026-10-22T19:51:11.772Z",
+     "2026-10-22T20:10:10.393Z"
+    ],
+    "OE-05": [
+     "2026-10-22T19:51:22.649Z",
+     "2026-10-22T20:13:09.850Z"
+    ],
+    "OE-06": [
+     "2026-10-22T19:51:33.139Z",
+     "2026-10-22T20:11:57.510Z"
+    ],
+    "OE-07": [
+     "2026-10-22T19:51:42.204Z",
+     "2026-10-22T20:00:36.755Z"
+    ],
+    "OE-08": [
+     "2026-10-22T19:51:52.166Z",
+     "2026-10-22T20:05:30.052Z"
+    ],
+    "OE-09": [
+     "2026-10-22T19:52:02.482Z",
+     "2026-10-22T20:08:34.501Z"
+    ]
+   },
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "R10 labeller log: Health H-1 to H-33",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-02",
+     "sha256": "866379ab7726c9007e429baf0c33040e282468a69bf44601be6d9a2d453267e1",
+     "locator": {
+      "jsonl_lines": [
+       1,
+       249
+      ],
+      "key": "timestamp"
+     }
+    },
+    {
+     "label": "R10 labeller log: Health H-34 to H-69",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-03",
+     "sha256": "cc73dfa6601c795bc95b8eb2b56e3f2cca85859ee3f84a42ceba7355d1f5f1a9",
+     "locator": {
+      "jsonl_lines": [
+       1,
+       226
+      ],
+      "key": "timestamp"
+     }
+    },
+    {
+     "label": "R10 labeller log: Mobility, policy inputs",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-04",
+     "sha256": "545031318bb3b0c91d147a6e94e85d15c34f34a43ab991524dd4d283135a1382",
+     "locator": {
+      "jsonl_lines": [
+       1,
+       98
+      ],
+      "key": "timestamp"
+     }
+    },
+    {
+     "label": "R10 labeller log: Mobility, standards inputs",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-05",
+     "sha256": "e8d26910dbcbad295ce1791b19cbe1bd3c50ca3bfb7829ad66dc6a255cac533e",
+     "locator": {
+      "jsonl_lines": [
+       1,
+       278
+      ],
+      "key": "timestamp"
+     }
+    },
+    {
+     "label": "R10 labeller log: Mobility, literature inputs",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-06",
+     "sha256": "241ad1cfacedb96e195fe80f14c65200ce7009bb025853b23059d4ea237f9216",
+     "locator": {
+      "jsonl_lines": [
+       1,
+       174
+      ],
+      "key": "timestamp"
+     }
+    },
+    {
+     "label": "R10 labeller log: Mobility, partner (consolidation) inputs",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-07",
+     "sha256": "8f8f75f0fb6f0ce27fa25f90f9a2df52bdf8164a34966250cf84fe698678da12",
+     "locator": {
+      "jsonl_lines": [
+       1,
+       44
+      ],
+      "key": "timestamp"
+     }
+    },
+    {
+     "label": "R10 labeller log: Geo",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-08",
+     "sha256": "663fe9b112c161b332f25c0100105bd54051352469d79d9372123c93a8caf864",
+     "locator": {
+      "jsonl_lines": [
+       1,
+       159
+      ],
+      "key": "timestamp"
+     }
+    },
+    {
+     "label": "R10 labeller log: Stat and JRC",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-09",
+     "sha256": "6afc4e35928b8ade995b6bd900a9344306dcd54c3dd2ffbde67492cd76ddfea8",
+     "locator": {
+      "jsonl_lines": [
+       1,
+       102
+      ],
+      "key": "timestamp"
+     }
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "The prompts record start times (recorded); end times come from the logs."
+  },
+  {
+   "fact_id": "R10-F04",
+   "step": "R10",
+   "field": "packets",
+   "value": "317 atoms (Health 119, JRC 17; the 3 later atoms were created on 23 Oct)",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "packet mobilitydcat",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-mobilitydcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "8256b6b1f6fa7411cf230495cc692a177a136acb36b2407b543cdb838041800d",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "8256b6b1f6fa7411cf230495cc692a177a136acb36b2407b543cdb838041800d"
+    },
+    {
+     "label": "packet healthdcat",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-healthdcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "ec8162bfa5397d58b494c4a515011cafbb863a5f7153ef733a0c7086830c4d93",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "ec8162bfa5397d58b494c4a515011cafbb863a5f7153ef733a0c7086830c4d93"
+    },
+    {
+     "label": "packet statdcat",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-statdcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "8cdddc6f9577519d18549619e0156b4618c62d86d2d7b89c0a1ae48be436e366",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "8cdddc6f9577519d18549619e0156b4618c62d86d2d7b89c0a1ae48be436e366"
+    },
+    {
+     "label": "packet geodcat",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-geodcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "296013056167ed6c4a8534a55204cf6be4d6bf197a0f3b585c8657089f68bb0f",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "296013056167ed6c4a8534a55204cf6be4d6bf197a0f3b585c8657089f68bb0f"
+    },
+    {
+     "label": "packet jrc-research",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-jrc-research.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "e48003811d94b2e5fa00b552f9011aef47f700ac3e7060af5f8223096eff9b5f",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "e48003811d94b2e5fa00b552f9011aef47f700ac3e7060af5f8223096eff9b5f"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R10-F05",
+   "step": "R10",
+   "field": "raw outputs",
+   "value": "stored; byte-identical to the files the labellers wrote",
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "raw output geo",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/geo.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "519158445b0bf1eb96d76cc60c696a66957bc4f2f44568f6bbb19eb87331b9e0",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "519158445b0bf1eb96d76cc60c696a66957bc4f2f44568f6bbb19eb87331b9e0"
+    },
+    {
+     "label": "raw output health-a",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/health-a.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "7a6f69e27cd19ff3b9bb79c5ba4aee3e84d404929ded6cdb49c50610f6f489dd",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "7a6f69e27cd19ff3b9bb79c5ba4aee3e84d404929ded6cdb49c50610f6f489dd"
+    },
+    {
+     "label": "raw output health-b",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/health-b.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "93582bfb3ba691fa5cded63d81f09fe12a49935410a2d111874dcc358c4875d8",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "93582bfb3ba691fa5cded63d81f09fe12a49935410a2d111874dcc358c4875d8"
+    },
+    {
+     "label": "raw output mobility-consolidation",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/mobility-consolidation.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "246066bf518edd1b2777857c658b3a957d64c86d59a16d73158986bf0fb163cd",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "246066bf518edd1b2777857c658b3a957d64c86d59a16d73158986bf0fb163cd"
+    },
+    {
+     "label": "raw output mobility-literature",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/mobility-literature.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "07b5101d0acade87c17e978ab94f8fda97fc71ff60f66bf8d8af2230f8de61bd",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "07b5101d0acade87c17e978ab94f8fda97fc71ff60f66bf8d8af2230f8de61bd"
+    },
+    {
+     "label": "raw output mobility-policy",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/mobility-policy.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "aa1caf6040ab98459d41f6bb9fc4275e031344363da1839df95f3d2d496ee9cf",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "aa1caf6040ab98459d41f6bb9fc4275e031344363da1839df95f3d2d496ee9cf"
+    },
+    {
+     "label": "raw output mobility-standards",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/mobility-standards.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "81f3cb2c8b8aa6998ea47e649a84795f6621074dbde6095c7b79a4355d180187",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "81f3cb2c8b8aa6998ea47e649a84795f6621074dbde6095c7b79a4355d180187"
+    },
+    {
+     "label": "raw output stat-jrc",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/stat-jrc.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "15b9e7b23824ed6da218e4f62ff250a002be3476eeb1dbd77a7f8163bc5c73dc",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "15b9e7b23824ed6da218e4f62ff250a002be3476eeb1dbd77a7f8163bc5c73dc"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "The scratch copies the labellers wrote are in the outside bundle; their hashes equal these files."
+  },
+  {
+   "fact_id": "R10-F06",
+   "step": "R10",
+   "field": "merge re-run",
+   "value": "equal to the case files for 315 atoms; equal to the build's merged file",
+   "status": "reconstructed (verified)",
+   "links": [
+    {
+     "label": "re-derivation",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/trace/backfill/R10-rederivation.json",
+     "hash_time": "now",
+     "file_sha256": "3082e5dde393006bb02382b2079dfd2dcb92b357986f032dab6bc21f89abd5ae",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "3082e5dde393006bb02382b2079dfd2dcb92b357986f032dab6bc21f89abd5ae"
+    },
+    {
+     "label": "merge rule",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/integrate_labels.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "0a297a1fa86ac0895dd421eb55e6e78abedec07443eafd236123d024c4cbf842",
+     "locator": {
+      "lines": [
+       39,
+       78
+      ]
+     },
+     "target_sha256": "a1721650327ccfbf9930b489ac0eebdf807be16d0a5d7c9a48ddca9652379c20"
+    },
+    {
+     "label": "Build output of the label merge (labels-merged.json, 22 Oct)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-10",
+     "sha256": "de05bfc9bdc02bbabc8db868edbe7785212fb62e34ca19a88ea3d717c3955be3"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R10-F07",
+   "step": "R10",
+   "field": "build-time hash of the merged labels",
+   "value": "de05bfc9bdc02bbabc8db868edbe7785212fb62e34ca19a88ea3d717c3955be3",
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "Build output of the label merge (labels-merged.json, 22 Oct)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-10",
+     "sha256": "de05bfc9bdc02bbabc8db868edbe7785212fb62e34ca19a88ea3d717c3955be3"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R10-F08",
+   "step": "R10",
+   "field": "labels read from session scratch",
+   "value": "path recorded in the script (accepted, decision 0.7)",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "path",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/integrate_labels.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "0a297a1fa86ac0895dd421eb55e6e78abedec07443eafd236123d024c4cbf842",
+     "locator": {
+      "lines": [
+       6,
+       6
+      ]
+     },
+     "target_sha256": "823e4a2119ae95ed8358807cd1879285172e679e6e92d62cb406376f822ba3c4"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R10-F09",
+   "step": "R10",
+   "field": "labellers per atom",
+   "value": "one",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "merge rule",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/integrate_labels.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "0a297a1fa86ac0895dd421eb55e6e78abedec07443eafd236123d024c4cbf842",
+     "locator": {
+      "lines": [
+       56,
+       63
+      ]
+     },
+     "target_sha256": "eec13e376ef2eb7b8829b389058160f4dd92a2b5fa4a97c902efc09d4b70ee8c"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R10-F10",
+   "step": "R10",
+   "field": "human review of the labels",
+   "value": "pending on 320 of 320",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "coverage",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/reference-coverage.csv",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "61da801b9104cddaa3c420a3babe24751c559d58f5c20b9f31473219c7d8163f",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "61da801b9104cddaa3c420a3babe24751c559d58f5c20b9f31473219c7d8163f"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R10-F11",
+   "step": "R10",
+   "field": "atoms whose R10 labels were replaced",
+   "value": "H-46.1, H-46.3 (relabelled), and the 3 new atoms: R11d",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "atom",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+     "locator": {
+      "json_pointer": "/atoms/86",
+      "names": {
+       "id": "H-46.1"
+      }
+     },
+     "target_sha256": "55538aef66342c738435903cde2984494e592fdb0c18e231466a397dc369b533"
+    },
+    {
+     "label": "atom",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+     "locator": {
+      "json_pointer": "/atoms/89",
+      "names": {
+       "id": "H-46.3"
+      }
+     },
+     "target_sha256": "fa817c9559feafcd2d4a5f5f65a9b6bdbeea70054e323f8e1ec9f68b22992fc3"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R10-F12",
+   "step": "R10",
+   "field": "rationales replaced without a before value",
+   "value": [
+    "healthdcat:H-1.1",
+    "healthdcat:H-22.1",
+    "healthdcat:H-29.1"
+   ],
+   "status": "reconstructed",
+   "links": [
+    {
+     "label": "re-derivation",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/trace/backfill/R10-rederivation.json",
+     "hash_time": "now",
+     "file_sha256": "3082e5dde393006bb02382b2079dfd2dcb92b357986f032dab6bc21f89abd5ae",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "3082e5dde393006bb02382b2079dfd2dcb92b357986f032dab6bc21f89abd5ae"
+    },
+    {
+     "label": "replacement",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "509d366eff7c15872b4802727ccfe1a1f8b2754898e7d80cbc0e03922f097ea8",
+     "locator": {
+      "lines": [
+       188,
+       190
+      ]
+     },
+     "target_sha256": "618a20264450ebfa3a8f8ce9dc3bf789ca193c56b9037f147d6c609143fbdd88"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "R11c replaced the raw rationale of these 3 atoms without keeping the old text; the re-derivation recovers it."
+  }
+ ]
+}

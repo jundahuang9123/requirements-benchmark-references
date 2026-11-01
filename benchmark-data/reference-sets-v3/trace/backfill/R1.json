@@ -1,0 +1,234 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R1",
+ "name": "Source publication and acquisition",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R1-F01",
+   "step": "R1",
+   "field": "artifact hashes",
+   "value": "95 of 95 manifest artifacts match their stored files",
+   "status": "reconstructed (verified)",
+   "links": [
+    {
+     "label": "epos provenance manifest",
+     "kind": "row",
+     "file": "benchmark-data/epos/provenance/manifest.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "e18ee744d4d340101c15961d3a6f669c0bb9996ab2253c0651d2db5416e1cfc7",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "e18ee744d4d340101c15961d3a6f669c0bb9996ab2253c0651d2db5416e1cfc7"
+    },
+    {
+     "label": "mobilitydcat provenance manifest",
+     "kind": "row",
+     "file": "benchmark-data/mobilitydcat/provenance/manifest.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "c06f5cb8c86a4981540fb1669dd1054ce016cc1f86b2116f28e8e51de5d0a1e6",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "c06f5cb8c86a4981540fb1669dd1054ce016cc1f86b2116f28e8e51de5d0a1e6"
+    },
+    {
+     "label": "healthdcat provenance manifest",
+     "kind": "row",
+     "file": "benchmark-data/healthdcat/provenance/manifest.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "d6f66275b1f81066b8c2856261f2c3b354fb574c5ae93c809aa257bc4a187194",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "d6f66275b1f81066b8c2856261f2c3b354fb574c5ae93c809aa257bc4a187194"
+    },
+    {
+     "label": "statdcat provenance manifest",
+     "kind": "row",
+     "file": "benchmark-data/statdcat/provenance/manifest.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "3eb0b52c0e4051d209a5175b1ad3401d44db15f8c6f6e79ea27a52b7d7a2b6ae",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "3eb0b52c0e4051d209a5175b1ad3401d44db15f8c6f6e79ea27a52b7d7a2b6ae"
+    },
+    {
+     "label": "geodcat provenance manifest",
+     "kind": "row",
+     "file": "benchmark-data/geodcat/provenance/manifest.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "a1f5651f2aed3cafaced5032ca7551683b71e74770611cfe43ceb1f9778923b7",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "a1f5651f2aed3cafaced5032ca7551683b71e74770611cfe43ceb1f9778923b7"
+    },
+    {
+     "label": "jrc-research provenance manifest",
+     "kind": "row",
+     "file": "benchmark-data/jrc-research/provenance/manifest.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "04d0b263cb8a5b256fd0c5597f288fba37d91cbb08b7c7d5351612ca12e900ac",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "04d0b263cb8a5b256fd0c5597f288fba37d91cbb08b7c7d5351612ca12e900ac"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R1-F02",
+   "step": "R1",
+   "field": "acquisition snapshot date",
+   "value": "2026-10-07",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "BM/README.md",
+     "kind": "row",
+     "file": "benchmark-data/README.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "0520c2ee3fb27732bc1bb9525c974650529996b846fb7daa083a3ba3278b50b3",
+     "locator": {
+      "lines": [
+       7,
+       7
+      ]
+     },
+     "target_sha256": "92de2bf91a040888b1b6e428927a3e5438e99553ea773306766e76d1042c2bd9"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R1-F03",
+   "step": "R1",
+   "field": "NAPCORE report (Mobility Table 1)",
+   "value": "citation only; redistribution rights not established, so no frozen copy (0.4a not possible)",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "napcore-report licence",
+     "kind": "source",
+     "file": "benchmark-data/mobilitydcat/provenance/manifest.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "c06f5cb8c86a4981540fb1669dd1054ce016cc1f86b2116f28e8e51de5d0a1e6",
+     "locator": {
+      "json_pointer": "/artifacts/12",
+      "names": {
+       "id": "napcore-report"
+      }
+     },
+     "target_sha256": "7ab9b21f0dfab42c8d20abaaa337278d91da2328177265ae6e8cd62b27e36193"
+    },
+    {
+     "label": "THIRD-PARTY-NOTICES.md",
+     "kind": "row",
+     "file": "benchmark-data/THIRD-PARTY-NOTICES.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "915f85f9f0c606ae28487d99ad7737fc24ed11910b5336deaef4bb95520eeb69",
+     "locator": {
+      "lines": [
+       38,
+       41
+      ]
+     },
+     "target_sha256": "5228621e706bbee24f81baf9eb0f85a10272a17bf1fbe0c7a3afacc3815bf5eb"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R1-F04",
+   "step": "R1",
+   "field": "JRC paper",
+   "value": "citation only; redistribution rights not established, so no frozen copy (0.4a not possible)",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "jrc-paper licence",
+     "kind": "source",
+     "file": "benchmark-data/jrc-research/provenance/manifest.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "04d0b263cb8a5b256fd0c5597f288fba37d91cbb08b7c7d5351612ca12e900ac",
+     "locator": {
+      "json_pointer": "/artifacts/4",
+      "names": {
+       "id": "jrc-paper"
+      }
+     },
+     "target_sha256": "5d7ddab8f34ad7352103a01cc5141be1ff83fa9b3daee023975e41e1cadac0ff"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R1-F05",
+   "step": "R1",
+   "field": "web copies read on 22 Oct (NAPCORE Table 1, JRC paper)",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/mobilitydcat/provenance/manifest.json",
+    "benchmark-data/jrc-research/provenance/manifest.json",
+    "benchmark-data/reference-sets-v3/README.md:39,136",
+    "benchmark-data/reference-sets-v3/validate_v3.py:27-33",
+    "the build workspace and session scratch of 22-23 Oct (outside the repository)"
+   ]
+  },
+  {
+   "fact_id": "R1-F06",
+   "step": "R1",
+   "field": "Health's scope as the curator's choice",
+   "value": "scoped curator representation",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "methodology",
+     "kind": "row",
+     "file": "benchmark-data/BENCHMARK-METHODOLOGY.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "17cd703f9876c3b6c76fd79936b22a6263f4b0484afe3750719c593da8bacf94",
+     "locator": {
+      "lines": [
+       13,
+       16
+      ]
+     },
+     "target_sha256": "387cf1d3ac2d50cc3ccf8a23a382bb42a32a02a95c1cd566284ee475965d63ed"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  }
+ ]
+}

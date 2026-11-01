@@ -1,0 +1,160 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R13",
+ "name": "Scored selection",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R13-F01",
+   "step": "R13",
+   "field": "rule",
+   "value": "content, not deferred, not merged_into, not umbrella_of",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "build",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "25ca9f805ede0ffdda6bfd57a0ae6d3060bce0d5e1a84293e3852e0622cfca09",
+     "locator": {
+      "lines": [
+       78,
+       88
+      ]
+     },
+     "target_sha256": "4cc453d420b41dee496f6b8a2fff4947f242c6ded9f706d63754a21ac0141662"
+    },
+    {
+     "label": "adjudication",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "509d366eff7c15872b4802727ccfe1a1f8b2754898e7d80cbc0e03922f097ea8",
+     "locator": {
+      "lines": [
+       162,
+       164
+      ]
+     },
+     "target_sha256": "c24fce52db2f449f85f1047891469f385e077c79c827d4f5ec6b35092ecd4988"
+    },
+    {
+     "label": "validator",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/validate_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "ddd67f5fb062aa921965c3f4018d11f11bb470171fee25638bb5d948a9d4a734",
+     "locator": {
+      "lines": [
+       145,
+       147
+      ]
+     },
+     "target_sha256": "293fa1585d67788d0804af2c04d8408ba199251a1d10b864381ffe2f0c47a984"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R13-F02",
+   "step": "R13",
+   "field": "recomputation",
+   "value": "196 of 320 scored; 0 differ",
+   "status": "reconstructed (verified)",
+   "links": [
+    {
+     "label": "recompute",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/trace/backfill/R13-recompute.json",
+     "hash_time": "now",
+     "file_sha256": "9ec2b1356a945edf647296d25210f7bfe0df506b585d9f8e89836a4c7df3ce24",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "9ec2b1356a945edf647296d25210f7bfe0df506b585d9f8e89836a4c7df3ce24"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R13-F03",
+   "step": "R13",
+   "field": "unsettled atoms in the selection",
+   "value": "50 proposed, open-issue or guidance atoms",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "README",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/README.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "db7f8aae0fe4dfb0b35b4f67a2842703710b1e20bcde05cafcc3a58ae92f4cf3",
+     "locator": {
+      "lines": [
+       59,
+       59
+      ]
+     },
+     "target_sha256": "e610a2f0085e2cc52e77b2ca34f4511fc7af201b30051ddc5bad1a5f9cf56a2d"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R13-F04",
+   "step": "R13",
+   "field": "held-out cases",
+   "value": "inconsistent with the disclosed exposure",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "methodology",
+     "kind": "row",
+     "file": "benchmark-data/BENCHMARK-METHODOLOGY.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "17cd703f9876c3b6c76fd79936b22a6263f4b0484afe3750719c593da8bacf94",
+     "locator": {
+      "lines": [
+       177,
+       182
+      ]
+     },
+     "target_sha256": "ec8d1838a90d530d438be8bd0a9cf6d76f83f4e2a17dc0711922a47045506194"
+    },
+    {
+     "label": "Codex",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "526a342b2820035058f78c06fd16953583e1d2ca4334dc16300d893ca7808641",
+     "locator": {
+      "lines": [
+       75,
+       77
+      ]
+     },
+     "target_sha256": "0da256a073e5d24bb29b50c7db9756a99b709a2b5d83f182a299da4abf657450"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  }
+ ]
+}

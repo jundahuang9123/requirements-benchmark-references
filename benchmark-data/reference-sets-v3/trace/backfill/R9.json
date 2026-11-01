@@ -1,0 +1,4130 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R9",
+ "name": "Independent check",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R9-F01",
+   "step": "R9",
+   "field": "actor",
+   "value": "one Claude subagent",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "IC",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+     "locator": {
+      "lines": [
+       3,
+       3
+      ]
+     },
+     "target_sha256": "454960f0e1e11f5b4ab419b0aae154f7190f18a058703ce47a181c3609976b02"
+    },
+    {
+     "label": "prompt file",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/independent-check/independent-check-prompt.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "95d0bfc30c920367aed849e8632e2565819fc37ca260b3b340c3642c48a45d79",
+     "locator": {
+      "lines": [
+       3,
+       3
+      ]
+     },
+     "target_sha256": "631c036b5647780c21c1392b5eaadf96231df8bd0a35fc00edb8557e4f00d08b"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R9-F02",
+   "step": "R9",
+   "field": "model ID and Claude Code version",
+   "value": {
+    "model_id": "claude-opus-5-5",
+    "claude_code": "2.1.308"
+   },
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "R9 independent-checker subagent log (22 Oct)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-01",
+     "sha256": "bbf577ef56009f2502d810d7fc8eabe17fb4b5466891b4ef4f09aac53e95f381",
+     "locator": {
+      "jsonl_line": 13,
+      "key": "message.model"
+     }
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R9-F03",
+   "step": "R9",
+   "field": "prompt and start",
+   "value": "P-R9, started 2026-10-22T18:57:25.027Z",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "prompt index",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/trace/index/prompts.json",
+     "hash_time": "now",
+     "file_sha256": "3f1ed2ff4f28c6b5e6e4e0f6759cc9655222fc4d0454dc3b28929cd5fc053eee",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "3f1ed2ff4f28c6b5e6e4e0f6759cc9655222fc4d0454dc3b28929cd5fc053eee"
+    },
+    {
+     "label": "start",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/independent-check/independent-check-prompt.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "95d0bfc30c920367aed849e8632e2565819fc37ca260b3b340c3642c48a45d79",
+     "locator": {
+      "lines": [
+       7,
+       7
+      ]
+     },
+     "target_sha256": "a5a7939220214b3e45b092d6c4034d2e27df5a19107d2ebc9ca7a07860f08907"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R9-F04",
+   "step": "R9",
+   "field": "end time",
+   "value": "2026-10-22T19:25:55.167Z",
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "R9 independent-checker subagent log (22 Oct)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-01",
+     "sha256": "bbf577ef56009f2502d810d7fc8eabe17fb4b5466891b4ef4f09aac53e95f381",
+     "locator": {
+      "jsonl_line": 324,
+      "key": "timestamp"
+     }
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R9-F05",
+   "step": "R9",
+   "field": "seed and the 30 sampled IDs",
+   "value": "seed 20261022 recorded; the sampled IDs are kept outside",
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "seed",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+     "locator": {
+      "lines": [
+       9,
+       9
+      ],
+      "names": [
+       "20261022"
+      ]
+     },
+     "target_sha256": "0a106363e1185dd5b1547ee4f3408988e43e7325a8352e81bb3edab0acd51dd1"
+    },
+    {
+     "label": "R9 checker sample file (the 30 sampled IDs)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-24",
+     "sha256": "83f378c18a85435e586091405e0cf79950353ffad9eefa404896d7c12fcd1269"
+    },
+    {
+     "label": "R9 independent-checker subagent log (22 Oct)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-01",
+     "sha256": "bbf577ef56009f2502d810d7fc8eabe17fb4b5466891b4ef4f09aac53e95f381",
+     "locator": {
+      "note": "the sampling call and its output"
+     }
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R9-F06",
+   "step": "R9",
+   "field": "raw findings with severities",
+   "value": "kept outside (the findings file as the checker wrote it); totals in IC:18",
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "totals",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+     "locator": {
+      "lines": [
+       18,
+       18
+      ]
+     },
+     "target_sha256": "06f3dc2028af0e5afe65c3865c73721e8cd0e42bb64afd0ed85910c72167120f"
+    },
+    {
+     "label": "R9 independent-checker subagent log (22 Oct)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-01",
+     "sha256": "bbf577ef56009f2502d810d7fc8eabe17fb4b5466891b4ef4f09aac53e95f381",
+     "locator": {
+      "note": "the Write call of the findings file"
+     }
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R9-F07",
+   "step": "R9",
+   "field": "the scanned draft (319 atoms)",
+   "value": null,
+   "status": "not_recorded",
+   "links": [
+    {
+     "label": "size",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+     "locator": {
+      "lines": [
+       10,
+       10
+      ],
+      "names": [
+       "319"
+      ]
+     },
+     "target_sha256": "86b8a0d7fe423a5df58a702d9fab2329878869617cdef955ea9e9d502c3eb99e"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/",
+    "outside: build workspace (overwritten at 19:49:48Z with the 317-atom state)",
+    "outside: session scratch"
+   ],
+   "note": "Per-case counts of the draft (Health 120, Mobility 99, Stat 27, Geo 56, JRC 17) are in the checker log (OE-01)."
+  },
+  {
+   "fact_id": "R9-F08",
+   "step": "R9",
+   "field": "drop from 319 to 317 atoms",
+   "value": "Mobility 99 to 98 (Table 1 re-check); Health: one merge (IC row 19), one move (IC row 41, net 0)",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "README",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/README.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "db7f8aae0fe4dfb0b35b4f67a2842703710b1e20bcde05cafcc3a58ae92f4cf3",
+     "locator": {
+      "lines": [
+       113,
+       113
+      ]
+     },
+     "target_sha256": "7ec60905c5187d62ad364d8e3557c57f296eb34656f05d27d694eaee8c081631"
+    },
+    {
+     "label": "merge",
+     "kind": "check_finding",
+     "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+     "locator": {
+      "lines": [
+       42,
+       42
+      ],
+      "names": [
+       "H-33.1",
+       "H-33.2"
+      ]
+     },
+     "target_sha256": "6232238745a5f03603b3a058372b37150fd2351c02a9f6f78ce953ba483d51d7"
+    },
+    {
+     "label": "move",
+     "kind": "check_finding",
+     "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+     "locator": {
+      "lines": [
+       62,
+       62
+      ],
+      "names": [
+       "H-30.3",
+       "H-69"
+      ]
+     },
+     "target_sha256": "9c31400c3f428b59b5e60b1e778abbc96935e6f6ec3e59f4191eba6acd877a9c"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R9-F09",
+   "step": "R9",
+   "field": "what \"verified the high-severity claims\" involved",
+   "value": null,
+   "status": "not_recorded",
+   "links": [
+    {
+     "label": "claim",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+     "locator": {
+      "lines": [
+       20,
+       20
+      ]
+     },
+     "target_sha256": "f84728621266fee48425b4606b94127a28a022654aea02308cd058026967db8d"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+    "outside: no main-session log of 22 Oct"
+   ]
+  },
+  {
+   "fact_id": "R9-F10",
+   "step": "R9",
+   "field": "applying the resolutions (decision 0.2)",
+   "value": "resolution column per finding; notes block dated 22 Oct; rows citing the check",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "notes block",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_health.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "264099369ddbf0f01d06e448d40315fb3d65df0ff25e00e190252a4b16796a6c",
+     "locator": {
+      "lines": [
+       396,
+       396
+      ],
+      "names": [
+       "independent check"
+      ]
+     },
+     "target_sha256": "61af7e44cae55412151f873c8353cb336c7fa18beb073e4a05b8c4984d69c8c0"
+    },
+    {
+     "label": "Health plan table before the R9 fixes",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-12",
+     "sha256": "83d22d8a2180cabf9d541b304f7ee95deb698b1ea071a5dc302cd5ccd156d2c2"
+    },
+    {
+     "label": "Stat, Geo and JRC plan table before the R9 fixes",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-13",
+     "sha256": "99d1990f0da7700ab46c6be9447b8f27ae4829b624dfa266e8ef43ca87fb0bca"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "Actor not recorded. Recorded under R9 by decision 0.2."
+  },
+  {
+   "fact_id": "R9-F11",
+   "step": "R9",
+   "field": "atoms scanned without a finding",
+   "value": "outcome not recorded (never \"passed\")",
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+    "outside: the checker log OE-01 lists the draft"
+   ]
+  },
+  {
+   "fact_id": "R9-E",
+   "step": "R9",
+   "field": "entries",
+   "rule": "One entry per finding row of the independent check (IC-01 to IC-45), linking the atoms and rows it names, and one per row the check changed.",
+   "status": "reconstructed",
+   "count": 47,
+   "entries": [
+    {
+     "entry_id": "R9:all:IC-01",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "1",
+      "atoms": [
+       "G-31.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         24,
+         24
+        ],
+        "names": [
+         "G-31.1"
+        ]
+       },
+       "target_sha256": "e467809eedb6158ff642aee3299ec01ae740f818a9d60f8e989a4d05b3a419ce"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/39",
+        "names": {
+         "id": "G-31.1"
+        }
+       },
+       "target_sha256": "f6c2a43608b9a4b13510fff3a7ea49eac13cee48c59486d00ab576e9255deacb"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-02",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "2",
+      "atoms": [
+       "H-17.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         25,
+         25
+        ],
+        "names": [
+         "H-17.1"
+        ]
+       },
+       "target_sha256": "a8b973ad5cfe13262dcd0fa701f4501ba88e138b2671119abb5dfabe092ac129"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/43",
+        "names": {
+         "id": "H-17.1"
+        }
+       },
+       "target_sha256": "a262e5deff60a9f1902a24c4de54a60e05b8b1d5dce08fedad35d4a559c51eca"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-03",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "3",
+      "atoms": [
+       "G-13.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         26,
+         26
+        ],
+        "names": [
+         "G-13.1"
+        ]
+       },
+       "target_sha256": "41d42d6e6233c6bfe2d102556aecab364a55eae37cabf8b0e3a29a83085fa58c"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/19",
+        "names": {
+         "id": "G-13.1"
+        }
+       },
+       "target_sha256": "74c33f0e8660449c9e3f707fc35c4c60b2852f186f9b68b5f252acdc3bd23cca"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-04",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "4",
+      "atoms": [
+       "G-14.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         27,
+         27
+        ],
+        "names": [
+         "G-14.1"
+        ]
+       },
+       "target_sha256": "0199bec941abd785e95efd435add855ca51f3c3bb886faf04280e86c6daa3883"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/20",
+        "names": {
+         "id": "G-14.1"
+        }
+       },
+       "target_sha256": "08a50cb0b9da7f4d7a1765ed526616392a5be4272451872bed865aaa69032b04"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-05",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "5",
+      "atoms": [
+       "S-16.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         28,
+         28
+        ],
+        "names": [
+         "S-16.1"
+        ]
+       },
+       "target_sha256": "3e63b04b8fe6f36bd9f83ade28fdcd866da8c32d5d099dc83f82d18b30750e94"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/atoms/20",
+        "names": {
+         "id": "S-16.1"
+        }
+       },
+       "target_sha256": "b287edd24ca5096b5ca7a856a60aa7a4f1418b4cb7a2d863272ec02144337531"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-06",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "6",
+      "atoms": [
+       "JRC-6.3"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         29,
+         29
+        ],
+        "names": [
+         "JRC-6.3"
+        ]
+       },
+       "target_sha256": "8412b67e010472a638e8e8d0d19ff4980c5831d3205e745d9462678714b312d5"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/atoms/7",
+        "names": {
+         "id": "JRC-6.3"
+        }
+       },
+       "target_sha256": "07f1c9523a3e1cbdb2356b4528c309621c7ba7d1b1e2bb59d69eab17118e044d"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-07",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "7",
+      "atoms": [
+       "H-17.2"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         30,
+         30
+        ],
+        "names": [
+         "H-17.2"
+        ]
+       },
+       "target_sha256": "940b61d9e838ae9cad55524ca9b8cbee1fa99af47a29ca5b2172dbfd996b54ed"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/44",
+        "names": {
+         "id": "H-17.2"
+        }
+       },
+       "target_sha256": "3902df982f523ac43c65acc205ec25dfe53a438e959727a835aa9b6c5f9d0a00"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-08",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "8",
+      "atoms": [
+       "G-22.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         31,
+         31
+        ],
+        "names": [
+         "G-22.1"
+        ]
+       },
+       "target_sha256": "9421964ce4c10470d471e73dd8ab66deeab1e036cace63a695c28738ea34b2d9"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/30",
+        "names": {
+         "id": "G-22.1"
+        }
+       },
+       "target_sha256": "4e6ecb84f43e19655116c98001f332c8c409edf4b076aaad9f246894879a79bb"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-09",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "9",
+      "atoms": [
+       "G-8.1",
+       "G-12.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         32,
+         32
+        ],
+        "names": [
+         "G-8.1",
+         "G-12.1"
+        ]
+       },
+       "target_sha256": "ce4f133743187733cd76c61f2a312679d5edebef8421f7248c8dee6a6048d42f"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/14",
+        "names": {
+         "id": "G-8.1"
+        }
+       },
+       "target_sha256": "6835670c4bb3844816869201e4c76389134fd41f6a2fe412ad43976d2c9cc86f"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/18",
+        "names": {
+         "id": "G-12.1"
+        }
+       },
+       "target_sha256": "d5a68ada9a0843fd7059c57b3de9a88e1fcfc4df7383af68784cdda93794df49"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-10",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "10",
+      "atoms": [
+       "G-29.1",
+       "G-30.1"
+      ],
+      "rows": [
+       "G-30"
+      ],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         33,
+         33
+        ],
+        "names": [
+         "G-29.1",
+         "G-30.1",
+         "G-30"
+        ]
+       },
+       "target_sha256": "6ca2613dd517022f77ca7e4f88177c7c958b7bcfb996804dcdb515f5ae8aa66f"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/37",
+        "names": {
+         "id": "G-29.1"
+        }
+       },
+       "target_sha256": "9215d067ccae8b410d656bc5dc1d4810bcc62db58e2ef5916c765f83ba6a85d1"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/38",
+        "names": {
+         "id": "G-30.1"
+        }
+       },
+       "target_sha256": "f169cccda207e4258c0b719760eaffd9bd3cc866dec77b262058dbb9ca097b7f"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/29",
+        "names": {
+         "id": "G-30"
+        }
+       },
+       "target_sha256": "a7224acea428878f8be34798a39410d73bea47a459a981a85137471e0f00db11"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-11",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "11",
+      "atoms": [
+       "JRC-8.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         34,
+         34
+        ],
+        "names": [
+         "JRC-8.1"
+        ]
+       },
+       "target_sha256": "e0254007b988a50de56cb2c46ed12d795000934d9c307ff0109c4e5216a7c291"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/atoms/11",
+        "names": {
+         "id": "JRC-8.1"
+        }
+       },
+       "target_sha256": "843d07839fc6f3d6e7a4c9ad62dd389627823a6882637fd9274d478c125073f3"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-12",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "12",
+      "atoms": [
+       "JRC-6.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         35,
+         35
+        ],
+        "names": [
+         "JRC-6.1"
+        ]
+       },
+       "target_sha256": "b140870c6917762eb111e7f9bd97a2ff47e9872493ea6de91d1341ba7a60bf4f"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/atoms/5",
+        "names": {
+         "id": "JRC-6.1"
+        }
+       },
+       "target_sha256": "9ead9da7ff8cd85173daf589b77ded8a9f4119280175707da00ebe8719295c3f"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-13",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "13",
+      "atoms": [
+       "JRC-6.5"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         36,
+         36
+        ],
+        "names": [
+         "JRC-6.5"
+        ]
+       },
+       "target_sha256": "95bfbbf5caabc78485d359e0234a788e105039ac287cca8f4a8551c51de81657"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/atoms/9",
+        "names": {
+         "id": "JRC-6.5"
+        }
+       },
+       "target_sha256": "ca500845c6e6b153d8421af6a53c34428b05518131a76e829ffacfc6466dd0c8"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-14",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "14",
+      "atoms": [
+       "H-12.2"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         37,
+         37
+        ],
+        "names": [
+         "H-12.2"
+        ]
+       },
+       "target_sha256": "224fb9c6283177296131ad8219d283f1106df69585d9b848c4ab3b1f2e2eb6b7"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/31",
+        "names": {
+         "id": "H-12.2"
+        }
+       },
+       "target_sha256": "9261db4ff2c0c97c5a7d1cf8c1077d622af081b1173361d5ba4ad20e05898d62"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-15",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "15",
+      "atoms": [
+       "H-12.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         38,
+         38
+        ],
+        "names": [
+         "H-12.1"
+        ]
+       },
+       "target_sha256": "bc92e34b9961a3f392e028d1e93d9f2d10450c123e9068dc2029fc155088d02e"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/30",
+        "names": {
+         "id": "H-12.1"
+        }
+       },
+       "target_sha256": "70a6f2d2f4dfa186e25dd3f7e4d74d3255b6edd603ed456058034b29ab1b33fa"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-16",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "16",
+      "atoms": [
+       "S-17.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         39,
+         39
+        ],
+        "names": [
+         "S-17.1"
+        ]
+       },
+       "target_sha256": "d53028a4e4caeee371ad64c81f86137790d0798b69dc764b167396cf230e9ee1"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/atoms/21",
+        "names": {
+         "id": "S-17.1"
+        }
+       },
+       "target_sha256": "24f9bf300c4d8417e45353157e449b14239f80c927a1fa617816f3e36cc18cd5"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-17",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "17",
+      "atoms": [
+       "H-56.3"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         40,
+         40
+        ],
+        "names": [
+         "H-56.3"
+        ]
+       },
+       "target_sha256": "811d8ca5d531d30e20f6d65de49a5d0d4ddc315b22c862e223bc3133331f60bf"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/104",
+        "names": {
+         "id": "H-56.3"
+        }
+       },
+       "target_sha256": "bd651551d338bb3e1975df85020c550ff3138ac0ee1d2e206b54660e59c9d99c"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-18",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "18",
+      "atoms": [
+       "H-18.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         41,
+         41
+        ],
+        "names": [
+         "H-18.1"
+        ]
+       },
+       "target_sha256": "c7db6cc11f3c8e10a53319849fb667d5552ba39f336249226d46c6b00e25ffe1"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/48",
+        "names": {
+         "id": "H-18.1"
+        }
+       },
+       "target_sha256": "29026008cc99393bc1a950154ccb08e9cd915a94d9e2b61c7a8a6648c557d3b4"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-19",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "19",
+      "atoms": [
+       "H-33.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": [
+       "H-33.2"
+      ]
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         42,
+         42
+        ],
+        "names": [
+         "H-33.1",
+         "H-33.2",
+         "H-33.1"
+        ]
+       },
+       "target_sha256": "6232238745a5f03603b3a058372b37150fd2351c02a9f6f78ce953ba483d51d7"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/68",
+        "names": {
+         "id": "H-33.1"
+        }
+       },
+       "target_sha256": "9b15db9e0246cf28c9feb0f9d1e0fd97983a65a27d16bff856d953097f728947"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-20",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "20",
+      "atoms": [
+       "H-4.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         43,
+         43
+        ],
+        "names": [
+         "H-4.1",
+         "H-16.1",
+         "H-26.1",
+         "H-28.1",
+         "H-36.1"
+        ]
+       },
+       "target_sha256": "69101837ff83ee0f1f1aeade5de1e3cd75f567e91bdd726d09cc1f1e550532c5"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/5",
+        "names": {
+         "id": "H-4.1"
+        }
+       },
+       "target_sha256": "d128cd6fd277067a7673c1f69456f1c4107b1c8d15685706c8513f62371df510"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-21",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "21–22",
+      "atoms": [
+       "Req-19.7",
+       "Req-24.1",
+       "Req-17.2",
+       "Req-35.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         44,
+         44
+        ],
+        "names": [
+         "Req-19.7",
+         "Req-24.1",
+         "Req-17.2",
+         "Req-35.1"
+        ]
+       },
+       "target_sha256": "ecb81639ee9b9ffe04ae3e2e051ca690a8d199cf62b9717924cf9243c476b390"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/50",
+        "names": {
+         "id": "Req-19.7"
+        }
+       },
+       "target_sha256": "abd895813f3dbd1886f21ed3561ef13523d456419e80fde0cbd6476d922c79b1"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/61",
+        "names": {
+         "id": "Req-24.1"
+        }
+       },
+       "target_sha256": "e6e2e59d7a1517e1fd7327d9863e67275fd31218e0b66eb8b3969a7e9caaa51a"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/41",
+        "names": {
+         "id": "Req-17.2"
+        }
+       },
+       "target_sha256": "40916d3dc6026a04a7ac79b977d8785c55adecda3597795c4651fef8b84fc34f"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/89",
+        "names": {
+         "id": "Req-35.1"
+        }
+       },
+       "target_sha256": "319745900da09567a30abdf28f82467d76ac0421572d7bf19b1573241586cb49"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-22",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "23",
+      "atoms": [
+       "Req-14.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         45,
+         45
+        ],
+        "names": [
+         "Req-14.1"
+        ]
+       },
+       "target_sha256": "53dcc472adcc276f3deeb42bf5777c31e33d3405c02b84e8fffd80bf8b07b84f"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/36",
+        "names": {
+         "id": "Req-14.1"
+        }
+       },
+       "target_sha256": "5027bd448f1ce4323524207abdac013e57f778f7a89d965563b8894349a24007"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-23",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "24",
+      "atoms": [
+       "G-38.1"
+      ],
+      "rows": [
+       "G-38"
+      ],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         46,
+         46
+        ],
+        "names": [
+         "G-38.1",
+         "G-38"
+        ]
+       },
+       "target_sha256": "39fc4a9cfc4d806b9498f929d53f2b1fa4cf229721f923f2248087e03320b638"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/46",
+        "names": {
+         "id": "G-38.1"
+        }
+       },
+       "target_sha256": "a5abf55abd0712078e03de54abee1b13f21e50cdebc7ad031d02616062d1b342"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/37",
+        "names": {
+         "id": "G-38"
+        }
+       },
+       "target_sha256": "01f163088dd7a5b12adc8080f56edf1f77fbc9bd0fbec2788a11067670092f35"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-24",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "25",
+      "atoms": [
+       "G-9.1",
+       "G-27.1",
+       "G-39.1",
+       "G-41.1",
+       "G-41.2"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         47,
+         47
+        ],
+        "names": [
+         "G-9.1",
+         "G-27.1",
+         "G-39.1",
+         "G-41.1",
+         "G-41.2"
+        ]
+       },
+       "target_sha256": "748692eb378eff5820712de0c1538ec400faddbb7f8dba3fd1d164151bc09005"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/15",
+        "names": {
+         "id": "G-9.1"
+        }
+       },
+       "target_sha256": "94302ccc0204be8aa1897f15ec410150b9a3d4f94ef713c47667852d520df116"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/35",
+        "names": {
+         "id": "G-27.1"
+        }
+       },
+       "target_sha256": "010c295e491c371569f6a628b652a78ae3dcf89077c3e595eb861a2164dda088"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/47",
+        "names": {
+         "id": "G-39.1"
+        }
+       },
+       "target_sha256": "e3c78f6ea69ba26d1cbb0fbb86eb2ee2f74252040d461390ff6a544fba59ffc1"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/49",
+        "names": {
+         "id": "G-41.1"
+        }
+       },
+       "target_sha256": "2f8cc7a0d9675570ef19a35818372ef0334d8aac15ca630905d615084c5445a0"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/50",
+        "names": {
+         "id": "G-41.2"
+        }
+       },
+       "target_sha256": "885fbe01afe5136618d00926ba2075503e38fb7ff46838b6e3fe98b46b0d86ef"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-25",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "26",
+      "atoms": [
+       "G-20.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         48,
+         48
+        ],
+        "names": [
+         "G-20.1"
+        ]
+       },
+       "target_sha256": "dbb25831040576fe3e9325f966c8cc788c1c20211b6e96b6ec5cf1f51f382311"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/28",
+        "names": {
+         "id": "G-20.1"
+        }
+       },
+       "target_sha256": "6a3813009b961f78695b358abc3d2e2a4015aa22604229c7711394e76a162a35"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-26",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "27",
+      "atoms": [],
+      "rows": [
+       "G-16"
+      ],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         49,
+         49
+        ],
+        "names": [
+         "G-16.x"
+        ]
+       },
+       "target_sha256": "ecac823fd2a7ac58e65d7346975b41dc0079ce72c2a78850a51f6960b4da847a"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/15",
+        "names": {
+         "id": "G-16"
+        }
+       },
+       "target_sha256": "ca294a2c92c45b7dc6b018e16db44e9c1f237b1277f72887636c74f45ce89ad0"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-27",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "28",
+      "atoms": [
+       "G-11.1",
+       "G-12.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         50,
+         50
+        ],
+        "names": [
+         "G-11.1",
+         "G-12.1"
+        ]
+       },
+       "target_sha256": "6c72f98352b10400997881c117cf48dd4712d74dd9e1e600cb4e732d40a9a8a7"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/17",
+        "names": {
+         "id": "G-11.1"
+        }
+       },
+       "target_sha256": "230b48c26fd451186f95c753c18fef2c786c98c30084d51dacea028797684192"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/atoms/18",
+        "names": {
+         "id": "G-12.1"
+        }
+       },
+       "target_sha256": "d5a68ada9a0843fd7059c57b3de9a88e1fcfc4df7383af68784cdda93794df49"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-28",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "29",
+      "atoms": [
+       "H-22.1",
+       "H-27.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         51,
+         51
+        ],
+        "names": [
+         "H-22.1",
+         "H-27.1"
+        ]
+       },
+       "target_sha256": "5e5b2fe3ee24fa058090e2a01182824aee90263ecb19b741da8eb1cc42286672"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/53",
+        "names": {
+         "id": "H-22.1"
+        }
+       },
+       "target_sha256": "7d52a7cfe778041d3a6f396b1b5a491b96e1a0304554186b7a1bc24add60ad80"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/58",
+        "names": {
+         "id": "H-27.1"
+        }
+       },
+       "target_sha256": "23aa39006c58b20ead40ceb41d0d6c0c38b226b106da49c8db3b99a97714219d"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-29",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "30",
+      "atoms": [
+       "H-29.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         52,
+         52
+        ],
+        "names": [
+         "H-29.1"
+        ]
+       },
+       "target_sha256": "a5e8ef752342bbfe90089eceac1c9a667fd865f64842af6b9be379406918dd44"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/61",
+        "names": {
+         "id": "H-29.1"
+        }
+       },
+       "target_sha256": "6ef0fa9486a36ccdb7ec4e3dc3e281c04cacb9f0524417e3f83201353cec08cc"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-30",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "31",
+      "atoms": [
+       "H-37.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         53,
+         53
+        ],
+        "names": [
+         "H-37.1"
+        ]
+       },
+       "target_sha256": "9be9bfba434f18670d74f2d221c38c038f9c97e76ead1637b22b87ac4686457e"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/72",
+        "names": {
+         "id": "H-37.1"
+        }
+       },
+       "target_sha256": "e49236c944f6f6c8299c7d40ea1d0282069b214b3d08c81aef6f52db6523cc19"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-31",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "32",
+      "atoms": [
+       "H-68.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         54,
+         54
+        ],
+        "names": [
+         "H-68.1"
+        ]
+       },
+       "target_sha256": "0a0167a1435e8c26ddc7e417e5b2a8b61028cd0a0dd87e708b50b6dc2425c521"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/120",
+        "names": {
+         "id": "H-68.1"
+        }
+       },
+       "target_sha256": "0db1da6e651ac23f05f123d134d622f467324296840cf93f7ca3b074f7057c8a"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-32",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "33",
+      "atoms": [
+       "H-23.1",
+       "H-13.4"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         55,
+         55
+        ],
+        "names": [
+         "H-23.1",
+         "H-13.4",
+         "H-23.1",
+         "H-13.4"
+        ]
+       },
+       "target_sha256": "109cc01ea736a46ea5c8a63e11daf5c3cbd60b316ac830d07a4242cf914c5b41"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/54",
+        "names": {
+         "id": "H-23.1"
+        }
+       },
+       "target_sha256": "23c834463c074ccbcc81388afff56575107d6900f5adb036b7719f8a09d2396e"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/35",
+        "names": {
+         "id": "H-13.4"
+        }
+       },
+       "target_sha256": "76c995a958056dfe20e2468027de7f2db05535e64d1a12c7b0f3c1877c12b1db"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-33",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "34–35",
+      "atoms": [
+       "S-2.1",
+       "H-46.4"
+      ],
+      "rows": [
+       "H-11"
+      ],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         56,
+         56
+        ],
+        "names": [
+         "H-11.x",
+         "S-2.1",
+         "H-46.4",
+         "H-11.3",
+         "H-11.4",
+         "H-7.3",
+         "H-11.6",
+         "H-7.4",
+         "S-2.1",
+         "S-6.1",
+         "H-46.4",
+         "H-26.1"
+        ]
+       },
+       "target_sha256": "a97be7ab7c84977cca628672c6b4229a546846d0fc479151f41837b9c12e4f2b"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/atoms/1",
+        "names": {
+         "id": "S-2.1"
+        }
+       },
+       "target_sha256": "668c776ced9007573b50084785f7bc3e6f2b8c360f595c292aa38d99a495d1d1"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/91",
+        "names": {
+         "id": "H-46.4"
+        }
+       },
+       "target_sha256": "256db9fdd5249e37c34e05df2c0b0ae8a1e5c45e995ec5dcc8b60b5cabb137ee"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/10",
+        "names": {
+         "id": "H-11"
+        }
+       },
+       "target_sha256": "1b49f4fb4cb231994776ff3aa4dac3d39636dc07985362282d394d5b1770bc97"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-34",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "36",
+      "atoms": [
+       "H-5.3",
+       "H-28.2"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         57,
+         57
+        ],
+        "names": [
+         "H-5.3",
+         "H-28.2",
+         "H-5.3",
+         "H-28.2"
+        ]
+       },
+       "target_sha256": "3485dec179b1da46b66eba2baa52644c756bacbeec59425e21895b84cc761d4e"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/9",
+        "names": {
+         "id": "H-5.3"
+        }
+       },
+       "target_sha256": "31f717dac5a80b94d9742fbd543d4d7f125288b50932b70a1e9e2f711f870d95"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/60",
+        "names": {
+         "id": "H-28.2"
+        }
+       },
+       "target_sha256": "260d34df77747e7bb24492d24211832b6e3512023b49d9f6196c691f90666803"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-35",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "37",
+      "atoms": [
+       "JRC-6.4"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         58,
+         58
+        ],
+        "names": [
+         "JRC-6.4",
+         "JRC-6.3"
+        ]
+       },
+       "target_sha256": "48c01c032be951b31fac14feae6c3690c3c444ecbc07b9f568929a558aabf2c4"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/atoms/8",
+        "names": {
+         "id": "JRC-6.4"
+        }
+       },
+       "target_sha256": "ec81f9176bb03539ceeca41ca40d042273b7a6246aa39501830696bc122936eb"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-36",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "38",
+      "atoms": [
+       "JRC-1.1",
+       "JRC-5.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         59,
+         59
+        ],
+        "names": [
+         "JRC-1.1",
+         "JRC-5.1"
+        ]
+       },
+       "target_sha256": "0ed7ae86c8020d3b5955f9f58848bf06436b492710b46b446f4c73bbade14edb"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/atoms/0",
+        "names": {
+         "id": "JRC-1.1"
+        }
+       },
+       "target_sha256": "8a41307f885eea2695ccb6814d71b1c3bd0f1d7a7186e2c2ac616f3789e7b763"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/atoms/4",
+        "names": {
+         "id": "JRC-5.1"
+        }
+       },
+       "target_sha256": "86433f01df3b59fc0ba691269d418c8eb3e019a7c87080b1b479b01af98c875c"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-37",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "39",
+      "atoms": [
+       "H-49.1",
+       "H-15.4",
+       "H-54.2",
+       "H-65.1",
+       "H-2.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         60,
+         60
+        ],
+        "names": [
+         "H-49.1",
+         "H-15.4",
+         "H-54.2",
+         "H-65.1",
+         "H-2.1",
+         "H-54.2"
+        ]
+       },
+       "target_sha256": "3325f288f2a3b6bfd620605c30a379d9df12d11f7e57e5e1c5a0fbf11cf8a8a8"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/94",
+        "names": {
+         "id": "H-49.1"
+        }
+       },
+       "target_sha256": "6171a3ca45894b696fc28267149515c773f639e4f64ac2c833ba6c65d0345b7b"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/40",
+        "names": {
+         "id": "H-15.4"
+        }
+       },
+       "target_sha256": "cdf482344e5283ba1edbb290144b974398eeae00e0d177a8bebd322e915f117f"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/100",
+        "names": {
+         "id": "H-54.2"
+        }
+       },
+       "target_sha256": "6915e97339f46e7bf6b1eb1af333720d6389cdf70a3b2348b9faa4dfba16a925"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/114",
+        "names": {
+         "id": "H-65.1"
+        }
+       },
+       "target_sha256": "8c987d8ef7e5c2d94397d6b6e32fefdf0318c1993c7f4220879d75340541eff5"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/2",
+        "names": {
+         "id": "H-2.1"
+        }
+       },
+       "target_sha256": "cd9b3775a2bc3c4633001d7c73daac3b19dbfd2086a2f6b7a88a1c8b5ce04453"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-38",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "40",
+      "atoms": [
+       "H-1.1",
+       "H-30.2",
+       "H-38.1"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         61,
+         61
+        ],
+        "names": [
+         "H-1.1",
+         "H-30.2",
+         "H-38.1"
+        ]
+       },
+       "target_sha256": "a009666e6fdf5cd355dd843f4f7896a00b452c82cd7b3e416f2db14b8aab5ffb"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/0",
+        "names": {
+         "id": "H-1.1"
+        }
+       },
+       "target_sha256": "346a8c94b4b39c711e6d44a4aad4a860fbc79ea1dcfdb3f99705d153aebbcd44"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/63",
+        "names": {
+         "id": "H-30.2"
+        }
+       },
+       "target_sha256": "e3607fe3c183d1742462dc6812d27428aabb3ad0be83e48b2522490c65476a03"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/atoms/75",
+        "names": {
+         "id": "H-38.1"
+        }
+       },
+       "target_sha256": "7ce9e4e9a76ccebcc45cc0fa06a7657a1b1bdf9d6cda47d0e601794d3e50b389"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-39",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "41",
+      "atoms": [],
+      "rows": [],
+      "names_no_longer_present": [
+       "H-30.3"
+      ]
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         62,
+         62
+        ],
+        "names": [
+         "H-30.3",
+         "H-69",
+         "H-69.1"
+        ]
+       },
+       "target_sha256": "9c31400c3f428b59b5e60b1e778abbc96935e6f6ec3e59f4191eba6acd877a9c"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-40",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "42",
+      "atoms": [],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         63,
+         63
+        ]
+       },
+       "target_sha256": "673d2ae9d6fd45b6023c7fd385a8152436a8259e8e4a96594cd042938415029a"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-41",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "43",
+      "atoms": [],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         64,
+         64
+        ]
+       },
+       "target_sha256": "a5d3f472ba48365b207a19be819f44801e24effdf4b75bfc81c3a34f884f2d5e"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-42",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "44",
+      "atoms": [],
+      "rows": [
+       "H-3",
+       "H-6"
+      ],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         65,
+         65
+        ],
+        "names": [
+         "H-3",
+         "H-6"
+        ]
+       },
+       "target_sha256": "5d1c03ba0a4f8f336ac9918843c759b35a2748e384b62cd4b813cfd0551677a8"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "H-3"
+        }
+       },
+       "target_sha256": "693740719707be5d76714830a6354dd34882056090f552daecd5d696248d3534"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/5",
+        "names": {
+         "id": "H-6"
+        }
+       },
+       "target_sha256": "5e3738114059197bae094057813deb031b22abe17e1a5a22afc5653d2c01e783"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-43",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "45",
+      "atoms": [],
+      "rows": [
+       "Req-1",
+       "Req-11",
+       "Req-21",
+       "Req-23",
+       "Req-30",
+       "Req-31"
+      ],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         66,
+         66
+        ],
+        "names": [
+         "Req-1",
+         "Req-11",
+         "Req-21",
+         "Req-23",
+         "Req-30",
+         "Req-31"
+        ]
+       },
+       "target_sha256": "2c5050a45add03621d656b834ed3f44ab7ef10d7477f2cb302291cb9e871a52a"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "Req-1"
+        }
+       },
+       "target_sha256": "e64ee3525a789df081456348e231d77526eb013c115c854b2baf8a5c57f8f078"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/10",
+        "names": {
+         "id": "Req-11"
+        }
+       },
+       "target_sha256": "31604dfe67f94fe478fbcd854f4e504ca4577e2295bf52a2a457fd83c26a3091"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/20",
+        "names": {
+         "id": "Req-21"
+        }
+       },
+       "target_sha256": "eaa83c258c3529f97ceec634580a69f4d266e821f998ddbdcd40573e0076e971"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/22",
+        "names": {
+         "id": "Req-23"
+        }
+       },
+       "target_sha256": "2089c47ac4a93c37c9ef36ba3dd323e466fb0ad6f7fb88f10a29c87915f12bbc"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/29",
+        "names": {
+         "id": "Req-30"
+        }
+       },
+       "target_sha256": "1bb7db064e5bcb9eca6a12278786e08623c5d4faa832ea6c44eb97df760b1835"
+      },
+      {
+       "label": "named row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/30",
+        "names": {
+         "id": "Req-31"
+        }
+       },
+       "target_sha256": "756def1ba9ee92bc779e10c1b027f5f0165c6598be1168bb86c7d3b587197a8f"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-44",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "46",
+      "atoms": [
+       "Req-35.2"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         67,
+         67
+        ],
+        "names": [
+         "Req-35.2"
+        ]
+       },
+       "target_sha256": "df6a56abf6c84fabfb6efd9fb4e35abe6047be6f29e95a466bb4bb7c67956fbd"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/90",
+        "names": {
+         "id": "Req-35.2"
+        }
+       },
+       "target_sha256": "c6f29a11797895a422997757366e416ba97051f8cce935def507b9d11e6a9fb3"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:all:IC-45",
+     "step": "R9",
+     "decision": "finding_resolved",
+     "value": {
+      "finding_numbers": "47",
+      "atoms": [
+       "Req-23.1",
+       "Req-23.2",
+       "Req-28.4",
+       "Req-30.1",
+       "Req-27.2",
+       "Req-27.3"
+      ],
+      "rows": [],
+      "names_no_longer_present": []
+     },
+     "reason": "resolution column of the finding row",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/checker",
+       "model_id": "claude-opus-5-5",
+       "model_id_status": "attested_log"
+      }
+     ],
+     "prompt": {
+      "prompt_id": "P-R9",
+      "status": "recorded"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "finding",
+       "kind": "check_finding",
+       "file": "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "02a9b46b905c61107b3d7f8e830b63cc47facf70aa4b5ccdfe7e927c869c401a",
+       "locator": {
+        "lines": [
+         68,
+         68
+        ],
+        "names": [
+         "Req-23.1",
+         "Req-28.4",
+         "Req-27.2",
+         "Req-27.2"
+        ]
+       },
+       "target_sha256": "09837da7a69f3df386c284a47ac9da2e449aa41e5f80f54b0445439df1dc4cb1"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/58",
+        "names": {
+         "id": "Req-23.1"
+        }
+       },
+       "target_sha256": "f9859fc8a4174131b41615e9901131395e4e833ac5a63770081b52336c5cc5bb"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/59",
+        "names": {
+         "id": "Req-23.2"
+        }
+       },
+       "target_sha256": "5b2257dbd17888fa6ace998fae847709a529440228871dfc15120ce166faae08"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/73",
+        "names": {
+         "id": "Req-28.4"
+        }
+       },
+       "target_sha256": "58a89a1c13ec40b028da50eea4eba7a5c90159831ed0bd6368c9b41466d84a65"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/76",
+        "names": {
+         "id": "Req-30.1"
+        }
+       },
+       "target_sha256": "b116ebe5aa63e5b6d8f63fad842736153730fca04ffdefd1fbbccc07ceeb6f13"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/68",
+        "names": {
+         "id": "Req-27.2"
+        }
+       },
+       "target_sha256": "d8a47b6289efd7128bbe415b424ae500a68b86a129d9a957d4718f033b0c3535"
+      },
+      {
+       "label": "named atom",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/atoms/69",
+        "names": {
+         "id": "Req-27.3"
+        }
+       },
+       "target_sha256": "066216adec63c172f3b8ebb32cac0ebe72627c3be3c5853277232472294114f5"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:geodcat:G-30",
+     "step": "R9",
+     "decision": "row_changed_after_check",
+     "value": {
+      "fields": [
+       "statement_before_v3"
+      ]
+     },
+     "reason": "\"where it is not the default one\" is not in GeoDCAT-AP 1.0 (independent check).",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": null,
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/29",
+        "names": {
+         "id": "G-30"
+        }
+       },
+       "target_sha256": "a7224acea428878f8be34798a39410d73bea47a459a981a85137471e0f00db11"
+      }
+     ]
+    },
+    {
+     "entry_id": "R9:geodcat:G-38",
+     "step": "R9",
+     "decision": "row_changed_after_check",
+     "value": {
+      "fields": [
+       "statement_before_v3"
+      ]
+     },
+     "reason": "\"and the reasons for them\" is not in GeoDCAT-AP 1.0 (independent check).",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": null,
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/37",
+        "names": {
+         "id": "G-38"
+        }
+       },
+       "target_sha256": "01f163088dd7a5b12adc8080f56edf1f77fbc9bd0fbec2788a11067670092f35"
+      }
+     ]
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  }
+ ]
+}

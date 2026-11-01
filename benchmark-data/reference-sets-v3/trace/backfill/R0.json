@@ -1,0 +1,246 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R0",
+ "name": "Repo snapshot",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R0-F01",
+   "step": "R0",
+   "field": "snapshot",
+   "value": "tag ref-trace-baseline: the sanitised snapshot the trace starts from",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "IMPORT-PROVENANCE.json at the baseline",
+     "kind": "row",
+     "file": "IMPORT-PROVENANCE.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "4076ebc93ee3b50655c94d7373dcf35f8e5f5ec845b289c01e2c042a24d02fbe",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "4076ebc93ee3b50655c94d7373dcf35f8e5f5ec845b289c01e2c042a24d02fbe"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "The repository has two commits: an import commit and the sanitising commit by \"Anonymous Curator\", which the tag marks."
+  },
+  {
+   "fact_id": "R0-F02",
+   "step": "R0",
+   "field": "files_sha256 at import vs now",
+   "value": "219 of 223 files match",
+   "status": "reconstructed (verified)",
+   "links": [
+    {
+     "label": "IMPORT-PROVENANCE.json",
+     "kind": "row",
+     "file": "IMPORT-PROVENANCE.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "4076ebc93ee3b50655c94d7373dcf35f8e5f5ec845b289c01e2c042a24d02fbe",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "4076ebc93ee3b50655c94d7373dcf35f8e5f5ec845b289c01e2c042a24d02fbe"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "Rechecked on a clean clone in Phase 0 and again here; the uncommitted working tree of the audit is excluded (decision 0.3)."
+  },
+  {
+   "fact_id": "R0-F03",
+   "step": "R0",
+   "field": "import commit author",
+   "value": null,
+   "status": "withheld",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "git history: author of the first commit"
+   ],
+   "note": "The first commit is authored under the owner's own account; removed for anonymity. No hash is kept."
+  },
+  {
+   "fact_id": "R0-F04",
+   "step": "R0",
+   "field": "upstream history and snapshot labels",
+   "value": null,
+   "status": "withheld",
+   "links": [
+    {
+     "label": "README.md",
+     "kind": "row",
+     "file": "README.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "09754bf2c227987d7596e3017e8eaa7df958f264eb50bad4d0a2e933f8c41d3d",
+     "locator": {
+      "lines": [
+       7,
+       7
+      ]
+     },
+     "target_sha256": "57b2309c5acde86490ec03cb9128881ed4e8e807fe4552297e410e3ee13826af"
+    },
+    {
+     "label": "ANONYMIZATION.md",
+     "kind": "row",
+     "file": "ANONYMIZATION.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "73b5fd640d77164648d8b482b3583623b89668cd26d6c9c3353dbfb31da18344",
+     "locator": {
+      "lines": [
+       11,
+       15
+      ]
+     },
+     "target_sha256": "06cc74c59ab0021c03487b34b002d8ed3f3988a207a8814bc3615eae010a8ae8"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "The snapshot labels (import-snapshot, pre-adjudication-snapshot, adjudicated-snapshot, audit-snapshot) replace upstream identifiers. The first commit still holds the unsanitised files (outside evidence OE-25, owner only)."
+  },
+  {
+   "fact_id": "R0-F05",
+   "step": "R0",
+   "field": "sanitising transformations",
+   "value": {
+    "files_changed": 52,
+    "files": [
+     "ANONYMIZATION.md",
+     "IMPORT-PROVENANCE.json",
+     "IMPORT-VALIDATION.md",
+     "README.md",
+     "benchmark-data/BENCHMARK-METHODOLOGY.md",
+     "benchmark-data/mobilitydcat/use-cases.json",
+     "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+     "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+     "benchmark-data/reference-sets-v3/README.md",
+     "benchmark-data/reference-sets-v3/atoms-review.csv",
+     "benchmark-data/reference-sets-v3/counts.json",
+     "benchmark-data/reference-sets-v3/coverage-ledger.csv",
+     "benchmark-data/reference-sets-v3/geodcat.json",
+     "benchmark-data/reference-sets-v3/healthdcat.json",
+     "benchmark-data/reference-sets-v3/history/README.md",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v2/build.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v2/build_v2.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v2/codes.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v2/stats.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v2/template.html",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v3/extract_inputs.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v3/integrate_labels.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v3/make_readme.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_health.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_mobility_v3.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_other.py",
+     "benchmark-data/reference-sets-v3/history/build-scripts/v3/srcfind.py",
+     "benchmark-data/reference-sets-v3/history/independent-check/independent-check-prompt.md",
+     "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md",
+     "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-jrc-research.json",
+     "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-mobilitydcat.json",
+     "benchmark-data/reference-sets-v3/history/v1-comparison-2026-10-22/reference-requirements-comparison.html",
+     "benchmark-data/reference-sets-v3/history/v2-vs-pr45-comparison/claude-v2-vs-pr45-mapping.csv",
+     "benchmark-data/reference-sets-v3/jrc-research.json",
+     "benchmark-data/reference-sets-v3/mobilitydcat.json",
+     "benchmark-data/reference-sets-v3/mock-benchmark/METHOD.md",
+     "benchmark-data/reference-sets-v3/mock-benchmark/README.md",
+     "benchmark-data/reference-sets-v3/mock-benchmark/SUMMARY.md",
+     "benchmark-data/reference-sets-v3/mock-benchmark/build_pools.py",
+     "benchmark-data/reference-sets-v3/mock-benchmark/judge/INSTRUCTIONS.md",
+     "benchmark-data/reference-sets-v3/mock-benchmark/out/mock-benchmark-results.json",
+     "benchmark-data/reference-sets-v3/mock-benchmark/runs.json",
+     "benchmark-data/reference-sets-v3/mock-benchmark/score.py",
+     "benchmark-data/reference-sets-v3/mock-benchmark/verify.py",
+     "benchmark-data/reference-sets-v3/statdcat.json",
+     "benchmark-data/reference-sets-v3/supplement/appendix-test-cases.tex",
+     "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+     "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.tex",
+     "benchmark-data/reference-sets-v3/supplement/table-benchmark.tex",
+     "tools/export_anonymous.py"
+    ]
+   },
+   "status": "reconstructed",
+   "links": [
+    {
+     "label": "transformations",
+     "kind": "row",
+     "file": "IMPORT-PROVENANCE.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "4076ebc93ee3b50655c94d7373dcf35f8e5f5ec845b289c01e2c042a24d02fbe",
+     "locator": {
+      "json_pointer": "/transformations"
+     },
+     "target_sha256": "2e73db159ba69418efc7bda14a33539db7fa3db72819cc3c153181bb8561c147"
+    },
+    {
+     "label": "IMPORT-VALIDATION.md",
+     "kind": "row",
+     "file": "IMPORT-VALIDATION.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "417ed5455cd8de8a33378b3e7d84b2d574c18f59fd4154fe5b2c1d8d9700b66d",
+     "locator": {
+      "lines": [
+       5,
+       5
+      ]
+     },
+     "target_sha256": "73562d7b5decba632dc6e3f316ffe2fd7acad17de4c5a488ca01ba42516bf059"
+    },
+    {
+     "label": "The repository's first commit (the import, before sanitising), parent of the baseline tag",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-25",
+     "sha256": null,
+     "reference": "git: parent of tag ref-trace-baseline"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "Derived from the difference between the two commits. Replaced: PR numbers, local paths, commit-like IDs, the owner's name and handle, GitHub URLs. Stored history scripts, prompts and two packets are therefore verbatim only after sanitising."
+  },
+  {
+   "fact_id": "R0-F06",
+   "step": "R0",
+   "field": "uncommitted mock-benchmark working tree",
+   "value": "left out; the trace describes the committed tree",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "decision 0.3",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/trace/DECISIONS.json",
+     "hash_time": "now",
+     "file_sha256": "0b628e3c0d20367767c49985f965999fe76ead4c12cebdaa6f32eea37c2cdaa6",
+     "locator": {
+      "json_pointer": "/decisions/2",
+      "names": {
+       "id": "0.3"
+      }
+     },
+     "target_sha256": "ceea266b70bd638791f294b4c9c898a13abfaae09c729f27c368296f49b82d78"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  }
+ ]
+}

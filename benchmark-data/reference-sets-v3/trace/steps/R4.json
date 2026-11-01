@@ -1,0 +1,135 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "R4",
+ "name": "v2 coding of the 75 rows",
+ "time_order": "22 Oct, before R5",
+ "actors": [
+  {
+   "actor": "model:claude/coder",
+   "model_id": null,
+   "model_id_status": "not_recorded"
+  }
+ ],
+ "session": null,
+ "session_note": "historical step: no session record; the backfill session is in written_by",
+ "scripts": [
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v2/codes.py",
+   "sha256": "a7f9af7022ea370762048462077af4f3fa9d0c6d845ab5656ce8f86e062bf601",
+   "hash_time": "import",
+   "rerunnable": "no",
+   "postdates_step": "no",
+   "reason": "data module; reads placeholder paths through build.py"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v2/stats.py",
+   "sha256": "67ce99a450414694d48e50681d5b75dccd78bcac4985fa11c370a826d51719a9",
+   "hash_time": "import",
+   "rerunnable": "no",
+   "postdates_step": "unknown",
+   "reason": "placeholder paths"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v2/verify.py",
+   "sha256": "6ee9ba339ce91211f8c8c355fd5992867ba14837d9977d74b21c506ae0f450c4",
+   "hash_time": "import",
+   "rerunnable": "no",
+   "postdates_step": "unknown",
+   "reason": "needs base_registry.json (kept outside)"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v2/template.html",
+   "sha256": "9a3c14011ab46aa7ce98698a7d949b54df326fbe685140a4582cee3d2bccb19b",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v2/codes.py",
+   "sha256": "a7f9af7022ea370762048462077af4f3fa9d0c6d845ab5656ce8f86e062bf601",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v2/rows.json",
+   "sha256": "2129abcf11d9f8f6056109886e959255dbd285250174bb00edfa3cef480aaa36",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/v1-comparison-2026-10-22/reference-requirements-coding.csv",
+   "sha256": "490d167284a0a008286e6201c3b6b72f594cedddbf3c5275b2b9f47594ee3ca0",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/v1-comparison-2026-10-22/reference-requirements-comparison.html",
+   "sha256": "02afbfd07b90f479161bc10b505d7b7ebf98d6ef70ae6279e27510afb291d0f1",
+   "hash_time": "import",
+   "stored": "yes"
+  }
+ ],
+ "outputs": [],
+ "timing": {
+  "run_started": "2026-10-22",
+  "run_ended": null,
+  "timing_status": "date only",
+  "run_by": "model:claude/coder"
+ },
+ "seeds": {},
+ "counts": {
+  "entries": 0,
+  "facts": 7
+ },
+ "decision_values": [
+  "level=<M|G|S>",
+  "problem=<P1-P7>",
+  "response=<A-H>",
+  "derivation=<code>"
+ ],
+ "rationale_location": "backfill/R4.json (facts with reason fields); spec section 2",
+ "evidence": [
+  "benchmark-data/reference-sets-v3/history/build-scripts/v2/codes.py:199-199",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v2/codes.py:7-8",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v2/template.html:216-216",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v2/verify.py:4-4"
+ ],
+ "facts": [
+  "R4-F01",
+  "R4-F02",
+  "R4-F03",
+  "R4-F04",
+  "R4-F05",
+  "R4-F06",
+  "R4-F07"
+ ],
+ "gaps": [
+  "G-014",
+  "G-015",
+  "G-016",
+  "G-017",
+  "G-018"
+ ],
+ "written_by": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "bb4ae342588d7022ac421a942673cf831387cc496021df140f39e1d447195ac2",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T12:49:27.396Z",
+  "actor": "model:claude/backfill"
+ },
+ "manifest_sha256": "8c1432878a1cbb3bf8f6940e930a700ab6145202fb7ef4126e099dc01c0c856a"
+}

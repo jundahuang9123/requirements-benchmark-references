@@ -1,0 +1,114 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "R13",
+ "name": "Scored selection",
+ "time_order": "22 Oct, recomputed on 23 Oct",
+ "actors": [
+  {
+   "actor": "script:benchmark-data/reference-sets-v3/validate_v3.py#ddd67f5fb062aa921965c3f4018d11f11bb470171fee25638bb5d948a9d4a734",
+   "role": "checks the rule"
+  }
+ ],
+ "session": null,
+ "session_note": "historical step: no session record; the backfill session is in written_by",
+ "scripts": [
+  {
+   "path": "benchmark-data/reference-sets-v3/validate_v3.py",
+   "sha256": "ddd67f5fb062aa921965c3f4018d11f11bb470171fee25638bb5d948a9d4a734",
+   "hash_time": "import",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/trace/rederive.py",
+   "sha256": "29ee1f0dfd46cc0cd22133c4d1aacd15d0eacfa7279b616426d7c3ea3862bb83",
+   "hash_time": "now",
+   "rerunnable": "yes",
+   "postdates_step": "no",
+   "reason": "re-derivation"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "benchmark-data/reference-sets-v3/trace/backfill/R13-recompute.json",
+   "sha256": "9ec2b1356a945edf647296d25210f7bfe0df506b585d9f8e89836a4c7df3ce24",
+   "hash_time": "now",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/README.md",
+   "sha256": "db7f8aae0fe4dfb0b35b4f67a2842703710b1e20bcde05cafcc3a58ae92f4cf3",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/BENCHMARK-METHODOLOGY.md",
+   "sha256": "17cd703f9876c3b6c76fd79936b22a6263f4b0484afe3750719c593da8bacf94",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+   "sha256": "526a342b2820035058f78c06fd16953583e1d2ca4334dc16300d893ca7808641",
+   "hash_time": "import",
+   "stored": "yes"
+  }
+ ],
+ "outputs": [],
+ "timing": {
+  "run_started": "2026-10-23",
+  "run_ended": null,
+  "timing_status": "date only",
+  "run_by": "script:benchmark-data/reference-sets-v3/validate_v3.py"
+ },
+ "seeds": {},
+ "counts": {
+  "entries": 0,
+  "facts": 4
+ },
+ "decision_values": [
+  "scored",
+  "not_scored"
+ ],
+ "rationale_location": "backfill/R13.json (facts with reason fields); spec section 2",
+ "evidence": [
+  "benchmark-data/BENCHMARK-METHODOLOGY.md:177-182",
+  "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md:75-77",
+  "benchmark-data/reference-sets-v3/README.md:59-59",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py:162-164",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py:78-88",
+  "benchmark-data/reference-sets-v3/validate_v3.py:145-147"
+ ],
+ "facts": [
+  "R13-F01",
+  "R13-F02",
+  "R13-F03",
+  "R13-F04"
+ ],
+ "gaps": [
+  "G-059",
+  "G-060",
+  "G-061"
+ ],
+ "written_by": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "bb4ae342588d7022ac421a942673cf831387cc496021df140f39e1d447195ac2",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T12:49:27.396Z",
+  "actor": "model:claude/backfill"
+ },
+ "manifest_sha256": "7f5ff7609da3cd46e3af199885bb2e3d795d209701c9bdd7ecc4f9142193c752"
+}

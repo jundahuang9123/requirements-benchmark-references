@@ -1,0 +1,53 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "date": "2026-11-01",
+ "actor": "human:curator",
+ "status": "recorded",
+ "source": {
+  "label": "the owner's reply in the references session, read against the session's Phase 0 recommendations",
+  "sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "location": "outside the repository"
+ },
+ "decisions": [
+  {
+   "id": "0.1",
+   "decision": "Lift B: definition-brief Task 2 (D1) plus the trace work, limited to the files of spec 0.2."
+  },
+  {
+   "id": "0.2",
+   "decision": "The two steps without an ID are recorded as decision entries under R9 (applying the R9 resolutions) and R7 (Mobility Table 1 re-check)."
+  },
+  {
+   "id": "0.3",
+   "decision": "The uncommitted mock-benchmark files are left out; the trace describes the committed tree."
+  },
+  {
+   "id": "0.4",
+   "decision": "(a) frozen copies where the licence allows, and (b) Mobility anchors against the stored table1_text (stored_transcription). Phase 1 found (a) not possible: both sources are citation-only."
+  },
+  {
+   "id": "0.5",
+   "decision": "Round 1 covers all 320 atoms: full cards for the 196 scored, short cards for the 124 not scored. Second annotator and sample: named before round 1."
+  },
+  {
+   "id": "0.6",
+   "decision": "Not decided; needed before the release check."
+  },
+  {
+   "id": "0.7",
+   "decision": "The 9 /tmp/claude-0 paths and the upstream branch name in the Codex review are accepted."
+  },
+  {
+   "id": "0.8",
+   "decision": "No exclusion in round 1; reviewers use flag."
+  },
+  {
+   "id": "0.9",
+   "decision": "Session logs, build workspaces and scratch of 22-23 Oct and the first commit are used as attested_log: hashes only in the repository; the files stay with the owner."
+  },
+  {
+   "id": "0.10",
+   "decision": "Commits and tags by \"Anonymous Curator <anonymous@example.invalid>\", without co-author or session-link trailers."
+  }
+ ]
+}

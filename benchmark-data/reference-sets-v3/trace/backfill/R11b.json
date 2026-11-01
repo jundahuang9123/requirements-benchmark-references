@@ -1,0 +1,114 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R11b",
+ "name": "Provisional adjudication",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R11b-F01",
+   "step": "R11b",
+   "field": "actors (one case-level string)",
+   "value": [
+    "human:curator",
+    "model:codex/review",
+    "model:claude/adjudication-applier"
+   ],
+   "status": "recorded",
+   "links": [
+    {
+     "label": "by",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+     "locator": {
+      "json_pointer": "/adjudication/by"
+     },
+     "target_sha256": "ecfcead88db2f164448af0cbab6fb0029ede068aff58d305e42c89862727ce90"
+    },
+    {
+     "label": "script",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "509d366eff7c15872b4802727ccfe1a1f8b2754898e7d80cbc0e03922f097ea8",
+     "locator": {
+      "lines": [
+       281,
+       281
+      ]
+     },
+     "target_sha256": "4ff07aa34d19547fc9969ef4bb5399f3dc8e946fc7172bfd9e63cd4a05c61ec0"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "The first commit shows that \"Curator\" in this string replaced the owner's name.",
+   "curator_identity": {
+    "actor": "human:curator",
+    "status": "attested_log",
+    "evidence": {
+     "label": "The repository's first commit (the import, before sanitising), parent of the baseline tag",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-25",
+     "sha256": null,
+     "reference": "git: parent of tag ref-trace-baseline",
+     "locator": {
+      "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+      "line": 281
+     }
+    }
+   }
+  },
+  {
+   "fact_id": "R11b-F02",
+   "step": "R11b",
+   "field": "reason per item",
+   "value": "the register gives a reason per item (CODEX:55-71)",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "register",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "526a342b2820035058f78c06fd16953583e1d2ca4334dc16300d893ca7808641",
+     "locator": {
+      "lines": [
+       55,
+       71
+      ]
+     },
+     "target_sha256": "e0d3e70356eace5f2f85488d01dfac3c28c4205c3a5fd2b70558c4b750d61db0"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R11b-F03",
+   "step": "R11b",
+   "field": "owner of each item: the curator's own decision or adopted from Codex",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+    "benchmark-data/reference-sets-v3/README.md:50-58"
+   ]
+  }
+ ]
+}

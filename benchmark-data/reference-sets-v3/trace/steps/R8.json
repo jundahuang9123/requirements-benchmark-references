@@ -1,0 +1,95 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "R8",
+ "name": "Anchor checks",
+ "time_order": "22 Oct, at build time",
+ "actors": [
+  {
+   "actor": "script:benchmark-data/reference-sets-v3/history/build-scripts/v3/srcfind.py#3abab65f37de5d5515d4891d9359284edf499b1271c7423b52cbbe6e57e2be73"
+  }
+ ],
+ "session": null,
+ "session_note": "historical step: no session record; the backfill session is in written_by",
+ "scripts": [
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v3/srcfind.py",
+   "sha256": "3abab65f37de5d5515d4891d9359284edf499b1271c7423b52cbbe6e57e2be73",
+   "hash_time": "import",
+   "rerunnable": "no",
+   "postdates_step": "unknown",
+   "reason": "placeholder paths"
+  },
+  {
+   "path": "tools/trace/rederive.py",
+   "sha256": "29ee1f0dfd46cc0cd22133c4d1aacd15d0eacfa7279b616426d7c3ea3862bb83",
+   "hash_time": "now",
+   "rerunnable": "yes",
+   "postdates_step": "no",
+   "reason": "re-derivation"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "benchmark-data/reference-sets-v3/trace/backfill/R8-anchor-spans.json",
+   "sha256": "0258f2316fe64ad23627f0ea065a6fffbd71dcc0829e409f543fb017406346c8",
+   "hash_time": "now",
+   "stored": "yes"
+  }
+ ],
+ "outputs": [],
+ "timing": {
+  "run_started": "2026-10-22",
+  "run_ended": null,
+  "timing_status": "date only",
+  "run_by": "script:benchmark-data/reference-sets-v3/history/build-scripts/v3/srcfind.py"
+ },
+ "seeds": {},
+ "counts": {
+  "entries": 0,
+  "facts": 6
+ },
+ "decision_values": [
+  "verbatim_in_source_text",
+  "from_web_fetch_not_verified_locally",
+  "stored_transcription"
+ ],
+ "rationale_location": "backfill/R8.json (facts with reason fields); spec section 2",
+ "evidence": [
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py:184-189",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/srcfind.py:6-17"
+ ],
+ "facts": [
+  "R8-F01",
+  "R8-F02",
+  "R8-F03",
+  "R8-F04",
+  "R8-F05",
+  "R8-F06"
+ ],
+ "gaps": [
+  "G-034",
+  "G-035",
+  "G-036"
+ ],
+ "written_by": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "bb4ae342588d7022ac421a942673cf831387cc496021df140f39e1d447195ac2",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T12:49:27.396Z",
+  "actor": "model:claude/backfill"
+ },
+ "manifest_sha256": "46962df23d9ceb584b110f73ea80be07e4659127caffee195ea6b0d7a0aaeac4"
+}

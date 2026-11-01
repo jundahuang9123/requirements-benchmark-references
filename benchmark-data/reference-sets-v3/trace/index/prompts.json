@@ -1,0 +1,117 @@
+{
+ "note": "Prompt texts as stored: verbatim except the sanitising substitutions of the second commit (container paths to workspace/, \"PR #45\" to \"audit pass A\").",
+ "files": {
+  "benchmark-data/reference-sets-v3/history/independent-check/independent-check-prompt.md": "95d0bfc30c920367aed849e8632e2565819fc37ca260b3b340c3642c48a45d79",
+  "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md": "d80bb3bceb044f1197ff3794b5928af69b054da879ffa4883df1d0fbba97e57e"
+ },
+ "items": [
+  {
+   "title": "Independent check of merged reference atoms",
+   "started_at": "2026-10-22T18:57:25.027Z",
+   "lines": [
+    10,
+    34
+   ],
+   "lines_sha256": "d836636e0fef2c8b1142e11d47c904d619442c511723dc62f683fde1828db2fa",
+   "prompt_id": "P-R9",
+   "step": "R9",
+   "file": "benchmark-data/reference-sets-v3/history/independent-check/independent-check-prompt.md"
+  },
+  {
+   "title": "Label Health atoms H-1–H-33 evidence",
+   "started_at": "2026-10-22T19:50:49.721Z",
+   "lines": [
+    10,
+    37
+   ],
+   "lines_sha256": "d8263eecbe58a84c177ef384820baf8fd51f8b2cd0d358c56844913187a0a9a3",
+   "prompt_id": "P-R10-1",
+   "step": "R10",
+   "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md"
+  },
+  {
+   "title": "Label Health atoms H-34–H-69 evidence",
+   "started_at": "2026-10-22T19:51:00.276Z",
+   "lines": [
+    45,
+    72
+   ],
+   "lines_sha256": "d79b6b71bb09bade1bffd046d7d04c9bea04e025c4b2467c69842565bc2e3151",
+   "prompt_id": "P-R10-2",
+   "step": "R10",
+   "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md"
+  },
+  {
+   "title": "Label Mobility atoms vs policy inputs",
+   "started_at": "2026-10-22T19:51:09.974Z",
+   "lines": [
+    80,
+    104
+   ],
+   "lines_sha256": "a49d97af51207ea7097c9dcf60f04769c4b66b9b1bee7e123c37da1c111044e5",
+   "prompt_id": "P-R10-3",
+   "step": "R10",
+   "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md"
+  },
+  {
+   "title": "Label Mobility atoms vs standards inputs",
+   "started_at": "2026-10-22T19:51:20.830Z",
+   "lines": [
+    112,
+    137
+   ],
+   "lines_sha256": "27b894568dfff0c54b1ff4b7887f1b5f3eacb4afc381615b65e860edbc185509",
+   "prompt_id": "P-R10-4",
+   "step": "R10",
+   "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md"
+  },
+  {
+   "title": "Label Mobility atoms vs literature inputs",
+   "started_at": "2026-10-22T19:51:31.177Z",
+   "lines": [
+    145,
+    169
+   ],
+   "lines_sha256": "4666671192a31029a4d061b26188e5658400b0eb920a09a8ea054da58161ad67",
+   "prompt_id": "P-R10-5",
+   "step": "R10",
+   "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md"
+  },
+  {
+   "title": "Label Mobility atoms vs partner inputs",
+   "started_at": "2026-10-22T19:51:40.332Z",
+   "lines": [
+    177,
+    200
+   ],
+   "lines_sha256": "73e8220a89377d6d3bc9afd22304f9fc1b3bb8ac4d3f7e26494570f1869044f3",
+   "prompt_id": "P-R10-6",
+   "step": "R10",
+   "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md"
+  },
+  {
+   "title": "Label Geo atoms evidence",
+   "started_at": "2026-10-22T19:51:50.377Z",
+   "lines": [
+    208,
+    232
+   ],
+   "lines_sha256": "9856f96718a38fb25560d116fecc361fa91744b518c41f3ea786570bcfec5196",
+   "prompt_id": "P-R10-7",
+   "step": "R10",
+   "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md"
+  },
+  {
+   "title": "Label Stat and JRC atoms evidence",
+   "started_at": "2026-10-22T19:52:00.323Z",
+   "lines": [
+    240,
+    269
+   ],
+   "lines_sha256": "e4fae33245a2b924893b755db24745391571a3358e4a0623fdc97c663d88d3fe",
+   "prompt_id": "P-R10-8",
+   "step": "R10",
+   "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md"
+  }
+ ]
+}

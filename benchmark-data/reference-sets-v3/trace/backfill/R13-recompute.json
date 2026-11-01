@@ -1,0 +1,42 @@
+{
+ "step": "R13",
+ "rule": "stratum = content, status_in_source != deferred, not merged_into, not umbrella_of (validate_v3.py:145-147)",
+ "script_sha256": "29ee1f0dfd46cc0cd22133c4d1aacd15d0eacfa7279b616426d7c3ea3862bb83",
+ "cases": {
+  "mobilitydcat": {
+   "atoms": 98,
+   "scored_stored": 39,
+   "scored_recomputed": 39,
+   "differing": []
+  },
+  "healthdcat": {
+   "atoms": 121,
+   "scored_stored": 89,
+   "scored_recomputed": 89,
+   "differing": []
+  },
+  "statdcat": {
+   "atoms": 27,
+   "scored_stored": 14,
+   "scored_recomputed": 14,
+   "differing": []
+  },
+  "geodcat": {
+   "atoms": 56,
+   "scored_stored": 37,
+   "scored_recomputed": 37,
+   "differing": []
+  },
+  "jrc-research": {
+   "atoms": 18,
+   "scored_stored": 17,
+   "scored_recomputed": 17,
+   "differing": []
+  }
+ },
+ "summary": {
+  "atoms": 320,
+  "scored": 196,
+  "differing": 0
+ }
+}

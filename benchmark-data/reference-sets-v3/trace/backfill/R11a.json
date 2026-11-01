@@ -1,0 +1,130 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R11a",
+ "name": "Codex review",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R11a-F01",
+   "step": "R11a",
+   "field": "actor",
+   "value": "ChatGPT/Codex",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "title",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "526a342b2820035058f78c06fd16953583e1d2ca4334dc16300d893ca7808641",
+     "locator": {
+      "lines": [
+       1,
+       5
+      ]
+     },
+     "target_sha256": "6c1d2166f6adb7bcf615a078cafed7e657309237580e93b6525713bbfedc0d40"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R11a-F02",
+   "step": "R11a",
+   "field": "model and prompt",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+    "outside: no Codex history in the bundle"
+   ]
+  },
+  {
+   "fact_id": "R11a-F03",
+   "step": "R11a",
+   "field": "register and findings",
+   "value": "17 register items, 4 findings sections",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "index",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/trace/index/codex-register.json",
+     "hash_time": "now",
+     "file_sha256": "77f4b57e980024a6f6b981bfe60bc6f5e434d65bcb7ba84d5bb356fb56f612da",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "77f4b57e980024a6f6b981bfe60bc6f5e434d65bcb7ba84d5bb356fb56f612da"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R11a-F04",
+   "step": "R11a",
+   "field": "reviewed head",
+   "value": "placeholder label pre-adjudication-snapshot",
+   "status": "withheld",
+   "links": [
+    {
+     "label": "head",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "526a342b2820035058f78c06fd16953583e1d2ca4334dc16300d893ca7808641",
+     "locator": {
+      "lines": [
+       3,
+       3
+      ]
+     },
+     "target_sha256": "0629dda9c93a55df724b0b1d2cab029a49063cbde3b1a006ec3cfdd93fbbb7f3"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R11a-F05",
+   "step": "R11a",
+   "field": "date",
+   "value": "2026-10-23",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "title",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "526a342b2820035058f78c06fd16953583e1d2ca4334dc16300d893ca7808641",
+     "locator": {
+      "lines": [
+       1,
+       1
+      ]
+     },
+     "target_sha256": "eb7f69cc996a35b2399eb1baa79bb477fdb669731fe98f575e909469671b97d9"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  }
+ ]
+}

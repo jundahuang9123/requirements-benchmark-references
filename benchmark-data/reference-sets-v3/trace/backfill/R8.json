@@ -1,0 +1,191 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R8",
+ "name": "Anchor checks",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R8-F01",
+   "step": "R8",
+   "field": "anchor check at build time",
+   "value": "occurrence of the anchor in the build-time text extractions",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "srcfind",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/srcfind.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "3abab65f37de5d5515d4891d9359284edf499b1271c7423b52cbbe6e57e2be73",
+     "locator": {
+      "lines": [
+       6,
+       17
+      ]
+     },
+     "target_sha256": "c7125b4912cfa298555dfb8855a921b367874c3c838d4f35e56192ced49c5c9f"
+    },
+    {
+     "label": "build",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "25ca9f805ede0ffdda6bfd57a0ae6d3060bce0d5e1a84293e3852e0622cfca09",
+     "locator": {
+      "lines": [
+       184,
+       189
+      ]
+     },
+     "target_sha256": "d5c35233033836d2938f2256cc12f8b41227a45fb84d34de2e622188c29eefdc"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R8-F02",
+   "step": "R8",
+   "field": "build-time text extractions",
+   "value": "kept outside the repository",
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "pdftotext extraction used for anchors: Health D6.2",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-18",
+     "sha256": "50f9023c39cc731c456bce203b56797e922b2b976e94a138bed70167fb754243"
+    },
+    {
+     "label": "pdftotext extraction used for anchors: Health D6.2 (raw mode)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-19",
+     "sha256": "bc1b7b8b14d2616844500b0c493da1759f05bdece9cae5902cb01dd095b7cdcf"
+    },
+    {
+     "label": "pdftotext extraction used for anchors: Stat",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-20",
+     "sha256": "20d7e9bfab5ae7ea090a4c44847322491a1453135c1591544d1ccb68184155f0"
+    },
+    {
+     "label": "pdftotext extraction used for anchors: Stat (raw mode)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-21",
+     "sha256": "2af8c7c4e7e9a21314773ce7d2ca46716d6faf90f670e036236e3203a21a115c"
+    },
+    {
+     "label": "pdftotext extraction used for anchors: Geo",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-22",
+     "sha256": "c63fed4c51264438f0e6e4e0f714e553d24a39f7c53ba8aa547b812e53b39c7e"
+    },
+    {
+     "label": "pdftotext extraction used for anchors: Geo (raw mode)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-23",
+     "sha256": "3c8879c47a8acb0fd069502cdb92f9ea7d3b01ea4e4c35e7010b15b10f0ffd48"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R8-F03",
+   "step": "R8",
+   "field": "verbatim anchors re-found",
+   "value": "204 of 204; pages equal to the stored anchor_page: 204",
+   "status": "reconstructed (verified)",
+   "links": [
+    {
+     "label": "spans",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/trace/backfill/R8-anchor-spans.json",
+     "hash_time": "now",
+     "file_sha256": "0258f2316fe64ad23627f0ea065a6fffbd71dcc0829e409f543fb017406346c8",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "0258f2316fe64ad23627f0ea065a6fffbd71dcc0829e409f543fb017406346c8"
+    },
+    {
+     "label": "validator matching",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/validate_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "ddd67f5fb062aa921965c3f4018d11f11bb470171fee25638bb5d948a9d4a734",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "ddd67f5fb062aa921965c3f4018d11f11bb470171fee25638bb5d948a9d4a734"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "pdftotext: pdftotext version 24.02.0. Spans give the text variant and offsets of every part, with the variant's sha256."
+  },
+  {
+   "fact_id": "R8-F04",
+   "step": "R8",
+   "field": "Mobility anchors against the stored table1_text (decision 0.4b)",
+   "value": "98 of 98 found; status stored_transcription, not counted for solidity unless the owner decides so",
+   "status": "reconstructed",
+   "links": [
+    {
+     "label": "spans",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/trace/backfill/R8-anchor-spans.json",
+     "hash_time": "now",
+     "file_sha256": "0258f2316fe64ad23627f0ea065a6fffbd71dcc0829e409f543fb017406346c8",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "0258f2316fe64ad23627f0ea065a6fffbd71dcc0829e409f543fb017406346c8"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R8-F05",
+   "step": "R8",
+   "field": "JRC web anchors",
+   "value": "18 unfrozen: the paper's redistribution rights are not established",
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/jrc-research/provenance/manifest.json",
+    "benchmark-data/reference-sets-v3/README.md:39,136"
+   ],
+   "note": "Known gap; --release cannot pass for these."
+  },
+  {
+   "fact_id": "R8-F06",
+   "step": "R8",
+   "field": "whether each quote supports its atom",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/validate_v3.py",
+    "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py"
+   ],
+   "note": "R8 checks occurrence only."
+  }
+ ]
+}

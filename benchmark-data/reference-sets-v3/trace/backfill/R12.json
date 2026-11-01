@@ -1,0 +1,285 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R12",
+ "name": "Validation, import, anonymisation",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R12-F01",
+   "step": "R12",
+   "field": "validate_v3.py re-run",
+   "value": "passed; equal to VALIDATION.json and IMPORT-V3-VALIDATION.json",
+   "status": "reconstructed (verified)",
+   "links": [
+    {
+     "label": "VALIDATION.json",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/VALIDATION.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "015a68b424167047cdbee75387cfff1bb12873e4e2f2cb93bb76d9861aa10f78",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "015a68b424167047cdbee75387cfff1bb12873e4e2f2cb93bb76d9861aa10f78"
+    },
+    {
+     "label": "IMPORT-V3-VALIDATION.json",
+     "kind": "row",
+     "file": "IMPORT-V3-VALIDATION.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "015a68b424167047cdbee75387cfff1bb12873e4e2f2cb93bb76d9861aa10f78",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "015a68b424167047cdbee75387cfff1bb12873e4e2f2cb93bb76d9861aa10f78"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R12-F02",
+   "step": "R12",
+   "field": "who ran the import",
+   "value": null,
+   "status": "withheld",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "git history: author of the first commit",
+    "IMPORT-VALIDATION.md"
+   ],
+   "note": "The import commit is under the owner's own account."
+  },
+  {
+   "fact_id": "R12-F03",
+   "step": "R12",
+   "field": "timestamps and tool versions at import",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/VALIDATION.json",
+    "IMPORT-*.json",
+    "IMPORT-VALIDATION.md"
+   ]
+  },
+  {
+   "fact_id": "R12-F04",
+   "step": "R12",
+   "field": "anonymous export",
+   "value": "passes on the committed tree",
+   "status": "reconstructed",
+   "links": [
+    {
+     "label": "check",
+     "kind": "script",
+     "file": "tools/export_anonymous.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "d37f379807fb462c4edb5140eaf3d3d91adad8a1f626d0affbe53737dec5e223",
+     "locator": {
+      "lines": [
+       60,
+       67
+      ]
+     },
+     "target_sha256": "c72a2042702d1e8e4df94b641a8a368dfe74b632c80935f630c206fa255aed30"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R12-F05",
+   "step": "R12",
+   "field": "scratch paths missed by the export (decision 0.7)",
+   "value": "9 paths, accepted",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "integrate_labels",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/integrate_labels.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "0a297a1fa86ac0895dd421eb55e6e78abedec07443eafd236123d024c4cbf842",
+     "locator": {
+      "lines": [
+       6,
+       6
+      ]
+     },
+     "target_sha256": "823e4a2119ae95ed8358807cd1879285172e679e6e92d62cb406376f822ba3c4"
+    },
+    {
+     "label": "prompt",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "d80bb3bceb044f1197ff3794b5928af69b054da879ffa4883df1d0fbba97e57e",
+     "locator": {
+      "lines": [
+       37,
+       37
+      ]
+     },
+     "target_sha256": "f5361a9dbe10c3cb9976ead5c3994a6342429d469bd28afd03a8d685524d8fd7"
+    },
+    {
+     "label": "prompt",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "d80bb3bceb044f1197ff3794b5928af69b054da879ffa4883df1d0fbba97e57e",
+     "locator": {
+      "lines": [
+       72,
+       72
+      ]
+     },
+     "target_sha256": "4c9dfa18800592f3b6ea212274b3506dd42e0ed136f5893de5df7ec4a3c29366"
+    },
+    {
+     "label": "prompt",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "d80bb3bceb044f1197ff3794b5928af69b054da879ffa4883df1d0fbba97e57e",
+     "locator": {
+      "lines": [
+       104,
+       104
+      ]
+     },
+     "target_sha256": "f58decc787b5ad634864c2b681bd14b0fec4be22a21773c7414cf76b10b8c67c"
+    },
+    {
+     "label": "prompt",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "d80bb3bceb044f1197ff3794b5928af69b054da879ffa4883df1d0fbba97e57e",
+     "locator": {
+      "lines": [
+       137,
+       137
+      ]
+     },
+     "target_sha256": "e9d496bc9d441416faf41f567a801b50a45bc78fa4f4c22cab60267b17936b0d"
+    },
+    {
+     "label": "prompt",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "d80bb3bceb044f1197ff3794b5928af69b054da879ffa4883df1d0fbba97e57e",
+     "locator": {
+      "lines": [
+       169,
+       169
+      ]
+     },
+     "target_sha256": "d254e003c276677e29278e3b61b308e677a86a4e727bf417da9e1702bcb2e287"
+    },
+    {
+     "label": "prompt",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "d80bb3bceb044f1197ff3794b5928af69b054da879ffa4883df1d0fbba97e57e",
+     "locator": {
+      "lines": [
+       200,
+       200
+      ]
+     },
+     "target_sha256": "55ecdda2836c989d0fba870eff94d865bdf49037f54f74842e4e7a19cc52f9bf"
+    },
+    {
+     "label": "prompt",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "d80bb3bceb044f1197ff3794b5928af69b054da879ffa4883df1d0fbba97e57e",
+     "locator": {
+      "lines": [
+       232,
+       232
+      ]
+     },
+     "target_sha256": "bfa8caa43bb1e74235e9297729f3bec1f48e3ca4fe45aff1ff7ccbd0ae12b06a"
+    },
+    {
+     "label": "prompt",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "d80bb3bceb044f1197ff3794b5928af69b054da879ffa4883df1d0fbba97e57e",
+     "locator": {
+      "lines": [
+       269,
+       269
+      ]
+     },
+     "target_sha256": "c4029a3cd7bb228d23238c0e370ef8447f412137af7648dee68d7bb7a247ed0f"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R12-F06",
+   "step": "R12",
+   "field": "\"Curator\" for two actors",
+   "value": "resolvable through the first commit for the strings that replaced the owner's name",
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "Claude as curator",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v2/completion.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "510744ffd668b6e4280f3eacf862ce0fd213771d186ef77a9ed263d728ac7f90",
+     "locator": {
+      "lines": [
+       1,
+       2
+      ]
+     },
+     "target_sha256": "d59d3bfcef005ae57663f7ec761ab6ca404e9b836d022829ee6fa1a59e60c03c"
+    },
+    {
+     "label": "The repository's first commit (the import, before sanitising), parent of the baseline tag",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-25",
+     "sha256": null,
+     "reference": "git: parent of tag ref-trace-baseline"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  }
+ ]
+}

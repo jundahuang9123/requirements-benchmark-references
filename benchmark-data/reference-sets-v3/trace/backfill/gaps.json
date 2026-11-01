@@ -1,0 +1,1262 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "gaps": [
+  {
+   "gap_id": "G-001",
+   "step": "R0",
+   "gap": "Upstream history and snapshot labels cannot be resolved.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "withheld"
+   ],
+   "facts": [
+    "R0-F04"
+   ],
+   "looked_in": [
+    "README.md",
+    "ANONYMIZATION.md"
+   ],
+   "note": "Withheld; the first commit resolves them (owner only, decision 0.9)."
+  },
+  {
+   "gap_id": "G-002",
+   "step": "R0",
+   "gap": "13 modified and 55 untracked entries (git status).",
+   "source": "spec 2.2",
+   "state": "corrected",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R0-F06"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/trace/DECISIONS.json"
+   ],
+   "note": "Not in the repository; left out by decision 0.3."
+  },
+  {
+   "gap_id": "G-003",
+   "step": "R0",
+   "gap": "Hashes match for 169 of 172 checkable files.",
+   "source": "spec 2.2",
+   "state": "corrected",
+   "statuses": [
+    "reconstructed (verified)"
+   ],
+   "facts": [
+    "R0-F02"
+   ],
+   "looked_in": [
+    "IMPORT-PROVENANCE.json"
+   ],
+   "note": "223 of 223 match."
+  },
+  {
+   "gap_id": "G-004",
+   "step": "R1",
+   "gap": "The JRC paper and NAPCORE Table 1 are not byte-frozen.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded",
+    "recorded"
+   ],
+   "facts": [
+    "R1-F03",
+    "R1-F04",
+    "R1-F05"
+   ],
+   "looked_in": [
+    "benchmark-data/mobilitydcat/provenance/manifest.json",
+    "benchmark-data/THIRD-PARTY-NOTICES.md",
+    "benchmark-data/jrc-research/provenance/manifest.json",
+    "benchmark-data/reference-sets-v3/README.md:39,136",
+    "benchmark-data/reference-sets-v3/validate_v3.py:27-33",
+    "the build workspace and session scratch of 22-23 Oct (outside the repository)"
+   ],
+   "note": "Redistribution rights not established, so decision 0.4(a) cannot be carried out in the repository."
+  },
+  {
+   "gap_id": "G-005",
+   "step": "R1",
+   "gap": "116 anchors come from a web fetch with no copy or hash.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "not_recorded",
+    "reconstructed"
+   ],
+   "facts": [
+    "R8-F04",
+    "R8-F05"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/trace/backfill/R8-anchor-spans.json",
+    "benchmark-data/jrc-research/provenance/manifest.json",
+    "benchmark-data/reference-sets-v3/README.md:39,136"
+   ],
+   "note": "98 Mobility anchors resolve against the stored table1_text (stored_transcription); 18 JRC anchors stay open."
+  },
+  {
+   "gap_id": "G-006",
+   "step": "R1",
+   "gap": "Health's scope is the curator's choice.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R1-F06"
+   ],
+   "looked_in": [
+    "benchmark-data/BENCHMARK-METHODOLOGY.md"
+   ],
+   "note": "A scope limitation, recorded."
+  },
+  {
+   "gap_id": "G-007",
+   "step": "R2",
+   "gap": "Who assigned each role, and when.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R2-F03"
+   ],
+   "looked_in": [
+    "benchmark-data/runtime-inputs.json",
+    "benchmark-data/*/provenance/manifest.json",
+    "benchmark-data/BENCHMARK-METHODOLOGY.md",
+    "benchmark-data/README.md"
+   ]
+  },
+  {
+   "gap_id": "G-008",
+   "step": "R2",
+   "gap": "30 corpus-validator errors are unresolved, 3 of them Mobility leakage flags.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R2-F04"
+   ],
+   "looked_in": [
+    "IMPORT-VALIDATION.md:8",
+    "IMPORT-CORPUS-VALIDATION.json",
+    "benchmark-data/VALIDATION-REPORT.json"
+   ]
+  },
+  {
+   "gap_id": "G-009",
+   "step": "R2",
+   "gap": "The 0 errors at acquisition and the 30 at import are never reconciled.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R2-F04"
+   ],
+   "looked_in": [
+    "IMPORT-VALIDATION.md:8",
+    "IMPORT-CORPUS-VALIDATION.json",
+    "benchmark-data/VALIDATION-REPORT.json"
+   ]
+  },
+  {
+   "gap_id": "G-010",
+   "step": "R2",
+   "gap": "When the allowlist check was added is not recorded.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R2-F05"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+    "benchmark-data/reference-sets-v3/validate_v3.py",
+    "benchmark-data/reference-sets-v3/history/"
+   ],
+   "note": "Bounded by the Codex review and the import."
+  },
+  {
+   "gap_id": "G-011",
+   "step": "R3",
+   "gap": "curated_by on 0 of 75.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R3-F01"
+   ],
+   "looked_in": [
+    "benchmark-data/*/reference-requirements/",
+    "benchmark-data/*/provenance/manifest.json",
+    "ANONYMIZATION.md:5-6"
+   ]
+  },
+  {
+   "gap_id": "G-012",
+   "step": "R3",
+   "gap": "No row-level anchor, date or rule.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R3-F02"
+   ],
+   "looked_in": [
+    "benchmark-data/README.md",
+    "benchmark-data/BENCHMARK-METHODOLOGY.md",
+    "benchmark-data/*/README.md"
+   ]
+  },
+  {
+   "gap_id": "G-013",
+   "step": "R3",
+   "gap": "No independent review, although one is required.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R3-F03"
+   ],
+   "looked_in": [
+    "benchmark-data/README.md",
+    "benchmark-data/BENCHMARK-METHODOLOGY.md",
+    "benchmark-data/reference-sets-v3/"
+   ]
+  },
+  {
+   "gap_id": "G-014",
+   "step": "R4",
+   "gap": "No prompt or model ID.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R4-F02"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/",
+    "benchmark-data/reference-sets-v3/history/README.md",
+    "outside: the build workspace of 22 Oct (no log of this step)"
+   ]
+  },
+  {
+   "gap_id": "G-015",
+   "step": "R4",
+   "gap": "One coder.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R4-F01"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/template.html"
+   ],
+   "note": "A limitation, recorded."
+  },
+  {
+   "gap_id": "G-016",
+   "step": "R4",
+   "gap": "P1 and P2 are undefined.",
+   "source": "spec 2.2",
+   "state": "corrected",
+   "statuses": [
+    "not_recorded",
+    "recorded"
+   ],
+   "facts": [
+    "R4-F03",
+    "R4-F04"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/codes.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/codes.py:1-16",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/template.html",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/rows.json"
+   ],
+   "note": "P1-P7 are defined in codes.py; the meaning of conf is not."
+  },
+  {
+   "gap_id": "G-017",
+   "step": "R4",
+   "gap": "The input of verify.py is missing.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "attested_log"
+   ],
+   "facts": [
+    "R4-F05"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/verify.py"
+   ],
+   "note": "Kept outside the repository (attested_log)."
+  },
+  {
+   "gap_id": "G-018",
+   "step": "R4",
+   "gap": "Web cross-checks were not saved.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R4-F06"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/",
+    "outside: build workspace"
+   ]
+  },
+  {
+   "gap_id": "G-019",
+   "step": "R5",
+   "gap": "Notes on about 15 of 109.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "reconstructed"
+   ],
+   "facts": [
+    "R5-E"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/v2-completion/healthdcat/reference-requirements/curated-requirements-v2.json",
+    "benchmark-data/reference-sets-v3/healthdcat.json",
+    "benchmark-data/reference-sets-v3/history/v2-completion/reference-completion-review.csv",
+    "benchmark-data/reference-sets-v3/history/v2-completion/statdcat/reference-requirements/requirements-and-resolutions-v2.json",
+    "benchmark-data/reference-sets-v3/statdcat.json",
+    "benchmark-data/reference-sets-v3/history/v2-completion/geodcat/reference-requirements/alignment-requirements-v2.json",
+    "benchmark-data/reference-sets-v3/geodcat.json",
+    "benchmark-data/reference-sets-v3/history/v2-completion/jrc-research/reference-requirements/core-requirements-v2.json",
+    "benchmark-data/reference-sets-v3/jrc-research.json"
+   ],
+   "note": "Exactly 15; other per-row reasons are not recorded."
+  },
+  {
+   "gap_id": "G-020",
+   "step": "R5",
+   "gap": "your_decision on 0 of 109.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R5-F08"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/v2-completion/reference-completion-review.csv"
+   ]
+  },
+  {
+   "gap_id": "G-021",
+   "step": "R5",
+   "gap": "The pdftotext outputs and the zip are not stored.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "attested_log",
+    "recorded"
+   ],
+   "facts": [
+    "R5-F04",
+    "R5-F05"
+   ],
+   "looked_in": [
+    "pdftotext extraction used for anchors: Health D6.2",
+    "pdftotext extraction used for anchors: Health D6.2 (raw mode)",
+    "pdftotext extraction used for anchors: Stat",
+    "pdftotext extraction used for anchors: Stat (raw mode)",
+    "pdftotext extraction used for anchors: Geo",
+    "pdftotext extraction used for anchors: Geo (raw mode)",
+    "benchmark-data/reference-sets-v3/history/README.md"
+   ],
+   "note": "pdftotext outputs kept outside (attested_log); the zip hash is recorded."
+  },
+  {
+   "gap_id": "G-022",
+   "step": "R5",
+   "gap": "Rejected candidates are not recorded.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R5-F06"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/v2-vs-pr45-comparison/",
+    "benchmark-data/reference-sets-v3/history/v2-completion/",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/completion.py"
+   ],
+   "note": "5 excluded audit pass A items are recorded in the mapping."
+  },
+  {
+   "gap_id": "G-023",
+   "step": "R5",
+   "gap": "v2 preservation is not certified.",
+   "source": "spec 2.2",
+   "state": "resolved",
+   "statuses": [
+    "reconstructed (verified)"
+   ],
+   "facts": [
+    "R5-F07"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/README.md",
+    "benchmark-data/reference-sets-v3/history/v2-completion/healthdcat/reference-requirements/curated-requirements-v2.json",
+    "benchmark-data/reference-sets-v3/history/v2-completion/statdcat/reference-requirements/requirements-and-resolutions-v2.json",
+    "benchmark-data/reference-sets-v3/history/v2-completion/geodcat/reference-requirements/alignment-requirements-v2.json",
+    "benchmark-data/reference-sets-v3/history/v2-completion/jrc-research/reference-requirements/core-requirements-v2.json"
+   ]
+  },
+  {
+   "gap_id": "G-024",
+   "step": "R6",
+   "gap": "Pass A inputs are not stored.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded",
+    "recorded"
+   ],
+   "facts": [
+    "R6a-F02",
+    "R6a-F03"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/",
+    "outside: the build workspace (the audit inputs are not in it)",
+    "benchmark-data/reference-sets-v3/coverage-ledger.csv"
+   ],
+   "note": "Their IDs resolve through the coverage ledger."
+  },
+  {
+   "gap_id": "G-025",
+   "step": "R6",
+   "gap": "No prompt or model.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R6a-F02",
+    "R6b-F02"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/",
+    "outside: the build workspace (the audit inputs are not in it)",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+    "benchmark-data/reference-sets-v3/README.md",
+    "outside: no main-session log of 22 Oct"
+   ]
+  },
+  {
+   "gap_id": "G-026",
+   "step": "R6",
+   "gap": "The problem list went only to the console.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "attested_log"
+   ],
+   "facts": [
+    "R6b-F05"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py"
+   ],
+   "note": "The build log is kept outside (attested_log)."
+  },
+  {
+   "gap_id": "G-027",
+   "step": "R6",
+   "gap": "The README decisions have no owner or date, except Geo.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R6b-F04"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/README.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+    "benchmark-data/reference-sets-v3/*.json decisions"
+   ]
+  },
+  {
+   "gap_id": "G-028",
+   "step": "R6",
+   "gap": "The stored script postdates the step.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R6b-F06"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/",
+    "outside: build workspace"
+   ],
+   "note": "A pre-adjudication copy is kept outside; that it is the version that ran is not shown."
+  },
+  {
+   "gap_id": "G-029",
+   "step": "R7",
+   "gap": "No reason for a split or a stratum.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R7-F03"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_health.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_other.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_mobility_v3.py"
+   ]
+  },
+  {
+   "gap_id": "G-030",
+   "step": "R7",
+   "gap": "relation_note always empty.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "reconstructed"
+   ],
+   "facts": [
+    "R7-E"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_mobility_v3.py",
+    "benchmark-data/reference-sets-v3/healthdcat.json",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_health.py",
+    "benchmark-data/reference-sets-v3/statdcat.json",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_other.py",
+    "benchmark-data/reference-sets-v3/geodcat.json",
+    "benchmark-data/reference-sets-v3/jrc-research.json"
+   ]
+  },
+  {
+   "gap_id": "G-031",
+   "step": "R7",
+   "gap": "No curated_by or timestamp.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R7-F01"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_health.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_other.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_mobility_v3.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_derived.py",
+    "benchmark-data/reference-sets-v3/README.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+    "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+    "benchmark-data/reference-sets-v3/history/README.md",
+    "outside: no main-session log of 22 Oct"
+   ]
+  },
+  {
+   "gap_id": "G-032",
+   "step": "R7",
+   "gap": "One decomposer.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R7-F01"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_health.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_other.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_mobility_v3.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_derived.py",
+    "benchmark-data/reference-sets-v3/README.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+    "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+    "benchmark-data/reference-sets-v3/history/README.md",
+    "outside: no main-session log of 22 Oct"
+   ],
+   "note": "Who it was is not recorded."
+  },
+  {
+   "gap_id": "G-033",
+   "step": "R7",
+   "gap": "No timestamped freeze before system outputs were viewed.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R7-F04"
+   ],
+   "looked_in": [
+    "benchmark-data/BENCHMARK-METHODOLOGY.md",
+    "benchmark-data/reference-sets-v3/README.md",
+    "benchmark-data/reference-sets-v3/mock-benchmark/METHOD.md:69-70",
+    "benchmark-data/reference-sets-v3/history/"
+   ]
+  },
+  {
+   "gap_id": "G-034",
+   "step": "R8",
+   "gap": "The 116 cannot be re-verified.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "not_recorded",
+    "reconstructed"
+   ],
+   "facts": [
+    "R8-F04",
+    "R8-F05"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/trace/backfill/R8-anchor-spans.json",
+    "benchmark-data/jrc-research/provenance/manifest.json",
+    "benchmark-data/reference-sets-v3/README.md:39,136"
+   ],
+   "note": "See G-005."
+  },
+  {
+   "gap_id": "G-035",
+   "step": "R8",
+   "gap": "Build-time text extractions are not stored.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "attested_log"
+   ],
+   "facts": [
+    "R8-F02"
+   ],
+   "looked_in": [
+    "pdftotext extraction used for anchors: Health D6.2",
+    "pdftotext extraction used for anchors: Health D6.2 (raw mode)",
+    "pdftotext extraction used for anchors: Stat",
+    "pdftotext extraction used for anchors: Stat (raw mode)",
+    "pdftotext extraction used for anchors: Geo",
+    "pdftotext extraction used for anchors: Geo (raw mode)"
+   ],
+   "note": "Kept outside (attested_log)."
+  },
+  {
+   "gap_id": "G-036",
+   "step": "R8",
+   "gap": "No judgement on whether a quote supports its atom.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R8-F06"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/validate_v3.py",
+    "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py"
+   ],
+   "note": "Covered by anchor_support in the review (RV1)."
+  },
+  {
+   "gap_id": "G-037",
+   "step": "R9",
+   "gap": "No raw findings.md, severity column or list of the 30 sampled IDs.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "attested_log"
+   ],
+   "facts": [
+    "R9-F05",
+    "R9-F06"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md"
+   ],
+   "note": "Kept outside (attested_log)."
+  },
+  {
+   "gap_id": "G-038",
+   "step": "R9",
+   "gap": "What \"verify\" involved is not recorded.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R9-F09"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+    "outside: no main-session log of 22 Oct"
+   ]
+  },
+  {
+   "gap_id": "G-039",
+   "step": "R9",
+   "gap": "The draft v3 is not stored.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R9-F07"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/",
+    "outside: build workspace (overwritten at 19:49:48Z with the 317-atom state)",
+    "outside: session scratch"
+   ]
+  },
+  {
+   "gap_id": "G-040",
+   "step": "R9",
+   "gap": "Mobility was not checked against Table 1.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R9-F08",
+    "R7-F05"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/README.md",
+    "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_mobility_v3.py"
+   ],
+   "note": "The builder re-checked Table 1 after R9; that check is not independent."
+  },
+  {
+   "gap_id": "G-041",
+   "step": "R9",
+   "gap": "The drop from 319 to 317 atoms is undocumented.",
+   "source": "spec 2.2",
+   "state": "corrected",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R9-F08"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/README.md",
+    "benchmark-data/reference-sets-v3/INDEPENDENT-CHECK.md"
+   ],
+   "note": "Documented across IC and the README."
+  },
+  {
+   "gap_id": "G-042",
+   "step": "R10",
+   "gap": "No model ID, end time or transcript.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "attested_log"
+   ],
+   "facts": [
+    "R10-F02",
+    "R10-F03"
+   ],
+   "looked_in": [
+    "R10 labeller log: Health H-1 to H-33",
+    "R10 labeller log: Health H-34 to H-69",
+    "R10 labeller log: Mobility, policy inputs",
+    "R10 labeller log: Mobility, standards inputs",
+    "R10 labeller log: Mobility, literature inputs",
+    "R10 labeller log: Mobility, partner (consolidation) inputs",
+    "R10 labeller log: Geo",
+    "R10 labeller log: Stat and JRC"
+   ],
+   "note": "From the labeller logs kept outside (attested_log)."
+  },
+  {
+   "gap_id": "G-043",
+   "step": "R10",
+   "gap": "One labeller per atom.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R10-F09"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/integrate_labels.py"
+   ],
+   "note": "A limitation, recorded."
+  },
+  {
+   "gap_id": "G-044",
+   "step": "R10",
+   "gap": "Labels were read from session scratch.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "attested_log",
+    "recorded"
+   ],
+   "facts": [
+    "R10-F08",
+    "R10-F05"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/integrate_labels.py",
+    "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/geo.json",
+    "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/health-a.json",
+    "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/health-b.json",
+    "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/mobility-consolidation.json",
+    "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/mobility-literature.json",
+    "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/mobility-policy.json",
+    "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/mobility-standards.json",
+    "benchmark-data/reference-sets-v3/history/labelling/raw-outputs/stat-jrc.json"
+   ],
+   "note": "The scratch files are kept outside and equal the stored raw outputs."
+  },
+  {
+   "gap_id": "G-045",
+   "step": "R10",
+   "gap": "No build-time hash.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "attested_log"
+   ],
+   "facts": [
+    "R10-F07"
+   ],
+   "looked_in": [
+    "Build output of the label merge (labels-merged.json, 22 Oct)"
+   ],
+   "note": "Hash of the merged file kept outside (attested_log)."
+  },
+  {
+   "gap_id": "G-046",
+   "step": "R10",
+   "gap": "human_review pending on 320 of 320.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R10-F10"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/reference-coverage.csv"
+   ],
+   "note": "Closed by the review (RV1-RV3)."
+  },
+  {
+   "gap_id": "G-047",
+   "step": "R10",
+   "gap": "3 atoms are not in the packets.",
+   "source": "spec 2.2",
+   "state": "corrected",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R10-F04",
+    "R11c-F03"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-mobilitydcat.json",
+    "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-healthdcat.json",
+    "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-statdcat.json",
+    "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-geodcat.json",
+    "benchmark-data/reference-sets-v3/history/labelling/packets/atoms-jrc-research.json",
+    "benchmark-data/reference-sets-v3/healthdcat.json",
+    "benchmark-data/reference-sets-v3/jrc-research.json"
+   ],
+   "note": "Confirmed; created by the 23 Oct adjudication."
+  },
+  {
+   "gap_id": "G-048",
+   "step": "R11",
+   "gap": "One case-level by string names three actors.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R11b-F01"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/healthdcat.json",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py"
+   ]
+  },
+  {
+   "gap_id": "G-049",
+   "step": "R11",
+   "gap": "There is no owner or reason per item.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "not_recorded",
+    "recorded"
+   ],
+   "facts": [
+    "R11b-F02",
+    "R11b-F03"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+    "benchmark-data/reference-sets-v3/README.md:50-58"
+   ],
+   "note": "The register gives a reason per item; the owner is not recorded."
+  },
+  {
+   "gap_id": "G-050",
+   "step": "R11",
+   "gap": "The curator's own decisions are not separated from those adopted from Codex text.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R11b-F03"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+    "benchmark-data/reference-sets-v3/README.md:50-58"
+   ]
+  },
+  {
+   "gap_id": "G-051",
+   "step": "R11",
+   "gap": "No Codex prompt or model.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R11a-F02"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+    "outside: no Codex history in the bundle"
+   ]
+  },
+  {
+   "gap_id": "G-052",
+   "step": "R11",
+   "gap": "The reviewed head is a placeholder.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "withheld"
+   ],
+   "facts": [
+    "R11a-F04"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md"
+   ],
+   "note": "Withheld for anonymity."
+  },
+  {
+   "gap_id": "G-053",
+   "step": "R11",
+   "gap": "The 5 relabels were not blind.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R11d-F01"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/healthdcat.json"
+   ],
+   "note": "They include the 3 new atoms."
+  },
+  {
+   "gap_id": "G-054",
+   "step": "R12",
+   "gap": "No timestamp or tool versions.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R12-F03"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/VALIDATION.json",
+    "IMPORT-*.json",
+    "IMPORT-VALIDATION.md"
+   ]
+  },
+  {
+   "gap_id": "G-055",
+   "step": "R12",
+   "gap": "Who ran the import is not recorded.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "withheld"
+   ],
+   "facts": [
+    "R12-F02"
+   ],
+   "looked_in": [
+    "git history: author of the first commit",
+    "IMPORT-VALIDATION.md"
+   ],
+   "note": "Withheld for anonymity."
+  },
+  {
+   "gap_id": "G-056",
+   "step": "R12",
+   "gap": "The export would refuse today.",
+   "source": "spec 2.2",
+   "state": "corrected",
+   "statuses": [
+    "reconstructed"
+   ],
+   "facts": [
+    "R12-F04"
+   ],
+   "looked_in": [
+    "tools/export_anonymous.py"
+   ],
+   "note": "It passes on the committed tree."
+  },
+  {
+   "gap_id": "G-057",
+   "step": "R12",
+   "gap": "The path regex misses /tmp/claude-0.",
+   "source": "spec 2.2",
+   "state": "resolved",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R12-F05"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/integrate_labels.py",
+    "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md"
+   ],
+   "note": "Accepted by decision 0.7 (9 paths)."
+  },
+  {
+   "gap_id": "G-058",
+   "step": "R12",
+   "gap": "\"Curator\" names both the human and Claude's curation role.",
+   "source": "spec 2.2",
+   "state": "partly_resolved",
+   "statuses": [
+    "attested_log"
+   ],
+   "facts": [
+    "R12-F06"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/completion.py"
+   ],
+   "note": "Resolvable through the first commit (attested_log)."
+  },
+  {
+   "gap_id": "G-059",
+   "step": "R13",
+   "gap": "Only as reviewable as the stratum and status coding it reads.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R13-F01"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py",
+    "benchmark-data/reference-sets-v3/validate_v3.py"
+   ],
+   "note": "Closed by the review."
+  },
+  {
+   "gap_id": "G-060",
+   "step": "R13",
+   "gap": "50 selected atoms are proposed, open-issue or guidance items.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R13-F03"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/README.md"
+   ],
+   "note": "Disclosed."
+  },
+  {
+   "gap_id": "G-061",
+   "step": "R13",
+   "gap": "The held-out cases are inconsistent.",
+   "source": "spec 2.2",
+   "state": "open",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R13-F04"
+   ],
+   "looked_in": [
+    "benchmark-data/BENCHMARK-METHODOLOGY.md",
+    "benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md"
+   ]
+  },
+  {
+   "gap_id": "G-062",
+   "step": "R11",
+   "gap": "The raw rationale of 3 atoms was replaced without a before value.",
+   "source": "found in Phase 0/1",
+   "state": "partly_resolved",
+   "statuses": [
+    "reconstructed",
+    "recorded"
+   ],
+   "facts": [
+    "R10-F12",
+    "R11c-F04"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/trace/backfill/R10-rederivation.json",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/adjudication_2026_10_23.py"
+   ],
+   "note": "Found in Phase 1; the R10 re-derivation recovers the old text."
+  },
+  {
+   "gap_id": "G-063",
+   "step": "R9",
+   "gap": "Two steps that changed atoms have no step ID (applying the R9 resolutions; the Mobility Table 1 re-check).",
+   "source": "found in Phase 0/1",
+   "state": "resolved",
+   "statuses": [
+    "recorded"
+   ],
+   "facts": [
+    "R9-F10",
+    "R7-F05"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_health.py",
+    "benchmark-data/reference-sets-v3/README.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_mobility_v3.py"
+   ],
+   "note": "Found in Phase 0; recorded under R9 and R7 (decision 0.2)."
+  },
+  {
+   "gap_id": "G-064",
+   "step": "R7",
+   "gap": "Plan-table comments are topic headings, not reasons.",
+   "source": "found in Phase 0/1",
+   "state": "open",
+   "statuses": [
+    "not_recorded"
+   ],
+   "facts": [
+    "R7-F03"
+   ],
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_health.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_other.py",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/plan_mobility_v3.py"
+   ],
+   "note": "Found in Phase 1; the stricter rule needs the owner's sign-off."
+  },
+  {
+   "gap_id": "G-065",
+   "step": "R0",
+   "gap": "The first commit holds the unsanitised files under the owner's own account.",
+   "source": "found in Phase 0/1",
+   "state": "open",
+   "statuses": [
+    "withheld"
+   ],
+   "facts": [
+    "R0-F03",
+    "R0-F04"
+   ],
+   "looked_in": [
+    "git history: author of the first commit",
+    "README.md",
+    "ANONYMIZATION.md"
+   ],
+   "note": "Found in Phase 0; disclosed in README.md:7 and ANONYMIZATION.md:11-15."
+  }
+ ],
+ "counts": {
+  "open": 43,
+  "corrected": 6,
+  "partly_resolved": 13,
+  "resolved": 3
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "R12",
+ "name": "Validation, import, anonymisation",
+ "time_order": "23 Oct, with the import commit",
+ "actors": [
+  {
+   "actor": "human:curator",
+   "status": "withheld",
+   "role": "ran the import"
+  },
+  {
+   "actor": "script:benchmark-data/reference-sets-v3/validate_v3.py#ddd67f5fb062aa921965c3f4018d11f11bb470171fee25638bb5d948a9d4a734"
+  },
+  {
+   "actor": "script:tools/export_anonymous.py#d37f379807fb462c4edb5140eaf3d3d91adad8a1f626d0affbe53737dec5e223"
+  }
+ ],
+ "session": null,
+ "session_note": "historical step: no session record; the backfill session is in written_by",
+ "scripts": [
+  {
+   "path": "benchmark-data/reference-sets-v3/validate_v3.py",
+   "sha256": "ddd67f5fb062aa921965c3f4018d11f11bb470171fee25638bb5d948a9d4a734",
+   "hash_time": "import",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/export_anonymous.py",
+   "sha256": "d37f379807fb462c4edb5140eaf3d3d91adad8a1f626d0affbe53737dec5e223",
+   "hash_time": "now",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "benchmark-data/reference-sets-v3/VALIDATION.json",
+   "sha256": "015a68b424167047cdbee75387cfff1bb12873e4e2f2cb93bb76d9861aa10f78",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "IMPORT-V3-VALIDATION.json",
+   "sha256": "015a68b424167047cdbee75387cfff1bb12873e4e2f2cb93bb76d9861aa10f78",
+   "hash_time": "now",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v2/completion.py",
+   "sha256": "510744ffd668b6e4280f3eacf862ce0fd213771d186ef77a9ed263d728ac7f90",
+   "hash_time": "import",
+   "stored": "yes"
+  }
+ ],
+ "outputs": [],
+ "timing": {
+  "run_started": "2026-10-23T11:58:45Z",
+  "run_ended": "2026-10-23T12:11:19Z",
+  "timing_status": "commit dates",
+  "run_by": "human:curator"
+ },
+ "seeds": {},
+ "counts": {
+  "entries": 0,
+  "facts": 6
+ },
+ "decision_values": [
+  "passed",
+  "failed"
+ ],
+ "rationale_location": "backfill/R12.json (facts with reason fields); spec section 2",
+ "evidence": [
+  "benchmark-data/reference-sets-v3/history/build-scripts/v2/completion.py:1-2",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/integrate_labels.py:6-6",
+  "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md:104-104",
+  "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md:137-137",
+  "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md:169-169",
+  "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md:200-200",
+  "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md:232-232",
+  "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md:269-269",
+  "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md:37-37",
+  "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md:72-72",
+  "tools/export_anonymous.py:60-67"
+ ],
+ "facts": [
+  "R12-F01",
+  "R12-F02",
+  "R12-F03",
+  "R12-F04",
+  "R12-F05",
+  "R12-F06"
+ ],
+ "gaps": [
+  "G-054",
+  "G-055",
+  "G-056",
+  "G-057",
+  "G-058"
+ ],
+ "written_by": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "bb4ae342588d7022ac421a942673cf831387cc496021df140f39e1d447195ac2",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T12:49:27.396Z",
+  "actor": "model:claude/backfill"
+ },
+ "manifest_sha256": "e492c401cf0c934df9b849e28bf0b7bc26238e02c7c65d0ccdd1cfc9be85878a"
+}

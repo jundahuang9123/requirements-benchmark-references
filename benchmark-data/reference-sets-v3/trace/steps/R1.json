@@ -1,0 +1,132 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "R1",
+ "name": "Source publication and acquisition",
+ "time_order": "first (acquisition snapshot 2026-10-07)",
+ "actors": [
+  {
+   "actor": "org:publishers",
+   "role": "the publishers named per artifact in the provenance manifests"
+  },
+  {
+   "actor": "unresolved:curator-label",
+   "status": "not_recorded",
+   "role": "acquisition"
+  }
+ ],
+ "session": null,
+ "session_note": "historical step: no session record; the backfill session is in written_by",
+ "scripts": [],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "benchmark-data/epos/provenance/manifest.json",
+   "sha256": "e18ee744d4d340101c15961d3a6f669c0bb9996ab2253c0651d2db5416e1cfc7",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/mobilitydcat/provenance/manifest.json",
+   "sha256": "c06f5cb8c86a4981540fb1669dd1054ce016cc1f86b2116f28e8e51de5d0a1e6",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/healthdcat/provenance/manifest.json",
+   "sha256": "d6f66275b1f81066b8c2856261f2c3b354fb574c5ae93c809aa257bc4a187194",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/statdcat/provenance/manifest.json",
+   "sha256": "3eb0b52c0e4051d209a5175b1ad3401d44db15f8c6f6e79ea27a52b7d7a2b6ae",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/geodcat/provenance/manifest.json",
+   "sha256": "a1f5651f2aed3cafaced5032ca7551683b71e74770611cfe43ceb1f9778923b7",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/jrc-research/provenance/manifest.json",
+   "sha256": "04d0b263cb8a5b256fd0c5597f288fba37d91cbb08b7c7d5351612ca12e900ac",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/README.md",
+   "sha256": "0520c2ee3fb27732bc1bb9525c974650529996b846fb7daa083a3ba3278b50b3",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/THIRD-PARTY-NOTICES.md",
+   "sha256": "915f85f9f0c606ae28487d99ad7737fc24ed11910b5336deaef4bb95520eeb69",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/BENCHMARK-METHODOLOGY.md",
+   "sha256": "17cd703f9876c3b6c76fd79936b22a6263f4b0484afe3750719c593da8bacf94",
+   "hash_time": "import",
+   "stored": "yes"
+  }
+ ],
+ "outputs": [],
+ "timing": {
+  "run_started": null,
+  "run_ended": null,
+  "timing_status": "not recorded",
+  "run_by": "org:publishers"
+ },
+ "seeds": {},
+ "counts": {
+  "entries": 0,
+  "facts": 6
+ },
+ "decision_values": [
+  "artifact_acquired",
+  "citation_only"
+ ],
+ "rationale_location": "backfill/R1.json (facts with reason fields); spec section 2",
+ "evidence": [
+  "benchmark-data/BENCHMARK-METHODOLOGY.md:13-16",
+  "benchmark-data/README.md:7-7",
+  "benchmark-data/THIRD-PARTY-NOTICES.md:38-41"
+ ],
+ "facts": [
+  "R1-F01",
+  "R1-F02",
+  "R1-F03",
+  "R1-F04",
+  "R1-F05",
+  "R1-F06"
+ ],
+ "gaps": [
+  "G-004",
+  "G-005",
+  "G-006"
+ ],
+ "written_by": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "bb4ae342588d7022ac421a942673cf831387cc496021df140f39e1d447195ac2",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T12:49:27.396Z",
+  "actor": "model:claude/backfill"
+ },
+ "manifest_sha256": "472749a8e3e860832d275d8e4a7d7a647942a5d074efce46384ac7b74bff20ed"
+}

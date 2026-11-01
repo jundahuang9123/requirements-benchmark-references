@@ -1,0 +1,4439 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R3",
+ "name": "v1 rows",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R3-F01",
+   "step": "R3",
+   "field": "actor",
+   "value": "curator (role label); machine assistance not stated",
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/*/reference-requirements/",
+    "benchmark-data/*/provenance/manifest.json",
+    "ANONYMIZATION.md:5-6"
+   ],
+   "note": "curated_by is on 0 of 75 rows. The manifests say \"Curator-authored\"; that label is the original wording, not a sanitised name, so it cannot be assigned to the human or to Claude (unresolved:curator-label)."
+  },
+  {
+   "fact_id": "R3-F02",
+   "step": "R3",
+   "field": "date and rule of the v1 rows",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/README.md",
+    "benchmark-data/BENCHMARK-METHODOLOGY.md",
+    "benchmark-data/*/README.md"
+   ]
+  },
+  {
+   "fact_id": "R3-F03",
+   "step": "R3",
+   "field": "independent review of the v1 rows",
+   "value": "required before quantitative use; not done",
+   "status": "not_recorded",
+   "links": [
+    {
+     "label": "requirement",
+     "kind": "row",
+     "file": "benchmark-data/README.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "0520c2ee3fb27732bc1bb9525c974650529996b846fb7daa083a3ba3278b50b3",
+     "locator": {
+      "lines": [
+       9,
+       11
+      ]
+     },
+     "target_sha256": "ada9f8794471743c9ecf14e9873e1d3a352fdcac052685b3ffa44df93fec3a73"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/README.md",
+    "benchmark-data/BENCHMARK-METHODOLOGY.md",
+    "benchmark-data/reference-sets-v3/"
+   ]
+  },
+  {
+   "fact_id": "R3-E",
+   "step": "R3",
+   "field": "entries",
+   "rule": "One entry per published v1 row: the v1 file names the row and the v3 row keeps its ID.",
+   "status": "reconstructed",
+   "count": 75,
+   "entries": [
+    {
+     "entry_id": "R3:mobilitydcat:Req-1",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "Req-1"
+        }
+       },
+       "target_sha256": "801fbd94863e13d5a43a776b25439719ce9f46f69c00423692f3273d0518cc7c"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "Req-1"
+        }
+       },
+       "target_sha256": "e64ee3525a789df081456348e231d77526eb013c115c854b2baf8a5c57f8f078"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-2",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/1",
+        "names": {
+         "id": "Req-2"
+        }
+       },
+       "target_sha256": "932b90ebb15a9fec2b2dc6ab54ca641de756b501b15eb68cf5496a47a97854f5"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/1",
+        "names": {
+         "id": "Req-2"
+        }
+       },
+       "target_sha256": "7078dd3119440991762961346996fa7ec8f0e948200bc3042950211da5cb386d"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-3",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "Req-3"
+        }
+       },
+       "target_sha256": "724f76bb800473dc952fa32ce446fb67b7aa0edddc0533b6b315baf34e1b3a15"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "Req-3"
+        }
+       },
+       "target_sha256": "69b25d7a531cfcdb2e5bd0862464454652fadc113da5bf156bbe5af54dd2a69a"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-4",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/3",
+        "names": {
+         "id": "Req-4"
+        }
+       },
+       "target_sha256": "1e0d299c7d58002149e42d91695b9a888ebbc603d539c5469e004bc6a9d312f0"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/3",
+        "names": {
+         "id": "Req-4"
+        }
+       },
+       "target_sha256": "52d3952887af5f6e84c34c54d38d39c1298e37704bdbacddfb15e10d5c828a5a"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-5",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/4",
+        "names": {
+         "id": "Req-5"
+        }
+       },
+       "target_sha256": "26db022407614d9ada8a819c29b1218a101f0c609ea82bcf6058bf1c4949c82d"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/4",
+        "names": {
+         "id": "Req-5"
+        }
+       },
+       "target_sha256": "260f8703708e6cecc73770ee17f356eac5ee9d0adf133eaee558fc7058c5ad3d"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-6",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/5",
+        "names": {
+         "id": "Req-6"
+        }
+       },
+       "target_sha256": "61f9385fcc21719306e666a72a6d1401980af3eabb2d728e1a04040007ebede4"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/5",
+        "names": {
+         "id": "Req-6"
+        }
+       },
+       "target_sha256": "ea50f6f8c29545751a809bf4c7e356ad627f99d5e4bfbb32c38b170e72968a80"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-7",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/6",
+        "names": {
+         "id": "Req-7"
+        }
+       },
+       "target_sha256": "1a3333c15de69c9b8e696f8ed1304ff44da44563b6165f9788ed16e026a09092"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/6",
+        "names": {
+         "id": "Req-7"
+        }
+       },
+       "target_sha256": "cf7f2d9e966e2011552bad2f2636383323eb8fddb1702cecfb06c384bf354ecc"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-8",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/7",
+        "names": {
+         "id": "Req-8"
+        }
+       },
+       "target_sha256": "74c298fe16e1e2e932c5995134286c0c87e09b42f57d186039420369691756bc"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/7",
+        "names": {
+         "id": "Req-8"
+        }
+       },
+       "target_sha256": "a6a28f61046a7fe913259d05351d55b52b20a0e9ba26cf622f465554fe3db4f9"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-9",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/8",
+        "names": {
+         "id": "Req-9"
+        }
+       },
+       "target_sha256": "b34548e9cb917424dfed5c39f441cc9f32263e0a9909c9d606202964b4c6ff08"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/8",
+        "names": {
+         "id": "Req-9"
+        }
+       },
+       "target_sha256": "3de200d6259d17c4862f21b009f53672b78acd5618759b4cce68f73088205dae"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-10",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/9",
+        "names": {
+         "id": "Req-10"
+        }
+       },
+       "target_sha256": "361db9b933ab6d2fa0d2aba21eb3ea964c4cf23ee6549ed0c5b5c0c3e280097a"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/9",
+        "names": {
+         "id": "Req-10"
+        }
+       },
+       "target_sha256": "3e9cb39b5fdffc2a6981a54bd64192d8cf9eea5db692935f406db33b5adb4dbb"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-11",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/10",
+        "names": {
+         "id": "Req-11"
+        }
+       },
+       "target_sha256": "920cbf0144687711b3e7fc55185af334dece70f16989c475155ce457a858b8de"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/10",
+        "names": {
+         "id": "Req-11"
+        }
+       },
+       "target_sha256": "31604dfe67f94fe478fbcd854f4e504ca4577e2295bf52a2a457fd83c26a3091"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-12",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/11",
+        "names": {
+         "id": "Req-12"
+        }
+       },
+       "target_sha256": "35d70090a8ef1d4e292c98cec24d8dc055f311d39d2c9bf239954027dbf88b03"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/11",
+        "names": {
+         "id": "Req-12"
+        }
+       },
+       "target_sha256": "73822205df7392eb93554f191a03aea6b10237fe476232755fe5f6e60ef22bb1"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-13",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/12",
+        "names": {
+         "id": "Req-13"
+        }
+       },
+       "target_sha256": "5bae43cc79e682e25e8e22e10b3e31fab74123dbb0fa488f35850e36b07f8233"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/12",
+        "names": {
+         "id": "Req-13"
+        }
+       },
+       "target_sha256": "bfef266dc8e2cb321756054c16bd075408beeaee1c1e649182da2f4a2d18f8ba"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-14",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/13",
+        "names": {
+         "id": "Req-14"
+        }
+       },
+       "target_sha256": "b446eb42f54899c57bf72abdd97be5c282765bf7b8465d560904fb11a087269c"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/13",
+        "names": {
+         "id": "Req-14"
+        }
+       },
+       "target_sha256": "16d26cafa2ef3136e7f4e44bf655520b1924649d58e0989cc4b7871f9d7c0fe1"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-15",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/14",
+        "names": {
+         "id": "Req-15"
+        }
+       },
+       "target_sha256": "19cee5b8bea5e00b019c28c05e8068e90f5461282c62df29f9910db2b8a0e917"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/14",
+        "names": {
+         "id": "Req-15"
+        }
+       },
+       "target_sha256": "7ea392d365c99d66a83ee0309a2902fca0c5297a9c3788a3c4dd28bc23fe7e8c"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-16",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/15",
+        "names": {
+         "id": "Req-16"
+        }
+       },
+       "target_sha256": "9acc0faf1eec15571875916635fc71dc333d15991bd67088c0906da9da8bd1eb"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/15",
+        "names": {
+         "id": "Req-16"
+        }
+       },
+       "target_sha256": "885512ff62c84eb60a7c4030111df8efdb0c6c8bc762c94660a2c2f08cad9f6b"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-17",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/16",
+        "names": {
+         "id": "Req-17"
+        }
+       },
+       "target_sha256": "806aa6d086f6b3350edb52479000f1876736261740ee5940f3d9866325fcb4f9"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/16",
+        "names": {
+         "id": "Req-17"
+        }
+       },
+       "target_sha256": "f2e25b0fa84e41fc383e975953fafce6dd4b557b30a865a394ac5ae2052bf969"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-18",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/17",
+        "names": {
+         "id": "Req-18"
+        }
+       },
+       "target_sha256": "49d1f27cd1868b730d5ec696e2dcc949294ca19b62c2df4aecf363bebaa49134"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/17",
+        "names": {
+         "id": "Req-18"
+        }
+       },
+       "target_sha256": "83e3ced7f784363267c51312dd6f326e1563cd72c42a756dbda6574ca20af8c8"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-19",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/18",
+        "names": {
+         "id": "Req-19"
+        }
+       },
+       "target_sha256": "0e70e475fabdcff182285f3eaeceba0fd3bc619991f9c90866df1f15c2270c60"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/18",
+        "names": {
+         "id": "Req-19"
+        }
+       },
+       "target_sha256": "7eb528c647df98dfe890711cc571d4e69f1170d8b5a3a193e7f2ff8f37bbdead"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-20",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/19",
+        "names": {
+         "id": "Req-20"
+        }
+       },
+       "target_sha256": "05455f2c92c338b66272d132930ab27bb9b7d420c5ba70fc1885ee1003dfe983"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/19",
+        "names": {
+         "id": "Req-20"
+        }
+       },
+       "target_sha256": "98899778121bc95c742e8f5eaf7b035b273c4230c51a7bb1f9dd0dd088b706d8"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-21",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/20",
+        "names": {
+         "id": "Req-21"
+        }
+       },
+       "target_sha256": "b82d63812eb15a8368234aec56d329cf29342a2f1bf71fa2d58d9135b81faccd"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/20",
+        "names": {
+         "id": "Req-21"
+        }
+       },
+       "target_sha256": "eaa83c258c3529f97ceec634580a69f4d266e821f998ddbdcd40573e0076e971"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-22",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/21",
+        "names": {
+         "id": "Req-22"
+        }
+       },
+       "target_sha256": "2491c0ee67ff9e83b090dbe2628a1082578fc79ed3e4514a606e606696c09e86"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/21",
+        "names": {
+         "id": "Req-22"
+        }
+       },
+       "target_sha256": "31c15816cb4d0a45e35e18404df5b809109b8032d022870ac036cedca8b8fcd9"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-23",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/22",
+        "names": {
+         "id": "Req-23"
+        }
+       },
+       "target_sha256": "a699937c1299bbb14ba2da8ba6e0773bfaa5cd67143789664353bbadec08f5d8"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/22",
+        "names": {
+         "id": "Req-23"
+        }
+       },
+       "target_sha256": "2089c47ac4a93c37c9ef36ba3dd323e466fb0ad6f7fb88f10a29c87915f12bbc"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-24",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/23",
+        "names": {
+         "id": "Req-24"
+        }
+       },
+       "target_sha256": "0c903fe44b9ef66a9aff71b85565061564bbcfc9e882870c264de4d3b7d43d77"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/23",
+        "names": {
+         "id": "Req-24"
+        }
+       },
+       "target_sha256": "e578d676f45ff3ddc06c4bfe812fae859eb8a9f28e35b4bd4c82b8a2b555ece7"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-25",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/24",
+        "names": {
+         "id": "Req-25"
+        }
+       },
+       "target_sha256": "03016c4c66317c078ae1715d57a54539a7fb934de5da76bab74048fae68e82ef"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/24",
+        "names": {
+         "id": "Req-25"
+        }
+       },
+       "target_sha256": "a66116cc0a8c807969ebd8a28db331b16bec25198ad7a68ed3d76ad037cfb577"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-26",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/25",
+        "names": {
+         "id": "Req-26"
+        }
+       },
+       "target_sha256": "74ae9421dbde6cc7e5cd50595b364d93d9435b255e5fef70becbffa5580b3c36"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/25",
+        "names": {
+         "id": "Req-26"
+        }
+       },
+       "target_sha256": "fbc3bf2baf9b3579e25b89bf848716d53c2f520a79279a75429a77be8d13e996"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-27",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/26",
+        "names": {
+         "id": "Req-27"
+        }
+       },
+       "target_sha256": "002d411a11f7923edf6e4bc3cac7989c6590d3c3a260d79280f83b1a0473600a"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/26",
+        "names": {
+         "id": "Req-27"
+        }
+       },
+       "target_sha256": "51732ba167c51900e9fd676ed7e4c8a72a237dccde6f770255b8dceac90b84e6"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-28",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/27",
+        "names": {
+         "id": "Req-28"
+        }
+       },
+       "target_sha256": "64e726a6165a3a704d0dea0db37fa48b7b8e68cc34c44d3d20e9facdaff7caaa"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/27",
+        "names": {
+         "id": "Req-28"
+        }
+       },
+       "target_sha256": "8929768212cf0e5048938386c66c1d60fe78e4446a9fc5c081dce402c5bd2d40"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-29",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/28",
+        "names": {
+         "id": "Req-29"
+        }
+       },
+       "target_sha256": "653d52f208a3b148b6c9b3a0010281cb57b1ebeaf735ecfbd4552491112d8add"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/28",
+        "names": {
+         "id": "Req-29"
+        }
+       },
+       "target_sha256": "afd7ba98b4c36898bf9574b5b6f51646854cf93f9c382e64fbd397a6ca276e49"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-30",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/29",
+        "names": {
+         "id": "Req-30"
+        }
+       },
+       "target_sha256": "86f7235e25c54664ce187ec311fa1e11b61f180ee845610691a716135b3e6c68"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/29",
+        "names": {
+         "id": "Req-30"
+        }
+       },
+       "target_sha256": "1bb7db064e5bcb9eca6a12278786e08623c5d4faa832ea6c44eb97df760b1835"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-31",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/30",
+        "names": {
+         "id": "Req-31"
+        }
+       },
+       "target_sha256": "5b1b39311be8381a3148cd6e6864c9a650b278bb63bc41d708427053cd8876c5"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/30",
+        "names": {
+         "id": "Req-31"
+        }
+       },
+       "target_sha256": "756def1ba9ee92bc779e10c1b027f5f0165c6598be1168bb86c7d3b587197a8f"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-32",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/31",
+        "names": {
+         "id": "Req-32"
+        }
+       },
+       "target_sha256": "5f6efd96d4294932bbe4c7c33b06d796e597c8c8898932a758a5d5fd15101f77"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/31",
+        "names": {
+         "id": "Req-32"
+        }
+       },
+       "target_sha256": "6363239fb17d62159abaaaa62d4299f12b89e9be830cd8c0ea0ab1aaeafef454"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-33",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/32",
+        "names": {
+         "id": "Req-33"
+        }
+       },
+       "target_sha256": "2467f3080866b8d75df7e6b8c5fd1588764ecb7bf1061d39a23eef7e39d283cb"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/32",
+        "names": {
+         "id": "Req-33"
+        }
+       },
+       "target_sha256": "c84a718f20957b8cdb3d49f307ac9dafb305dd391b43e10255591ac08238fd0c"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-34",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/33",
+        "names": {
+         "id": "Req-34"
+        }
+       },
+       "target_sha256": "ca93d2940e9a6470c19240a0c318391405d248c58244fbb56c14413bc71193b1"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/33",
+        "names": {
+         "id": "Req-34"
+        }
+       },
+       "target_sha256": "308dbc5cc31fb62668b22964b25048fc75215d7e20ca4b49e788d1d8202f917a"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-35",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/34",
+        "names": {
+         "id": "Req-35"
+        }
+       },
+       "target_sha256": "ca3775948e0c4ae77cc558e9a10295902b7f5b6973797af16786cc031ad9db14"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/34",
+        "names": {
+         "id": "Req-35"
+        }
+       },
+       "target_sha256": "8d2b026c0f9debcf67d25d84eae2fa823ba8de3405ee7c2982f33602788d0db4"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-36",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/35",
+        "names": {
+         "id": "Req-36"
+        }
+       },
+       "target_sha256": "d5f8d64177b8ca808acf9c316d81edc6fac789a15318752f4b9a33f10a018b77"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/35",
+        "names": {
+         "id": "Req-36"
+        }
+       },
+       "target_sha256": "88c6cf163daf1d4925c06bff889f7d1443f014dfc9b129bc64bfdd632072db51"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-37",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/36",
+        "names": {
+         "id": "Req-37"
+        }
+       },
+       "target_sha256": "cb33722c729340e7920d4c500f25439d67e8ca9e1ba5b65d73d9cf1923898c8d"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/36",
+        "names": {
+         "id": "Req-37"
+        }
+       },
+       "target_sha256": "77592a5540dd72e119d73e874e44d13fbbc9794912b834099e92e341a61b34a0"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-38",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/37",
+        "names": {
+         "id": "Req-38"
+        }
+       },
+       "target_sha256": "f9304ae8791b354c223b994bf5153ab4e5c0a47ae5ec81cfa00257f98135752f"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/37",
+        "names": {
+         "id": "Req-38"
+        }
+       },
+       "target_sha256": "589c0e44aff561f743e3e7274d56ba8b4114ca6d0cd770bd7b028e0aa93b6ef2"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-39",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/38",
+        "names": {
+         "id": "Req-39"
+        }
+       },
+       "target_sha256": "136b8182c16996219455d470f646d72408c9f3b675b93816515f313f9a84d12b"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/38",
+        "names": {
+         "id": "Req-39"
+        }
+       },
+       "target_sha256": "557ca1194110f619afb062c5ded4647473d69e3aea6ff7a360bc33ce7a0e0926"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:mobilitydcat:Req-40",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/mobilitydcat/reference-requirements/consolidated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "b862743548fcc823ed3cfa9974d6c021f1216d6367d3ac5194f0690c900a759e",
+       "locator": {
+        "json_pointer": "/requirements/39",
+        "names": {
+         "id": "Req-40"
+        }
+       },
+       "target_sha256": "c363cc7b4d0410452b3ff3dc3e074e528e31902f4cab846f2c73ea3bd70bf017"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6db542fb6f75b4c65f3bdd730f337981b9a42142a87e6dea7add8d5ad93489e9",
+       "locator": {
+        "json_pointer": "/requirements/39",
+        "names": {
+         "id": "Req-40"
+        }
+       },
+       "target_sha256": "7b0deece1f82b4329a71fee643ad71941e7f8564ca516c8830f0bffdfcd8cc47"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-1",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "H-1"
+        }
+       },
+       "target_sha256": "8bb7af320df2bf838df36c7242a7421f176a512f63d485a4235365bee0bc47c3"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "H-1"
+        }
+       },
+       "target_sha256": "54a2d218f6eb60b4baeca52faa16a23ffd7b391eb3d1d10c38b7a3c727842e0b"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-2",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/1",
+        "names": {
+         "id": "H-2"
+        }
+       },
+       "target_sha256": "d3305c038e676f1c8a0bbdc2ee79bdabcbbacb95ebcc41d3d1e059ee8807bfee"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/1",
+        "names": {
+         "id": "H-2"
+        }
+       },
+       "target_sha256": "bdea4d996ee09fa18727e1bc8db9afd1786baa5534e85166ed8936139374ac61"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-3",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "H-3"
+        }
+       },
+       "target_sha256": "409ca741c67146a0d440ee50460b6ce75ca08fae98299169a3697f9c26fb1090"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "H-3"
+        }
+       },
+       "target_sha256": "693740719707be5d76714830a6354dd34882056090f552daecd5d696248d3534"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-4",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/3",
+        "names": {
+         "id": "H-4"
+        }
+       },
+       "target_sha256": "9774cde7e98b122fcce0dfc3268cc7e1d2518eeca33375def5adfdc752c72e66"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/3",
+        "names": {
+         "id": "H-4"
+        }
+       },
+       "target_sha256": "4aef293590824bc43c9ac60bc105bc7186cfe9906b99d1dc85156b34723b8c44"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-5",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/4",
+        "names": {
+         "id": "H-5"
+        }
+       },
+       "target_sha256": "ce5e7b925ad51c1cd5feef5e35b3fb0352b88274cd1ef97b2b8ba95555f9b2fa"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/4",
+        "names": {
+         "id": "H-5"
+        }
+       },
+       "target_sha256": "1efd8113c11f25c8fba3d03173c636abd3514ad1611aaab14acc4aec68063d87"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-6",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/5",
+        "names": {
+         "id": "H-6"
+        }
+       },
+       "target_sha256": "cda45b02bbd072e9bce3492fde473bc9189aa75c903ea054a318798e802819ea"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/5",
+        "names": {
+         "id": "H-6"
+        }
+       },
+       "target_sha256": "5e3738114059197bae094057813deb031b22abe17e1a5a22afc5653d2c01e783"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-7",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/6",
+        "names": {
+         "id": "H-7"
+        }
+       },
+       "target_sha256": "244ce15b2953a78a64b6a45f0f63c2d41e019660bb6cc1ccfeb3e88db03a2b83"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/6",
+        "names": {
+         "id": "H-7"
+        }
+       },
+       "target_sha256": "eba818baaa9529997156f5712726bb05c81294c6de60b4a8f704371e6e7500b1"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-8",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/7",
+        "names": {
+         "id": "H-8"
+        }
+       },
+       "target_sha256": "b15b78fb4d5d184c52a0b5026a6a0866ec373469e494c86e0d48dd9da6efc2fa"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/7",
+        "names": {
+         "id": "H-8"
+        }
+       },
+       "target_sha256": "62afac03242315d64355bf25c967db2267e57e029a3ec2b0f19e393ccadd3f65"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-9",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/8",
+        "names": {
+         "id": "H-9"
+        }
+       },
+       "target_sha256": "d6cb4c9435204271def6a89982b3b9d1e0292fd1047c184eaa8614127fcb0d4d"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/8",
+        "names": {
+         "id": "H-9"
+        }
+       },
+       "target_sha256": "edb8b30c64a3d2153dc312cb4aa6aae5b815f6c2c15f6941a7064b6e6af11bdb"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-10",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/9",
+        "names": {
+         "id": "H-10"
+        }
+       },
+       "target_sha256": "8e32d0ff8b463875c35d8f1fc486eb663ee39592d61ab702c044b0a101fcd643"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/9",
+        "names": {
+         "id": "H-10"
+        }
+       },
+       "target_sha256": "96bad6cd219a67a1349a5781dabc21f0c2f1fae50be65e24535faed09eb51426"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-11",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/10",
+        "names": {
+         "id": "H-11"
+        }
+       },
+       "target_sha256": "2a338da8a506cdcf77a0af4a62ecd4b4634ea2adee3607832e89fbb20638bbc0"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/10",
+        "names": {
+         "id": "H-11"
+        }
+       },
+       "target_sha256": "1b49f4fb4cb231994776ff3aa4dac3d39636dc07985362282d394d5b1770bc97"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-12",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/11",
+        "names": {
+         "id": "H-12"
+        }
+       },
+       "target_sha256": "e3531b027536e9f4f73195d3cc3e59607441270563887ca8ca76a1b0e22e2a14"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/11",
+        "names": {
+         "id": "H-12"
+        }
+       },
+       "target_sha256": "170455d5bc8c964f0d10de4f58e87be43c88d792fb7b8e1a7d8520da8ee45b62"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-13",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/12",
+        "names": {
+         "id": "H-13"
+        }
+       },
+       "target_sha256": "6fae907b97656b05ea3842a2f36887456535d6eb98f3d687dae3a0d6288eac72"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/12",
+        "names": {
+         "id": "H-13"
+        }
+       },
+       "target_sha256": "6be8e0462e9569eaf0e4f53f15ba66841c0e394caefcfcb67e04f1dc13e0cb53"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-14",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/13",
+        "names": {
+         "id": "H-14"
+        }
+       },
+       "target_sha256": "b62341a7949d076ad880eca9034e2074f00f8266e9b21ed5b9feb360aa837546"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/13",
+        "names": {
+         "id": "H-14"
+        }
+       },
+       "target_sha256": "9b589b3c388cf3a3d545f2baf6a5e2dff242a791876b648f7f3a0afec32186ae"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-15",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/14",
+        "names": {
+         "id": "H-15"
+        }
+       },
+       "target_sha256": "e756459d9a31ab429d64d1f5fe5984535733fe7f798f0f4b0a9afceeba8c2bf1"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/14",
+        "names": {
+         "id": "H-15"
+        }
+       },
+       "target_sha256": "34b3aca074b3a8f34997e8b51be273975a6c90e7219a35d1ffc7c99bc2ad356f"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:healthdcat:H-16",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/healthdcat/reference-requirements/curated-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "f62556b6358878b68416e68fec18e28ebe629a346fbfdcfdfdc54197a38ff5b2",
+       "locator": {
+        "json_pointer": "/requirements/15",
+        "names": {
+         "id": "H-16"
+        }
+       },
+       "target_sha256": "6ecc5418f77f86a5b0b1b9ac3c97d92c313e9548b39ede78ac1cb0a14db2dbf5"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/15",
+        "names": {
+         "id": "H-16"
+        }
+       },
+       "target_sha256": "af5cdbe2e78572bb292a24088dc490d07bf855a9c8c2fbbb9cf42bd4aca9e282"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:statdcat:S-1",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/statdcat/reference-requirements/requirements-and-resolutions.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "9a63c6cad556a5b20f47114c439c12d7e130f08d9e632ef94c86a13d06d5cce3",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "S-1"
+        }
+       },
+       "target_sha256": "8922e0d22962d80a40590f5a739ad1036766f88cad4969042cc90018460d9423"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "S-1"
+        }
+       },
+       "target_sha256": "84e5f83f3a48c7803516826b83e1963a838ad655eb24f9af8aa5853474603647"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:statdcat:S-2",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/statdcat/reference-requirements/requirements-and-resolutions.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "9a63c6cad556a5b20f47114c439c12d7e130f08d9e632ef94c86a13d06d5cce3",
+       "locator": {
+        "json_pointer": "/requirements/1",
+        "names": {
+         "id": "S-2"
+        }
+       },
+       "target_sha256": "4125dc27df69771e83d8b541d7087191284e742cbf80c2c9976f9bf62a2e6299"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/requirements/1",
+        "names": {
+         "id": "S-2"
+        }
+       },
+       "target_sha256": "c07072f4bf51948241c7e966ef15bc108f30195a389852f7227817b7a9571ff4"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:statdcat:S-3",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/statdcat/reference-requirements/requirements-and-resolutions.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "9a63c6cad556a5b20f47114c439c12d7e130f08d9e632ef94c86a13d06d5cce3",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "S-3"
+        }
+       },
+       "target_sha256": "a11dfc3beb96b15d721c30bb7b25c44d2bae9eb4e13152a19e11e002ba3a4164"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "S-3"
+        }
+       },
+       "target_sha256": "a8ef101f4a3bda89901d97a31543083a5bc9046bd3d73d528d807762f9f334b8"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:statdcat:S-4",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/statdcat/reference-requirements/requirements-and-resolutions.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "9a63c6cad556a5b20f47114c439c12d7e130f08d9e632ef94c86a13d06d5cce3",
+       "locator": {
+        "json_pointer": "/requirements/3",
+        "names": {
+         "id": "S-4"
+        }
+       },
+       "target_sha256": "e20dc5d00d8834f4315639580a97b233f7afa76a057dcc242a5dac8d295a7bc6"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/requirements/3",
+        "names": {
+         "id": "S-4"
+        }
+       },
+       "target_sha256": "65bb401512ef2cf5bb7850572ea9cb2887ae2f5b9267e74644fbda5f42c84563"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:statdcat:S-5",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/statdcat/reference-requirements/requirements-and-resolutions.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "9a63c6cad556a5b20f47114c439c12d7e130f08d9e632ef94c86a13d06d5cce3",
+       "locator": {
+        "json_pointer": "/requirements/4",
+        "names": {
+         "id": "S-5"
+        }
+       },
+       "target_sha256": "b1c1d46934e3503fc7ff9e837f7b2ebc87ef72fc02b88c3f1b939b2c37161975"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/requirements/4",
+        "names": {
+         "id": "S-5"
+        }
+       },
+       "target_sha256": "a48d20489b20d404387d16692d12c489f7c914b445ab7b0b2f8af7c87e68e5b8"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:statdcat:S-6",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/statdcat/reference-requirements/requirements-and-resolutions.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "9a63c6cad556a5b20f47114c439c12d7e130f08d9e632ef94c86a13d06d5cce3",
+       "locator": {
+        "json_pointer": "/requirements/5",
+        "names": {
+         "id": "S-6"
+        }
+       },
+       "target_sha256": "d01d6d8e4e611031d4f4a82dbb06ed1bf1870155de7aa24311302d1c7c6aaf26"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/requirements/5",
+        "names": {
+         "id": "S-6"
+        }
+       },
+       "target_sha256": "cfe7bd53f99b67b2b430c2645880314f347a856c1f3a8fe44b02290c85a6b194"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:statdcat:S-7",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/statdcat/reference-requirements/requirements-and-resolutions.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "9a63c6cad556a5b20f47114c439c12d7e130f08d9e632ef94c86a13d06d5cce3",
+       "locator": {
+        "json_pointer": "/requirements/6",
+        "names": {
+         "id": "S-7"
+        }
+       },
+       "target_sha256": "e69897960ac9aaa01e4b663135457b5eb7fc29ff255d4bd77a67184d06d78097"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/requirements/6",
+        "names": {
+         "id": "S-7"
+        }
+       },
+       "target_sha256": "ab0146d9e754c1c61ad73fdf22688451c886e0a0ba436d59fb4a143fdd6ad701"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:geodcat:G-1",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/geodcat/reference-requirements/alignment-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "63d72bc1d7a512a241505d16a9d12eaa56cc5c1d44eb98ac13528dee70730a00",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "G-1"
+        }
+       },
+       "target_sha256": "d9dce60c3751977ad44c562ecebfeed803fa730993b54175cdff57f992f5b4b8"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "G-1"
+        }
+       },
+       "target_sha256": "5bcc7406a9f45ccfcd461a52576bedb05e5a1812e9cd73f5ed19e2b2457cc4c3"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:geodcat:G-2",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/geodcat/reference-requirements/alignment-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "63d72bc1d7a512a241505d16a9d12eaa56cc5c1d44eb98ac13528dee70730a00",
+       "locator": {
+        "json_pointer": "/requirements/1",
+        "names": {
+         "id": "G-2"
+        }
+       },
+       "target_sha256": "a759d29f2ffdfd5823e7abcb13f35c95a628e42dea4459be4a49974b4504a8f7"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/1",
+        "names": {
+         "id": "G-2"
+        }
+       },
+       "target_sha256": "1603147a6454bdf20d026639b3720757a7dfb91b6634ee34802591c0ab389588"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:geodcat:G-3",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/geodcat/reference-requirements/alignment-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "63d72bc1d7a512a241505d16a9d12eaa56cc5c1d44eb98ac13528dee70730a00",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "G-3"
+        }
+       },
+       "target_sha256": "b815113508c8b138325e5a91a08b3aab5a24798377c53e559777454d451645a9"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "G-3"
+        }
+       },
+       "target_sha256": "798f1c373c54e40fc0e6d25973a20da08088a255aae2761d0961c4085f7796f6"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:geodcat:G-4",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/geodcat/reference-requirements/alignment-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "63d72bc1d7a512a241505d16a9d12eaa56cc5c1d44eb98ac13528dee70730a00",
+       "locator": {
+        "json_pointer": "/requirements/3",
+        "names": {
+         "id": "G-4"
+        }
+       },
+       "target_sha256": "31679506b42259051ea2a3a7a6418e70a073fdb87f683ef98e9f58685d9fbf46"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/3",
+        "names": {
+         "id": "G-4"
+        }
+       },
+       "target_sha256": "0f1dab9e88df24a7b99f2a62e0220f6446307968a70c966cc26cc0e7758750cc"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:geodcat:G-5",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/geodcat/reference-requirements/alignment-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "63d72bc1d7a512a241505d16a9d12eaa56cc5c1d44eb98ac13528dee70730a00",
+       "locator": {
+        "json_pointer": "/requirements/4",
+        "names": {
+         "id": "G-5"
+        }
+       },
+       "target_sha256": "9ab3944775eb8233275e4cd7bb1f5a5016f59759afc2b1adf53113b5275a0bdd"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/4",
+        "names": {
+         "id": "G-5"
+        }
+       },
+       "target_sha256": "fbb80cbeb40767455123b4b81c6976c9ef9938353f60d5e6fa06f25ed8e7695a"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:geodcat:G-6",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/geodcat/reference-requirements/alignment-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "63d72bc1d7a512a241505d16a9d12eaa56cc5c1d44eb98ac13528dee70730a00",
+       "locator": {
+        "json_pointer": "/requirements/5",
+        "names": {
+         "id": "G-6"
+        }
+       },
+       "target_sha256": "05a84d275a4d8129db3e888b6beaa6b7072df413262c3b2bff50b86690d7e72f"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/5",
+        "names": {
+         "id": "G-6"
+        }
+       },
+       "target_sha256": "5f1f9ad7867b15d6577d15a802ffff1b95e1725b1f220a11f6a76f20f3b94e6e"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:geodcat:G-7",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": "curator_paraphrase"
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/geodcat/reference-requirements/alignment-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "63d72bc1d7a512a241505d16a9d12eaa56cc5c1d44eb98ac13528dee70730a00",
+       "locator": {
+        "json_pointer": "/requirements/6",
+        "names": {
+         "id": "G-7"
+        }
+       },
+       "target_sha256": "cb7ceae9e7efbb2a32c9d722d1ce911f9778051ff183f7abf686252decf43918"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/6",
+        "names": {
+         "id": "G-7"
+        }
+       },
+       "target_sha256": "93c330936f7780b85e0353166a4807b53ce5b1e8ca47f9cb4bc79a6643f590bf"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:jrc-research:JRC-1",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": null
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/jrc-research/reference-requirements/core-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "1c4c346451612ea66dfbcd054c97d0ff6d01eb9f009fa9ba342f2d63b29a6786",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "JRC-1"
+        }
+       },
+       "target_sha256": "ee1f76852e042e5ffed1c3fd3350bfa1426beec2ea4ae4af7c4b8b9a6d1977a8"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/requirements/0",
+        "names": {
+         "id": "JRC-1"
+        }
+       },
+       "target_sha256": "812384aeb09e42cbbdbf5d474552ca8f5d8fe23ec6ff677362019763ca4e9442"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:jrc-research:JRC-2",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": null
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/jrc-research/reference-requirements/core-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "1c4c346451612ea66dfbcd054c97d0ff6d01eb9f009fa9ba342f2d63b29a6786",
+       "locator": {
+        "json_pointer": "/requirements/1",
+        "names": {
+         "id": "JRC-2"
+        }
+       },
+       "target_sha256": "e866903d04f6d1bfa7d8855a498803c442afaa8b4d9e9e0ce6895f3bbfdb1dba"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/requirements/1",
+        "names": {
+         "id": "JRC-2"
+        }
+       },
+       "target_sha256": "4ab8ceccef169b43a5be2c805172baa8f98f6e9fdf981a8fccf77adaf395c6bc"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:jrc-research:JRC-3",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": null
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/jrc-research/reference-requirements/core-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "1c4c346451612ea66dfbcd054c97d0ff6d01eb9f009fa9ba342f2d63b29a6786",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "JRC-3"
+        }
+       },
+       "target_sha256": "26b48b4bcccdf314ec6dd30eba5a14402da63163b7eb25d678a622abcf7154d7"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "JRC-3"
+        }
+       },
+       "target_sha256": "27c9286f19890de64993737a9c837e51e19885bd60a1e0690ad99781b9935d6c"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:jrc-research:JRC-4",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": null
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/jrc-research/reference-requirements/core-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "1c4c346451612ea66dfbcd054c97d0ff6d01eb9f009fa9ba342f2d63b29a6786",
+       "locator": {
+        "json_pointer": "/requirements/3",
+        "names": {
+         "id": "JRC-4"
+        }
+       },
+       "target_sha256": "d9194dec1470697c066229fcf06fc201442be33741a0921e9989606c65a49659"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/requirements/3",
+        "names": {
+         "id": "JRC-4"
+        }
+       },
+       "target_sha256": "c55bbb1ddda415fc71c98f9e4d2ad6c719fa2ed8041d889160b34d8c1a0c18a7"
+      }
+     ]
+    },
+    {
+     "entry_id": "R3:jrc-research:JRC-5",
+     "step": "R3",
+     "decision": "published_row_kept",
+     "value": {
+      "statement_kind": null
+     },
+     "reason": null,
+     "reason_status": "not_recorded",
+     "actors": [
+      {
+       "actor": "unresolved:curator-label",
+       "status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "v1 row",
+       "kind": "row",
+       "file": "benchmark-data/jrc-research/reference-requirements/core-requirements.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "1c4c346451612ea66dfbcd054c97d0ff6d01eb9f009fa9ba342f2d63b29a6786",
+       "locator": {
+        "json_pointer": "/requirements/4",
+        "names": {
+         "id": "JRC-5"
+        }
+       },
+       "target_sha256": "1e878b560b5b0e0924044b804ce9dceea3264bd0d14886ddebae8ee91c72144c"
+      },
+      {
+       "label": "v3 row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/requirements/4",
+        "names": {
+         "id": "JRC-5"
+        }
+       },
+       "target_sha256": "9dd91025cfe57c88264e396e94e7678e86980019a6f1c11f33b5b19b03b1e45e"
+      }
+     ]
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  }
+ ]
+}

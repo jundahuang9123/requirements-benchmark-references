@@ -1,0 +1,4524 @@
+{
+ "step": "R10",
+ "method": "merge rule of history/build-scripts/v3/integrate_labels.py:39-78 on the stored raw outputs; input texts as history/build-scripts/v3/extract_inputs.py",
+ "pdftotext": "pdftotext version 24.02.0",
+ "script_sha256": "29ee1f0dfd46cc0cd22133c4d1aacd15d0eacfa7279b616426d7c3ea3862bb83",
+ "raw_outputs": {
+  "geo": "519158445b0bf1eb96d76cc60c696a66957bc4f2f44568f6bbb19eb87331b9e0",
+  "health-a": "7a6f69e27cd19ff3b9bb79c5ba4aee3e84d404929ded6cdb49c50610f6f489dd",
+  "health-b": "93582bfb3ba691fa5cded63d81f09fe12a49935410a2d111874dcc358c4875d8",
+  "mobility-consolidation": "246066bf518edd1b2777857c658b3a957d64c86d59a16d73158986bf0fb163cd",
+  "mobility-literature": "07b5101d0acade87c17e978ab94f8fda97fc71ff60f66bf8d8af2230f8de61bd",
+  "mobility-policy": "aa1caf6040ab98459d41f6bb9fc4275e031344363da1839df95f3d2d496ee9cf",
+  "mobility-standards": "81f3cb2c8b8aa6998ea47e649a84795f6621074dbde6095c7b79a4355d180187",
+  "stat-jrc": "15b9e7b23824ed6da218e4f62ff250a002be3476eeb1dbd77a7f8163bc5c73dc"
+ },
+ "merged_sha256": "83c978428e0667200d5e5419034f9dc9ee4825de01512e3874162cb2cc70f426",
+ "atoms": [
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-1.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/0",
+    "names": {
+     "id": "Req-1.1"
+    }
+   },
+   "raw_sha256": "6a048a2f70957a8c1909b4a4fe4f3899c5a30030be3dbf2a92054ce9f8b0d964",
+   "consolidation_sha256": "485ffe776a2102c0ef46c82f3dbc96767b5ee2c405f152db28cd4c9f7ee65e1c",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-1.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/1",
+    "names": {
+     "id": "Req-1.2"
+    }
+   },
+   "raw_sha256": "9a2612176671c7fa463cc4c39641ed09faefb954a06ab1ba3d6894cec0e275fd",
+   "consolidation_sha256": "74b7d077d1c7a24b7c48a294baba13c8429bf550231732b34a3a44531b5e4324",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-1.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/2",
+    "names": {
+     "id": "Req-1.3"
+    }
+   },
+   "raw_sha256": "ba7583f1cf980f4c07bb8e2960f22e74c6697301980be6f8096e7ee1f43291f1",
+   "consolidation_sha256": "8200e3601f8259e9a0192c4238e212e5fc5c0584cbc2707ea93915d14d097535",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-1.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/3",
+    "names": {
+     "id": "Req-1.4"
+    }
+   },
+   "raw_sha256": "cae0511e43640437c0bb1af10639461433a7ff7b92d85a43c5123819fae308af",
+   "consolidation_sha256": "d7f2a0f52150d3db4be42b4f7a66be977306073bfc0eb8293152908e72846cdf",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-1.5",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/4",
+    "names": {
+     "id": "Req-1.5"
+    }
+   },
+   "raw_sha256": "2dc5aa91bb0e7764e40fd8bed4b1f17a57d567d68683dfda76b9346df2bc0965",
+   "consolidation_sha256": "1c86a40a8373810c48ec10d77347316423370f578d62620cecefb884f0b85c32",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-1.6",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/5",
+    "names": {
+     "id": "Req-1.6"
+    }
+   },
+   "raw_sha256": "43b69c551788867d93ebccaf1fbb9f7af43b440670ed8f06a4aaa2e19dc7161b",
+   "consolidation_sha256": "30a4e9ab0e1d2ac899653a3f702a9fcc31cd4782b6a0875b5e3dc3566e3ab048",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-1.7",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/6",
+    "names": {
+     "id": "Req-1.7"
+    }
+   },
+   "raw_sha256": "d31179bbe0d99a606db3a1cf914460ca438e1a43806b2f2889be0a10e2967407",
+   "consolidation_sha256": "3fc89843fbadc27d0f42214b6fd0f8c0a7fc47d032215b72d7387aaa1772ff1a",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-1.8",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/7",
+    "names": {
+     "id": "Req-1.8"
+    }
+   },
+   "raw_sha256": "69ecf392af9be51308de611429077382ea0935b62f5c4a6c9975e1a5c8f542a9",
+   "consolidation_sha256": "0ef5e5c45b3a7db5ccfd4a41a1d0c8c658f4222047fb98f24778b9da70c897bd",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-1.9",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/8",
+    "names": {
+     "id": "Req-1.9"
+    }
+   },
+   "raw_sha256": "88f54764732fdad90be840f5122531fbfd5b3fb1ee9de4a3acf5ac60b93b4819",
+   "consolidation_sha256": "5b057cfd48fe9b99427c0608dfe3dbb1466c23ea36567ad2452802020468815c",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-1.10",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/9",
+    "names": {
+     "id": "Req-1.10"
+    }
+   },
+   "raw_sha256": "ffa921b07b9e2ebfd223dfecc5ee9de5a368534cecc5f8b3ef83c6cae3e19cce",
+   "consolidation_sha256": "cbccdff2cb112f802e12e656883b189d2c8295a2da2f5aa42169d5f21c2000dd",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-2.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/10",
+    "names": {
+     "id": "Req-2.1"
+    }
+   },
+   "raw_sha256": "113b599d4603ca5d387a8e4f4d489b15e2de1029c2bd57771ba49c834c4f38ce",
+   "consolidation_sha256": "42bfa3cbfe3cb39b87de67dd755292ff2f310f2014cb7768268e3343dfe5a325",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-2.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/11",
+    "names": {
+     "id": "Req-2.2"
+    }
+   },
+   "raw_sha256": "84c78621ff5f65a2f4176acb3c244bc5515daef46010c6cf59d1ba183d3adf28",
+   "consolidation_sha256": "106e79fc0b14921a57487a33e441a2380921e1a2979c86826257987707533ce2",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-2.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/12",
+    "names": {
+     "id": "Req-2.3"
+    }
+   },
+   "raw_sha256": "9fc914496a4c6127f67ed3788b5785127feb14a6e1aad072465db3cd3dd9fc0a",
+   "consolidation_sha256": "60b60a942b5300bbc2d3687fa94460e2c0716dcca3b25900a251cf339504ce63",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-2.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/13",
+    "names": {
+     "id": "Req-2.4"
+    }
+   },
+   "raw_sha256": "cb0fea624d44fe16c2cf655ea8706dd2d1792f0ead7ddb5d772317c349fb32f5",
+   "consolidation_sha256": "74e83baa607f17facb00ccdc71778400ddaf06800456db3f3bb92c514fb35bd6",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-2.5",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/14",
+    "names": {
+     "id": "Req-2.5"
+    }
+   },
+   "raw_sha256": "70249d416b7afbc26be6f99a70a67676e10cdccbe8932d7c0b50801fa261e1cc",
+   "consolidation_sha256": "4e5d219151bb9e1d12e08933f88a058f18663a7d4b19fbf3586b1f64ea4a5d69",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-2.6",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/15",
+    "names": {
+     "id": "Req-2.6"
+    }
+   },
+   "raw_sha256": "11844b392793c5f62244fe7859a3adec0eb357cc8bedc2c2b395b8bb83267667",
+   "consolidation_sha256": "a9b183c9ca04d8d9bbd196a84741e7ce6bf4d028e524b5b467cb8b97c61270db",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-2.7",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/16",
+    "names": {
+     "id": "Req-2.7"
+    }
+   },
+   "raw_sha256": "e96ac1d4055d148632e3146dbd269138798e844f5c2137928eff00cf3aac55bb",
+   "consolidation_sha256": "4705e59973333dc9abdac07783d833a1340b62cb09e94a25443825ecce7f93b1",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-3.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/17",
+    "names": {
+     "id": "Req-3.1"
+    }
+   },
+   "raw_sha256": "abd38f84265f3581dd2bef78e068921275d60526952817f46fa6a76306aa7d36",
+   "consolidation_sha256": "17764b1d8098d945c6435d0aaeb09cedf819fd2927a64f13a9ffa0068bdc0d3e",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-3.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/18",
+    "names": {
+     "id": "Req-3.2"
+    }
+   },
+   "raw_sha256": "28561b05e573d4eb9ba6d16d63a63fa5e36c0532574eb3ae4963b5810b8e681f",
+   "consolidation_sha256": "e8d7e270f26409de2f95101171d7a0b0a93ebdcd9e10bbf627110b76ac27a1c3",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-4.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/19",
+    "names": {
+     "id": "Req-4.1"
+    }
+   },
+   "raw_sha256": "7e29d69a703fae40f6b5a9e2383c0ddbd4a5e3b56c3ca5b5b193ed53228d8272",
+   "consolidation_sha256": "fce8b56067d2c544d5def20e5040ce75280feb29ff9a0307c7246795e076dc82",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-5.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/20",
+    "names": {
+     "id": "Req-5.1"
+    }
+   },
+   "raw_sha256": "e4a9d3c041c302c14e41b614efc539e865a40b1acd8cee5591b6550001d16877",
+   "consolidation_sha256": "8d8cc2c1c613b2693fdb3e58c8f322eec374f9a5f9042e8e3e0258f6ce5d662d",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-6.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/21",
+    "names": {
+     "id": "Req-6.1"
+    }
+   },
+   "raw_sha256": "69e1563d5289ad2132c688caa496e0f124d159bbf9e1e9b99d0c15e7b6078912",
+   "consolidation_sha256": "9d551531408c2c4000ed02ee0f33e001029562d2c5fa0c9818f858f48abd7099",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-7.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/22",
+    "names": {
+     "id": "Req-7.1"
+    }
+   },
+   "raw_sha256": "f4600e4adbc1511b69c5065709f75161ba0bb15c85de2efd3b1f3574a3968bc9",
+   "consolidation_sha256": "43cbaea9eb9db449abc4d70ce3ba9f1ac1b3e6eb908015ed0eed1f458108c749",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-7.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/23",
+    "names": {
+     "id": "Req-7.2"
+    }
+   },
+   "raw_sha256": "1625efcd1de6041f5853145b6c6b6ca7d8e024da37f6ebaa5d110cc35bfb40d3",
+   "consolidation_sha256": "b6d2fe9ef333d384f47dc82d61a947db337edc3d4c0bbaf5f710c8256ad74749",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-8.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/24",
+    "names": {
+     "id": "Req-8.1"
+    }
+   },
+   "raw_sha256": "9172d0823668045b43a6201659655e56d63f9c4900dabc98f732c535519bc07f",
+   "consolidation_sha256": "d9c6e828df5ec2ad9ae72c028bd63bdc42da91f594eba8e35dbfea5705795a3f",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-8.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/25",
+    "names": {
+     "id": "Req-8.2"
+    }
+   },
+   "raw_sha256": "fb6769d3dd2e8ca37768e65325caf3cb8ab6c22a0238b60d06205c70b865c3a3",
+   "consolidation_sha256": "d7b2f24c766a730caf91662212b575a64c6aa63ae18f2d55b402a9ebcdcba1c9",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-8.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/26",
+    "names": {
+     "id": "Req-8.3"
+    }
+   },
+   "raw_sha256": "97cacaeed0b6cc0681427ef3865879eed4045623ec658650cc91ef9d6bac5aaa",
+   "consolidation_sha256": "eea09595336e04d81874ed4b010ef19392a2a610ec565dfeabff750b5263286e",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-8.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/27",
+    "names": {
+     "id": "Req-8.4"
+    }
+   },
+   "raw_sha256": "95346b81fc3253e038a01710eac92b1156210ea8ffb0e6e2da5f963a8daea5e7",
+   "consolidation_sha256": "a64abaab89ed593d6d027a8790aa992908e56dce529e2063032a4005ef0d5cd1",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-8.5",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/28",
+    "names": {
+     "id": "Req-8.5"
+    }
+   },
+   "raw_sha256": "8be18d0f7639ff251bd96bebbf74e896664d0ed15ae9b4640f3c56686f5a6653",
+   "consolidation_sha256": "8aca2c3f4d81b984c3d4ed6cc5979f9a4983fe85aa50107e6ada353ff41320ad",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-9.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/29",
+    "names": {
+     "id": "Req-9.1"
+    }
+   },
+   "raw_sha256": "e7c069acbef6a0be09a8b068f33dac064be04ace2e183395b3e6cefebf003c9a",
+   "consolidation_sha256": "959e7f9694cc86ac893121e5e4282eb7f83a3a7bc4fe79fcac2253058b4d0ea2",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-9.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/30",
+    "names": {
+     "id": "Req-9.2"
+    }
+   },
+   "raw_sha256": "3198f63643f4eb096ec21142b27c316ec98312065bbde2a461d2f9e317b36ce8",
+   "consolidation_sha256": "c39d90ca2d4de3e2f8600bfa952f2924c600dc53d2116e2d4fe1190f54ab9c65",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-10.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/31",
+    "names": {
+     "id": "Req-10.1"
+    }
+   },
+   "raw_sha256": "a2913976181b2319f2b6f64e560e4583c45ae3a0fa55f8b6a2494e77b6bac351",
+   "consolidation_sha256": "421797facf0fe77afdfa5132654d43d3cf5a66aba1d4f227f4613476b3323f8a",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-11.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/32",
+    "names": {
+     "id": "Req-11.1"
+    }
+   },
+   "raw_sha256": "9a420f61d8e615cf6d8402d7bb8770f6d30269551d5cfaf896e77e03db4946c6",
+   "consolidation_sha256": "989edf7d75cb013a3277ad72aefd980a64b4e9a8e04716044898ea1805339587",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-12.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/33",
+    "names": {
+     "id": "Req-12.1"
+    }
+   },
+   "raw_sha256": "5d97f070acb2aa5d1e442ab3a620e13b5bc074393621d7a4aa2c2d6af1c616b2",
+   "consolidation_sha256": "b308b3ad0717a3eddf7c4cb0f4e90b62c68b815bbeb4025b695a74cd96b0ed51",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-12.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/34",
+    "names": {
+     "id": "Req-12.2"
+    }
+   },
+   "raw_sha256": "4a25110017360b74f7e42802f59a5ff6f14a81b50b3d4b76e2bcc498311148a5",
+   "consolidation_sha256": "0f366ed1700d4ec3df2cc530ec736053af2d352d606ba68ce0a86fc448d110e5",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-13.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/35",
+    "names": {
+     "id": "Req-13.1"
+    }
+   },
+   "raw_sha256": "20f6c3bec966e2ac479f6ed60f1c24f3a43e39d8b632f6b099df482f4ba84211",
+   "consolidation_sha256": "41efc34b0b98350764b81a31e41bcbd6a320a8798e03d67d18e131db668d6044",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-14.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/36",
+    "names": {
+     "id": "Req-14.1"
+    }
+   },
+   "raw_sha256": "406c03f96e0d9ffdea7aa1b5fb1111bba09dfb1bcea19563f6bf1c987ba7a6f8",
+   "consolidation_sha256": "77febde2eea56f8e45acba54dfb7cc06f57eafe8b5143eeebaabe2587e55a6ff",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-15.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/37",
+    "names": {
+     "id": "Req-15.1"
+    }
+   },
+   "raw_sha256": "c46c03301ec359c95dcd8a12c47e583472e574b95da5a777fc934e6f97a0a874",
+   "consolidation_sha256": "278baf555bcc32e433806f84b2b71a3dc05e822418c099717fc9a120eb2fd51c",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-15.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/38",
+    "names": {
+     "id": "Req-15.2"
+    }
+   },
+   "raw_sha256": "6e3f1b1983b54eade7523dbc4e947b45ed42d53cb71539b36c8e332ec515c22f",
+   "consolidation_sha256": "e364d77d7c0436989f55a131d9cc6fa2f909a72b0a75f9114d481fa86aa91c84",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-16.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/39",
+    "names": {
+     "id": "Req-16.1"
+    }
+   },
+   "raw_sha256": "b6e043ae4306865bc518856c84ba75cd67f880a920f7f1d963d61498a815dd62",
+   "consolidation_sha256": "7f9ecf4c16a6556ee49cdbf0e16afc0a0d97d132d8301582df1855da9c1661ad",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-17.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/40",
+    "names": {
+     "id": "Req-17.1"
+    }
+   },
+   "raw_sha256": "501dab59ad72a22d3b8afd4745b6e4cd1776ba2380df23a42a998e317d2c16d5",
+   "consolidation_sha256": "27148bdb5f412df1b108c464d2267449d1197ffec42114941d737534ccdb4bb5",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-17.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/41",
+    "names": {
+     "id": "Req-17.2"
+    }
+   },
+   "raw_sha256": "bcbb1dfdff89b5d1f6d745026c9d5aa074eab7b806fb75632125a13fdd2a019f",
+   "consolidation_sha256": "f2d1b2d4b5c9677d0d8158d6f565566fa3ed78a1546ce6452b40950f946ffaa8",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-17.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/42",
+    "names": {
+     "id": "Req-17.3"
+    }
+   },
+   "raw_sha256": "2cbfd90c8d87e4ec1eb1a582cdb648dafa6ccc34b029a554fa89861f44f3b25b",
+   "consolidation_sha256": "1b26b40eabb812dc908d098e847bf30c9cefdd11456a5b350af17c5cc2ce68fe",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-18.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/43",
+    "names": {
+     "id": "Req-18.1"
+    }
+   },
+   "raw_sha256": "5fa57ff087ffcaaae7d85855a0ed66929919d4045c9db250c08c87c73ee71297",
+   "consolidation_sha256": "e0fdbf669b0a0a762068beaee01b51f65c20ffc9311be3e28f5fbfeb8bbd2390",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-19.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/44",
+    "names": {
+     "id": "Req-19.1"
+    }
+   },
+   "raw_sha256": "a219682ab2177f39e4e8c72e67e9029b26de47dcb40f58ce5bce948f8caebe47",
+   "consolidation_sha256": "f6680ab503a1df37dfbff296a50fa5dfe529fa6b92185ccf5e86ae85246c467c",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-19.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/45",
+    "names": {
+     "id": "Req-19.2"
+    }
+   },
+   "raw_sha256": "c5bec3c75c80643c172b97561126feb5a8064f4d6c558a2a3dc1a276fe602785",
+   "consolidation_sha256": "75fb231864c44940a39d9bdfb79a12925a4daa0686d9407a8347063edec1bd5e",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-19.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/46",
+    "names": {
+     "id": "Req-19.3"
+    }
+   },
+   "raw_sha256": "97a606039303d421a4972cef9fcd660f938b3a46b63376372221cfbb622799a0",
+   "consolidation_sha256": "c95d55fcd93aaabf33da976abfc14f06d6d2094d5ecec86a568c3323f0f9798e",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-19.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/47",
+    "names": {
+     "id": "Req-19.4"
+    }
+   },
+   "raw_sha256": "f0ab76cc72f47b46d1e521dc89dd836bd1149b58d67dfa2be5d1273c74151f6a",
+   "consolidation_sha256": "056cb1d94be6edbdf09edd375c501cdcf80cdd840845d65e8d7f3515b9faef16",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-19.5",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/48",
+    "names": {
+     "id": "Req-19.5"
+    }
+   },
+   "raw_sha256": "a8eca49b733b0df7117dfb7337493da12b2297a6085bddab14628f592a5ec1c7",
+   "consolidation_sha256": "83b0004ff844c2689696d592964296b6e85d07b73ce825eb2482430f5f425ae9",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-19.6",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/49",
+    "names": {
+     "id": "Req-19.6"
+    }
+   },
+   "raw_sha256": "5c2254ab49339ceb3120edbb6a7d17adbfc01268dcf5d89a26ba1fe259b2c962",
+   "consolidation_sha256": "baad09e91caf6adeb4ec3c18ae39e2bf1b38ced6fb3dcce4cc668572227c1e22",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-19.7",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/50",
+    "names": {
+     "id": "Req-19.7"
+    }
+   },
+   "raw_sha256": "2794d46272fb5016ad1f988a80674998236e404aed1316b621bbc5b338049918",
+   "consolidation_sha256": "43f07c2854eb74bdf30c2623c7b74361f712996b64c32eeca816036c615368bc",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-20.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/51",
+    "names": {
+     "id": "Req-20.1"
+    }
+   },
+   "raw_sha256": "614e3f38db1df2c1f7f721d1105c64641120f4d06102fd9cc731986cb762a44c",
+   "consolidation_sha256": "ca8b62b099e1c5d605b736df3a3c60cc6a9c5b416cab4fdda25d1d0c39d42348",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-21.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/52",
+    "names": {
+     "id": "Req-21.1"
+    }
+   },
+   "raw_sha256": "a5468f40a10e28220de08c94ee4384df38f63ffb2a013c5076ab8eb9a22ef757",
+   "consolidation_sha256": "d78d1e6164a8a14b240858cfedf4a02972035a29bbd9bcaad2aa1b4406f1299d",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-21.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/53",
+    "names": {
+     "id": "Req-21.2"
+    }
+   },
+   "raw_sha256": "c5f7eaad3cb896b83cc5817ea440a3cd4795796341aa4b4f089de137e73208d5",
+   "consolidation_sha256": "b612dfc3a1c83524cea87fddaf6bcdedc816377dc00c57905a06f3be31ece009",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-21.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/54",
+    "names": {
+     "id": "Req-21.3"
+    }
+   },
+   "raw_sha256": "3ad7a3f05f5248b0f2aecba94a7af4a2ad32186c72883f4c41b6863a0bb6759f",
+   "consolidation_sha256": "04a31311b62b682da342af8340593a9a0a5e0b44624ddee5008fd79b997c504c",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-21.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/55",
+    "names": {
+     "id": "Req-21.4"
+    }
+   },
+   "raw_sha256": "5b3cb6e8ab4cc17bc1b8cce654ddcb07325138d250d513eed3602a1af9e49b47",
+   "consolidation_sha256": "8b55a0d6972e06ec99feabee5e9031da6f6a82779948d2d8de228b6fbc6adf4e",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-21.5",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/56",
+    "names": {
+     "id": "Req-21.5"
+    }
+   },
+   "raw_sha256": "b2c9046917e0faf3c2f0c8ac8c3bd41a9a05440469cb0e3866f6327d5a898471",
+   "consolidation_sha256": "01d10246e2fbacbf7cec1524e4ad311f406e6494127e669dd6b26643a0d971f9",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-22.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/57",
+    "names": {
+     "id": "Req-22.1"
+    }
+   },
+   "raw_sha256": "57d4f6de5dde0fc0944b2823b1ba5ee02deeeccf13e23e6b771063a12f60e3d8",
+   "consolidation_sha256": "2029711b4a6281933b714dae1616cd74c17113c2dbdfb906a4a1ce78829d5907",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-23.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/58",
+    "names": {
+     "id": "Req-23.1"
+    }
+   },
+   "raw_sha256": "37d91ea765a47d2e9924f4b128fb27d6057d2b60b05db68e91ed747967917b8f",
+   "consolidation_sha256": "d8fd4a97bc724a4d2a107f7be5176e46cc45c7e54e681474ac19e24501e91249",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-23.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/59",
+    "names": {
+     "id": "Req-23.2"
+    }
+   },
+   "raw_sha256": "434e41c1f21dfb480331e6f40f9262ad12d9696379fea56636206522acc46351",
+   "consolidation_sha256": "dfdbdd7b12144e8f332a7bc8a178a6e8a209a84fded6d4e2ee949278d7b5078c",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-23.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/60",
+    "names": {
+     "id": "Req-23.3"
+    }
+   },
+   "raw_sha256": "38896e628b438d088587a38a0fa8b662c78e01afb315c083342dd655ed17d53f",
+   "consolidation_sha256": "e75b8123080ab0346c0a6cb60d5e994e9ee52512475ec5ea98e2d42355fe6203",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-24.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/61",
+    "names": {
+     "id": "Req-24.1"
+    }
+   },
+   "raw_sha256": "554c6ba886a5c14bea72198140d2f53ae8466851b91e58b25a0e9ce14e983ed7",
+   "consolidation_sha256": "623268998df104d216860bdff03ab5668b4e4eda88ba283da7f1bad53520829f",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-24.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/62",
+    "names": {
+     "id": "Req-24.2"
+    }
+   },
+   "raw_sha256": "ac1ff61677dca64eee96eb20e6436f5f291a758542ecca53c4c58ac47fc2d3da",
+   "consolidation_sha256": "6a3ca199afb3de915d98f4cc7a38405b267606e2c7c30c8cb3ce702d38b7ee64",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-25.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/63",
+    "names": {
+     "id": "Req-25.1"
+    }
+   },
+   "raw_sha256": "6d87defe775136959571fe1fc652f75ab82c2985d94d2ad3519c9ca48cdcaa45",
+   "consolidation_sha256": "9faf9ed9df9d032a37396dfa6e95e360c135d1be855676bcfc2b080efdae0c44",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-25.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/64",
+    "names": {
+     "id": "Req-25.2"
+    }
+   },
+   "raw_sha256": "faf2396b5ebdb3fff633c16e60458496c28148f3a873ba78e3e602737eddd689",
+   "consolidation_sha256": "b25ebd7ef7ba1ab5c268579dcfb4d5a33cb1de397a81d429fdd4acdbf1972ab2",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-26.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/65",
+    "names": {
+     "id": "Req-26.1"
+    }
+   },
+   "raw_sha256": "d0f8d8d2980fb8930cdc1458e44f3db38d6bfa3bea2843f89ead327e144aa923",
+   "consolidation_sha256": "9525923c987d32a39bd1b27da57f252a288795d822328d359f3bf6c4fe647969",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-26.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/66",
+    "names": {
+     "id": "Req-26.2"
+    }
+   },
+   "raw_sha256": "c914b8dc453ddc2c881cde6744e6de1b848cd04ddb64eb4f9e3b9ff9d0f39bf3",
+   "consolidation_sha256": "9669dea98e841e2f37300757ea33747d13be62dff5c4c74c47361b9c98c4b71b",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-27.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/67",
+    "names": {
+     "id": "Req-27.1"
+    }
+   },
+   "raw_sha256": "d03e53393053736c2bde1301dab2f8c61f3254c7fc2dd35b4351263e5de8319c",
+   "consolidation_sha256": "21f6c2056786f073f4db3a031bc42e6e8fbc190afc82323f8e16ec098d8f6005",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-27.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/68",
+    "names": {
+     "id": "Req-27.2"
+    }
+   },
+   "raw_sha256": "19f38b122b51628ed7bde17cdeb1fb304b5dbc05da5eb1e6413f7743a3680ff7",
+   "consolidation_sha256": "3d70ab4447d83f03e35939fe5847546e0bc687de633590b9f5d38e46fc22cee5",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-27.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/69",
+    "names": {
+     "id": "Req-27.3"
+    }
+   },
+   "raw_sha256": "12e7c53d59f234b147f67f80393faf71e4820b82d6b28fbfceb3f58a55615a7e",
+   "consolidation_sha256": "be6a2ae85449fe926096192ec5e25a3bbf552f60cd19739b622b1f381edf690b",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-28.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/70",
+    "names": {
+     "id": "Req-28.1"
+    }
+   },
+   "raw_sha256": "a4a901283159dd3eafcfda3085eed0e2d8c6886198aaef24ad9059ada8f4bb2f",
+   "consolidation_sha256": "5a4a91fee925f3443cb7cff6c8f2bbe46a01a5887103e7d96be5388444c0893e",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-28.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/71",
+    "names": {
+     "id": "Req-28.2"
+    }
+   },
+   "raw_sha256": "c5d38c0bc190d0737679b75c5d491af256a60d7cf8d65d4b9db213525aea1f33",
+   "consolidation_sha256": "7e9ed8f1de7b88a71a2e86d521efed449cd3ece34b2779db3d114fc650b539ce",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-28.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/72",
+    "names": {
+     "id": "Req-28.3"
+    }
+   },
+   "raw_sha256": "12d793f1e9ead5e4266d97c3f1801597af17fdfbfdf8568018d6d5ccf73caa72",
+   "consolidation_sha256": "8694561a24ba7745109cfe71496be322d0474aad8887217f7c5477282b02d02b",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-28.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/73",
+    "names": {
+     "id": "Req-28.4"
+    }
+   },
+   "raw_sha256": "77fdc8b3f0a25a5611efa813934509e47b35f7700c0a0490b42e6a7520d30a01",
+   "consolidation_sha256": "ddd63f17a7d9bc2553c8e17b15309d57214d5e4ec843d6cebcadf4d0575a2ab1",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-29.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/74",
+    "names": {
+     "id": "Req-29.1"
+    }
+   },
+   "raw_sha256": "bc247c4b804d5ffe37942f21cba218b6a677965b8d0885ccbe4f1662fc272994",
+   "consolidation_sha256": "0a50ea848c87a8fac09082ab141992124469aa44b3fea169d102f09bd36f5c3a",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-29.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/75",
+    "names": {
+     "id": "Req-29.2"
+    }
+   },
+   "raw_sha256": "f4a525a3c550ed798e0e947a81a9927a63926daa45ba095a43c14e15b8f4ce6b",
+   "consolidation_sha256": "519e6c85f9fbd3ae2a4f44e16dcef2117ab1bb4872cc68969bca84e1d7bd9a25",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-30.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/76",
+    "names": {
+     "id": "Req-30.1"
+    }
+   },
+   "raw_sha256": "af02bc7e96f99f0b6a881b2c58b1f38c5784e0b0ba71c7e5daad8982750e7d1f",
+   "consolidation_sha256": "80f75f320f02f005550b993d0f8ae848aeadaab69512338133a0a9dd7370630b",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-30.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/77",
+    "names": {
+     "id": "Req-30.2"
+    }
+   },
+   "raw_sha256": "6830ee317d28539acefd2aae6e3309297e69555001e164b89389dcc190407acf",
+   "consolidation_sha256": "4b06095e0bf69b735c8e79d4e03c752a56fd9fd64d496f6ec40b9a738acfe770",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-30.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/78",
+    "names": {
+     "id": "Req-30.3"
+    }
+   },
+   "raw_sha256": "fd22ab3f57e5f8b5dfc28c7858bebc802694d2188be78955eda82fcc587f35dd",
+   "consolidation_sha256": "155928c321845b964dae032da59962ef3f2750a1a5b0b4d054daff6e6ad4d5a5",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-31.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/79",
+    "names": {
+     "id": "Req-31.1"
+    }
+   },
+   "raw_sha256": "1a4a93d22f104f077abbad1252662b056f7e67b65034f953e39bb72286bfb61c",
+   "consolidation_sha256": "d32db46adc41adc5879f6269e7f6d53578ee04b41b98421a8a2cc67344119f06",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-31.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/80",
+    "names": {
+     "id": "Req-31.2"
+    }
+   },
+   "raw_sha256": "c80bfd9c902bc5288547f22b6c4c6244f6eef9e25cc95ce8aef859d1a0389367",
+   "consolidation_sha256": "37f378ff96e06ccc686fbe63373db198a0532e63e4169ab8c288b1137897d58f",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-31.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/81",
+    "names": {
+     "id": "Req-31.3"
+    }
+   },
+   "raw_sha256": "ee2967d1490f1a084d8c8fbc27b73765b87ee041c36c6a2e6b956b3ee9c6e831",
+   "consolidation_sha256": "3ecdcc46b0ba2d3409adbf9ccfd00f5393f8c96600c468a448b875f15096f479",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-31.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/82",
+    "names": {
+     "id": "Req-31.4"
+    }
+   },
+   "raw_sha256": "e0d080efa1829448d405e37f32eeb4fe4f97b6c4c51c059a13a39b41c7c87916",
+   "consolidation_sha256": "52262f57643e981428dca6817efac4ca5cc4275a4317bd27c0e0922fc604572f",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-32.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/83",
+    "names": {
+     "id": "Req-32.1"
+    }
+   },
+   "raw_sha256": "b38a869225612e0e4bff49303bdbda5b6df9d59a337200a76299c1fa9ddbe388",
+   "consolidation_sha256": "962416b08a3960f0f6ec408181edd566b4cfcd1ece1e2a0b3de297ab9f28c947",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-32.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/84",
+    "names": {
+     "id": "Req-32.2"
+    }
+   },
+   "raw_sha256": "c22327e2d5af86fbba502e61fc8d552f05e897466e6e61ae57635189f64c3b66",
+   "consolidation_sha256": "b9e3839e07612a3bfff12e6da736ab1763fa27968dd27dd30e34cc8b714f6651",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-32.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/85",
+    "names": {
+     "id": "Req-32.3"
+    }
+   },
+   "raw_sha256": "d7fb3ecbece95d143b8257be5d3c8d20187bcc533ec28746ef492be2461db0f3",
+   "consolidation_sha256": "155b3cbd1f8ed9e3887ce4395cf1b3b0cfe1e005960be2bc0c33d90cb96de174",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-32.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/86",
+    "names": {
+     "id": "Req-32.4"
+    }
+   },
+   "raw_sha256": "ebee449160162c769a4dca271eb5352da1d8c176d98c21001592d72a85a723f9",
+   "consolidation_sha256": "67a43df881e1c6051f1029ff41393d403bde29de286d323fb324cbfdfd0e1525",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-33.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/87",
+    "names": {
+     "id": "Req-33.1"
+    }
+   },
+   "raw_sha256": "b9b227608d2872990bc4aea8554ae1ea78ea6f559056f8a186aacc8e104c50c1",
+   "consolidation_sha256": "836ecdd2fe7dab224460e5192577ffeacb6d8590341b02790a5ecdf313f593b9",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-34.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/88",
+    "names": {
+     "id": "Req-34.1"
+    }
+   },
+   "raw_sha256": "ec53a1dedab722f94f5eb5b3e761c3cc53dc07967341768ea5438a3b0e2d604f",
+   "consolidation_sha256": "79281dc4358fa26d1a48f607441153fdee9c881a02ed8bb7104017807bbea132",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-35.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/89",
+    "names": {
+     "id": "Req-35.1"
+    }
+   },
+   "raw_sha256": "152aab1e517ff570a30178d3d406a3a312f2bb134dd2c884a4682badce5cc2cf",
+   "consolidation_sha256": "27c4fdf5dcd4ecc9c5f687f98ea5138e412632d725af7fef6c8b3e8549f30e36",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-35.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/90",
+    "names": {
+     "id": "Req-35.2"
+    }
+   },
+   "raw_sha256": "f514d9335a8d0106355b72d429b7651fde5a9c3f4c0dc7d44ce29c894bb84f0a",
+   "consolidation_sha256": "cd5adf25d143e90380eb354afbdbb82dbe4c8be0d4529518cce995bc254130b2",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-36.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/91",
+    "names": {
+     "id": "Req-36.1"
+    }
+   },
+   "raw_sha256": "c87af9f314baa2584de986c7abd0711dd0de784afa7d13aeb0779ecbc35c321c",
+   "consolidation_sha256": "0c4b755771b69693de17182860ece9cf3b39bb5d0f2f4df937284bd6fdd4f94f",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-37.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/92",
+    "names": {
+     "id": "Req-37.1"
+    }
+   },
+   "raw_sha256": "cec44c1be7f3e57a20e2f1b6fb3395f0a0825f45c321d3485b3c97517b501b54",
+   "consolidation_sha256": "a808184f6697e893e4f2c130f4d92143edbbd9806f5b7f9e8c5d6a2738aa7dd4",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-37.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/93",
+    "names": {
+     "id": "Req-37.2"
+    }
+   },
+   "raw_sha256": "0bf9d113f7855ef711bcd2b5365548ef8155d8b36e846869d835fe2d6dc86ead",
+   "consolidation_sha256": "c3bf6e13f15cb5a99796aaa3cba4b87a11a65d9319cf308319b5918fca458dac",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-38.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/94",
+    "names": {
+     "id": "Req-38.1"
+    }
+   },
+   "raw_sha256": "7c9ff204835c53575d69a94cf9ef95efee3b454e669e63d1b87bb0212453a9bb",
+   "consolidation_sha256": "caf992a6d1dbfe3fb586c2562c1f7639f0f9f6116a67b8f0468f98bc76690300",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-39.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/95",
+    "names": {
+     "id": "Req-39.1"
+    }
+   },
+   "raw_sha256": "f9f9b90e802abdadb3c4752390352909422b63b54278720d6eb71d06349d9e4b",
+   "consolidation_sha256": "ecdc67d0fd59065dcd4b0ef68ee2819370fa9be7c13d64b840101921225988b3",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-39.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/96",
+    "names": {
+     "id": "Req-39.2"
+    }
+   },
+   "raw_sha256": "ccdae4c9dd2ed45d88fa130366c93cfcf1162786657db0a7f663514359c045b2",
+   "consolidation_sha256": "3eed51b45bb298cc2e28a4ea59c651350989bc12d502c10142d92ade202bdc7b",
+   "result": "equal"
+  },
+  {
+   "case": "mobilitydcat",
+   "atom_id": "Req-40.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/mobilitydcat.json",
+    "json_pointer": "/atoms/97",
+    "names": {
+     "id": "Req-40.1"
+    }
+   },
+   "raw_sha256": "27b88f444b6182b8770b2a6f6ec7c895a23f2c7a94ff9619bd64446cd5e46a06",
+   "consolidation_sha256": "242eb078ec123e518e3eddce1d532b05258b1483fe9477e8b3812c2a118294d6",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-1.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/0",
+    "names": {
+     "id": "H-1.1"
+    }
+   },
+   "compared_with_before_adjudication": [
+    "raw"
+   ],
+   "replaced_without_before_value": [
+    "raw.rationale"
+   ],
+   "raw_sha256": "640062e22b1b3ae9a25c362efc53b678d1e25710eb09ed69b7b633bbd037dfa9",
+   "consolidation_sha256": "372f89489993e63d42cc416a55203a3bad516a1a2a64b3a8f0006279d1d67608",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-1.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/1",
+    "names": {
+     "id": "H-1.2"
+    }
+   },
+   "raw_sha256": "659e12748e48477bcc9244f35a6b34c44766737c52cd37a6a54563bfd6501f69",
+   "consolidation_sha256": "b7ffb8e59e42a9252a4429e95f6f92557facb95cbbb92a8b30f2ee0e066d543d",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-2.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/2",
+    "names": {
+     "id": "H-2.1"
+    }
+   },
+   "raw_sha256": "324bd63fcd94c290a5741a6ae3f3fef761faa5d4fb1f10c3bf7ff50be181fbb3",
+   "consolidation_sha256": "23066f0f2bf1e3423c7975e92431716fbb160efbf8cd3f84a340f600d1602933",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-3.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/3",
+    "names": {
+     "id": "H-3.1"
+    }
+   },
+   "raw_sha256": "af2e32977c0d69549d2a06b30efc9b0c45ae7a9cb9a745ade2e445acc28126f0",
+   "consolidation_sha256": "d5c18f531ac9e8e93e4b5ca7e16d288b18e32aae8ab624c795c43b353750b6f5",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-3.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/4",
+    "names": {
+     "id": "H-3.2"
+    }
+   },
+   "raw_sha256": "cefe78b4767c69cec8376369f12e7d88f4b05908bbc1a7d00dda0009fbf54cb7",
+   "consolidation_sha256": "d67587e43484ce840e3d1f5e662a262d94ce01089583eb09ce9172bf705b4c3c",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-4.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/5",
+    "names": {
+     "id": "H-4.1"
+    }
+   },
+   "raw_sha256": "c5dfd0bd97cc538c24e3bbcb5d5293167dedac13337005f4ba9b465c46075323",
+   "consolidation_sha256": "2a706514d10ca2660d1e6b1fe118bac42f34560e06b92438d5aa30cf3fea0b2c",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-4.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/6",
+    "names": {
+     "id": "H-4.2"
+    }
+   },
+   "raw_sha256": "c89b07573fb9d9f6d8bf51996eccdd77c803faaba645b70205a2c82336106c0d",
+   "consolidation_sha256": "b266218c82f91aa36adc7ff8486181ef8980438c7de9aa503564fcca64e186d4",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-5.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/7",
+    "names": {
+     "id": "H-5.1"
+    }
+   },
+   "raw_sha256": "1adb696317d1c64296cd5d664960475f3deaac3e949a620edbc7966e5124bec1",
+   "consolidation_sha256": "667873b0af87cd50b0d17c59a12f6dd6eb96e540bb6c2e756240bafe6a4e098f",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-5.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/8",
+    "names": {
+     "id": "H-5.2"
+    }
+   },
+   "raw_sha256": "5ed795cd7c5d1a7d0ea2f4b4101131fd4275334c222e88511c2471dbfe960f55",
+   "consolidation_sha256": "77a00cf384222f41df37966814926d9861a860533da3b7aa71897a0d0c32cd18",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-5.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/9",
+    "names": {
+     "id": "H-5.3"
+    }
+   },
+   "raw_sha256": "8d5c063d0338bf91d38e0a3159012b1bb8215c2ceb600cc4b3f909500539c826",
+   "consolidation_sha256": "1f4b7e4c89bc4b780e60cfa54a5085ed30fff16e72457b4def2c8f67de7bbaef",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-5.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/10",
+    "names": {
+     "id": "H-5.4"
+    }
+   },
+   "raw_sha256": "7427f723e742e15f24d6af3a9ea0e05593ea54610bfda1f3ba1ee90041ceccf6",
+   "consolidation_sha256": "ff77cfded3dd29b74d051adc8393fa4f9172585a3ab189d4a803b222ac94d2d1",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-5.5",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/11",
+    "names": {
+     "id": "H-5.5"
+    }
+   },
+   "raw_sha256": "e6c004b0954220dacf5dcab95c4b4fd365fabf829cda619d5db3177a3fac0cac",
+   "consolidation_sha256": "fc649b0e4182bace0fe378303ccebfb1e943b03b9c6892020344ed33648b7c82",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-5.6",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/12",
+    "names": {
+     "id": "H-5.6"
+    }
+   },
+   "raw_sha256": "745c9e038ff094612bb06ada9f6c7e11283b58a0b77202a7ba7d43ce35ce57fa",
+   "consolidation_sha256": "fc649b0e4182bace0fe378303ccebfb1e943b03b9c6892020344ed33648b7c82",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-5.7",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/13",
+    "names": {
+     "id": "H-5.7"
+    }
+   },
+   "raw_sha256": "8008755a22e37e67008b37913fbb30ca41fb69cfda4ba8014404f4df241c5a8d",
+   "consolidation_sha256": "492770969dca23a700b71fae8f875c2d276b48ed67725959713596be1d8c3539",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-5.8",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/14",
+    "names": {
+     "id": "H-5.8"
+    }
+   },
+   "raw_sha256": "1aebda0cbf754f96edb855cfecccfcca93259d078768ae17f5c3ac42ae4f8bcb",
+   "consolidation_sha256": "ce8ce6cb4fbd10855e90ffdadbc49a7a821968dc568ab0f294656d3bddcb3e2a",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-5.9",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/15",
+    "names": {
+     "id": "H-5.9"
+    }
+   },
+   "raw_sha256": "18caeeea76a925862ce75736bf822ba88e3a8355e73720a04481fbf47f054acf",
+   "consolidation_sha256": "ea2d5f3aad327fe0714cf94303c86ada16bbf4d99f09647030405b6fa1cd093d",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-6.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/16",
+    "names": {
+     "id": "H-6.1"
+    }
+   },
+   "raw_sha256": "ec54af9e58e7c32cd8e5eaccd31b374188716d917ed345af3c1a19b266748d58",
+   "consolidation_sha256": "0a452d85fa2fee15e75e07d0dea0fc3b21cac8edcc2ca0e4dcf57c76cd470899",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-7.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/17",
+    "names": {
+     "id": "H-7.1"
+    }
+   },
+   "raw_sha256": "64e9d5f373b644e190d216f3a110db77cc2462326f194cd2a34beaa39785593d",
+   "consolidation_sha256": "f8ada67131ac95f3ee77f468019e584ffa39e3051f5f906a5ebe9543142a876a",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-7.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/18",
+    "names": {
+     "id": "H-7.2"
+    }
+   },
+   "raw_sha256": "2d475c761fc37b98711e7b224ad93e9c4eec7c21d43113559cc168291eba709e",
+   "consolidation_sha256": "089a5d2895e2093dc74018a7fc56f05713b804dba146d8f4713168188821e7d4",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-7.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/19",
+    "names": {
+     "id": "H-7.3"
+    }
+   },
+   "raw_sha256": "c97b580d71bdb1911e2eb1d51dac15816bd8e73a4be45b29ab1150565d4da6a3",
+   "consolidation_sha256": "071f9636e83f8fdb575565c1ae1840a6e4655ae70fea4382faff19fe18e50ece",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-7.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/20",
+    "names": {
+     "id": "H-7.4"
+    }
+   },
+   "raw_sha256": "eff512a7d472126921967b2289724a51eb8e2c0be942c50e6438cf26483a1ac8",
+   "consolidation_sha256": "b4546ce987404b8f8e138c14a9b7247cb24c27cd2688812f922a600da7c8a34f",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-8.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/21",
+    "names": {
+     "id": "H-8.1"
+    }
+   },
+   "raw_sha256": "b741eb3d7640b580398db88bcf4f6bdaf5d97841c0be4f2f6b5054612ee6d097",
+   "consolidation_sha256": "1a250173801c55ff3dbb94e385674cb1fe1283ae5167260100d157a854edd426",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-9.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/22",
+    "names": {
+     "id": "H-9.1"
+    }
+   },
+   "raw_sha256": "fa2eeb30c96fddeb88abfa93fbedc27eb8ab579108eba08b8abad186c6541d44",
+   "consolidation_sha256": "0909e464ef0fc56f66ba849352000125e110e6d085aaf82f93cb03e673f529cd",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-10.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/23",
+    "names": {
+     "id": "H-10.1"
+    }
+   },
+   "raw_sha256": "de481c3408315ef9da4c2e2653960c3b78fccf56a5ac4a023f81ac1c42e8ed74",
+   "consolidation_sha256": "87c0d10c9920f43d9ea26a5b950a26f593991b7ffae68718ec70b24a1f9dca3e",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-11.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/24",
+    "names": {
+     "id": "H-11.1"
+    }
+   },
+   "raw_sha256": "45b200224f8467864891c106118acb6153d05c15f2005caf18902a4d04bf250b",
+   "consolidation_sha256": "dd235633f0c6585cd60a1af5748fe136c0a01bf43647ae9680f91cf55c08b3c7",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-11.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/25",
+    "names": {
+     "id": "H-11.2"
+    }
+   },
+   "raw_sha256": "3629847da835966895e9af7b1abc262a2892bd5bc9198d5d39dffc9841e9cf66",
+   "consolidation_sha256": "44a21a2564ef2e8cb921f66c648c649e358b7d79c00bb788d5e9d99e7e48e33f",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-11.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/26",
+    "names": {
+     "id": "H-11.3"
+    }
+   },
+   "raw_sha256": "a968d20c7602e0269bc7bec76cf863d9d6d12ef9d0c9a001d0c569b552f0fae2",
+   "consolidation_sha256": "88bce98e163e937e39bb3dc558d87252649a5837a9f2844c13e1d2b8149cc4ab",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-11.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/27",
+    "names": {
+     "id": "H-11.4"
+    }
+   },
+   "raw_sha256": "77cf7773d33a3ade1a387ea46de4c4cf3a78c2b87352ab816a25fdfb3e6058f7",
+   "consolidation_sha256": "c9ac3fcc73bc8dd77d42a122c45b1adc6e3283f66151a5341af9c07f55b0c245",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-11.5",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/28",
+    "names": {
+     "id": "H-11.5"
+    }
+   },
+   "raw_sha256": "857dc5269c58b27ff14a047a3bed3fa5c3c469774b6b30f6d7fe3ca5dfc1908a",
+   "consolidation_sha256": "d1a061c31e0b83f302a603c7d8c3a783a541510b6eef4b977d627adca17baa25",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-11.6",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/29",
+    "names": {
+     "id": "H-11.6"
+    }
+   },
+   "raw_sha256": "d2b9a71c3943f8cb4c1b8b925ecd540dd69ce091cbdf3c8c03b73ecce530bf65",
+   "consolidation_sha256": "fb84e58572e2e93a3923a6c563aa2d8d4c9728d4b86719ff15fad3a56aee04d7",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-12.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/30",
+    "names": {
+     "id": "H-12.1"
+    }
+   },
+   "raw_sha256": "332a46a0b2e22eb3801a6ffb276ed0145e9bf659b0ba805abe23e15e7eae6d94",
+   "consolidation_sha256": "fc6e12f53048ca568850484d37db181d0748ffd253b7d8f28aa44ed180c3b7c6",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-12.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/31",
+    "names": {
+     "id": "H-12.2"
+    }
+   },
+   "raw_sha256": "f4b5aa680b8ad093a85ad474960a057bf9a1a4550be6a6475739e8631dfc1ece",
+   "consolidation_sha256": "997f221aaa224f00cf775c7605e7d4a5907edf3163179dea705806c27785ac12",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-13.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/32",
+    "names": {
+     "id": "H-13.1"
+    }
+   },
+   "raw_sha256": "437bcdf2822bf42a954b16df7da373fb136dd0291ca60202004640bb18b0cedc",
+   "consolidation_sha256": "f3357c28fac46275239ce4914b54df78923bab32f5b3e2aad6ff97d3d1cc5db3",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-13.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/33",
+    "names": {
+     "id": "H-13.2"
+    }
+   },
+   "raw_sha256": "0150f1feef42a7697f3c65a2556a85496a16d69975953ec718b254335ce7ce59",
+   "consolidation_sha256": "135f990f64d4772167799e8ee7343c369be16a031efe81a8accdce7f0545ba01",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-13.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/34",
+    "names": {
+     "id": "H-13.3"
+    }
+   },
+   "raw_sha256": "e17dc7a2f82448c93cb8ef9de4eeaa81a18a950aa3a64c43e96d418721629b14",
+   "consolidation_sha256": "135f990f64d4772167799e8ee7343c369be16a031efe81a8accdce7f0545ba01",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-13.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/35",
+    "names": {
+     "id": "H-13.4"
+    }
+   },
+   "raw_sha256": "7b9e86321ce0beeacdc025498bf354759a172a0e798de4e32b86c43efcb37f22",
+   "consolidation_sha256": "60a16a1c4b82dd29d6295660dcd55ee645122c60d8d86e682d3d816aa31258ea",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-14.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/36",
+    "names": {
+     "id": "H-14.1"
+    }
+   },
+   "raw_sha256": "a18262a9f6bffee4c8f06ca1bf98ecad606e010a7ec3311fe96d28dcc6062f3e",
+   "consolidation_sha256": "cda4c601c3f3b56eb92c8e3f1ff13de479639b0b83c4979b7bcb70f4ac6f41de",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-15.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/37",
+    "names": {
+     "id": "H-15.1"
+    }
+   },
+   "raw_sha256": "6a428137ebd7e8e14874c772d0b157daf2c1f8a2d2d7b2aa2ca727fb9dd5a840",
+   "consolidation_sha256": "1940ce1ce9e5b39226244d1db1a71c110f77f6adf3a1b258ef4f99fc23238888",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-15.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/38",
+    "names": {
+     "id": "H-15.2"
+    }
+   },
+   "raw_sha256": "dd3c3960dd5c38d033eb64324c5b3bea309232a88e319b6d8ab893d9985176a7",
+   "consolidation_sha256": "b82eb2da4d5e91e238155f324c01b8b23a78c59ac60d1ef602860cd23468b723",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-15.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/39",
+    "names": {
+     "id": "H-15.3"
+    }
+   },
+   "raw_sha256": "71b2c9dfda27c678cd22f7ba6192b44924e97a98923678fac17c71e7475b1c24",
+   "consolidation_sha256": "b82eb2da4d5e91e238155f324c01b8b23a78c59ac60d1ef602860cd23468b723",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-15.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/40",
+    "names": {
+     "id": "H-15.4"
+    }
+   },
+   "raw_sha256": "62b2542e20511889d54b870a2dd5752187648fe14c112e7541cd85b6fb04b140",
+   "consolidation_sha256": "273f2067d346e2b6ab9646ccef5dfe63238698f488c9eafc082926f359821edf",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-16.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/41",
+    "names": {
+     "id": "H-16.1"
+    }
+   },
+   "raw_sha256": "8995d71a96c3aeaa509a1531e3c0e436729d92743f4c7525b031876b532f7257",
+   "consolidation_sha256": "cfc3d96c0ca29778b56aa2b6b27c9b503689fc132eff086f805ffc82eea963a6",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-16.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/42",
+    "names": {
+     "id": "H-16.2"
+    }
+   },
+   "raw_sha256": "371b8d597aa1d6f43b0872631d3a0bb9d352865ada31d9d4c12f01fed8475d5e",
+   "consolidation_sha256": "7675b5e932d9cb0601a3a61211d375121716d45200f62344f3d92a0c7fe9c4f9",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-17.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/43",
+    "names": {
+     "id": "H-17.1"
+    }
+   },
+   "raw_sha256": "6c309515ed00ebce22ba093a10e68b7164e0d1e433c83ba7766d759e2bfb9d76",
+   "consolidation_sha256": "5d33ea2fb3f11935896c9549ef01f4bdb8459cf53e9425039c60321ba005f53c",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-17.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/44",
+    "names": {
+     "id": "H-17.2"
+    }
+   },
+   "raw_sha256": "6c2197208a940240f1a22d4933365a9e4cda39f8d6c0cb5d52fbe91861959c71",
+   "consolidation_sha256": "0715b81191a6a8a89571552dc91067621ae64bb94c005038ef7c6b3c4c629d0a",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-17.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/45",
+    "names": {
+     "id": "H-17.3"
+    }
+   },
+   "raw_sha256": "92308ca2ee11d5e73694017ea8890321c4ca384299b6b2459d1941396c94808d",
+   "consolidation_sha256": "b08ea3e3f639fcfcd46ba69d97cf4b08ae8d9356bbdd4d2719055f9762d436ca",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-17.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/46",
+    "names": {
+     "id": "H-17.4"
+    }
+   },
+   "raw_sha256": "51c6909212bc2f7fe04668661d1124b38210b8fc55357c05ff9cd0ecbb99ac8f",
+   "consolidation_sha256": "fd1a1b7eee3adaaedbf3686466c0c3557b955a59e42610d7683a970b3226907c",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-17.5",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/47",
+    "names": {
+     "id": "H-17.5"
+    }
+   },
+   "raw_sha256": "76d09ef5f67f3becf087a829ede1f475a2adf008786d7266cecc9c29b8c65150",
+   "consolidation_sha256": "442639416fab95ef2a9a32018e14b5764371c39b3c609687a6cab1eb95201189",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-18.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/48",
+    "names": {
+     "id": "H-18.1"
+    }
+   },
+   "raw_sha256": "251cac1839f1a76e5901d30ee03d6af636ca5ee1971694d104de42b72053c9ec",
+   "consolidation_sha256": "1002f824761c2dea0fa01267cbb55a563018dab93cb21ec42a99aa8a31c0ad0b",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-19.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/49",
+    "names": {
+     "id": "H-19.1"
+    }
+   },
+   "raw_sha256": "29ab24eac490c3d71c2d191d060cd89a32c93cfb43c5894cb1e6f9e715a7c345",
+   "consolidation_sha256": "13b1c0668692c5972c5f67ed5c5f11ab08bdbf182cd05db49648ec4a34e2c59f",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-20.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/50",
+    "names": {
+     "id": "H-20.1"
+    }
+   },
+   "raw_sha256": "11769104bd0bc772ee2cf6735c94c6dee80bbe6106d01f592b29e9c2be153ff1",
+   "consolidation_sha256": "5229a5002f5de2e39b941118c650d183cf04ab87a28b23513da99d0f988ef8cf",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-20.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/51",
+    "names": {
+     "id": "H-20.2"
+    }
+   },
+   "raw_sha256": "5fed19f6e9cb012d8680a02c983e6d4ac99003ad1e082a243780f7b5536b3878",
+   "consolidation_sha256": "11b208f3ef2a940880736585b301a3b467d1ea3a393033f6584d68b817512b6c",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-21.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/52",
+    "names": {
+     "id": "H-21.1"
+    }
+   },
+   "raw_sha256": "b86ab91835f35509c9520e6e2b500917f8e1f754cf1fb8e892f25c9900152ee2",
+   "consolidation_sha256": "ec260ed7b4a562dc1e5ee0ef275ef8637b5f2b9e64127a883f74258e2816f92e",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-22.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/53",
+    "names": {
+     "id": "H-22.1"
+    }
+   },
+   "compared_with_before_adjudication": [
+    "raw"
+   ],
+   "replaced_without_before_value": [
+    "raw.rationale"
+   ],
+   "raw_sha256": "d156fca59d95a8c93e3595a502bd28e3e2d765a28e0439becb29ffc0bd4806b8",
+   "consolidation_sha256": "2bf0e6d44d1ec62af02ef2c80307b09ad6fa4ff35d1d8867b9c7413af7690631",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-23.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/54",
+    "names": {
+     "id": "H-23.1"
+    }
+   },
+   "raw_sha256": "f05c8c813d20689274ecca5f55fae087ffeb1ef7947cef127f24d63e2108162a",
+   "consolidation_sha256": "65641d737a9eccd6afc01443b7efc579b4c692bbaf162cd1550f44a34a057b42",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-24.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/55",
+    "names": {
+     "id": "H-24.1"
+    }
+   },
+   "raw_sha256": "c74a5a444e33b63f51a38ed1220f822dfb28532f6cf644d5491db1bb2f3432bb",
+   "consolidation_sha256": "6cfb29c55d7e659e93074defa7dffad67564ce2dde69e9beb81a1a3bde3e2133",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-25.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/56",
+    "names": {
+     "id": "H-25.1"
+    }
+   },
+   "raw_sha256": "21df04ca5a051be53f746caf18a18bfda341a182ac183699d107b7922ae198a7",
+   "consolidation_sha256": "b0d9cf60a1c794fc47a8c5816338b029eb654140394cae0dd53e0e024712be2f",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-26.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/57",
+    "names": {
+     "id": "H-26.1"
+    }
+   },
+   "raw_sha256": "4ac8a142d9d7bade94ed4643389d36d204675718006182f463a30bb49a9ea1a4",
+   "consolidation_sha256": "4787f2e7c46be96c3e60fb2f4367313335e43cb167979d9f47ab43da704657b6",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-27.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/58",
+    "names": {
+     "id": "H-27.1"
+    }
+   },
+   "raw_sha256": "5f60e1d646474dfb240410e20550fa25bb1ed3038d4c886aa0ae34d6bdd27049",
+   "consolidation_sha256": "19f114b0ce86b2a7064aedebcec51f4970a359da294611a0c65898f9fd08b7af",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-28.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/59",
+    "names": {
+     "id": "H-28.1"
+    }
+   },
+   "raw_sha256": "9631194519cccb05d90865e8160f2b59506f692038cf4f709c0dc53619e8739b",
+   "consolidation_sha256": "39d6a0f51162e8883b13edc95db08fbeab1f4d70443a050fd9007514d2a0a2a3",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-28.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/60",
+    "names": {
+     "id": "H-28.2"
+    }
+   },
+   "raw_sha256": "091163fab863c31ceefe606b0c59d8eb76b7f9c5fab7bc71afc64799a5af7074",
+   "consolidation_sha256": "d9cb594ae08cb90c22e08a83c9d07e20b043ecf7327a9a4e4ffba182dc69dfc1",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-29.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/61",
+    "names": {
+     "id": "H-29.1"
+    }
+   },
+   "compared_with_before_adjudication": [
+    "raw"
+   ],
+   "replaced_without_before_value": [
+    "raw.rationale"
+   ],
+   "raw_sha256": "adca2913be59cbcb968a1dda77ad9bb0b24db9eba83f4a87699765dd28797c08",
+   "consolidation_sha256": "f4c9d04aa38b4a413f14d7f585ca03fdf69732e8f72d3976d823f502c73f7be4",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-30.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/62",
+    "names": {
+     "id": "H-30.1"
+    }
+   },
+   "raw_sha256": "64201f09ecadb8896458c65e666c05e71561ea83cb84892417d693f78eb226f5",
+   "consolidation_sha256": "c1dbb4ccbe9f27a9d798588e449941a6fcee07e3137323c31b87857ee94f975c",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-30.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/63",
+    "names": {
+     "id": "H-30.2"
+    }
+   },
+   "raw_sha256": "a8b9e83beafb4cda2415aacc86fbbbc1721a071f5bc78270cfb326df2b9cf4fb",
+   "consolidation_sha256": "1a714c0dd62c965928d84abdc473e476c47847d3d725fe7a5b52f36595bb7551",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-69.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/64",
+    "names": {
+     "id": "H-69.1"
+    }
+   },
+   "raw_sha256": "db9192cf526fb9daa237fb55439a6ab7bed8af67461f8dbb6277b8680a98fb69",
+   "consolidation_sha256": "787bc5bfa30729d9c201bf67430a822dd94d7c2d14476207dfa834dd96bf01f5",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-31.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/65",
+    "names": {
+     "id": "H-31.1"
+    }
+   },
+   "raw_sha256": "f1a9f5badf65f8abace1d8c2ee30430e9f0b1c74953985033a96d9db3ef7d5d8",
+   "consolidation_sha256": "b0d1ff94c6cb4d7eb8f9b4fe999bc6a8cd17ca4a84db9d381218ea91cba954dc",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-32.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/66",
+    "names": {
+     "id": "H-32.1"
+    }
+   },
+   "raw_sha256": "ab2b5ebaf386b5cc8ff42814fe8c5f39f73dc1c4702263838a4120bce9a7472d",
+   "consolidation_sha256": "266050a3af8bccacb94d769ff56ff9fe02c9613ce34683ffaf125b312f209881",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-32.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/67",
+    "names": {
+     "id": "H-32.2"
+    }
+   },
+   "raw_sha256": "85dfe3e019fda5a3a60b4f9d282d912e94e3a023f9cfa3bf76306804c29b9711",
+   "consolidation_sha256": "0064e4769de7cb34e69afdd4f6595806864e5491baa360f659f9b906f855a8df",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-33.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/68",
+    "names": {
+     "id": "H-33.1"
+    }
+   },
+   "raw_sha256": "22cc299d1a9596605ebb8293f36d0b5ea71ae7842066a545312f8e38b4bad6c6",
+   "consolidation_sha256": "4d58ae7b89ea20478db8df7723375bbe2ca3a486812ce6597568ba24d28a49b6",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-34.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/69",
+    "names": {
+     "id": "H-34.1"
+    }
+   },
+   "raw_sha256": "f761a420852e0bb9a3f6633ab6cd863cff39800902469b4cb12b5a44157ccddc",
+   "consolidation_sha256": "9cb0fb1f84131d1ffd0c038d3c82f91f0005f187acdf931e64e7fb63ddef5eb5",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-35.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/70",
+    "names": {
+     "id": "H-35.1"
+    }
+   },
+   "raw_sha256": "bbc63ff819f0a512c00106f9b04f896b49c455046bfe0cc1b36b24be316b80d6",
+   "consolidation_sha256": "cf8e5a5bf9864480d1f12933f5323e6f0693b0954813516c7d36560e659f6b2f",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-36.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/71",
+    "names": {
+     "id": "H-36.1"
+    }
+   },
+   "raw_sha256": "91bd5ee31362918aee06364e774385db91911e1a3d81bd391303ce65b8cc17b5",
+   "consolidation_sha256": "9ecc6385bf3609a8dfd254d6d2b20a325f74560b2d2576f4ff351c8b2babdc92",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-37.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/72",
+    "names": {
+     "id": "H-37.1"
+    }
+   },
+   "raw_sha256": "3a13bd0e4ed8d492e6d510f10200ed638b0b15d7e6f72a1096362dc2b4cb52d1",
+   "consolidation_sha256": "d042da019684d0ad0ae681fa0db47045262fc8458471794f98094bb9277525c0",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-37.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/73",
+    "names": {
+     "id": "H-37.2"
+    }
+   },
+   "raw_sha256": "f7b9912b6482eb10a44784b1aceab4eccd976499b5fb4d7147febaeea520fb64",
+   "consolidation_sha256": "250bc602ec74c2bb60f10717e2ec7d0b74fd3dd3bb96b07f0440a8e7d55df53f",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-37.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/74",
+    "names": {
+     "id": "H-37.3"
+    }
+   },
+   "raw_sha256": "7f2d0821599892c9aaacef0c76f93a33b1086cd01beef6dd55ff040bb4e8a19f",
+   "consolidation_sha256": "98573e52c2b9719200b746f423cf488b7af02c2d571b08b20ba6abe5f607d7a6",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-38.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/75",
+    "names": {
+     "id": "H-38.1"
+    }
+   },
+   "raw_sha256": "9354ffd7a842601ab323cc96e8181c3bdf4a4e3e3d83dd3d5eff64545e9e821f",
+   "consolidation_sha256": "41b9167636c8356590ca0f480302ec606c0fcbf08ea37d665e60a2c474a58dd5",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-39.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/76",
+    "names": {
+     "id": "H-39.1"
+    }
+   },
+   "raw_sha256": "9781286345315a496abfec818ac14d415dcdc019854ff68f74e9c4451d6dc9b1",
+   "consolidation_sha256": "51583c4dc8f112ed29660fcf6a52ee9f0df49917bee1782463945cd95e907a78",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-40.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/77",
+    "names": {
+     "id": "H-40.1"
+    }
+   },
+   "raw_sha256": "8e5795025ee9ad6b50a5cb9ec703e965b30d11dc1a0820bc9a3b8c3c4964bc1d",
+   "consolidation_sha256": "342d21d3a4083a654d15a54f096903cc548abefd76bc571449b96fd60c25cee2",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-40.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/78",
+    "names": {
+     "id": "H-40.2"
+    }
+   },
+   "raw_sha256": "7117cd730264ac9cce5eed70510d8434f46854edd71e304a8ed35536e274167e",
+   "consolidation_sha256": "fe753d931bed969e2da547a1f50c57207d5d66aa54b65a2a880879fca9abb61b",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-41.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/79",
+    "names": {
+     "id": "H-41.1"
+    }
+   },
+   "raw_sha256": "a099722b378a0e1d2fc56a529f16b19bb26e5a4c4f2ce0de15295ce42034589e",
+   "consolidation_sha256": "2bac0d7d3efd782ebc6c65255c5c5038baeb70d89993a328e13ea3d49ae31222",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-42.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/80",
+    "names": {
+     "id": "H-42.1"
+    }
+   },
+   "raw_sha256": "d6f4e309a551cc6ed5a07623387340dc99b7f4c108fec52a1241d34a89dfc56f",
+   "consolidation_sha256": "3bb591fe4b05cac0973492c088b70c9f0e18fc76f82aea414cd3b9807dc7c0a1",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-43.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/81",
+    "names": {
+     "id": "H-43.1"
+    }
+   },
+   "raw_sha256": "9822c50826fa0be15ae2edb29d56e5919fb92a3fa438e4ff1bce0c727043db67",
+   "consolidation_sha256": "b4f74e2645415b1f2c7ce58d2401a5218bfb718625653b147f0c1feaeedf8e3c",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-43.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/82",
+    "names": {
+     "id": "H-43.2"
+    }
+   },
+   "raw_sha256": "39f08d09266f2d34a8b57f25bc0885106288c8ecbd66ccd1039a45509ddd4346",
+   "consolidation_sha256": "b4f74e2645415b1f2c7ce58d2401a5218bfb718625653b147f0c1feaeedf8e3c",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-43.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/83",
+    "names": {
+     "id": "H-43.3"
+    }
+   },
+   "raw_sha256": "7ad3e8e03e23c7c16f5e86e333b186e237b94c0e76ef9649ca27d1b095ea17de",
+   "consolidation_sha256": "e40970f4b4370b2a673545ff57b3b83dca7daaee5631689d41df503c012a01bc",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-44.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/84",
+    "names": {
+     "id": "H-44.1"
+    }
+   },
+   "raw_sha256": "1b8394b24ab57f35a76d8a81e6b6c5ec5163cb13b2c41cb98d6b2713ed6f2895",
+   "consolidation_sha256": "81cb225a562451aaf4e9fe7e88662b32be90435dd228a0d1206e1197a5608bfc",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-45.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/85",
+    "names": {
+     "id": "H-45.1"
+    }
+   },
+   "raw_sha256": "44174cc414ef78c6c6a4891164d40441d53a736ca3baf02ca0d8b23dd972c792",
+   "consolidation_sha256": "39505ba9aba9fc1c71961badfe96863315dbefc7725abbc0b173aaa9516ca29f",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-46.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/86",
+    "names": {
+     "id": "H-46.1"
+    }
+   },
+   "result": "r11d_follow_up"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-46.5",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/87",
+    "names": {
+     "id": "H-46.5"
+    }
+   },
+   "result": "r11d_follow_up_not_in_packets"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-46.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/88",
+    "names": {
+     "id": "H-46.2"
+    }
+   },
+   "raw_sha256": "b4fdf21ecdfa4ed43546a9062bcee4246681342976689b427b5782d8db2f526e",
+   "consolidation_sha256": "28915b79348307b237d08a7f00accef0daecc9632db06a07cf1f8950dbe62905",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-46.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/89",
+    "names": {
+     "id": "H-46.3"
+    }
+   },
+   "result": "r11d_follow_up"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-46.6",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/90",
+    "names": {
+     "id": "H-46.6"
+    }
+   },
+   "result": "r11d_follow_up_not_in_packets"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-46.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/91",
+    "names": {
+     "id": "H-46.4"
+    }
+   },
+   "raw_sha256": "2cfd12cba27b0bf807d2c33b2dce9695581a758bfd6356942584fc87e9feeddb",
+   "consolidation_sha256": "b1cebea19014f25adec803799db1d16a9c18c866a69e3ece71d0d3a60833691b",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-47.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/92",
+    "names": {
+     "id": "H-47.1"
+    }
+   },
+   "raw_sha256": "df4bc8d5c783eeec45b126653562d0a6350e1bd392470114999fad8b95daf373",
+   "consolidation_sha256": "18db6de818b4ee424c21c5dde36e7e063726bd0c2bcb93884ee9af7e6f8ea97a",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-48.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/93",
+    "names": {
+     "id": "H-48.1"
+    }
+   },
+   "raw_sha256": "94dd590786b119754a9eb062fcb2c55bb223cc3f6bbec97488b4434a184d71f8",
+   "consolidation_sha256": "6387a6624ca4c424aa8aeb45106867b3e861027a9f8b8cce7e4fcc464f2d9e42",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-49.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/94",
+    "names": {
+     "id": "H-49.1"
+    }
+   },
+   "raw_sha256": "aa556d8b113d75201b028f167c0b943f00ee8faf747c666fdc232c10bac3c5cc",
+   "consolidation_sha256": "be2d4d6b90867bbd343248e67902f980842c94bbe5ecec663aa4867590e7d6c7",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-50.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/95",
+    "names": {
+     "id": "H-50.1"
+    }
+   },
+   "raw_sha256": "510883159751aa0f741e12eb2475d6f641c9c4e7eac8a32e3eb253d880788cd3",
+   "consolidation_sha256": "3024720c1eec1b1d5f908f93769c82f2287ae55f44f90bcc6484406503fc781b",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-51.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/96",
+    "names": {
+     "id": "H-51.1"
+    }
+   },
+   "raw_sha256": "377211ecdbbe943be700ed8f49f7487eb8287b8c591f330bc75ad902d8c9d512",
+   "consolidation_sha256": "ea150f682a04ced2782ae32d3359b3df350bda23fe4dfc58be18c4584003e715",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-52.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/97",
+    "names": {
+     "id": "H-52.1"
+    }
+   },
+   "raw_sha256": "6431ff2723620609044d68865e9c77e3e14da23d640f2b412b992ce1ef6beeb1",
+   "consolidation_sha256": "7763b58840e022a1943681df156c3444d5ad5eaf607679fac22e5e3c827ad6af",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-53.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/98",
+    "names": {
+     "id": "H-53.1"
+    }
+   },
+   "raw_sha256": "3efd69ad1e58aafe1058a87583503050068ee6b51559b0cedaed307adae4a381",
+   "consolidation_sha256": "c6b03f5db5c1018b3d5bf84133dea152383a2502996e756a9f291059e4319c1a",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-54.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/99",
+    "names": {
+     "id": "H-54.1"
+    }
+   },
+   "raw_sha256": "bbaae75d3267dd6cdb590b02015560e85ef8fea6b83c795b4f2488d47713ffb3",
+   "consolidation_sha256": "0c1dfe3ec4c1a2a0510f633fefd6365ddb54615f2ed64936c18a4fbab887e353",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-54.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/100",
+    "names": {
+     "id": "H-54.2"
+    }
+   },
+   "raw_sha256": "d70da692be83c1b5baf8a5627c3354a4560e55263d47161b900eea4fde946a7b",
+   "consolidation_sha256": "3a3629c4f6bfb163ff9728667490e9bdac6d79e5b47cfa489877bdf940bb37ca",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-55.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/101",
+    "names": {
+     "id": "H-55.1"
+    }
+   },
+   "raw_sha256": "f5379657b2f150508c2c62395029f5026b95a0018903ba5b48bd1dbf8b055687",
+   "consolidation_sha256": "992a84468060d6470b904d0d9692e96dd915ba675ff2ffef46195e0a6b5a0592",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-56.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/102",
+    "names": {
+     "id": "H-56.1"
+    }
+   },
+   "raw_sha256": "71854edff1fb99b1ae613b96217c882dcf33d3a995e20f583a36a96edb221036",
+   "consolidation_sha256": "3e85b843a332974b5a9ca50bdebc33e3727052efeaca17eb445970033b916f9f",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-56.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/103",
+    "names": {
+     "id": "H-56.2"
+    }
+   },
+   "raw_sha256": "0455f4c70273b50ae64aefc0da9f6dbcd1a05e1d5f199b616b6e3b400a15c542",
+   "consolidation_sha256": "34c521c17f30fccf9b707ebccacaba192673c1f72a0e1e9722111cfe03485b33",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-56.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/104",
+    "names": {
+     "id": "H-56.3"
+    }
+   },
+   "raw_sha256": "44e573aeea421a0d637330596852feeb09015d8d3c1af3b8308d5d80f07a1747",
+   "consolidation_sha256": "0f46785622f4eb1eb694498ec375fa9e37b530aa96ba9d48d5ed3492c049a1f0",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-57.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/105",
+    "names": {
+     "id": "H-57.1"
+    }
+   },
+   "raw_sha256": "f8eb35eb5eff45ddf4d06f864901b67289ffc53a4521b76858025e3c41e9757e",
+   "consolidation_sha256": "8899217dfbe620682498027d859cbe1397aefad34bdaa723a31afd6311d347de",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-58.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/106",
+    "names": {
+     "id": "H-58.1"
+    }
+   },
+   "raw_sha256": "497481a38a15042571e1a652858b14e1a25ad1a701eb72b4a821c9841675af5a",
+   "consolidation_sha256": "6100d2adcec31cd6f7a61ad821cdf75b8c965aef7fc1ef75df8a97fbadd9ca9f",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-59.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/107",
+    "names": {
+     "id": "H-59.1"
+    }
+   },
+   "raw_sha256": "21968804856940905728bb4ae2dad55260f86deda2cee9bea1319e3261440dae",
+   "consolidation_sha256": "1bfa570c3ba8d12edefd4b6d7901e05d1b6c47f137843ab1f0ebd38d32fe7ea2",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-60.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/108",
+    "names": {
+     "id": "H-60.1"
+    }
+   },
+   "raw_sha256": "da73fb58dc71fd5cdcbf6936e7dd29193934236a319174d0d9da5f90622e1db2",
+   "consolidation_sha256": "d92345fcd2ac0e14592a1512903e775752a577915e363103ca53fcfbe037a9ec",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-61.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/109",
+    "names": {
+     "id": "H-61.1"
+    }
+   },
+   "raw_sha256": "6d034bec429bae3353b8d538a1ac93b0b57c49228f306023860010bbc989eaa5",
+   "consolidation_sha256": "2b68c9116c60679e0872db3f68adc460621e18dccfa6ec3c0227898d1bac84e8",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-61.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/110",
+    "names": {
+     "id": "H-61.2"
+    }
+   },
+   "raw_sha256": "edf445355e4512dac5b43f61856e75d3aa923d5787a9b7f84866c9ea866392e2",
+   "consolidation_sha256": "8abe10ec4deadda7c0da9b9368bc00bc5d93bafd8ff0766c2835fd86746c9521",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-62.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/111",
+    "names": {
+     "id": "H-62.1"
+    }
+   },
+   "raw_sha256": "6ac26d24c1ce893d0608f4e83a0732ea9a54d733406995e5188b0afdf4c9e0a0",
+   "consolidation_sha256": "931f856d4d9227528c50e1d6887ff84ae4718287eb72d1d314676defdc6411ab",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-63.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/112",
+    "names": {
+     "id": "H-63.1"
+    }
+   },
+   "raw_sha256": "ae26e58ae22abe0805d3239c4fcc69af4916a420ceef95f7ba33e9223f6c50c8",
+   "consolidation_sha256": "edc6477cee240a5f55695716378dd12e20bf95d1959b1cc22d86df3e479ef73d",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-64.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/113",
+    "names": {
+     "id": "H-64.1"
+    }
+   },
+   "raw_sha256": "5532ff5bcc137585b5359557e9ef9a8433258e93aff4b46d8e59a226d0f5b71b",
+   "consolidation_sha256": "a06dd5dedde288e2e8b1f6d447875dcedc3d0f09d05acf72931970bfebdb70b1",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-65.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/114",
+    "names": {
+     "id": "H-65.1"
+    }
+   },
+   "raw_sha256": "59b5ffbcf8a6984f490c332b6c9b36f380d24a30fee5408fc29b0a3c2d114d1d",
+   "consolidation_sha256": "5fb951a5569fe5b762efdc5f7c02affbfbc38167a1e80518ee077ba820faa00d",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-66.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/115",
+    "names": {
+     "id": "H-66.1"
+    }
+   },
+   "raw_sha256": "a1ecdd2d05f48639fcbbae65bb1f9a0c111b1bb994cde0e7e6a64e900dd9bf65",
+   "consolidation_sha256": "5efc6f81df3a85604192d852f47f00af5932ec1bfbe22600cf6aad2f1ca9128d",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-66.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/116",
+    "names": {
+     "id": "H-66.2"
+    }
+   },
+   "raw_sha256": "b956d1f9d37322f161f150487a3aca9f83c1cd1464f71121854a95284c2e10a4",
+   "consolidation_sha256": "5f11883a7b07aa2dffb0f27fbf15a29c3c667c45987cd20a96a3868a38386800",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-66.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/117",
+    "names": {
+     "id": "H-66.3"
+    }
+   },
+   "raw_sha256": "85e3700a84540b50b2476f7a136197e7f2119eb24dbcf701c40470d22d4256ef",
+   "consolidation_sha256": "8e12487382310be209f399def197b8bd41f6dd4d3836d5aaa684b99f34100144",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-67.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/118",
+    "names": {
+     "id": "H-67.1"
+    }
+   },
+   "raw_sha256": "e226eaf2eae0663a296969a147af392a1e5ab244bf4c89476514188b4b1d90cb",
+   "consolidation_sha256": "ea91fdcde5838d2aa333b52a759f7865e80e9840358c9033f157e6304e656cca",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-67.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/119",
+    "names": {
+     "id": "H-67.2"
+    }
+   },
+   "raw_sha256": "1ac7d25c02b6e6136a2f538a781ad6fbbab0ecbc7da2f71e5136e55ff71955d5",
+   "consolidation_sha256": "0a5a190bfc66c884094e37696cf8e9c10766ad2a6a87695d61ce7615a0cd71ca",
+   "result": "equal"
+  },
+  {
+   "case": "healthdcat",
+   "atom_id": "H-68.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+    "json_pointer": "/atoms/120",
+    "names": {
+     "id": "H-68.1"
+    }
+   },
+   "raw_sha256": "5a436e6c4be8c68c19e36b2ef26ce44a55c1f5df5765c4885f9a470513e2ec2a",
+   "consolidation_sha256": "8c3250b8181f330a183e6e8613fa75cd34c282761397933957116bc26188af61",
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-1.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/0",
+    "names": {
+     "id": "S-1.1"
+    }
+   },
+   "raw_sha256": "db93c74598057d104f563db572752d7327b11ff5c573cfa51866197a7794cac2",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-2.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/1",
+    "names": {
+     "id": "S-2.1"
+    }
+   },
+   "raw_sha256": "679dcc46a45af6b9569207c69ce7796d17fc653cf6ab0ab60c345187577303fd",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-3.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/2",
+    "names": {
+     "id": "S-3.1"
+    }
+   },
+   "raw_sha256": "d71a3e0893b9dda160269b9cfbd52286b9e33426d1bb5c4c01b7e5267b3c1fc3",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-3.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/3",
+    "names": {
+     "id": "S-3.2"
+    }
+   },
+   "raw_sha256": "0a1c23f7dbce6542944e0115266c585708806ad33ee8f805867bc8261824a3d7",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-3.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/4",
+    "names": {
+     "id": "S-3.3"
+    }
+   },
+   "raw_sha256": "f9bdb4a08cba1861425292b8aa8eb82d77d8c5bcf935c691451bbfad4348c619",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-4.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/5",
+    "names": {
+     "id": "S-4.1"
+    }
+   },
+   "raw_sha256": "5a0fbdf04763d513589807f85712daff6738a4bf4e5f086c821c77a6a72e1440",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-5.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/6",
+    "names": {
+     "id": "S-5.1"
+    }
+   },
+   "raw_sha256": "675d6346a77fd8441427fe1136099908ced3343b7a6c2de8159cd58c987ca035",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-6.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/7",
+    "names": {
+     "id": "S-6.1"
+    }
+   },
+   "raw_sha256": "a8f956e2352aeea263aba0207b0f85317ebc8bd57677f85959c4748485787bb5",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-7.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/8",
+    "names": {
+     "id": "S-7.1"
+    }
+   },
+   "raw_sha256": "30b63c1f12d9d95b67a0f061ba7152eb8d468905023f7e9af87460a261f533bf",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-7.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/9",
+    "names": {
+     "id": "S-7.2"
+    }
+   },
+   "raw_sha256": "30b63c1f12d9d95b67a0f061ba7152eb8d468905023f7e9af87460a261f533bf",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-7.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/10",
+    "names": {
+     "id": "S-7.3"
+    }
+   },
+   "raw_sha256": "f4fa3e7c9c19c66be0222c815bc79a19f3b5d85cfac35db469b463c0a94dcfdf",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-8.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/11",
+    "names": {
+     "id": "S-8.1"
+    }
+   },
+   "raw_sha256": "c78b99b01b8bbd19526c57a9571fe0f56e8438153f194a33da59ef8928b9f423",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-9.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/12",
+    "names": {
+     "id": "S-9.1"
+    }
+   },
+   "raw_sha256": "58d05c343d523cca3a212397d820f5ec2b21095ba7193fbabb49f1cce12a1ca0",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-9.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/13",
+    "names": {
+     "id": "S-9.2"
+    }
+   },
+   "raw_sha256": "45fbc1ba47a6ff6527bb166a08ffddaed75da6c020deca684a8785fc20b16460",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-10.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/14",
+    "names": {
+     "id": "S-10.1"
+    }
+   },
+   "raw_sha256": "7e8a565887c98aba7f8d662a8d35d84626c8b90ce6a2321ea51e4d5cc4dc1e56",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-11.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/15",
+    "names": {
+     "id": "S-11.1"
+    }
+   },
+   "raw_sha256": "0d92ae1af25269e0e369443a05e948dfcb0aefa5daf3dc27d0f020a801a786f3",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-12.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/16",
+    "names": {
+     "id": "S-12.1"
+    }
+   },
+   "raw_sha256": "ce8846ffd17c8a97b2ba441068754bc4fa8217bed5c75195869e0b212786870f",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-13.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/17",
+    "names": {
+     "id": "S-13.1"
+    }
+   },
+   "raw_sha256": "4661466cfb07376c30b5a7a6a0bb420e6e4eae6d16e9fed0fe23d6081790b143",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-14.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/18",
+    "names": {
+     "id": "S-14.1"
+    }
+   },
+   "raw_sha256": "08f3569ef5da91e3f6a2fd350a3f445fa95b192199f472dd7e271c68f1912e3b",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-15.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/19",
+    "names": {
+     "id": "S-15.1"
+    }
+   },
+   "raw_sha256": "cd74ef694a5f69e956c0f1352c70d1c6915bd01265124ffb1d92db4e27af2974",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-16.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/20",
+    "names": {
+     "id": "S-16.1"
+    }
+   },
+   "raw_sha256": "a35dae82f18ab9b99928514b27308cb71839ed104f924b1db15c1618a160d42c",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-17.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/21",
+    "names": {
+     "id": "S-17.1"
+    }
+   },
+   "raw_sha256": "615fa0754833b8db2393c2da2439a3e8f0e51cf4499602c547485afab97f68c6",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-18.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/22",
+    "names": {
+     "id": "S-18.1"
+    }
+   },
+   "raw_sha256": "dde046904c12f3aaf57d6e5a6becddcbb06312426343b8f6328af7ac0855abd6",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-19.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/23",
+    "names": {
+     "id": "S-19.1"
+    }
+   },
+   "raw_sha256": "409d3ce57803641603cb04377d3ab5dbc32d778b9c652b2918320dfee1677cea",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-20.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/24",
+    "names": {
+     "id": "S-20.1"
+    }
+   },
+   "raw_sha256": "b682adb6ce75b26f5e76edfbf45b9f79f4e99941508f190a6cec707567a075e3",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-21.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/25",
+    "names": {
+     "id": "S-21.1"
+    }
+   },
+   "raw_sha256": "3c14b3dc8ce8d5e2b68c0e586708249dc046a9724677a157ac46c8a952281001",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "statdcat",
+   "atom_id": "S-22.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/statdcat.json",
+    "json_pointer": "/atoms/26",
+    "names": {
+     "id": "S-22.1"
+    }
+   },
+   "raw_sha256": "afd2eacd26f2e8051ec26e288b7bd3e6f9d243260eda19bf8b87131d0c977a16",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-1.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/0",
+    "names": {
+     "id": "G-1.1"
+    }
+   },
+   "raw_sha256": "42ac4a42c6b0f05ff20b715c587a230a062a8e9b48f8f4bc888d39ddbd42ab2b",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-1.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/1",
+    "names": {
+     "id": "G-1.2"
+    }
+   },
+   "raw_sha256": "647c3d580788106cd7d448b4c05aba42cfd3e539fad4e08d58b7712817b1f0de",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-1.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/2",
+    "names": {
+     "id": "G-1.3"
+    }
+   },
+   "raw_sha256": "f4caa311b8c6e871756565b0ad1c24eba0589c91113dce2b664739f544ec9cd4",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-2.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/3",
+    "names": {
+     "id": "G-2.1"
+    }
+   },
+   "raw_sha256": "9262c527001e834ef3dc53798bdc13e2efc043fd70b602bc3d672771847c7824",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-3.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/4",
+    "names": {
+     "id": "G-3.1"
+    }
+   },
+   "raw_sha256": "f3fe6113a7fee9c90e1f95c0b2c7aab22008d048865bbc0b6d25de26666f0561",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-4.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/5",
+    "names": {
+     "id": "G-4.1"
+    }
+   },
+   "raw_sha256": "fc3409e9690033d39b8f2ddd49f12e72d371854e58cfe90b74de8970b1136aae",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-4.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/6",
+    "names": {
+     "id": "G-4.2"
+    }
+   },
+   "raw_sha256": "847282db5cfddacade757c1bd02ffd3be8a75075681e81755c337fc4e1e40d90",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-5.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/7",
+    "names": {
+     "id": "G-5.1"
+    }
+   },
+   "raw_sha256": "0d4678109897ece344978bb05369cb7bdfbdcac4e467470b2a125586709a498b",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-5.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/8",
+    "names": {
+     "id": "G-5.2"
+    }
+   },
+   "raw_sha256": "912ee75be88b6396f965236329edb03cef5b08bb268b376ef42a1f4d0622b99d",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-6.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/9",
+    "names": {
+     "id": "G-6.1"
+    }
+   },
+   "raw_sha256": "cddc2315358cf7868778a655cd3abea95096f4d84dc52fe8a789bffa949f4557",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-6.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/10",
+    "names": {
+     "id": "G-6.2"
+    }
+   },
+   "raw_sha256": "cd42c23c78e55cada37282794c12356d5906595b034af92c15248cf2ca45e0b5",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-6.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/11",
+    "names": {
+     "id": "G-6.3"
+    }
+   },
+   "raw_sha256": "c5d1c0686d5976e11d2b3cdb76eb86676b3fc53837021b3b190134adf326ebd1",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-7.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/12",
+    "names": {
+     "id": "G-7.1"
+    }
+   },
+   "raw_sha256": "dd5f254ca694e8593b5a34e41779296d0649548a4ba8a7f97512e5b9a18ef440",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-7.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/13",
+    "names": {
+     "id": "G-7.2"
+    }
+   },
+   "raw_sha256": "b85abbb12a3898b06d4a38cefd39de7bd65f1f201e69e7f8c8309c12d6cb3aef",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-8.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/14",
+    "names": {
+     "id": "G-8.1"
+    }
+   },
+   "raw_sha256": "703cfcd2681007447bdbbb53de8f1ceb5f32d045b39c1304896e0db688c102d5",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-9.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/15",
+    "names": {
+     "id": "G-9.1"
+    }
+   },
+   "raw_sha256": "9b2404c304f7221e14b5c7eb0db8ef56e87b612dd4a176c94aa475343c23f49d",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-10.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/16",
+    "names": {
+     "id": "G-10.1"
+    }
+   },
+   "raw_sha256": "335d6939e083b93f6cf5d23799914eb7a8b868a2be377ddbcb86113c22db1198",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-11.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/17",
+    "names": {
+     "id": "G-11.1"
+    }
+   },
+   "raw_sha256": "456cedba573a0aebbae996e91cdf1011594c9f816def182f19809232e9f4d48a",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-12.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/18",
+    "names": {
+     "id": "G-12.1"
+    }
+   },
+   "raw_sha256": "e75f053a115acb919bb2994e55c82aa6961eefde0bc090847f7d05bdeb65f942",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-13.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/19",
+    "names": {
+     "id": "G-13.1"
+    }
+   },
+   "raw_sha256": "16bbeee97799dc8c4a8fb6efe51d935dd4be36f2862415c114a440e6b99865bc",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-14.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/20",
+    "names": {
+     "id": "G-14.1"
+    }
+   },
+   "raw_sha256": "68a06d8f7b303c7a9c7eff82f5641c00b5b4eb5bf639457a51cadf8fe87628d2",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-15.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/21",
+    "names": {
+     "id": "G-15.1"
+    }
+   },
+   "raw_sha256": "8cb244d17dcaea276568cafeca72ac1a6e409d4c10f7375b4a95cc96066165f2",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-16.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/22",
+    "names": {
+     "id": "G-16.1"
+    }
+   },
+   "raw_sha256": "e97c2b8abd5e68196283c8f02f5c95dbe96fcd9b7aa3a50bc10e2a32114b150b",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-16.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/23",
+    "names": {
+     "id": "G-16.2"
+    }
+   },
+   "raw_sha256": "3eb6c0aa9de3c30db83242bd9997b5b8b0c8395ebf7514d697e523b347c29844",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-16.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/24",
+    "names": {
+     "id": "G-16.3"
+    }
+   },
+   "raw_sha256": "a3ac5601538145de1a46d02463cf6e44a60e5d5924c5db307e50e7df022967da",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-17.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/25",
+    "names": {
+     "id": "G-17.1"
+    }
+   },
+   "raw_sha256": "5eacf6a915ad5580ec061d9c5c7f59b7752dac0ac2b9771305d43806e46523c2",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-18.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/26",
+    "names": {
+     "id": "G-18.1"
+    }
+   },
+   "raw_sha256": "f43ae062d142c41e7d7c9d528c4333248b2becc4ce628ca2474a358b876c9115",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-19.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/27",
+    "names": {
+     "id": "G-19.1"
+    }
+   },
+   "raw_sha256": "83d93a21d16b1d35417597c7de8187fa95072aad7098a0095c7dc0dfffc81b74",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-20.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/28",
+    "names": {
+     "id": "G-20.1"
+    }
+   },
+   "raw_sha256": "9d8a498bbf7acc90c51cd1e7329753a2c0c4435a68e9dcd4519a16e8a7c10582",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-21.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/29",
+    "names": {
+     "id": "G-21.1"
+    }
+   },
+   "raw_sha256": "103710ab426b2a662afe55f7f8a537052bba8d644c81be31c2e70582c9a31318",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-22.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/30",
+    "names": {
+     "id": "G-22.1"
+    }
+   },
+   "raw_sha256": "4bed79f8fca0a60c1b43c09486bde0339bc2cc341f48d607969d9e41c9f41962",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-23.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/31",
+    "names": {
+     "id": "G-23.1"
+    }
+   },
+   "raw_sha256": "181ec692f5d84f01deb5d4ada07b3361b267393b224a487a6affd3628c59d9f7",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-24.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/32",
+    "names": {
+     "id": "G-24.1"
+    }
+   },
+   "raw_sha256": "84b3ef9be204b02049f0231d5ef2c2bd4df799c18b9f930ce453725a3bd3b2b3",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-25.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/33",
+    "names": {
+     "id": "G-25.1"
+    }
+   },
+   "raw_sha256": "622a2755b29d23385c9ef5c2741718d5a51ddf12d115b8abde99755ffbf398ca",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-26.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/34",
+    "names": {
+     "id": "G-26.1"
+    }
+   },
+   "raw_sha256": "3979725dfa061ed6ce13bf34686638f26eef964a73934b3602c7225e374edd0e",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-27.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/35",
+    "names": {
+     "id": "G-27.1"
+    }
+   },
+   "raw_sha256": "cc6d90d304eacc5276e7cc5dde516a646567391bff00ca826857a072a0cc9ad2",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-28.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/36",
+    "names": {
+     "id": "G-28.1"
+    }
+   },
+   "raw_sha256": "1ee8f0bd3281644e418fd08fc8147ecfc188133b67fe8a4f5b1d1e5e2405256e",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-29.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/37",
+    "names": {
+     "id": "G-29.1"
+    }
+   },
+   "raw_sha256": "3a8c4afc79510b287eb5dc59c5aeef650fe02a8db0b45986322c3f9bd1e30fc8",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-30.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/38",
+    "names": {
+     "id": "G-30.1"
+    }
+   },
+   "raw_sha256": "28c01a35c3f47bcfcc70f6b15287ed564650377066a440cd8408b36e5b3a45ab",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-31.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/39",
+    "names": {
+     "id": "G-31.1"
+    }
+   },
+   "raw_sha256": "4d61164aa7fa0f611b392364e7fc52fde371b2f4e1cf5e927fa5a8a69738be18",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-32.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/40",
+    "names": {
+     "id": "G-32.1"
+    }
+   },
+   "raw_sha256": "6bb7a3175bc8d9eafa0ba4350128e2f4bf69748b185248acb84476870e0dabeb",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-33.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/41",
+    "names": {
+     "id": "G-33.1"
+    }
+   },
+   "raw_sha256": "4389f8ce556e97e16dd29de675644e63dbe7bd6848d1095e5ab3535a7683575b",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-34.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/42",
+    "names": {
+     "id": "G-34.1"
+    }
+   },
+   "raw_sha256": "e203b5a5bfba258507af3110829b745ccec5c6d47c6bf62cae296e64f3933edd",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-35.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/43",
+    "names": {
+     "id": "G-35.1"
+    }
+   },
+   "raw_sha256": "672981910bbc0bf6e7fe99b68407df64a12f005500998233cf4828f4b8de43e6",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-36.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/44",
+    "names": {
+     "id": "G-36.1"
+    }
+   },
+   "raw_sha256": "978565d48fce59a7fb856030ecf2f315420aa796bf486599a947a262358fad96",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-37.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/45",
+    "names": {
+     "id": "G-37.1"
+    }
+   },
+   "raw_sha256": "dbb6b8db87e5b41796a6f8f6d409dff3ca308e3e09bb3f9baf3f965b34a4952c",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-38.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/46",
+    "names": {
+     "id": "G-38.1"
+    }
+   },
+   "raw_sha256": "5ce819beee779e718b1b884b14da25e4d82a6cdc01bd5b3164ddca047d560352",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-39.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/47",
+    "names": {
+     "id": "G-39.1"
+    }
+   },
+   "raw_sha256": "bf9a194990ccdb6486ce0629dd6e1ddd373adcf8de57fc416d93b67b801b6187",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-40.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/48",
+    "names": {
+     "id": "G-40.1"
+    }
+   },
+   "raw_sha256": "faaec3cd91629a9f4ddc90590038a3a024f4b9281e8e08ad3dbe20a675ba244f",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-41.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/49",
+    "names": {
+     "id": "G-41.1"
+    }
+   },
+   "raw_sha256": "f943aff4a7662de3c68ec72b8e7cca05e40be53802214e73a6e6902fac7810e3",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-41.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/50",
+    "names": {
+     "id": "G-41.2"
+    }
+   },
+   "raw_sha256": "4fe728b3d88cf55ffa96d106493632a5d4dd04c6c8b952e9333d2a96af1710c2",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-42.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/51",
+    "names": {
+     "id": "G-42.1"
+    }
+   },
+   "raw_sha256": "ef3fb02ac8997edbe44c9068190a56aedfda424777963c1874c5d883076e18f9",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-43.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/52",
+    "names": {
+     "id": "G-43.1"
+    }
+   },
+   "raw_sha256": "a34a32fb19a2025df686e492ded3995d9a04c15ec12a5387d080e4eb208092d8",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-44.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/53",
+    "names": {
+     "id": "G-44.1"
+    }
+   },
+   "raw_sha256": "7305d2b3c9e6abedf60d54815ed82cc331cdc64ffa5cf31f04d7d688150f4f1a",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-45.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/54",
+    "names": {
+     "id": "G-45.1"
+    }
+   },
+   "raw_sha256": "5f7622a5a33e2b1d163f50618e27f92775ff8d0b2ba1c6cd7002695ab7006658",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "geodcat",
+   "atom_id": "G-46.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/geodcat.json",
+    "json_pointer": "/atoms/55",
+    "names": {
+     "id": "G-46.1"
+    }
+   },
+   "raw_sha256": "4643b3bb5fcee9f7b9ec1ac25e4a72bbaf1bbda356e2d0e5b68797912baa88e0",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-1.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/0",
+    "names": {
+     "id": "JRC-1.1"
+    }
+   },
+   "raw_sha256": "20d1ff7852a214ef0bd1c88c21fe1cac783d1029cd2b9ea8445046b722c4382d",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-2.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/1",
+    "names": {
+     "id": "JRC-2.1"
+    }
+   },
+   "raw_sha256": "06f7d6353d148f64d01b3149dd0877d5396b6b367dff8f95230c5f8898d428b7",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-3.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/2",
+    "names": {
+     "id": "JRC-3.1"
+    }
+   },
+   "raw_sha256": "27f13943b12e70960240e03316d48c45072608965beff3be5f8c1bd9fd84f98a",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-4.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/3",
+    "names": {
+     "id": "JRC-4.1"
+    }
+   },
+   "raw_sha256": "de83cda0ab2d4cf1aca718851fd809fbec4d7de463d292f0f79dd757c9f9ec25",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-5.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/4",
+    "names": {
+     "id": "JRC-5.1"
+    }
+   },
+   "raw_sha256": "5d0b7d4250a668ffd5adece25043f42b51807b1588ad3b80b211e879a1315339",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-6.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/5",
+    "names": {
+     "id": "JRC-6.1"
+    }
+   },
+   "raw_sha256": "2e5a8553396741b554315df2e6d0a28edd792a3aba65d967386d546c585b1407",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-6.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/6",
+    "names": {
+     "id": "JRC-6.2"
+    }
+   },
+   "raw_sha256": "e8b465b4f7e5548a4b1393df326ca1356c1db22bd69217e4ed71dcccd1e840b8",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-6.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/7",
+    "names": {
+     "id": "JRC-6.3"
+    }
+   },
+   "raw_sha256": "2043476214f074449f2a0693fe011d72fc012591450f87d181863f382a5dbadd",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-6.4",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/8",
+    "names": {
+     "id": "JRC-6.4"
+    }
+   },
+   "raw_sha256": "c7a992215c1d012e683b5b5c86795ff28155d734c9ba2790a875a1c3ff0d3c57",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-6.5",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/9",
+    "names": {
+     "id": "JRC-6.5"
+    }
+   },
+   "raw_sha256": "3ceb853aae8c0472da35723994cff8458d9379800d719068eadcd2b31a59b728",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-7.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/10",
+    "names": {
+     "id": "JRC-7.1"
+    }
+   },
+   "raw_sha256": "d577751ea9e943d503a0e5a92f31f77c4773090ea8bdc41ec7d92a1eb652a546",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-8.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/11",
+    "names": {
+     "id": "JRC-8.1"
+    }
+   },
+   "raw_sha256": "6c6506348aa4268eacc37b26fe4b41ab993c0fb84346e9a1384fef2a15bfba83",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-8.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/12",
+    "names": {
+     "id": "JRC-8.2"
+    }
+   },
+   "raw_sha256": "53969c95c19ff5893b1866f3471ab58fe7ebf104961067b2a1efeaec053702d2",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-9.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/13",
+    "names": {
+     "id": "JRC-9.1"
+    }
+   },
+   "raw_sha256": "3772136b8db52a07d32b8373452bf296d323f303a3b34e402595748fa2359935",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-10.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/14",
+    "names": {
+     "id": "JRC-10.1"
+    }
+   },
+   "raw_sha256": "f06189c0a3423e330c03c106383b8e30b10f181e26366fcba84b284d6f96a918",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-10.2",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/15",
+    "names": {
+     "id": "JRC-10.2"
+    }
+   },
+   "raw_sha256": "b803a2bd114ca9f177666ff5ed8358b34e408ffb3ca6a5851c1d8731ca5348c9",
+   "consolidation_sha256": null,
+   "result": "equal"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-10.3",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/16",
+    "names": {
+     "id": "JRC-10.3"
+    }
+   },
+   "result": "r11d_follow_up_not_in_packets"
+  },
+  {
+   "case": "jrc-research",
+   "atom_id": "JRC-11.1",
+   "atom": {
+    "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+    "json_pointer": "/atoms/17",
+    "names": {
+     "id": "JRC-11.1"
+    }
+   },
+   "raw_sha256": "26e8b8000545cee405ebccf3ee16330f338c3190f0f9f96b31f700d82613c95f",
+   "consolidation_sha256": null,
+   "result": "equal"
+  }
+ ],
+ "build_labels_merged": {
+  "sha256": "de05bfc9bdc02bbabc8db868edbe7785212fb62e34ca19a88ea3d717c3955be3",
+  "location": "outside the repository",
+  "equal_to_rederivation": true,
+  "atoms_differing": []
+ },
+ "summary": {
+  "equal": 315,
+  "r11d_follow_up": 2,
+  "r11d_follow_up_not_in_packets": 3,
+  "atoms_in_raw_outputs": 317,
+  "rationale_replaced_without_before_value": [
+   "healthdcat:H-1.1",
+   "healthdcat:H-22.1",
+   "healthdcat:H-29.1"
+  ]
+ }
+}

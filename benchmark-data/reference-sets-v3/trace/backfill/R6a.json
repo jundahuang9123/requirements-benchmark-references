@@ -1,0 +1,125 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R6a",
+ "name": "Audit pass A",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R6a-F01",
+   "step": "R6a",
+   "field": "actor",
+   "value": "ChatGPT/Codex (audit pass A)",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "built_from",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+     "locator": {
+      "json_pointer": "/built_from/pr45"
+     },
+     "target_sha256": "48c02461dee6507986388f9219d16cc021f27e77c80a972d5db4e11661056cef"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R6a-F02",
+   "step": "R6a",
+   "field": "model, prompt and inputs",
+   "value": null,
+   "status": "not_recorded",
+   "links": [
+    {
+     "label": "inputs read by the build",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "25ca9f805ede0ffdda6bfd57a0ae6d3060bce0d5e1a84293e3852e0622cfca09",
+     "locator": {
+      "lines": [
+       65,
+       67
+      ]
+     },
+     "target_sha256": "713f8d487edce961f81bb21c6673fb3bce799d9c7ef27db4f0b2724407ee6d99"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/",
+    "outside: the build workspace (the audit inputs are not in it)"
+   ]
+  },
+  {
+   "fact_id": "R6a-F03",
+   "step": "R6a",
+   "field": "items",
+   "value": {
+    "ids": 256,
+    "mobility_clauses": 99,
+    "candidates": 157
+   },
+   "status": "recorded",
+   "links": [
+    {
+     "label": "coverage ledger",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/coverage-ledger.csv",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "f43eb12df5948aef3ef5c2498a49486fb42d249576aea38d137f0665a5c1b0e4",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "f43eb12df5948aef3ef5c2498a49486fb42d249576aea38d137f0665a5c1b0e4"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "Every audit pass A ID resolves to an atom through the coverage ledger."
+  },
+  {
+   "fact_id": "R6a-F04",
+   "step": "R6a",
+   "field": "date",
+   "value": "2026-10-22",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "audit folder name",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "25ca9f805ede0ffdda6bfd57a0ae6d3060bce0d5e1a84293e3852e0622cfca09",
+     "locator": {
+      "lines": [
+       38,
+       38
+      ],
+      "names": [
+       "reference-audit-2026-10-22"
+      ]
+     },
+     "target_sha256": "c2a28f5bc3a05ebae793236f61f53734fa638a4db8e87737f03dfdc78b5d3972"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  }
+ ]
+}

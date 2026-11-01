@@ -1,0 +1,218 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R4",
+ "name": "v2 coding of the 75 rows",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R4-F01",
+   "step": "R4",
+   "field": "actor",
+   "value": "Claude, single coder",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "template",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v2/template.html",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "9a3c14011ab46aa7ce98698a7d949b54df326fbe685140a4582cee3d2bccb19b",
+     "locator": {
+      "lines": [
+       216,
+       216
+      ],
+      "names": [
+       "Single coder (Claude)"
+      ]
+     },
+     "target_sha256": "fdee7b57ea08219f558827dfacd0d29b389e506ff5dd6cc325a51b03d92cc55e"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R4-F02",
+   "step": "R4",
+   "field": "model ID and prompt",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/",
+    "benchmark-data/reference-sets-v3/history/README.md",
+    "outside: the build workspace of 22 Oct (no log of this step)"
+   ]
+  },
+  {
+   "fact_id": "R4-F03",
+   "step": "R4",
+   "field": "codes P1-P7 (problem)",
+   "value": "defined",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "codes",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v2/codes.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "a7f9af7022ea370762048462077af4f3fa9d0c6d845ab5656ce8f86e062bf601",
+     "locator": {
+      "lines": [
+       7,
+       8
+      ],
+      "names": [
+       "P1 Discover",
+       "P2 Access"
+      ]
+     },
+     "target_sha256": "4247d847a5a0868f36c102b9fb15fcd964b06b57798fa5c4fc9c45878e4f1c20"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "Phase 0 correction: the spec said P1 and P2 were undefined."
+  },
+  {
+   "fact_id": "R4-F04",
+   "step": "R4",
+   "field": "meaning of conf (high, med, low)",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/codes.py:1-16",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/template.html",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/rows.json"
+   ]
+  },
+  {
+   "fact_id": "R4-F05",
+   "step": "R4",
+   "field": "base_registry.json, input of verify.py",
+   "value": "kept outside the repository",
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "verify.py reads it",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v2/verify.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "6ee9ba339ce91211f8c8c355fd5992867ba14837d9977d74b21c506ae0f450c4",
+     "locator": {
+      "lines": [
+       4,
+       4
+      ]
+     },
+     "target_sha256": "bda77f0c5718b774661acd8a35cef09f21759a60f5e0b0d7a6aacf1974ead6ef"
+    },
+    {
+     "label": "base_registry.json, the input of history/build-scripts/v2/verify.py",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-17",
+     "sha256": "f86dbe2a94f631eade0d82e150c7259d6b8b585a3a422b660715962627ebd6c3"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R4-F06",
+   "step": "R4",
+   "field": "web cross-checks of the Mobility derivations",
+   "value": null,
+   "status": "not_recorded",
+   "links": [
+    {
+     "label": "claim",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v2/codes.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "a7f9af7022ea370762048462077af4f3fa9d0c6d845ab5656ce8f86e062bf601",
+     "locator": {
+      "lines": [
+       199,
+       199
+      ]
+     },
+     "target_sha256": "a86d88303f0872a9a4b9540679053d99a69ab8752f73a0c916dd72ad3deb4f3a"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v2/",
+    "outside: build workspace"
+   ]
+  },
+  {
+   "fact_id": "R4-F07",
+   "step": "R4",
+   "field": "outputs",
+   "value": {
+    "rows.json": 75,
+    "coding csv": 75
+   },
+   "status": "recorded",
+   "links": [
+    {
+     "label": "rows.json",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v2/rows.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "2129abcf11d9f8f6056109886e959255dbd285250174bb00edfa3cef480aaa36",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "2129abcf11d9f8f6056109886e959255dbd285250174bb00edfa3cef480aaa36"
+    },
+    {
+     "label": "coding",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/v1-comparison-2026-10-22/reference-requirements-coding.csv",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "490d167284a0a008286e6201c3b6b72f594cedddbf3c5275b2b9f47594ee3ca0",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "490d167284a0a008286e6201c3b6b72f594cedddbf3c5275b2b9f47594ee3ca0"
+    },
+    {
+     "label": "comparison page",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/history/v1-comparison-2026-10-22/reference-requirements-comparison.html",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "02afbfd07b90f479161bc10b505d7b7ebf98d6ef70ae6279e27510afb291d0f1",
+     "locator": {
+      "whole_file": true
+     },
+     "target_sha256": "02afbfd07b90f479161bc10b505d7b7ebf98d6ef70ae6279e27510afb291d0f1"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "note": "The note key is on all 75 rows of rows.json and non-empty on 71. R4 is traced at step level only."
+  }
+ ]
+}

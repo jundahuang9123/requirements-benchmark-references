@@ -1,0 +1,208 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "decision": "0.9",
+ "status": "attested_log",
+ "signoff": "pending",
+ "note": "Files kept outside the repository. Only their sha256 is tracked; they contain reference content or private paths.",
+ "items": [
+  {
+   "evidence_id": "OE-01",
+   "label": "R9 independent-checker subagent log (22 Oct)",
+   "sha256": "bbf577ef56009f2502d810d7fc8eabe17fb4b5466891b4ef4f09aac53e95f381",
+   "bytes": 2108567,
+   "mtime_utc": "2026-10-22T19:25:55Z",
+   "step": "R9"
+  },
+  {
+   "evidence_id": "OE-02",
+   "label": "R10 labeller log: Health H-1 to H-33",
+   "sha256": "866379ab7726c9007e429baf0c33040e282468a69bf44601be6d9a2d453267e1",
+   "bytes": 1815325,
+   "mtime_utc": "2026-10-22T20:14:35Z",
+   "step": "R10"
+  },
+  {
+   "evidence_id": "OE-03",
+   "label": "R10 labeller log: Health H-34 to H-69",
+   "sha256": "cc73dfa6601c795bc95b8eb2b56e3f2cca85859ee3f84a42ceba7355d1f5f1a9",
+   "bytes": 1559612,
+   "mtime_utc": "2026-10-22T20:08:38Z",
+   "step": "R10"
+  },
+  {
+   "evidence_id": "OE-04",
+   "label": "R10 labeller log: Mobility, policy inputs",
+   "sha256": "545031318bb3b0c91d147a6e94e85d15c34f34a43ab991524dd4d283135a1382",
+   "bytes": 1555553,
+   "mtime_utc": "2026-10-22T20:10:10Z",
+   "step": "R10"
+  },
+  {
+   "evidence_id": "OE-05",
+   "label": "R10 labeller log: Mobility, standards inputs",
+   "sha256": "e8d26910dbcbad295ce1791b19cbe1bd3c50ca3bfb7829ad66dc6a255cac533e",
+   "bytes": 2226484,
+   "mtime_utc": "2026-10-22T20:13:09Z",
+   "step": "R10"
+  },
+  {
+   "evidence_id": "OE-06",
+   "label": "R10 labeller log: Mobility, literature inputs",
+   "sha256": "241ad1cfacedb96e195fe80f14c65200ce7009bb025853b23059d4ea237f9216",
+   "bytes": 1879827,
+   "mtime_utc": "2026-10-22T20:11:57Z",
+   "step": "R10"
+  },
+  {
+   "evidence_id": "OE-07",
+   "label": "R10 labeller log: Mobility, partner (consolidation) inputs",
+   "sha256": "8f8f75f0fb6f0ce27fa25f90f9a2df52bdf8164a34966250cf84fe698678da12",
+   "bytes": 724820,
+   "mtime_utc": "2026-10-22T20:00:36Z",
+   "step": "R10"
+  },
+  {
+   "evidence_id": "OE-08",
+   "label": "R10 labeller log: Geo",
+   "sha256": "663fe9b112c161b332f25c0100105bd54051352469d79d9372123c93a8caf864",
+   "bytes": 1320123,
+   "mtime_utc": "2026-10-22T20:05:30Z",
+   "step": "R10"
+  },
+  {
+   "evidence_id": "OE-09",
+   "label": "R10 labeller log: Stat and JRC",
+   "sha256": "6afc4e35928b8ade995b6bd900a9344306dcd54c3dd2ffbde67492cd76ddfea8",
+   "bytes": 1213273,
+   "mtime_utc": "2026-10-22T20:08:34Z",
+   "step": "R10"
+  },
+  {
+   "evidence_id": "OE-10",
+   "label": "Build output of the label merge (labels-merged.json, 22 Oct)",
+   "sha256": "de05bfc9bdc02bbabc8db868edbe7785212fb62e34ca19a88ea3d717c3955be3",
+   "bytes": 567790,
+   "mtime_utc": "2026-10-22T20:14:44Z",
+   "step": "R10"
+  },
+  {
+   "evidence_id": "OE-11",
+   "label": "Build log of the R10 integration build (22 Oct)",
+   "sha256": "a75756eacd951409803bb383c352260526e0e5f85f26c56677d9771bb8312937",
+   "bytes": 4698,
+   "mtime_utc": "2026-10-22T20:14:45Z",
+   "step": "R6b"
+  },
+  {
+   "evidence_id": "OE-12",
+   "label": "Health plan table before the R9 fixes",
+   "sha256": "83d22d8a2180cabf9d541b304f7ee95deb698b1ea071a5dc302cd5ccd156d2c2",
+   "bytes": 40884,
+   "mtime_utc": "2026-10-22T19:31:29Z",
+   "step": "R9"
+  },
+  {
+   "evidence_id": "OE-13",
+   "label": "Stat, Geo and JRC plan table before the R9 fixes",
+   "sha256": "99d1990f0da7700ab46c6be9447b8f27ae4829b624dfa266e8ef43ca87fb0bca",
+   "bytes": 18633,
+   "mtime_utc": "2026-10-22T19:31:29Z",
+   "step": "R9"
+  },
+  {
+   "evidence_id": "OE-14",
+   "label": "Mobility plan before the Table 1 re-check",
+   "sha256": "c067de16383dc4f4a612d982ef10c94c11f615b3721f5a05a85ea5b1bc3998f2",
+   "bytes": 5090,
+   "mtime_utc": "2026-10-22T19:31:51Z",
+   "step": "R7"
+  },
+  {
+   "evidence_id": "OE-15",
+   "label": "build_v3.py before the adjudication hook",
+   "sha256": "3adfb5db86881332a6a59a61893bd1987c0a207ddea83a407f8f302b0b7c0490",
+   "bytes": 25730,
+   "mtime_utc": "2026-10-23T08:38:48Z",
+   "step": "R6b"
+  },
+  {
+   "evidence_id": "OE-16",
+   "label": "make_readme.py before the adjudication",
+   "sha256": "9679dcf78b22b211771801ea7d961b1c96ced489ad4560dcf6b0b14b012fb19e",
+   "bytes": 8565,
+   "mtime_utc": "2026-10-23T08:39:45Z",
+   "step": "R6b"
+  },
+  {
+   "evidence_id": "OE-17",
+   "label": "base_registry.json, the input of history/build-scripts/v2/verify.py",
+   "sha256": "f86dbe2a94f631eade0d82e150c7259d6b8b585a3a422b660715962627ebd6c3",
+   "bytes": 13507,
+   "mtime_utc": "2026-10-22T16:45:37Z",
+   "step": "R4"
+  },
+  {
+   "evidence_id": "OE-18",
+   "label": "pdftotext extraction used for anchors: Health D6.2",
+   "sha256": "50f9023c39cc731c456bce203b56797e922b2b976e94a138bed70167fb754243",
+   "bytes": 271806,
+   "mtime_utc": "2026-10-22T16:33:26Z",
+   "step": "R8"
+  },
+  {
+   "evidence_id": "OE-19",
+   "label": "pdftotext extraction used for anchors: Health D6.2 (raw mode)",
+   "sha256": "bc1b7b8b14d2616844500b0c493da1759f05bdece9cae5902cb01dd095b7cdcf",
+   "bytes": 237204,
+   "mtime_utc": "2026-10-22T17:43:11Z",
+   "step": "R8"
+  },
+  {
+   "evidence_id": "OE-20",
+   "label": "pdftotext extraction used for anchors: Stat",
+   "sha256": "20d7e9bfab5ae7ea090a4c44847322491a1453135c1591544d1ccb68184155f0",
+   "bytes": 271330,
+   "mtime_utc": "2026-10-22T16:33:25Z",
+   "step": "R8"
+  },
+  {
+   "evidence_id": "OE-21",
+   "label": "pdftotext extraction used for anchors: Stat (raw mode)",
+   "sha256": "2af8c7c4e7e9a21314773ce7d2ca46716d6faf90f670e036236e3203a21a115c",
+   "bytes": 196103,
+   "mtime_utc": "2026-10-22T17:43:10Z",
+   "step": "R8"
+  },
+  {
+   "evidence_id": "OE-22",
+   "label": "pdftotext extraction used for anchors: Geo",
+   "sha256": "c63fed4c51264438f0e6e4e0f714e553d24a39f7c53ba8aa547b812e53b39c7e",
+   "bytes": 231971,
+   "mtime_utc": "2026-10-22T16:33:26Z",
+   "step": "R8"
+  },
+  {
+   "evidence_id": "OE-23",
+   "label": "pdftotext extraction used for anchors: Geo (raw mode)",
+   "sha256": "3c8879c47a8acb0fd069502cdb92f9ea7d3b01ea4e4c35e7010b15b10f0ffd48",
+   "bytes": 156351,
+   "mtime_utc": "2026-10-22T17:43:11Z",
+   "step": "R8"
+  },
+  {
+   "evidence_id": "OE-24",
+   "label": "R9 checker sample file (the 30 sampled IDs)",
+   "sha256": "83f378c18a85435e586091405e0cf79950353ffad9eefa404896d7c12fcd1269",
+   "bytes": 203,
+   "mtime_utc": "2026-10-22T19:09:13Z",
+   "step": "R9"
+  },
+  {
+   "evidence_id": "OE-25",
+   "label": "The repository's first commit (the import, before sanitising), parent of the baseline tag",
+   "sha256": null,
+   "step": "R0",
+   "reference": "git: parent of tag ref-trace-baseline"
+  }
+ ]
+}

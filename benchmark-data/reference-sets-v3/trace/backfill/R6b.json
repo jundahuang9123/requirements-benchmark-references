@@ -1,0 +1,963 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step": "R6b",
+ "name": "v3 merge",
+ "generated_by": {
+  "script": "tools/trace/backfill.py",
+  "script_sha256": "e3ecb5de8077af8042c775cf67954838223d887b1fd38dfcfac1407ad64133fe",
+  "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
+  "actor": "model:claude/backfill",
+  "model_id": "claude-opus-5-5",
+  "written_at": "2026-11-01T12:43:25Z"
+ },
+ "facts": [
+  {
+   "fact_id": "R6b-F01",
+   "step": "R6b",
+   "field": "actor",
+   "value": "Claude (merge)",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "curated_by of the merge rows",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "25ca9f805ede0ffdda6bfd57a0ae6d3060bce0d5e1a84293e3852e0622cfca09",
+     "locator": {
+      "lines": [
+       121,
+       121
+      ],
+      "names": [
+       "Claude (Anthropic), 2026-10-22"
+      ]
+     },
+     "target_sha256": "18ba2b91aa8a74b369f38de989bbbfb8513b1d52647ce9cde50f545342634310"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R6b-F02",
+   "step": "R6b",
+   "field": "model ID and prompt",
+   "value": null,
+   "status": "not_recorded",
+   "links": [],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+    "benchmark-data/reference-sets-v3/README.md",
+    "outside: no main-session log of 22 Oct"
+   ]
+  },
+  {
+   "fact_id": "R6b-F03",
+   "step": "R6b",
+   "field": "merge rules",
+   "value": "case-level merge_rules",
+   "status": "recorded",
+   "links": [
+    {
+     "label": "merge_rules",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+     "locator": {
+      "json_pointer": "/merge_rules"
+     },
+     "target_sha256": "1c9ef868b5645245df4b6f1a7af58340eac8993a44e5a5b796abf0bba4853435"
+    },
+    {
+     "label": "README",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/README.md",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "db7f8aae0fe4dfb0b35b4f67a2842703710b1e20bcde05cafcc3a58ae92f4cf3",
+     "locator": {
+      "lines": [
+       61,
+       69
+      ]
+     },
+     "target_sha256": "114a8bf45cef47b8a5deebd08d5585cfdd67a8129e5246220faef47db631c4f1"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R6b-F04",
+   "step": "R6b",
+   "field": "decisions: owner and date",
+   "value": "only the Geo decision is dated (Curator, 2026-10-22)",
+   "status": "not_recorded",
+   "links": [
+    {
+     "label": "decisions",
+     "kind": "row",
+     "file": "benchmark-data/reference-sets-v3/geodcat.json",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+     "locator": {
+      "json_pointer": "/decisions"
+     },
+     "target_sha256": "20a46d7598fe179131fb8987c16661a4739fa0f82719520ae124875e6d8ac86c"
+    },
+    {
+     "label": "build",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "25ca9f805ede0ffdda6bfd57a0ae6d3060bce0d5e1a84293e3852e0622cfca09",
+     "locator": {
+      "lines": [
+       379,
+       382
+      ]
+     },
+     "target_sha256": "26b80ec72d526601343c377a138f35d70c98d264812b10ea09643199e1c8192d"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/README.md",
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+    "benchmark-data/reference-sets-v3/*.json decisions"
+   ],
+   "actor_of_geo_decision": {
+    "actor": "human:curator",
+    "status": "attested_log",
+    "evidence": {
+     "label": "The repository's first commit (the import, before sanitising), parent of the baseline tag",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-25",
+     "sha256": null,
+     "reference": "git: parent of tag ref-trace-baseline",
+     "locator": {
+      "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+      "line": 382
+     }
+    }
+   }
+  },
+  {
+   "fact_id": "R6b-F05",
+   "step": "R6b",
+   "field": "problem list of the build",
+   "value": "printed to the console only; the build log of 22 Oct says problems: 0",
+   "status": "attested_log",
+   "links": [
+    {
+     "label": "console output",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "25ca9f805ede0ffdda6bfd57a0ae6d3060bce0d5e1a84293e3852e0622cfca09",
+     "locator": {
+      "lines": [
+       437,
+       439
+      ]
+     },
+     "target_sha256": "09c62eb866ff175ce2049988b063d51af771b2c3c9f452a51eaf6157952cd4e3"
+    },
+    {
+     "label": "Build log of the R10 integration build (22 Oct)",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-11",
+     "sha256": "a75756eacd951409803bb383c352260526e0e5f85f26c56677d9771bb8312937"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  },
+  {
+   "fact_id": "R6b-F06",
+   "step": "R6b",
+   "field": "script that ran",
+   "value": "the stored build_v3.py postdates the step (imports the 23 Oct adjudication); a pre-adjudication copy exists outside",
+   "status": "not_recorded",
+   "links": [
+    {
+     "label": "import",
+     "kind": "script",
+     "file": "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+     "git_ref": "ref-trace-baseline",
+     "hash_time": "import",
+     "file_sha256": "25ca9f805ede0ffdda6bfd57a0ae6d3060bce0d5e1a84293e3852e0622cfca09",
+     "locator": {
+      "lines": [
+       13,
+       13
+      ],
+      "names": [
+       "adjudication_2026_10_23"
+      ]
+     },
+     "target_sha256": "6b2ccb83569727a5db17d8bdeac9143a4c87c4c002aa76e26915aee5f6bab982"
+    },
+    {
+     "label": "build_v3.py before the adjudication hook",
+     "kind": "outside_evidence",
+     "evidence_id": "OE-15",
+     "sha256": "3adfb5db86881332a6a59a61893bd1987c0a207ddea83a407f8f302b0b7c0490"
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending",
+   "looked_in": [
+    "benchmark-data/reference-sets-v3/history/build-scripts/v3/",
+    "outside: build workspace"
+   ],
+   "note": "Whether the outside copy is exactly the version that ran on 22 Oct is not shown."
+  },
+  {
+   "fact_id": "R6b-E",
+   "step": "R6b",
+   "field": "entries",
+   "rule": "One entry per row the merge added (4) or changed, except changes the row itself attributes to the independent check (under R9).",
+   "status": "reconstructed",
+   "count": 16,
+   "entries": [
+    {
+     "entry_id": "R6b:healthdcat:H-3",
+     "step": "R6b",
+     "decision": "row_changed",
+     "value": {
+      "fields": [
+       "statement_before_v3",
+       "status_in_source_before_v3"
+      ]
+     },
+     "reason": "v1 lost the actor (data holders) and the annual cadence of EHDS Art. 41 (audit pass A correction, confirmed in D6.2 §5.2.1.3).",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/2",
+        "names": {
+         "id": "H-3"
+        }
+       },
+       "target_sha256": "693740719707be5d76714830a6354dd34882056090f552daecd5d696248d3534"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:healthdcat:H-10",
+     "step": "R6b",
+     "decision": "row_changed",
+     "value": {
+      "fields": [
+       "source_locator_before_v3"
+      ]
+     },
+     "reason": "The variable-listing requirement precedes §5.2.6.1 (audit pass A correction, confirmed).",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/9",
+        "names": {
+         "id": "H-10"
+        }
+       },
+       "target_sha256": "96bad6cd219a67a1349a5781dabc21f0c2f1fae50be65e24535faed09eb51426"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:healthdcat:H-12",
+     "step": "R6b",
+     "decision": "row_noted",
+     "value": {
+      "fields": []
+     },
+     "reason": "H-12.1 is scored as a content restatement (each logical dataset is an ordinary dcat:Dataset); H-12.2 is deferred future work in the source.",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/11",
+        "names": {
+         "id": "H-12"
+        }
+       },
+       "target_sha256": "170455d5bc8c964f0d10de4f58e87be43c88d792fb7b8e1a7d8520da8ee45b62"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:healthdcat:H-33",
+     "step": "R6b",
+     "decision": "row_noted",
+     "value": {
+      "fields": []
+     },
+     "reason": "The §6.1 back-link from research datasets is the same derived-to-source need, so the row has one atom.",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/32",
+        "names": {
+         "id": "H-33"
+        }
+       },
+       "target_sha256": "437cd8419b7bb4b7d8491be9ed38b2f1e79d04b45a9430098720a3252d4ab679"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:healthdcat:H-37",
+     "step": "R6b",
+     "decision": "row_changed",
+     "value": {
+      "fields": [
+       "statement_before_v3"
+      ]
+     },
+     "reason": "Number of unique individuals is its own §5.3.1.3 element with the same rationale (found by audit pass A).",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/36",
+        "names": {
+         "id": "H-37"
+        }
+       },
+       "target_sha256": "581ff2c867361218dc177bcc6ccd0ba8ba8fd65ea5f5049e32dee3a0d8de9e87"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:healthdcat:H-46",
+     "step": "R6b",
+     "decision": "row_noted",
+     "value": {
+      "fields": []
+     },
+     "reason": "Art. 56(a) documentation and the time-period and population-coverage parts of (d) are already atoms H-9.1, H-26.1, H-30.1, H-31.1, H-36.1 and H-38.1; only the remaining label inputs are separate atoms.",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/45",
+        "names": {
+         "id": "H-46"
+        }
+       },
+       "target_sha256": "d2d0e1ebc82e1d9a643373b31408ce3c61bbc6566609c8d7317ad8e6635e187e"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:healthdcat:H-63",
+     "step": "R6b",
+     "decision": "row_noted",
+     "value": {
+      "fields": []
+     },
+     "reason": "The \"data holder, not the access body, owns and edits the metadata\" part is the same need as H-56.2 and is scored there.",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/62",
+        "names": {
+         "id": "H-63"
+        }
+       },
+       "target_sha256": "ebe7ab1f44ba86b32a948a3df960225bfa352ee026fed6b0a3a6e02b2175fa53"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:healthdcat:H-66",
+     "step": "R6b",
+     "decision": "row_added_in_merge",
+     "value": {
+      "atom_ids": [
+       "H-66.1",
+       "H-66.2",
+       "H-66.3"
+      ]
+     },
+     "reason": "Added in v3 from audit pass A items HC-058, HC-059 and HC-065 (DCAT-AP restatements kept by decision, flagged).",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/65",
+        "names": {
+         "id": "H-66"
+        }
+       },
+       "target_sha256": "4b3702ddfc73a8433d90537d27fe1b6ae0598d2837cc6fdd0beeb71544578c0d"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:healthdcat:H-67",
+     "step": "R6b",
+     "decision": "row_added_in_merge",
+     "value": {
+      "atom_ids": [
+       "H-67.1",
+       "H-67.2"
+      ]
+     },
+     "reason": "Added in v3 from audit pass A items HC-063 and HC-067.",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/66",
+        "names": {
+         "id": "H-67"
+        }
+       },
+       "target_sha256": "4d2b00c2b5625f5e13a0de84e7faa108f9a315fe09f0a25497e4eb4775991384"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:healthdcat:H-69",
+     "step": "R6b",
+     "decision": "row_added_in_merge",
+     "value": {
+      "atom_ids": [
+       "H-69.1"
+      ]
+     },
+     "reason": "Added in v3: found while checking anchors (\"could be implemented\"); not in Claude v2 or audit pass A.",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/67",
+        "names": {
+         "id": "H-69"
+        }
+       },
+       "target_sha256": "4dd5481329b8cd10e257d5698602fbcc369b3c8fa76f4fa4cc9e8301526051e3"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:healthdcat:H-68",
+     "step": "R6b",
+     "decision": "row_added_in_merge",
+     "value": {
+      "atom_ids": [
+       "H-68.1"
+      ]
+     },
+     "reason": "Added in v3 from audit pass A item HC-080; the source gives no rationale for this entry.",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": "2026-10-22",
+     "date_status": "recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/healthdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+       "locator": {
+        "json_pointer": "/requirements/68",
+        "names": {
+         "id": "H-68"
+        }
+       },
+       "target_sha256": "c773b8acf2357ffb429228e9b1f8884a5f313b6dc1b65d93948ce5616cd27922"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:statdcat:S-7",
+     "step": "R6b",
+     "decision": "row_noted",
+     "value": {
+      "fields": []
+     },
+     "reason": "Representation guidance in the source, split into start, end and periodicity atoms; not three new stakeholder requirements.",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/statdcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "06b1fa105d4dea7d62ae14d043ca7f99d47404d79ec13d776b98e98252b98151",
+       "locator": {
+        "json_pointer": "/requirements/6",
+        "names": {
+         "id": "S-7"
+        }
+       },
+       "target_sha256": "ab0146d9e754c1c61ad73fdf22688451c886e0a0ba436d59fb4a143fdd6ad701"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:geodcat:G-41",
+     "step": "R6b",
+     "decision": "row_noted",
+     "value": {
+      "fields": []
+     },
+     "reason": "Conceptual and domain consistency are separate rows of Annex I Table 5 and become separate atoms (as in audit pass A).",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/40",
+        "names": {
+         "id": "G-41"
+        }
+       },
+       "target_sha256": "240743b28feeaecc57a7f82778aa147df3a9f696bbbd3321a22b37b75e934882"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:geodcat:G-44",
+     "step": "R6b",
+     "decision": "row_noted",
+     "value": {
+      "fields": []
+     },
+     "reason": "Its \"reuse existing vocabularies\" and \"avoid new terms\" parts are the same needs as G-3.1 and G-5.1 and are scored there.",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/geodcat.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+       "locator": {
+        "json_pointer": "/requirements/43",
+        "names": {
+         "id": "G-44"
+        }
+       },
+       "target_sha256": "5f180655f39369771b90f080a7dc75dc60043877d22a5c85bc99128293cb3782"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:jrc-research:JRC-8",
+     "step": "R6b",
+     "decision": "row_changed",
+     "value": {
+      "fields": [
+       "statement_before_v3"
+      ]
+     },
+     "reason": "The paper's second API requirement asks for the interface description with its query parameters (found by audit pass A, JC-004).",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/requirements/7",
+        "names": {
+         "id": "JRC-8"
+        }
+       },
+       "target_sha256": "4b37be5052aec8e1ee736daf7655c3af813b5bde6574299971c45da5a4485b84"
+      }
+     ]
+    },
+    {
+     "entry_id": "R6b:jrc-research:JRC-9",
+     "step": "R6b",
+     "decision": "row_noted",
+     "value": {
+      "fields": []
+     },
+     "reason": "Reproducibility and usage tracking are two purposes of one provenance need, so one atom.",
+     "reason_status": "recorded",
+     "actors": [
+      {
+       "actor": "model:claude/merge",
+       "model_id": null,
+       "model_id_status": "not_recorded"
+      }
+     ],
+     "prompt": {
+      "status": "not_applicable"
+     },
+     "script": {
+      "status": "not_recorded"
+     },
+     "inputs": [],
+     "outputs": [],
+     "date": null,
+     "date_status": "not_recorded",
+     "links": [
+      {
+       "label": "row",
+       "kind": "row",
+       "file": "benchmark-data/reference-sets-v3/jrc-research.json",
+       "git_ref": "ref-trace-baseline",
+       "hash_time": "import",
+       "file_sha256": "fd4967b5ec05e0d06f051e68aaca7f0972717f421644ca3288d01892fdff4cd5",
+       "locator": {
+        "json_pointer": "/requirements/8",
+        "names": {
+         "id": "JRC-9"
+        }
+       },
+       "target_sha256": "c3329d412888e959d47dbe4ecab21f3b95e43f2a7e3a6990d58cca1f12493f3f"
+      }
+     ]
+    }
+   ],
+   "actor": "model:claude/backfill",
+   "signoff": "pending"
+  }
+ ]
+}

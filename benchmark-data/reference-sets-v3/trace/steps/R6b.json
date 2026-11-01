@@ -1,0 +1,107 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "R6b",
+ "name": "v3 merge",
+ "time_order": "22 Oct, after R5 and R6a",
+ "actors": [
+  {
+   "actor": "model:claude/merge",
+   "model_id": null,
+   "model_id_status": "not_recorded"
+  }
+ ],
+ "session": null,
+ "session_note": "historical step: no session record; the backfill session is in written_by",
+ "scripts": [
+  {
+   "path": "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py",
+   "sha256": "25ca9f805ede0ffdda6bfd57a0ae6d3060bce0d5e1a84293e3852e0622cfca09",
+   "hash_time": "import",
+   "rerunnable": "no",
+   "postdates_step": "yes",
+   "reason": "imports the 23 Oct adjudication; placeholder paths"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "benchmark-data/reference-sets-v3/healthdcat.json",
+   "sha256": "6dad28df091cc4e84c6d0596ff7e8b71c76f6dcf002d5cd68efb3ea56139d319",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/README.md",
+   "sha256": "db7f8aae0fe4dfb0b35b4f67a2842703710b1e20bcde05cafcc3a58ae92f4cf3",
+   "hash_time": "import",
+   "stored": "yes"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/geodcat.json",
+   "sha256": "0a03ba689cf030fed1fbad312735a257f15187ae14baed3916d8c076dff136b3",
+   "hash_time": "import",
+   "stored": "yes"
+  }
+ ],
+ "outputs": [],
+ "timing": {
+  "run_started": "2026-10-22",
+  "run_ended": null,
+  "timing_status": "date only",
+  "run_by": "model:claude/merge"
+ },
+ "seeds": {},
+ "counts": {
+  "entries": 16,
+  "facts": 7
+ },
+ "decision_values": [
+  "row_added_in_merge",
+  "row_changed",
+  "row_noted"
+ ],
+ "rationale_location": "backfill/R6b.json (facts with reason fields); spec section 2",
+ "evidence": [
+  "benchmark-data/reference-sets-v3/README.md:61-69",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py:121-121",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py:13-13",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py:379-382",
+  "benchmark-data/reference-sets-v3/history/build-scripts/v3/build_v3.py:437-439"
+ ],
+ "facts": [
+  "R6b-F01",
+  "R6b-F02",
+  "R6b-F03",
+  "R6b-F04",
+  "R6b-F05",
+  "R6b-F06",
+  "R6b-E"
+ ],
+ "gaps": [
+  "G-024",
+  "G-025",
+  "G-026",
+  "G-027",
+  "G-028"
+ ],
+ "written_by": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "bb4ae342588d7022ac421a942673cf831387cc496021df140f39e1d447195ac2",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-01T12:49:27.396Z",
+  "actor": "model:claude/backfill"
+ },
+ "manifest_sha256": "6272794ece1c18215601d42cdd0cf8d1096b2fa5678e24bea9c906aca97962ab"
+}
