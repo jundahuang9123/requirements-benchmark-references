@@ -51,4 +51,4 @@ When a review decides a rule that an earlier batch did not follow, the batch rec
 
 Batch 2b also corrects JRC-8.2 from batch 1 to the content rule: "Users and software agents can know …" became "Users can know …, so software agents can use it directly."
 
-The supplement and Appendix A print the statements. They are regenerated once all batches are applied.
+All 320 atoms are in standard form. The supplement, Appendix A and Table 2 were regenerated after batch 4 with plain `python3 make_tables.py`; Table 2 did not change.

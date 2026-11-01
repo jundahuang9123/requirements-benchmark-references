@@ -9,6 +9,7 @@ See [anonymous export instructions](ANONYMIZATION.md) to create a history-free c
 ## Start here
 
 - [Merged reference sets v3](benchmark-data/reference-sets-v3/README.md): reference sets, atomic scoring units, source anchors and evidence labels.
+- [Standard form of the atom statements](benchmark-data/reference-sets-v3/standard-form/README.md) and [atom types](benchmark-data/reference-sets-v3/ATOM-TYPES.md): how every atom is worded, how its type (content, profile, system) was assigned, and the owner's review of each batch.
 - [Corpus guide](benchmark-data/README.md) and [methodology](benchmark-data/BENCHMARK-METHODOLOGY.md).
 - [Review and provisional adjudication](benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md).
 - [Supplement tables and PDF](benchmark-data/reference-sets-v3/supplement/README.md).

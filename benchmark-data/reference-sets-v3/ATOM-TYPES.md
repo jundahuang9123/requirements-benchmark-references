@@ -2,7 +2,15 @@
 
 Every atom has a type in the field `stratum`: content, profile or system. Only content atoms can be scored (`scored_by_default`). This file records where the types come from and who assigned them. A fact that was never recorded is marked "not recorded".
 
-## Definitions the labels follow
+## Definitions
+
+- **Content requirement:** information a catalogue record should carry. *(citation needed)*
+- **Profile requirement:** how the profile is specified: its principles, scope, reuse of and alignment with other vocabularies, obligation levels, code lists and documentation. *(citation needed)*
+- **System requirement:** the systems and processes around the profile: governance and maintenance, validation, interfaces, exchange and review. *(citation needed)*
+
+These are the definitions the labels follow, written out from the coding scheme below. No published work defines these three types; the related work found so far is under Literature, and a citation is still to be chosen.
+
+## Where the definitions come from
 
 The three types were defined in the coding scheme of the 75 published rows, `history/build-scripts/v2/codes.py:4-6`:
 

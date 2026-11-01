@@ -30,7 +30,8 @@ Version 3 merges three sources into one reference set per case:
 
 ## Key atom fields
 
-- `stratum`: content (information a catalogue record should carry), profile (how the profile is specified: principles, scope, reuse and alignment, obligation levels, code lists, documentation) or system (systems and processes around the profile: governance and maintenance, validation, interfaces, exchange, review). Find/access relevance and input support are recorded separately. Only content atoms are scored by default (`scored_by_default`: content, not deferred, not merged, not an umbrella). The pipeline's unit, the need, corresponds to a content atom.
+- `stratum`: content (information a catalogue record should carry), profile (how the profile is specified: principles, scope, reuse and alignment, obligation levels, code lists, documentation) or system (systems and processes around the profile: governance and maintenance, validation, interfaces, exchange, review). Citation needed for these definitions; how each atom's type was assigned is recorded in [ATOM-TYPES.md](ATOM-TYPES.md). Find/access relevance and input support are recorded separately. Only content atoms are scored by default (`scored_by_default`: content, not deferred, not merged, not an umbrella). The pipeline's unit, the need, corresponds to a content atom.
+- `statement`: the atom's requirement in the standard form of [standard-form/README.md](standard-form/README.md): "Users can …" for content atoms, "The profile …" for profile atoms, the system or role the source names for system atoms. The earlier wording is in `statement_before_standard`; the parts of the sentence, the flag and the review decision are in `standard_form`.
 - `status_in_source`: requirement, proposed, deferred, open_issue or guidance.
 - `modality`: the source's own obligation wording where known. For Mobility this is the Table 1 importance and modal verb.
 - `relation_to_base`: restates_base, tightens_base, extends_base, partly_base, beyond_base, not_term_level or unresolved, measured against the DCAT-AP version the case cites. `restates_dcat_ap` is true exactly when this is restates_base.
@@ -143,3 +144,8 @@ From the repository root:
 ```sh
 python3 benchmark-data/reference-sets-v3/validate_v3.py
 ```
+
+## Standard form and atom types (1 November 2026)
+
+- [standard-form/README.md](standard-form/README.md): every atom statement is written in one standard form ("Users can …" for content, "The profile …" for profile, the system or role the source names for system), decided by the owner batch by batch. The batch records keep each atom's earlier statement, the proposed sentence and the owner's decision; `tools/standard_form/apply.py` applies them and changes no label, anchor or scored flag.
+- [ATOM-TYPES.md](ATOM-TYPES.md): the definitions of the three atom types (citation needed), how each atom's type was assigned, and related literature.
