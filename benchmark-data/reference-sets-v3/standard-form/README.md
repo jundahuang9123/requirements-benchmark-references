@@ -4,6 +4,8 @@ Every atom's `statement` is written in one standard form. A run's needs and the 
 
 ## Patterns
 
+The type of an atom (`stratum`) and how it was assigned are recorded in [ATOM-TYPES.md](../ATOM-TYPES.md).
+
 | Stratum | Pattern | Subject |
 |---|---|---|
 | content | `Users can <verb> <information> …` | users, always: anyone who uses the catalogue or its metadata, people or software, aggregators included |
