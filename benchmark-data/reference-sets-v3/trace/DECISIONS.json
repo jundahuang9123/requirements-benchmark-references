@@ -5,7 +5,7 @@
  "status": "recorded",
  "source": {
   "label": "the owner's reply in the references session, read against the session's Phase 0 recommendations",
-  "sha256": "ed7da365d6cfaf2d370737831bc85e7aebb966e9c6d78e383ec4361476cb897a",
+  "sha256": "6847621519896430ba63702e250227fc458af638eba0455afd8c692026dccd29",
   "location": "outside the repository"
  },
  "decisions": [

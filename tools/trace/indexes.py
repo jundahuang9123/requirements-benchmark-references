@@ -131,7 +131,7 @@ def prompts():
     for k, b in enumerate(prompt_blocks(LB_PROMPTS), start=1):
         items.append(dict(b, prompt_id=f'P-R10-{k}', step='R10', file=LB_PROMPTS))
     return {'note': 'Prompt texts as stored: verbatim except the sanitising substitutions of the second commit '
-                    '(container paths to workspace/, "PR #45" to "audit pass A").',
+                    '(container paths to workspace/, the upstream pull-request label to "audit pass A").',
             'files': {IC_PROMPT: sha256_file(IC_PROMPT), LB_PROMPTS: sha256_file(LB_PROMPTS)}, 'items': items}
 
 

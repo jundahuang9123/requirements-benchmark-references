@@ -8,7 +8,7 @@
   "meta_sha256": "72776c7f8d7a2971b85084c86eaade224fcebd0bae3ee2034a9e722f2195605a",
   "actor": "model:claude/backfill",
   "model_id": "claude-opus-5-5",
-  "written_at": "2026-11-01T12:43:25Z"
+  "written_at": "2026-11-01T14:20:38Z"
  },
  "facts": [
   {
@@ -229,7 +229,7 @@
      "kind": "row",
      "file": "benchmark-data/reference-sets-v3/trace/DECISIONS.json",
      "hash_time": "now",
-     "file_sha256": "0b628e3c0d20367767c49985f965999fe76ead4c12cebdaa6f32eea37c2cdaa6",
+     "file_sha256": "c566ede04dedb20e4e8ad520a22f3730684d0eec4a3169dc77bbfadecbf0c856",
      "locator": {
       "json_pointer": "/decisions/2",
       "names": {

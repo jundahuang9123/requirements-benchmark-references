@@ -1,5 +1,5 @@
 {
- "note": "Prompt texts as stored: verbatim except the sanitising substitutions of the second commit (container paths to workspace/, \"PR #45\" to \"audit pass A\").",
+ "note": "Prompt texts as stored: verbatim except the sanitising substitutions of the second commit (container paths to workspace/, the upstream pull-request label to \"audit pass A\").",
  "files": {
   "benchmark-data/reference-sets-v3/history/independent-check/independent-check-prompt.md": "95d0bfc30c920367aed849e8632e2565819fc37ca260b3b340c3642c48a45d79",
   "benchmark-data/reference-sets-v3/history/labelling/labelling-prompts.md": "d80bb3bceb044f1197ff3794b5928af69b054da879ffa4883df1d0fbba97e57e"
