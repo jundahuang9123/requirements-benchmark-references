@@ -1,0 +1,100 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "M11",
+ "name": "Refresh files_sha256 in IMPORT-PROVENANCE.json",
+ "time_order": "after the step whose files it covers; see reason",
+ "actors": [
+  {
+   "actor": "script:tools/trace/refresh_hashes.py#a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189"
+  },
+  {
+   "actor": "model:claude/manifest-refresh",
+   "role": "ran the script"
+  }
+ ],
+ "session": {
+  "model_id": "claude-opus-5-5",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "6847621519896430ba63702e250227fc458af638eba0455afd8c692026dccd29",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.316 (Claude Code)"
+  },
+  "transcript_sha256": "8fd984f12eb82af7794e6d55b4fb8b2255beb444c0396d5cf2641a453d1c9c12",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-02T10:43:29.459Z"
+ },
+ "scripts": [
+  {
+   "path": "tools/trace/refresh_hashes.py",
+   "sha256": "a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/trace/common.py",
+   "sha256": "ce04c1e3351f6f1532476b1c479545209cc48bc6c1055279ed3e20cd271fe21b",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "4041dbdbcff23fc82d12b44a978a05c62013c3740c42867ce075a0e925f14eee",
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 286
+  }
+ ],
+ "outputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": null,
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 287,
+   "note": "Written after this manifest and containing its hash, so its own hash cannot be recorded here; tools/export_anonymous.py checks every entry."
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-02T10:43:23.835Z",
+  "run_ended": "2026-11-02T10:43:29.459Z",
+  "run_by": "model:claude/manifest-refresh"
+ },
+ "seeds": {},
+ "counts": {
+  "in": 286,
+  "out": 287,
+  "changed": 6
+ },
+ "decision_values": [
+  "entry_added",
+  "entry_changed",
+  "entry_removed"
+ ],
+ "rationale_location": "reason below",
+ "reason": "Tables call the stratum the atom's type; ATOM-TYPES.md literature extended (DCMI guidelines, W3C Profiles Vocabulary, Glinz)",
+ "entries_added": {},
+ "entries_changed": {
+  "benchmark-data/reference-sets-v3/ATOM-TYPES.md": "280dd3f4ea45a8789f2b74e88db12745bfa167741779d91b739fd4a7eab8ed32",
+  "benchmark-data/reference-sets-v3/supplement/make_tables.py": "d2d1bf7d3a9fa3c33ce444f1b006ff51485f44abecbdb351e998206e998aff08",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.pdf": "d975aa66c72bd0b6f2173a0dc8978e910a5e254378ffbf9726213bd035c62ce5",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.tex": "ee71258930432a94bb35571e990b8f6d9ceee24c9b786051dfab0cfee0f3d8de",
+  "benchmark-data/reference-sets-v3/supplement/table-benchmark.tex": "cb7d3f1a1a680b917aa6eb0c4b1b57f4e40a2990e7a4959d3b4c237a9e848284"
+ },
+ "entries_removed": [],
+ "own_entry": "added to IMPORT-PROVENANCE.json after this manifest was written",
+ "evidence": [
+  "tools/export_anonymous.py:60-65"
+ ],
+ "gaps": [],
+ "manifest_sha256": "38f4ff4b33ef0892cc4d6068e4d6379954ff67cb82ba1c8d24a4dbc97a2de083"
+}
