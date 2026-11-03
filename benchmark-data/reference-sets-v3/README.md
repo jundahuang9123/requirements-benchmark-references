@@ -38,7 +38,7 @@ Version 3 merges three sources into one reference set per case:
 - `reuse_or_alignment_rule`: reuse and alignment rules (RQ2 scope).
 - `derived_from`: where the reference document says the requirement comes from (for Mobility, the Source column of Table 1, with contributor and perspective on the row).
 - `anchor_quote`, `anchor_check`, `anchor_page`: the reference passage. It is machine-checked for Health, Stat and Geo, with the PDF page where it starts. JRC and Mobility quotes come from the live documents via WebFetch.
-- `input_evidence`: whether the case's staged runtime inputs support the atom, given separately for `raw` and, where the case has them, `consolidation` inputs. Each has a label (supported, partial, uncertain or unsupported), the input passages (path, locator, verbatim quote, `quote_check`) and a rationale.
+- `input_evidence`: whether the case's staged runtime inputs support the atom, given separately for `raw` and, where the case has them, `consolidation` inputs. Each has a label (supported, partial, uncertain or unsupported), the input passages (path, locator, verbatim quote, `quote_check`) and a rationale. `human_review` holds the adjudicated labels for the scored atoms (see the 3 November 2026 section below) and `"pending"` for the others.
 - `overlaps`: atoms that state closely related needs. Under one-to-one matching, a prediction can be credited to only one of them. `overlap_review` classifies each pair (equivalent, subsumes, subsumed_by, related) and records the decision.
 - `merged_into` / `merged_from`: an atom equivalent to an atom of another row is scored once, through the canonical atom (`scoring_unit_rows` lists both rows).
 - `umbrella_of`: an atom that only bundles separately scored atoms; not scored by default.
@@ -144,6 +144,12 @@ From the repository root:
 ```sh
 python3 benchmark-data/reference-sets-v3/validate_v3.py
 ```
+
+## Evidence labels adjudicated (3 November 2026)
+
+- `input_evidence.human_review` of every scored atom is now an object: `label` (raw or consolidation corpus states the atom), `raw_label`, `consolidation_label`, the two reviews' labels, the kind of difference, the owner's decision and the record. The 22 October AI blocks `raw` and `consolidation` are unchanged. The 124 unscored atoms keep `"pending"`.
+- Method, rules and counts: [evidence-review/README.md](evidence-review/README.md); record: `evidence-review/adjudication-2026-11-03.json`; applied by `tools/evidence_review/apply.py`. Counts: `counts.reviewed_*`.
+- Table 2 "Stated" and the Raw / Cons. columns of Appendix A and the supplement now show the adjudicated labels (raw corpus: 128 stated, 187 at least in part; with the pre-consolidation corpus: 137, 187).
 
 ## Standard form and atom types (1 November 2026)
 

@@ -89,7 +89,24 @@
   },
   "scored_by_default_raw_supported": 6,
   "scored_by_default_raw_supported_or_partial": 12,
-  "atoms_with_overlaps": 6
+  "atoms_with_overlaps": 6,
+  "reviewed_evidence_labels": {
+   "supported": 4,
+   "partial": 12,
+   "unsupported": 1,
+   "uncertain": 0
+  },
+  "reviewed_raw_evidence_labels": {
+   "supported": 4,
+   "partial": 12,
+   "unsupported": 1,
+   "uncertain": 0
+  },
+  "scored_by_default_reviewed": 17,
+  "scored_by_default_reviewed_supported": 4,
+  "scored_by_default_reviewed_supported_or_partial": 16,
+  "scored_by_default_reviewed_raw_supported": 4,
+  "scored_by_default_reviewed_raw_supported_or_partial": 16
  },
  "requirements": [
   {
@@ -436,7 +453,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "supported",
+     "raw_label": "supported",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "supported",
+     "category": "rule 2: bare mention",
+     "decision": "Owner 3 Nov: agree with Astra, bare mention suffices",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    },
    "overlap_review": [
     {
@@ -527,7 +556,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "supported",
+     "raw_label": "supported",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "supported",
+     "category": "judgment",
+     "decision": "Owner 3 Nov: Supported where Claude held",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    },
    "overlap_review": [
     {
@@ -610,7 +651,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    }
   },
   {
@@ -685,7 +738,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    }
   },
   {
@@ -760,7 +825,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    }
   },
   {
@@ -840,7 +917,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    }
   },
   {
@@ -914,7 +1003,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    }
   },
   {
@@ -996,7 +1097,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "supported",
+     "raw_label": "supported",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "supported",
+     "category": "rule 2: bare mention",
+     "decision": "Owner 3 Nov: agree with Astra, bare mention suffices",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    },
    "overlap_review": [
     {
@@ -1084,7 +1197,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "supported",
+     "raw_label": "supported",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "supported",
+     "category": "judgment",
+     "decision": "Owner 3 Nov: Claude's concession to Astra accepted",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    },
    "status_in_source_before_adjudication": "open_issue",
    "adjudication": [
@@ -1179,7 +1304,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    }
   },
   {
@@ -1261,7 +1398,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    },
    "overlap_review": [
     {
@@ -1348,7 +1497,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    }
   },
   {
@@ -1433,7 +1594,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    },
    "adjudication": [
     {
@@ -1522,7 +1695,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    },
    "overlap_review": [
     {
@@ -1615,7 +1800,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    },
    "adjudication": [
     {
@@ -1702,7 +1899,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude subagents working only from the staged inputs (separate from the curation pass), 2026-10-22; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "partial",
+     "raw_label": "partial",
+     "consolidation_label": null,
+     "review_claude_blind": "partial",
+     "review_astra_raw": "partial",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    }
   },
   {
@@ -1769,7 +1978,19 @@
     },
     "consolidation": null,
     "labelled_by": "Claude, adjudication follow-up 2026-10-23, from the staged inputs; not blind to the reference; quotes machine-checked; not human-reviewed",
-    "human_review": "pending"
+    "human_review": {
+     "status": "adjudicated",
+     "date": "2026-11-03",
+     "label": "unsupported",
+     "raw_label": "unsupported",
+     "consolidation_label": null,
+     "review_claude_blind": "unsupported",
+     "review_astra_raw": "unsupported",
+     "category": "agreed",
+     "decision": "Claude and Astra agree; accepted by the owner on 3 Nov after skimming all 196 rows.",
+     "decided_by": "human:curator",
+     "record": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json"
+    }
    },
    "adjudication": [
     {

@@ -24,7 +24,7 @@
 
 This table lists every row and atom of the five reference sets (version 3). Rows are the published reference rows and rows added from the same reference document (marked $^{\dagger}$); each row is followed by its atoms, the scoring units. Row statements are curator paraphrases. Atom statements are written in one standard form: a content atom says what users can know, find, access, cite or use (\emph{Users can \dots}), a profile atom what the profile does (\emph{The profile \dots}), and a system atom names the system or role the source names. The reference documents' own wording is cited in the benchmark files. A provisional adjudication of reviewed items was applied on 23 October 2026: one duplicate merged, one umbrella atom left out of scoring, two compound atoms split, three evidence labels downgraded and one omitted need restored; each change is logged in the benchmark files.
 
-\paragraph{Columns.} \emph{Type}: content (c), information a catalog record should carry; profile (p), how the profile is specified (principles, scope, reuse and alignment, obligation levels, code lists, documentation); or system (s), the systems and processes around the profile (governance and maintenance, validation, interfaces, exchange, review)\citeneeded. Only content atoms are scored. \emph{Status} in the source: requirement (req.), proposal (prop.), open issue (open), guidance (guid.) or deferred to future work (def.). \emph{Base}: relation to the pinned \dcatap\ release: restates, tightens, extends, partly covered by, or beyond the base; -- for atoms that are not about metadata terms, ? if unresolved. \emph{Raw} and \emph{Cons.}: whether the raw corpus and, for mobilityDCAT-AP and HealthDCAT-AP, the pre-consolidation corpus state the atom: S stated, P in part, U uncertain, N not stated, -- no such corpus. These are AI labels with verbatim quotations checked by program; human review is pending. \emph{Sc.}: scored by default (\checkmark); m merged into an equivalent atom of another row (\req{Req-24.1} into \req{Req-19.7}); u an umbrella of separately scored atoms (\req{H-4.1} of \req{H-16.1}, \req{H-26.1}, \req{H-28.1}, \req{H-36.1}, \req{H-66.2}).
+\paragraph{Columns.} \emph{Type}: content (c), information a catalog record should carry; profile (p), how the profile is specified (principles, scope, reuse and alignment, obligation levels, code lists, documentation); or system (s), the systems and processes around the profile (governance and maintenance, validation, interfaces, exchange, review)\citeneeded. Only content atoms are scored. \emph{Status} in the source: requirement (req.), proposal (prop.), open issue (open), guidance (guid.) or deferred to future work (def.). \emph{Base}: relation to the pinned \dcatap\ release: restates, tightens, extends, partly covered by, or beyond the base; -- for atoms that are not about metadata terms, ? if unresolved. \emph{Raw} and \emph{Cons.}: whether the raw corpus and, for mobilityDCAT-AP and HealthDCAT-AP, the pre-consolidation corpus state the atom: S stated, P in part, U uncertain, N not stated, -- no such corpus. Labels proposed by AI with verbatim quotations checked by program (22 Oct 2026), reviewed independently by two AI annotators and adjudicated by the curator (3 Nov 2026; see evidence-review/adjudication-2026-11-03.json). \emph{Sc.}: scored by default (\checkmark); m merged into an equivalent atom of another row (\req{Req-24.1} into \req{Req-19.7}); u an umbrella of separately scored atoms (\req{H-4.1} of \req{H-16.1}, \req{H-26.1}, \req{H-28.1}, \req{H-36.1}, \req{H-66.2}).
 
 {\scriptsize\setlength{\tabcolsep}{3pt}
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.3cm}>{\raggedright\arraybackslash}p{5.5cm}cllccc@{}}
@@ -39,7 +39,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \bottomrule
 \endlastfoot
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{mobilityDCAT-AP}\quad\footnotesize NAPCORE requirement analysis (2022), Table~1; base \dcatap\ 2.0.1; inspected during development: outputs}\\*
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{40 rows (40 published), 98 atoms, 39 scored (39 requirements), 7 restate the base, 31 stated (37 at least in part); pre-consolidation corpus: 38 (39)}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{40 rows (40 published), 98 atoms, 39 scored (39 requirements), 7 restate the base, 30 stated (39 at least in part); pre-consolidation corpus: 38 (39)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-1}}\enspace Use sufficiently expressive, context-aware and modular descriptions with explicit structure, types and rules; distinguish entity identities, preserve references, and support persistent identifiers.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
 \req{Req-1.1} & The profile makes metadata descriptions expressive. & p & req. & -- & S & S & \\
@@ -128,7 +128,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{Req-19.4} & Users can know the dataset type category, by logical clustering or by the EC Delegated Regulations. & c & req. & beyond & S & S & \checkmark\\
 \req{Req-19.5} & Users can know the service type category listed in Delegated Regulation (EU) 2017/1926. & c & req. & beyond & P & P & \checkmark\\
 \req{Req-19.6} & Users can know the language of a resource. & c & req. & restates & S & S & \checkmark\\
-\req{Req-19.7} & Users can know the georeferencing method applied within the payload. & c & req. & beyond & S & S & \checkmark\\
+\req{Req-19.7} & Users can know the georeferencing method applied within the payload. & c & req. & beyond & P & S & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-20}}\enspace Indicate which ITS delegated regulations apply to a resource.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
 \req{Req-20.1} & Users can know which Delegated Regulation (MMTIS, RTTI, SRTI, SSTP) covers a dataset or service. & c & req. & beyond & P & S & \checkmark\\
@@ -177,8 +177,8 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-30}}\enspace Distinguish precise data-model versions, publication types and extensions, such as those used in DATEX II, for discovery.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
 \req{Req-30.1} & Users can know precisely the version of the data model a dataset adopts (e.g. the DATEX II version), to allow better searching. & c & req. & beyond & P & S & \checkmark\\
-\req{Req-30.2} & Users can know the publication type of the data model a dataset adopts (e.g. the DATEX II publication type), to allow better searching. & c & req. & beyond & U & S & \checkmark\\
-\req{Req-30.3} & Users can know the extensions of the data model a dataset adopts (e.g. DATEX II extensions), to allow better searching. & c & req. & beyond & U & S & \checkmark\\
+\req{Req-30.2} & Users can know the publication type of the data model a dataset adopts (e.g. the DATEX II publication type), to allow better searching. & c & req. & beyond & P & S & \checkmark\\
+\req{Req-30.3} & Users can know the extensions of the data model a dataset adopts (e.g. DATEX II extensions), to allow better searching. & c & req. & beyond & P & S & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-31}}\enspace Record update cadence, quality criteria and the history and status of ITS-regulation compliance assessments.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
 \req{Req-31.1} & Users can know the update rate of a dataset. & c & req. & tightens & S & S & \checkmark\\
@@ -373,7 +373,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{HealthDCAT-AP}\quad\footnotesize HealthData@EU Pilot D6.2 (2024); base \dcatap\ 3.0.0; inspected during development: reference}\\*
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{69 rows (16 published), 121 atoms, 89 scored (51 requirements), 13 restate the base, 59 stated (84 at least in part); pre-consolidation corpus: 5 (22)}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{69 rows (16 published), 121 atoms, 89 scored (51 requirements), 13 restate the base, 53 stated (85 at least in part); pre-consolidation corpus: 5 (22)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-1}}\enspace Use stable, resolvable identifiers so metadata records and their relationships remain reliably identifiable across catalogues.\enspace\textit{(D6.2 §5.2.1.1)}}\\*
 \req{H-1.1} & Users can access each dataset's metadata record through a persistent, dereferenceable identifier (an HTTP URI). & c & req. & tightens & P & P & \checkmark\\
@@ -428,7 +428,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{H-11.6} & Users can know the code lists of a dataset, described in a publicly available and consistent manner, where available. & c & req. & beyond & S & N & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-12}}\enspace Describe logical dataset subdivisions and their relationships where large holdings need to be partitioned.\enspace\textit{(D6.2 §5.2.6.2)}}\\*
-\req{H-12.1} & Users can know the coherent logical ('virtual') datasets within a large data warehouse, each with its own metadata record. & c & req. & restates & U & U & \checkmark\\
+\req{H-12.1} & Users can know the coherent logical ('virtual') datasets within a large data warehouse, each with its own metadata record. & c & req. & restates & P & U & \checkmark\\
 \req{H-12.2} & Users can know how a data source breaks down into collections and datasets, from the dataset descriptions. & c & def. & ? & P & U & \\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-13}}\enspace State intellectual-property and reuse conditions, including those on sample distributions.\enspace\textit{(D6.2 §5.2.6.3)}}\\*
@@ -468,13 +468,13 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{H-20.2} & Users can access a public dataset through an access URL or download link, and a non-public dataset through the landing page of the health data access body or equivalent authority. & c & prop. & tightens & P & N & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-21}}$^{\dagger}$\enspace Name a contact point for every dataset, so users can ask about it without working out whom to contact.\enspace\textit{(D6.2 §5.3.1.3 (Contact point))}}\\*
-\req{H-21.1} & Users can know the contact point of every dataset, which acts as its helpdesk. & c & prop. & tightens & S & N & \checkmark\\
+\req{H-21.1} & Users can know the contact point of every dataset, which acts as its helpdesk. & c & prop. & tightens & P & N & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-22}}$^{\dagger}$\enspace Identify the health data access body that acts as the access gateway for a non-public or personal dataset.\enspace\textit{(D6.2 §5.3.1.3 (Health data access body))}}\\*
 \req{H-22.1} & Users can know the health data access body that acts as access gateway for every dataset with personal or non-public data. & c & prop. & beyond & P & N & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-23}}$^{\dagger}$\enspace Indicate whether a dataset contains personal data.\enspace\textit{(D6.2 §5.3.1.3 (Data type); §5.3.1.4)}}\\*
-\req{H-23.1} & Users can know whether a dataset contains personal or non-personal data (data type). & c & prop. & extends & S & U & \checkmark\\
+\req{H-23.1} & Users can know whether a dataset contains personal or non-personal data (data type). & c & prop. & extends & P & U & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-24}}$^{\dagger}$\enspace Give each dataset's geographical coverage, preferably from controlled vocabularies, as a filter for populations.\enspace\textit{(D6.2 §5.3.1.3 (Geographical coverage))}}\\*
 \req{H-24.1} & Users can filter datasets by their geographical coverage, when considering populations. & c & prop. & tightens & S & P & \checkmark\\
@@ -486,7 +486,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{H-26.1} & Users can know a dataset's lineage: how it was created and modified, and by whom. & c & prop. & tightens & S & S & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-27}}$^{\dagger}$\enspace Identify the publisher as the data holder accountable for making the dataset accessible.\enspace\textit{(D6.2 §5.3.1.3 (Publisher))}}\\*
-\req{H-27.1} & Users can know the publisher of a dataset, as the data holder accountable for making it accessible. & c & prop. & tightens & S & N & \checkmark\\
+\req{H-27.1} & Users can know the publisher of a dataset, as the data holder accountable for making it accessible. & c & prop. & tightens & P & N & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-28}}$^{\dagger}$\enspace Describe the nature and type of the data holder as context for judging a dataset's credibility.\enspace\textit{(D6.2 §5.3.1.3 (Publisher note; Publisher type))}}\\*
 \req{H-28.1} & Users can know the nature of the data holder, as context for judging the credibility of the dataset. & c & prop. & beyond & P & N & \checkmark\\
@@ -507,7 +507,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{H-32.2} & Users can find the resources related to a dataset. & c & prop. & tightens & S & N & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-33}}$^{\dagger}$\enspace Identify the datasets a dataset was derived from, and let datasets derived from it refer back to it.\enspace\textit{(D6.2 §5.3.1.3 (Source); §6.1)}}\\*
-\req{H-33.1} & Users can know the datasets a dataset was derived from; research datasets derived from a health dataset cite its metadata identifier. & c & prop. & tightens & S & U & \checkmark\\
+\req{H-33.1} & Users can know the datasets a dataset was derived from; research datasets derived from a health dataset cite its metadata identifier. & c & prop. & tightens & P & U & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-34}}$^{\dagger}$\enspace Give a landing page that provides access to the dataset and further information.\enspace\textit{(D6.2 §5.3.1.3 (Landing page))}}\\*
 \req{H-34.1} & Users can access the dataset and further information through a landing page. & c & prop. & tightens & S & N & \checkmark\\
@@ -520,8 +520,8 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-37}}$^{\dagger}$\enspace State the size of a dataset (number of records, number of unique individuals; byte size of each distribution), so users can judge its value.\enspace\textit{(D6.2 §2.3.1.3 and §5.3.1.2 (DGA Art. 8); §5.3.1.3 (Number of records))}}\\*
 \req{H-37.1} & Users can know the number of records in a dataset. & c & prop. & beyond & S & P & \checkmark\\
-\req{H-37.2} & Users can know the number of unique individuals in a dataset. & c & prop. & beyond & S & P & \checkmark\\
-\req{H-37.3} & Users can know the byte size of each distribution. & c & prop. & tightens & S & U & \checkmark\\
+\req{H-37.2} & Users can know the number of unique individuals in a dataset. & c & prop. & beyond & P & P & \checkmark\\
+\req{H-37.3} & Users can know the byte size of each distribution. & c & prop. & tightens & P & U & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-38}}$^{\dagger}$\enspace Give a dataset's temporal coverage, leaving the end open while collection continues.\enspace\textit{(D6.2 §5.3.1.3 (Temporal coverage))}}\\*
 \req{H-38.1} & Users can know a dataset's temporal coverage, with the end left open while collection continues. & c & prop. & restates & S & N & \checkmark\\
@@ -548,7 +548,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{H-44.1} & Users can know which application profile a metadata record follows, so aggregators can validate it. & c & req. & restates & S & U & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-45}}$^{\dagger}$\enspace Indicate whether a dataset's holder is a trusted data holder, as a search facet.\enspace\textit{(D6.2 §5.2.3 (facet list))}}\\*
-\req{H-45.1} & Users can filter datasets by whether their holder is a trusted data holder, in a search facet. & c & prop. & beyond & U & U & \checkmark\\
+\req{H-45.1} & Users can filter datasets by whether their holder is a trusted data holder, in a search facet. & c & prop. & beyond & N & U & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-46}}$^{\dagger}$\enspace Provide the information the EHDS data quality and utility label needs: documentation, maturity of quality management, coverage, access and provision times, and data modifications.\enspace\textit{(D6.2 §5.2.8 (quoting EHDS Art. 56))}}\\*
 \req{H-46.1} & Users can know, for the EHDS data quality and utility label, how representative the sampled population is, when applicable. & c & req. & beyond & S & P & \checkmark\\
@@ -636,7 +636,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{StatDCAT-AP}\quad\footnotesize StatDCAT-AP 1.0.0 (2016); base \dcatap\ 1.1; inspected during development: reference}\\*
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{22 rows (7 published), 27 atoms, 14 scored (10 requirements), 6 restate the base, 4 stated (8 at least in part)}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{22 rows (7 published), 27 atoms, 14 scored (10 requirements), 6 restate the base, 4 stated (10 at least in part)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-1}}\enspace Expose the dimensions that distinguish observations, including time and demographic or regional dimensions.\enspace\textit{(StatDCAT-AP 1.0 §7.2.1)}}\\*
 \req{S-1.1} & Users can know the dimensions that identify observations in a statistical dataset (e.g. time, sex, age, region), described the same way whatever the distribution format. & c & req. & beyond & P & -- & \checkmark\\
@@ -650,7 +650,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{S-3.3} & Users can know the quality information, as text or as a link to quality information published elsewhere. & c & req. & beyond & N & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-4}}\enspace Identify delivery resources that present dataset visualisations.\enspace\textit{(StatDCAT-AP 1.0 §7.2.3)}}\\*
-\req{S-4.1} & Users can access visualisations of the data (tables, graphs or interactive views). & c & req. & extends & N & -- & \checkmark\\
+\req{S-4.1} & Users can access visualisations of the data (tables, graphs or interactive views). & c & req. & extends & P & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-5}}\enspace Indicate the actual number of statistical series represented in a dataset.\enspace\textit{(StatDCAT-AP 1.0 §7.2.4)}}\\*
 \req{S-5.1} & Users can know the actual number of data series in a dataset, as distinct from the number of observations and the theoretical number of combinations. & c & req. & beyond & N & -- & \checkmark\\
@@ -661,7 +661,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-7}}\enspace Represent time-series coverage and periodicity without relying on an ambiguous shorthand.\enspace\textit{(StatDCAT-AP 1.0 §7.2.6)}}\\*
 \req{S-7.1} & Users can know the start of the period a time series covers. & c & guid. & restates & S & -- & \checkmark\\
 \req{S-7.2} & Users can know the end of the period a time series covers. & c & guid. & restates & S & -- & \checkmark\\
-\req{S-7.3} & Users can know the periodicity of a time series. & c & guid. & restates & U & -- & \checkmark\\
+\req{S-7.3} & Users can know the periodicity of a time series. & c & guid. & restates & P & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-8}}$^{\dagger}$\enspace Improve the discoverability of statistical datasets on general open data portals.\enspace\textit{(StatDCAT-AP 1.0.0 §2.2 (charter); §5.1)}}\\*
 \req{S-8.1} & The profile improves the discoverability of statistical datasets on general open data portals. & p & req. & -- & S & -- & \\
@@ -711,7 +711,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{DCAT-AP-JRC}\quad\footnotesize Perego et al., SDSVoc 2016, paper 27; base \dcatap\ 1.1; inspected during development: reference}\\*
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{11 rows (5 published), 18 atoms, 17 scored (9 requirements), 4 restate the base, 6 stated (12 at least in part)}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{11 rows (5 published), 18 atoms, 17 scored (9 requirements), 4 restate the base, 4 stated (16 at least in part)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-1}}\enspace Identify the people who created a dataset.\enspace\textit{(Metadata elements relevant for scientific data, numbered item 1)}}\\*
 \req{JRC-1.1} & Users can know the authors of a dataset. & c & req. & beyond & S & -- & \checkmark\\
@@ -720,7 +720,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{JRC-2.1} & Users can know the lineage of a dataset. & c & req. & restates & S & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-3}}\enspace Give prospective users practical guidance on using a dataset.\enspace\textit{(Metadata elements relevant for scientific data, numbered item 3)}}\\*
-\req{JRC-3.1} & Users can know how to use the data of a dataset (usage notes). & c & req. & beyond & U & -- & \checkmark\\
+\req{JRC-3.1} & Users can know how to use the data of a dataset (usage notes). & c & req. & beyond & P & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-4}}\enspace Connect datasets to associated scientific publications.\enspace\textit{(Metadata elements relevant for scientific data, numbered item 4)}}\\*
 \req{JRC-4.1} & Users can find the scientific publications about a dataset. & c & req. & beyond & P & -- & \checkmark\\
@@ -730,24 +730,24 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-6}}$^{\dagger}$\enspace Give datasets persistent identifiers, encoded as HTTP URIs where possible, and tell primary identifiers (e.g. DOIs) from alternative ones.\enspace\textit{(Perego et al. 2016 (SDSVoc paper 27), ``Data citation'', ``Identifiers'')}}\\*
 \req{JRC-6.1} & Users can reliably filter and link datasets by their authors and input data, through persistent identifiers. & c & req. & tightens & P & -- & \checkmark\\
-\req{JRC-6.2} & Users can use identifiers encoded as HTTP URIs, wherever possible. & c & open & tightens & U & -- & \checkmark\\
+\req{JRC-6.2} & Users can use identifiers encoded as HTTP URIs, wherever possible. & c & open & tightens & P & -- & \checkmark\\
 \req{JRC-6.3} & Users can know which of a dataset's identifiers is the primary one (e.g. a DOI) and which are alternative ones. & c & req. & restates & S & -- & \checkmark\\
 \req{JRC-6.4} & Users can cite a dataset by its DOI, when DataCite citations are generated. & c & req. & tightens & S & -- & \checkmark\\
-\req{JRC-6.5} & Users can know the scheme or type of each identifier. & c & req. & restates & S & -- & \checkmark\\
+\req{JRC-6.5} & Users can know the scheme or type of each identifier. & c & req. & restates & P & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-7}}$^{\dagger}$\enspace Express the roles that agents play for a dataset beyond publisher and contact point, consistently across catalogues.\enspace\textit{(Perego et al. 2016 (SDSVoc paper 27), ``Data citation'', ``Agent roles'')}}\\*
 \req{JRC-7.1} & Users can know the roles that agents play for a dataset beyond publisher and contact point, from a minimal, consistent set of unambiguous roles. & c & open & beyond & P & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-8}}$^{\dagger}$\enspace Indicate when a distribution gives access through a service or API rather than to the data itself, and describe the service interface with the query parameters needed to select data.\enspace\textit{(Perego et al. 2016 (SDSVoc paper 27), ``Modelling service/API-based data access'')}}\\*
-\req{JRC-8.1} & Users can know when a distribution points to a service or API rather than directly to the data. & c & open & extends & S & -- & \checkmark\\
+\req{JRC-8.1} & Users can know when a distribution points to a service or API rather than directly to the data. & c & open & extends & P & -- & \checkmark\\
 \req{JRC-8.2} & Users can know the API or service interface and the query parameters needed to select data, so software agents can use it directly. & c & open & beyond & P & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-9}}$^{\dagger}$\enspace Describe provenance in enough detail to support reproducibility and to track how data are used.\enspace\textit{(Perego et al. 2016 (SDSVoc paper 27), ``Additional requirements'' (detailed specification of data provenance))}}\\*
 \req{JRC-9.1} & Users can know the provenance of a dataset in enough detail to support reproducibility and to track how the data are used. & c & open & beyond & P & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-10}}$^{\dagger}$\enspace Describe data and metadata quality assessments and include users' feedback on the data.\enspace\textit{(Perego et al. 2016 (SDSVoc paper 27), ``Additional requirements'' (modelling and using data quality assessments))}}\\*
-\req{JRC-10.1} & Users can know the data quality assessments of a dataset. & c & open & beyond & U & -- & \checkmark\\
-\req{JRC-10.2} & Users can know the feedback users have given on the data, as quality information. & c & open & beyond & U & -- & \checkmark\\
+\req{JRC-10.1} & Users can know the data quality assessments of a dataset. & c & open & beyond & P & -- & \checkmark\\
+\req{JRC-10.2} & Users can know the feedback users have given on the data, as quality information. & c & open & beyond & P & -- & \checkmark\\
 \req{JRC-10.3} & Users can know the quality assessments of the metadata of a dataset. & c & open & beyond & N & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-11}}$^{\dagger}$\enspace Publish metadata on the Web so that the data are visible and discoverable through search engines.\enspace\textit{(Perego et al. 2016 (SDSVoc paper 27), ``Additional requirements'' (optimising metadata publication on the Web))}}\\*
