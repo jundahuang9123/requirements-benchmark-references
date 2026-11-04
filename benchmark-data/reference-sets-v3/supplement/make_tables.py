@@ -2,7 +2,7 @@
 
 Writes
   table-benchmark.tex      Table 2 (summary per case), drop-in replacement in main.tex
-  appendix-test-cases.tex  Appendix A: scored atoms of the two test cases (fits the 2-page appendix)
+  appendix-test-cases.tex  Appendix A: scored atoms of the two cases not inspected against their reference during development (fits the 2-page appendix)
   supplement-reference-requirements.tex  standalone document: every row and atom of all five cases
 """
 import json
@@ -14,12 +14,12 @@ REF = os.environ.get('RQ1_REF', os.path.join(os.path.dirname(os.path.abspath(__f
 COMMIT = os.environ.get('RQ1_REF_COMMIT', 'adjudicated-snapshot')
 OUT = os.path.dirname(os.path.abspath(__file__))
 
-CASES = [  # order of Table 2: test cases first
- ('mobilitydcat', 'mobilityDCAT-AP', 'NAPCORE analysis~\\cite{bures2022napcore} (2022)', 'NAPCORE requirement analysis (2022), Table~1', '13+3', '822', '2.0.1', 'test'),
- ('geodcat', 'GeoDCAT-AP', 'GeoDCAT-AP 1.0~\\cite{geodcatap10} (2015)', 'GeoDCAT-AP 1.0 (2015)', '5', '271', '1.1', 'test'),
- ('healthdcat', 'HealthDCAT-AP', 'HealthData@EU D6.2~\\cite{healthdataeu2024d62} (2024)', 'HealthData@EU Pilot D6.2 (2024)', '3+2', '\\tbd', '3.0.0', 'dev.'),
- ('statdcat', 'StatDCAT-AP', 'StatDCAT-AP 1.0.0~\\cite{statdcatap} (2016)', 'StatDCAT-AP 1.0.0 (2016)', '2', '60', '1.1', 'dev.'),
- ('jrc-research', 'DCAT-AP-JRC', 'Perego et al.~\\cite{perego2016jrc} (2016)', 'Perego et al., SDSVoc 2016, paper 27', '3', '59', '1.1', 'dev.'),
+CASES = [  # order of Table 2: the cases not inspected against their reference during development first; last field: what was inspected during development (outputs, reference, or nothing)
+ ('mobilitydcat', 'mobilityDCAT-AP', 'NAPCORE analysis~\\cite{bures2022napcore} (2022)', 'NAPCORE requirement analysis (2022), Table~1', '13+3', '822', '2.0.1', 'outputs'),
+ ('geodcat', 'GeoDCAT-AP', 'GeoDCAT-AP 1.0~\\cite{geodcatap10} (2015)', 'GeoDCAT-AP 1.0 (2015)', '5', '271', '1.1', 'no'),
+ ('healthdcat', 'HealthDCAT-AP', 'HealthData@EU D6.2~\\cite{healthdataeu2024d62} (2024)', 'HealthData@EU Pilot D6.2 (2024)', '3+2', '\\tbd', '3.0.0', 'reference'),
+ ('statdcat', 'StatDCAT-AP', 'StatDCAT-AP 1.0.0~\\cite{statdcatap} (2016)', 'StatDCAT-AP 1.0.0 (2016)', '2', '60', '1.1', 'reference'),
+ ('jrc-research', 'DCAT-AP-JRC', 'Perego et al.~\\cite{perego2016jrc} (2016)', 'Perego et al., SDSVoc 2016, paper 27', '3', '59', '1.1', 'reference'),
 ]
 LEVEL = {'content': 'c', 'profile': 'p', 'system': 's'}
 STATUS = {'requirement': 'req.', 'proposed': 'prop.', 'open_issue': 'open', 'guidance': 'guid.', 'deferred': 'def.'}
@@ -88,12 +88,12 @@ def table_benchmark():
 % "Stated" uses the raw input-evidence labels of v3: AI labels, human review pending; align Sect. 5 and the
 % Use of Generative AI section with how they were made.
 \\begin{{table}}[t]
-\\caption{{Benchmark cases. Files: evidence files plus base specifications kept as background; units: evidence units; base: the \\dcatap\\ release that the extension's own documents cite. Rows: published reference rows plus rows added from the same document. Atoms: scoring units (content type, not deferred, each need once); of all {tot['atoms']}, {tot['in_base']} restate the base and {tot['atoms'] - tot['settled']} are proposals, open issues or guidance in their source. The case files also hold {out_of_scope['profile']} profile and {out_of_scope['system']} system atoms, outside RQ1's scope. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part).}}
+\\caption{{Benchmark cases. Files: evidence files plus base specifications kept as background; units: evidence units; base: the \\dcatap\\ release that the extension's own documents cite. Rows: published reference rows plus rows added from the same document. Atoms: scoring units (content type, not deferred, each need once); of all {tot['atoms']}, {tot['in_base']} restate the base and {tot['atoms'] - tot['settled']} are proposals, open issues or guidance in their source. The case files also hold {out_of_scope['profile']} profile and {out_of_scope['system']} system atoms, outside RQ1's scope. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part). Inspected: what was looked at during development, the workflow's outputs, its outputs against the reference, or nothing; the workflow never reads references.}}
 \\label{{tab:benchmark}}
 \\centering\\scriptsize\\setlength{{\\tabcolsep}}{{4pt}}
 \\begin{{tabularx}}{{\\textwidth}}{{@{{}}lYrrlrrrl@{{}}}}
 \\toprule
-Case & Reference (date) & Files & Units & Base & Rows & Atoms & Stated & Use\\\\
+Case & Reference (date) & Files & Units & Base & Rows & Atoms & Stated & Inspected\\\\
 \\midrule
 {body}
 \\midrule
@@ -110,7 +110,7 @@ def appendix():
     body = []
     n_total = 0
     for case, name, _, _, _, _, base, use in CASES:
-        if use != 'test':
+        if use == 'reference':
             continue
         d = load(case)
         atoms = [a for a in d['atoms'] if a['scored_by_default']]
@@ -126,7 +126,7 @@ def appendix():
 % reviewers need not read it, so the paper must not depend on it. Starting it on a new page keeps its length visible.
 \\clearpage
 \\appendix
-\\section{{Reference Requirements of the Test Cases}}\\label{{app:references}}
+\\section{{Reference Requirements of the Cases Not Inspected During Development}}\\label{{app:references}}
 
 % longtable captions in the LNCS style (bold ``Table n.'', small type), as for floating tables.
 \\makeatletter
@@ -134,7 +134,7 @@ def appendix():
 \\makeatother
 {{\\scriptsize\\setlength{{\\tabcolsep}}{{2.5pt}}\\setlength{{\\LTcapwidth}}{{\\textwidth}}
 \\begin{{longtable}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{1.25cm}}>{{\\raggedright\\arraybackslash}}p{{8.0cm}}lcc@{{}}}}
-\\caption{{The {n_total} scored reference requirements (atoms) of the test cases; all are requirements in their source. Base: relation to the pinned \\dcatap\\ release. Raw, Cons.: whether the raw and the pre-consolidation corpus state the atom (S stated, P in part, U uncertain, N not stated). The other cases, unscored atoms and the rows are in the supplementary material.}}\\label{{tab:app-references}}\\\\
+\\caption{{The {n_total} scored reference requirements (atoms) of the two cases whose references were not inspected during development; all are requirements in their source. Base: relation to the pinned \\dcatap\\ release. Raw, Cons.: whether the raw and the pre-consolidation corpus state the atom (S stated, P in part, U uncertain, N not stated). The other cases, unscored atoms and the rows are in the supplementary material.}}\\label{{tab:app-references}}\\\\
 {head}\\endfirsthead
 {head}\\endhead
 \\bottomrule
@@ -154,7 +154,7 @@ def supplement():
         for a in d['atoms']:
             atoms_by_row.setdefault(a['parent_id'], []).append(a)
         has_cons = case in ('mobilitydcat', 'healthdcat')
-        parts.append(f"\\multicolumn{{8}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{\\linewidth}}@{{}}}}{{\\normalsize\\textbf{{{name}}}\\quad\\footnotesize {refdoc}; base \\dcatap\\ {base}; {use.replace('dev.', 'development')} case}}\\\\*")
+        parts.append(f"\\multicolumn{{8}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{\\linewidth}}@{{}}}}{{\\normalsize\\textbf{{{name}}}\\quad\\footnotesize {refdoc}; base \\dcatap\\ {base}; inspected during development: {use}}}\\\\*")
         parts.append(f"\\multicolumn{{8}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{\\linewidth}}@{{}}}}{{{c['rows']} rows ({c['v1']} published), {len(d['atoms'])} atoms, {c['atoms']} scored ({c['settled']} requirements), "
                      f"{c['in_base']} restate the base, {c['stated']} stated ({c['stated_or_partly']} at least in part)"
                      + (f"; pre-consolidation corpus: {c['cons']} ({c['cons_p']})" if has_cons else '') + "}\\\\*")
