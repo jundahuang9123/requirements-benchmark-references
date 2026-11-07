@@ -14,12 +14,17 @@ REF = os.environ.get('RQ1_REF', os.path.join(os.path.dirname(os.path.abspath(__f
 COMMIT = os.environ.get('RQ1_REF_COMMIT', 'adjudicated-snapshot')
 OUT = os.path.dirname(os.path.abspath(__file__))
 
-CASES = [  # order of Table 2: the cases not inspected against their reference during development first; last field: what was inspected during development (outputs, reference, or nothing)
- ('mobilitydcat', 'mobilityDCAT-AP', 'NAPCORE analysis~\\cite{bures2022napcore} (2022)', 'NAPCORE requirement analysis (2022), Table~1', '13+3', '822', '2.0.1', 'outputs'),
- ('geodcat', 'GeoDCAT-AP', 'GeoDCAT-AP 1.0~\\cite{geodcatap10} (2015)', 'GeoDCAT-AP 1.0 (2015)', '5', '271', '1.1', 'no'),
- ('healthdcat', 'HealthDCAT-AP', 'HealthData@EU D6.2~\\cite{healthdataeu2024d62} (2024)', 'HealthData@EU Pilot D6.2 (2024)', '3+2', '\\tbd', '3.0.0', 'reference'),
- ('statdcat', 'StatDCAT-AP', 'StatDCAT-AP 1.0.0~\\cite{statdcatap} (2016)', 'StatDCAT-AP 1.0.0 (2016)', '2', '60', '1.1', 'reference'),
- ('jrc-research', 'DCAT-AP-JRC', 'Perego et al.~\\cite{perego2016jrc} (2016)', 'Perego et al., SDSVoc 2016, paper 27', '3', '59', '1.1', 'reference'),
+CASES = [  # order of Table 2: the cases not inspected against their reference during development first; fields: id, name, reference (cited), reference (plain), inputs (the raw corpus, for Table 2), units, base release, what was inspected during development (outputs, reference, or nothing)
+ ('mobilitydcat', 'mobilityDCAT-AP', 'NAPCORE analysis~\\cite{bures2022napcore} (2022)', 'NAPCORE requirement analysis (2022), Table~1',
+  '16 files: EU directives and strategies, reports on FAIR data and metadata, the INSPIRE metadata guidelines, GeoDCAT-AP, national-access-point project results; DCAT~2, DCAT-AP 2.0.0 and 2.1.0 as background', '822', '2.0.1', 'outputs'),
+ ('geodcat', 'GeoDCAT-AP', 'GeoDCAT-AP 1.0~\\cite{geodcatap10} (2015)', 'GeoDCAT-AP 1.0 (2015)',
+  'INSPIRE Directive, metadata and interoperability regulations and metadata guidelines 1.3; DCAT (2014)', '271', '1.1', 'no'),
+ ('healthdcat', 'HealthDCAT-AP', 'HealthData@EU D6.2~\\cite{healthdataeu2024d62} (2024)', 'HealthData@EU Pilot D6.2 (2024)',
+  'GDPR; EHDS proposal; HealthData@EU landscape analysis (MS6.1); DCAT~2; DCAT-AP 2.1.1', '\\tbd', '3.0.0', 'reference'),
+ ('statdcat', 'StatDCAT-AP', 'StatDCAT-AP 1.0.0~\\cite{statdcatap} (2016)', 'StatDCAT-AP 1.0.0 (2016)',
+  'DCAT (2014); RDF Data Cube (2014)', '60', '1.1', 'reference'),
+ ('jrc-research', 'DCAT-AP-JRC', 'Perego et al.~\\cite{perego2016jrc} (2016)', 'Perego et al., SDSVoc 2016, paper 27',
+  'JRC data policy (2015); DCAT (2014); DataCite 3.1 field synopsis', '59', '1.1', 'reference'),
 ]
 LEVEL = {'content': 'c', 'profile': 'p', 'system': 's'}
 STATUS = {'requirement': 'req.', 'proposed': 'prop.', 'open_issue': 'open', 'guidance': 'guid.', 'deferred': 'def.'}
@@ -73,31 +78,29 @@ def counts(d):
 def table_benchmark():
     lines = []
     tot = dict(v1=0, added=0, atoms=0, settled=0, in_base=0, stated=0, stated_or_partly=0)
-    out_of_scope = dict(profile=0, system=0)  # atoms outside RQ1's scope, summed from the case files
-    for case, name, ref, _, files, units, base, use in CASES:
+    for case, name, ref, _, inputs, units, base, use in CASES:
         d = load(case)
         c = counts(d)
         for k in tot:
             tot[k] += c[k]
-        for k in out_of_scope:
-            out_of_scope[k] += d['counts']['atoms_by_stratum'].get(k, 0)
         rows = f"{c['v1']}" if not c['added'] else f"{c['v1']}+{c['added']}"
-        lines.append(f"{name} & {ref} & {files} & {units} & {base} & {rows} & {c['atoms']} & {c['stated']} ({c['stated_or_partly']}) & {use}\\\\")
+        mark = '$^{\\dagger}$' if use == 'reference' else ''  # the dagger of the results table: outputs compared with the reference during development
+        lines.append(f"{name}{mark} ({base}) & {inputs} & {ref} & {rows} & {c['atoms']} & {c['stated']} ({c['stated_or_partly']})\\\\")
     body = '\n'.join(lines)
     return f"""% Table 2, generated from benchmark-data/reference-sets-v3 (commit {COMMIT}) by make_tables.py.
 % "Stated" uses the raw input-evidence labels of v3: AI labels, human review pending; align Sect. 5 and the
 % Use of Generative AI section with how they were made.
-\\begin{{table}}[t]
-\\caption{{Benchmark cases. Files: evidence files plus base specifications kept as background; units: evidence units; base: the \\dcatap\\ release that the extension's own documents cite. Rows: published reference rows plus rows added from the same document. Atoms: scoring units (content type, not deferred, each need once); of all {tot['atoms']}, {tot['in_base']} restate the base and {tot['atoms'] - tot['settled']} are proposals, open issues or guidance in their source. The case files also hold {out_of_scope['profile']} profile and {out_of_scope['system']} system atoms, outside RQ1's scope. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part). Inspected: what was looked at during development, the workflow's outputs, its outputs against the reference, or nothing; the workflow never reads references.}}
+\\begin{{table}}[!t]
+\\caption{{The five cases. Base: the \\dcatap\\ release the extension's own documents cite. Inputs: the raw corpus (base specifications among the inputs are evidence; mobilityDCAT-AP keeps three as background); exact files, versions and hashes are in the benchmark's manifests. Rows: published reference rows plus rows added from the same document. Atoms: scored content atoms. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part). $^{{\\dagger}}$: outputs compared with the reference during development; the workflow never reads references.}}
 \\label{{tab:benchmark}}
-\\centering\\scriptsize\\setlength{{\\tabcolsep}}{{4pt}}
-\\begin{{tabularx}}{{\\textwidth}}{{@{{}}lYrrlrrrl@{{}}}}
+\\centering\\scriptsize\\setlength{{\\tabcolsep}}{{3pt}}
+\\begin{{tabularx}}{{\\textwidth}}{{@{{}}p{{2.0cm}}Xp{{2.3cm}}rrr@{{}}}}
 \\toprule
-Case & Reference (date) & Files & Units & Base & Rows & Atoms & Stated & Inspected\\\\
+Case (base) & Inputs & Reference (date) & Rows & Atoms & Stated\\\\
 \\midrule
 {body}
 \\midrule
-Total & & & & & {tot['v1']}+{tot['added']} & {tot['atoms']} & {tot['stated']} ({tot['stated_or_partly']}) & \\\\
+Total & & & {tot['v1']}+{tot['added']} & {tot['atoms']} & {tot['stated']} ({tot['stated_or_partly']})\\\\
 \\bottomrule
 \\end{{tabularx}}
 \\end{{table}}
