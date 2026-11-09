@@ -1,0 +1,99 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "M13",
+ "name": "Refresh files_sha256 in IMPORT-PROVENANCE.json",
+ "time_order": "after the step whose files it covers; see reason",
+ "actors": [
+  {
+   "actor": "script:tools/trace/refresh_hashes.py#a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189"
+  },
+  {
+   "actor": "model:claude/manifest-refresh",
+   "role": "ran the script"
+  }
+ ],
+ "session": {
+  "model_id": "claude-fable-5-1",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.316",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "6847621519896430ba63702e250227fc458af638eba0455afd8c692026dccd29",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.319 (Claude Code)"
+  },
+  "transcript_sha256": "40197cfdda3ae9143be88a307149e5adc5b599817c534c4477c27d3d6f54f01f",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-07T21:43:31.409Z"
+ },
+ "scripts": [
+  {
+   "path": "tools/trace/refresh_hashes.py",
+   "sha256": "a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/trace/common.py",
+   "sha256": "ce04c1e3351f6f1532476b1c479545209cc48bc6c1055279ed3e20cd271fe21b",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "004a773418a10b61027b785a95f6bf6e683414549e296c9efb5c75572d7babf0",
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 288
+  }
+ ],
+ "outputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": null,
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 289,
+   "note": "Written after this manifest and containing its hash, so its own hash cannot be recorded here; tools/export_anonymous.py checks every entry."
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-07T21:43:28.909Z",
+  "run_ended": "2026-11-07T21:43:31.409Z",
+  "run_by": "model:claude/manifest-refresh"
+ },
+ "seeds": {},
+ "counts": {
+  "in": 288,
+  "out": 289,
+  "changed": 5
+ },
+ "decision_values": [
+  "entry_added",
+  "entry_changed",
+  "entry_removed"
+ ],
+ "rationale_location": "reason below",
+ "reason": "Refresh after the Table 2 layout change of 7 Nov (compact layout, inputs in words, dagger for the inspected cases); covers the regenerated supplement files",
+ "entries_added": {},
+ "entries_changed": {
+  "benchmark-data/reference-sets-v3/supplement/appendix-test-cases.tex": "f573c2204753d51b6ce9bbb43f55fe8df42e2657624739cd3b85bcd7ab5fe5e9",
+  "benchmark-data/reference-sets-v3/supplement/make_tables.py": "3f87802be6aa9e8410ba7b933d4789b66c66a0b1fdcbbafe031742f9af4219eb",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.tex": "865f37b1b151ec8397ac454058966efc74cc11859762d91f745037ed45477689",
+  "benchmark-data/reference-sets-v3/supplement/table-benchmark.tex": "bc44afea448190054f166505746921b5386e656a166ba7483bd5c56d1fbe3bc3"
+ },
+ "entries_removed": [],
+ "own_entry": "added to IMPORT-PROVENANCE.json after this manifest was written",
+ "evidence": [
+  "tools/export_anonymous.py:60-65"
+ ],
+ "gaps": [],
+ "manifest_sha256": "8e149aa3d9bb497a25bf6d841a9b8cd413e776dfaedaf1bb2f98b3d65dda84d8"
+}

@@ -24,21 +24,21 @@
 
 This table lists every row and atom of the five reference sets (version 3). Rows are the published reference rows and rows added from the same reference document (marked $^{\dagger}$); each row is followed by its atoms, the scoring units. Row statements are curator paraphrases. Atom statements are written in one standard form: a content atom says what users can know, find, access, cite or use (\emph{Users can \dots}), a profile atom what the profile does (\emph{The profile \dots}), and a system atom names the system or role the source names. The reference documents' own wording is cited in the benchmark files. A provisional adjudication of reviewed items was applied on 23 October 2026: one duplicate merged, one umbrella atom left out of scoring, two compound atoms split, three evidence labels downgraded and one omitted need restored; each change is logged in the benchmark files.
 
-\paragraph{Columns.} \emph{Lev.}: the atom's type: content (c), information a catalog record should carry; profile (p), how the profile is specified (principles, scope, reuse and alignment, obligation levels, code lists, documentation); or system (s), the systems and processes around the profile (governance and maintenance, validation, interfaces, exchange, review)\citeneeded. Only content atoms are scored. \emph{Status} in the source: requirement (req.), proposal (prop.), open issue (open), guidance (guid.) or deferred to future work (def.). \emph{Base}: relation to the pinned \dcatap\ release: restates, tightens, extends, partly covered by, or beyond the base; -- for atoms that are not about metadata terms, ? if unresolved. \emph{Raw} and \emph{Cons.}: whether the raw corpus and, for mobilityDCAT-AP and HealthDCAT-AP, the pre-consolidation corpus state the atom: S stated, P in part, U uncertain, N not stated, -- no such corpus. These are AI labels with verbatim quotations checked by program; human review is pending. \emph{Sc.}: scored by default (\checkmark); m merged into an equivalent atom of another row (\req{Req-24.1} into \req{Req-19.7}); u an umbrella of separately scored atoms (\req{H-4.1} of \req{H-16.1}, \req{H-26.1}, \req{H-28.1}, \req{H-36.1}, \req{H-66.2}).
+\paragraph{Columns.} \emph{Type}: content (c), information a catalog record should carry; profile (p), how the profile is specified (principles, scope, reuse and alignment, obligation levels, code lists, documentation); or system (s), the systems and processes around the profile (governance and maintenance, validation, interfaces, exchange, review)\citeneeded. Only content atoms are scored. \emph{Status} in the source: requirement (req.), proposal (prop.), open issue (open), guidance (guid.) or deferred to future work (def.). \emph{Base}: relation to the pinned \dcatap\ release: restates, tightens, extends, partly covered by, or beyond the base; -- for atoms that are not about metadata terms, ? if unresolved. \emph{Raw} and \emph{Cons.}: whether the raw corpus and, for mobilityDCAT-AP and HealthDCAT-AP, the pre-consolidation corpus state the atom: S stated, P in part, U uncertain, N not stated, -- no such corpus. These are AI labels with verbatim quotations checked by program; human review is pending. \emph{Sc.}: scored by default (\checkmark); m merged into an equivalent atom of another row (\req{Req-24.1} into \req{Req-19.7}); u an umbrella of separately scored atoms (\req{H-4.1} of \req{H-16.1}, \req{H-26.1}, \req{H-28.1}, \req{H-36.1}, \req{H-66.2}).
 
 {\scriptsize\setlength{\tabcolsep}{3pt}
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.3cm}>{\raggedright\arraybackslash}p{5.5cm}cllccc@{}}
 \toprule
-ID & Reference requirement (atom) & Lev. & Status & Base & Raw & Cons. & Sc.\\
+ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \midrule
 \endfirsthead
 \toprule
-ID & Reference requirement (atom) & Lev. & Status & Base & Raw & Cons. & Sc.\\
+ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \midrule
 \endhead
 \bottomrule
 \endlastfoot
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{mobilityDCAT-AP}\quad\footnotesize NAPCORE requirement analysis (2022), Table~1; base \dcatap\ 2.0.1; test case}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{mobilityDCAT-AP}\quad\footnotesize NAPCORE requirement analysis (2022), Table~1; base \dcatap\ 2.0.1; inspected during development: outputs}\\*
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{40 rows (40 published), 98 atoms, 39 scored (39 requirements), 7 restate the base, 31 stated (37 at least in part); pre-consolidation corpus: 38 (39)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-1}}\enspace Use sufficiently expressive, context-aware and modular descriptions with explicit structure, types and rules; distinguish entity identities, preserve references, and support persistent identifiers.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
@@ -220,7 +220,7 @@ ID & Reference requirement (atom) & Lev. & Status & Base & Raw & Cons. & Sc.\\
 \req{Req-40.1} & The profile provides guidelines for a quality assurance process that checks the quality of metadata collected on a NAP. & s & req. & -- & S & S & \\
 \addlinespace[2pt]
 \midrule
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{GeoDCAT-AP}\quad\footnotesize GeoDCAT-AP 1.0 (2015); base \dcatap\ 1.1; test case}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{GeoDCAT-AP}\quad\footnotesize GeoDCAT-AP 1.0 (2015); base \dcatap\ 1.1; inspected during development: no}\\*
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{46 rows (7 published), 56 atoms, 37 scored (37 requirements), 16 restate the base, 37 stated (37 at least in part)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{G-1}}\enspace Provide RDF representations of spatial metadata that conform to DCAT-AP, retain meaning as far as practical and support cross-domain reuse.\enspace\textit{(GeoDCAT-AP 1.0 §1.1;4.1)}}\\*
@@ -372,7 +372,7 @@ ID & Reference requirement (atom) & Lev. & Status & Base & Raw & Cons. & Sc.\\
 \req{G-46.1} & The GeoDCAT-AP working group feeds recommendations into the DCAT-AP revision so that DCAT-AP and GeoDCAT-AP stay aligned. & s & req. & -- & N & -- & \\
 \addlinespace[2pt]
 \midrule
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{HealthDCAT-AP}\quad\footnotesize HealthData@EU Pilot D6.2 (2024); base \dcatap\ 3.0.0; development case}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{HealthDCAT-AP}\quad\footnotesize HealthData@EU Pilot D6.2 (2024); base \dcatap\ 3.0.0; inspected during development: reference}\\*
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{69 rows (16 published), 121 atoms, 89 scored (51 requirements), 13 restate the base, 59 stated (84 at least in part); pre-consolidation corpus: 5 (22)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-1}}\enspace Use stable, resolvable identifiers so metadata records and their relationships remain reliably identifiable across catalogues.\enspace\textit{(D6.2 §5.2.1.1)}}\\*
@@ -635,7 +635,7 @@ ID & Reference requirement (atom) & Lev. & Status & Base & Raw & Cons. & Sc.\\
 \req{H-68.1} & Users can know how often a dataset is updated (frequency). & c & prop. & tightens & S & N & \checkmark\\
 \addlinespace[2pt]
 \midrule
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{StatDCAT-AP}\quad\footnotesize StatDCAT-AP 1.0.0 (2016); base \dcatap\ 1.1; development case}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{StatDCAT-AP}\quad\footnotesize StatDCAT-AP 1.0.0 (2016); base \dcatap\ 1.1; inspected during development: reference}\\*
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{22 rows (7 published), 27 atoms, 14 scored (10 requirements), 6 restate the base, 4 stated (8 at least in part)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-1}}\enspace Expose the dimensions that distinguish observations, including time and demographic or regional dimensions.\enspace\textit{(StatDCAT-AP 1.0 §7.2.1)}}\\*
@@ -710,7 +710,7 @@ ID & Reference requirement (atom) & Lev. & Status & Base & Raw & Cons. & Sc.\\
 \req{S-22.1} & The profile documents, with a full example, how datasets, distributions, Data Cube datasets and data structure definitions relate. & p & req. & -- & P & -- & \\
 \addlinespace[2pt]
 \midrule
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{DCAT-AP-JRC}\quad\footnotesize Perego et al., SDSVoc 2016, paper 27; base \dcatap\ 1.1; development case}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{DCAT-AP-JRC}\quad\footnotesize Perego et al., SDSVoc 2016, paper 27; base \dcatap\ 1.1; inspected during development: reference}\\*
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{11 rows (5 published), 18 atoms, 17 scored (9 requirements), 4 restate the base, 6 stated (12 at least in part)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-1}}\enspace Identify the people who created a dataset.\enspace\textit{(Metadata elements relevant for scientific data, numbered item 1)}}\\*
