@@ -38,13 +38,21 @@ def tex(s):
     s = s.replace('\\', '\\textbackslash{}')
     s = re.sub(r'([&%$#_{}])', r'\\\1', s)
     s = s.replace('~', '\\textasciitilde{}').replace('^', '\\textasciicircum{}')
+    s = s.replace("–", "--").replace("—", "---")  # portable dash glyphs with pdfLaTeX and XeTeX
     s = re.sub(r'"([^"]*)"', r"``\1''", s)
     assert '"' not in s, s
     return s
 
 
 def ev(a, kind):
+    """Evidence mark: the adjudicated label (input_evidence.human_review, 3 Nov 2026) where there is one,
+    else the 22 Oct AI label."""
     ie = a.get('input_evidence') or {}
+    hr = ie.get('human_review') if isinstance(ie, dict) else None
+    if isinstance(hr, dict):
+        lab = hr.get('raw_label') if kind == 'raw' else hr.get('consolidation_label')
+        if lab in EV:
+            return EV[lab]
     b = ie.get(kind) if isinstance(ie, dict) else None
     return EV[b['label']] if b else '--'
 
@@ -70,7 +78,9 @@ def counts(d):
     return dict(rows=len(rows), v1=v1, added=len(rows) - v1, atoms=c['scored_by_default'],
                 settled=c['scored_by_default_requirement_status_only'],
                 in_base=c['scored_by_default'] - c['scored_by_default_without_dcat_ap_restatements'],
-                stated=c['scored_by_default_raw_supported'], stated_or_partly=c['scored_by_default_raw_supported_or_partial'],
+                stated=c.get('scored_by_default_reviewed_raw_supported', c['scored_by_default_raw_supported']),
+                stated_or_partly=c.get('scored_by_default_reviewed_raw_supported_or_partial', c['scored_by_default_raw_supported_or_partial']),
+                stated_any=c.get('scored_by_default_reviewed_supported'), stated_any_or_partly=c.get('scored_by_default_reviewed_supported_or_partial'),
                 cons=c.get('scored_by_default_consolidation_supported'), cons_p=c.get('scored_by_default_consolidation_supported_or_partial'))
 
 
@@ -88,7 +98,8 @@ def table_benchmark():
         lines.append(f"{name}{mark} ({base}) & {inputs} & {ref} & {rows} & {c['atoms']} & {c['stated']} ({c['stated_or_partly']})\\\\")
     body = '\n'.join(lines)
     return f"""% Table 2, generated from benchmark-data/reference-sets-v3 (commit {COMMIT}) by make_tables.py.
-% "Stated" uses the raw input-evidence labels of v3: AI labels, human review pending; align Sect. 5 and the
+% "Stated" uses the raw-corpus evidence labels of v3 as adjudicated by the curator on 3 Nov 2026 after two AI reviews
+% (evidence-review/adjudication-2026-11-03.json); counting the pre-consolidation corpus too gives 137 (187). Align Sect. 5 and the
 % Use of Generative AI section with how they were made.
 \\begin{{table}}[!t]
 \\caption{{The five cases. Base: the \\dcatap\\ release the extension's own documents cite. Inputs: the raw corpus, including base specifications listed in the raw-input allowlist. The three mobilityDCAT-AP files also tagged as background remain in that allowlist. Exact files, versions and hashes are in the benchmark's manifests. Rows: published reference rows plus rows added from the same document. Atoms: scored content atoms. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part). $^{{\\dagger}}$: outputs compared with the reference during development; the workflow never reads references.}}
@@ -137,7 +148,7 @@ def appendix():
 \\makeatother
 {{\\scriptsize\\setlength{{\\tabcolsep}}{{2.5pt}}\\setlength{{\\LTcapwidth}}{{\\textwidth}}
 \\begin{{longtable}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{1.25cm}}>{{\\raggedright\\arraybackslash}}p{{8.0cm}}lcc@{{}}}}
-\\caption{{The {n_total} scored reference requirements (atoms) of the two cases whose outputs were not compared with their references during development (mobilityDCAT-AP outputs alone were inspected); all are requirements in their source. Base: relation to the pinned \\dcatap\\ release. Raw, Cons.: whether the raw and the pre-consolidation corpus state the atom (S stated, P in part, U uncertain, N not stated). The other cases, unscored atoms and the rows are in the supplementary material.}}\\label{{tab:app-references}}\\\\
+\\caption{{The {n_total} scored reference requirements (atoms) of the two cases whose outputs were not compared with their references during development (mobilityDCAT-AP outputs alone were inspected); all are requirements in their source. Base: relation to the pinned \\dcatap\\ release. Raw, Cons.: whether the raw and the pre-consolidation corpus state the atom (S stated, P in part, U uncertain, N not stated). Raw labels are curator-adjudicated after two AI reviews; Cons. retains the original AI label where not explicitly reviewed. The other cases, unscored atoms and the rows are in the supplementary material.}}\\label{{tab:app-references}}\\\\
 {head}\\endfirsthead
 {head}\\endhead
 \\bottomrule
@@ -201,10 +212,10 @@ def supplement():
 
 This table lists every row and atom of the five reference sets (version 3). Rows are the published reference rows and rows added from the same reference document (marked $^{{\\dagger}}$); each row is followed by its atoms, the scoring units. Row statements are curator paraphrases. Atom statements are written in one standard form: a content atom says what users can know, find, access, cite or use (\\emph{{Users can \\dots}}), a profile atom what the profile does (\\emph{{The profile \\dots}}), and a system atom names the system or role the source names. The reference documents' own wording is cited in the benchmark files. A provisional adjudication of reviewed items was applied on 23 October 2026: one duplicate merged, one umbrella atom left out of scoring, two compound atoms split, three evidence labels downgraded and one omitted need restored; each change is logged in the benchmark files.
 
-\\paragraph{{Columns.}} \\emph{{Type}}: content (c), information a catalog record should carry; profile (p), how the profile is specified (principles, scope, reuse and alignment, obligation levels, code lists, documentation); or system (s), the systems and processes around the profile (governance and maintenance, validation, interfaces, exchange, review)\\citeneeded. Only content atoms are scored. \\emph{{Status}} in the source: requirement (req.), proposal (prop.), open issue (open), guidance (guid.) or deferred to future work (def.). \\emph{{Base}}: relation to the pinned \\dcatap\\ release: restates, tightens, extends, partly covered by, or beyond the base; -- for atoms that are not about metadata terms, ? if unresolved. \\emph{{Raw}} and \\emph{{Cons.}}: whether the raw corpus and, for mobilityDCAT-AP and HealthDCAT-AP, the pre-consolidation corpus state the atom: S stated, P in part, U uncertain, N not stated, -- no such corpus. These are AI labels with verbatim quotations checked by program; human review is pending. \\emph{{Sc.}}: scored by default (\\checkmark); m merged into an equivalent atom of another row (\\req{{Req-24.1}} into \\req{{Req-19.7}}); u an umbrella of separately scored atoms (\\req{{H-4.1}} of \\req{{H-16.1}}, \\req{{H-26.1}}, \\req{{H-28.1}}, \\req{{H-36.1}}, \\req{{H-66.2}}).
+\\paragraph{{Columns.}} \\emph{{Type}}: content (c), information a catalog record should carry; profile (p), how the profile is specified (principles, scope, reuse and alignment, obligation levels, code lists, documentation); or system (s), the systems and processes around the profile (governance and maintenance, validation, interfaces, exchange, review)\\citeneeded. Only content atoms are scored. \\emph{{Status}} in the source: requirement (req.), proposal (prop.), open issue (open), guidance (guid.) or deferred to future work (def.). \\emph{{Base}}: relation to the pinned \\dcatap\\ release: restates, tightens, extends, partly covered by, or beyond the base; -- for atoms that are not about metadata terms, ? if unresolved. \\emph{{Raw}} and \\emph{{Cons.}}: whether the raw corpus and, for mobilityDCAT-AP and HealthDCAT-AP, the pre-consolidation corpus state the atom: S stated, P in part, U uncertain, N not stated, -- no such corpus. For the 196 scored atoms, Raw shows the curator-adjudicated label after two AI reviews (3 Nov 2026; one review was not blind). Cons. uses that adjudication only where consolidation was explicitly reviewed; otherwise it retains the original AI label. All 124 unscored atoms retain their original AI labels (22 Oct 2026). This is not independent human source validation; see evidence-review/adjudication-2026-11-03.json. \\emph{{Sc.}}: scored by default (\\checkmark); m merged into an equivalent atom of another row (\\req{{Req-24.1}} into \\req{{Req-19.7}}); u an umbrella of separately scored atoms (\\req{{H-4.1}} of \\req{{H-16.1}}, \\req{{H-26.1}}, \\req{{H-28.1}}, \\req{{H-36.1}}, \\req{{H-66.2}}).
 
 {{\\scriptsize\\setlength{{\\tabcolsep}}{{3pt}}
-\\begin{{longtable}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{1.3cm}}>{{\\raggedright\\arraybackslash}}p{{5.5cm}}cllccc@{{}}}}
+\\begin{{longtable}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{1.3cm}}>{{\\raggedright\\arraybackslash}}p{{5.45cm}}cllccc@{{}}}}
 {head}\\endfirsthead
 {head}\\endhead
 \\bottomrule

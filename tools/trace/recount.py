@@ -6,8 +6,10 @@
 
 The count rules are those of the build that wrote counts.json (history/build-scripts/v3/build_v3.py,
 counts() and evidence_counts(), as amended by the 23 Oct adjudication), restated here so that the
-counts can be recomputed after a review round. Check mode exits non-zero unless counts.json is
-reproduced byte for byte and every case's counts block equals its recount.
+counts can be recomputed after a review round. The counts of the reviewed evidence labels
+(reviewed_*, scored_by_default_reviewed*) follow tools/evidence_review/apply.py (review of 3 Nov 2026)
+and appear only where scored atoms carry an adjudicated human_review. Check mode exits non-zero unless
+counts.json is reproduced byte for byte and every case's counts block equals its recount.
 """
 import collections
 import json
@@ -43,6 +45,25 @@ def evidence_counts(atoms):
     return out
 
 
+def reviewed_counts(atoms):
+    """Counts of the adjudicated labels (input_evidence.human_review objects) over the scored atoms,
+    with the keys and order tools/evidence_review/apply.py writes; empty while no review is applied."""
+    hr = [a['input_evidence']['human_review'] for a in atoms if a['scored_by_default']
+          and isinstance(a.get('input_evidence'), dict) and isinstance(a['input_evidence'].get('human_review'), dict)]
+    if not hr:
+        return {}
+    labels = ('supported', 'partial', 'unsupported', 'uncertain')
+    return {
+        'reviewed_evidence_labels': {k: sum(h['label'] == k for h in hr) for k in labels},
+        'reviewed_raw_evidence_labels': {k: sum(h['raw_label'] == k for h in hr) for k in labels},
+        'scored_by_default_reviewed': len(hr),
+        'scored_by_default_reviewed_supported': sum(h['label'] == 'supported' for h in hr),
+        'scored_by_default_reviewed_supported_or_partial': sum(h['label'] in ('supported', 'partial') for h in hr),
+        'scored_by_default_reviewed_raw_supported': sum(h['raw_label'] == 'supported' for h in hr),
+        'scored_by_default_reviewed_raw_supported_or_partial': sum(h['raw_label'] in ('supported', 'partial') for h in hr),
+    }
+
+
 def counts(rows, atoms):
     c = collections.Counter
     content = [a for a in atoms if a['scored_by_default']]
@@ -62,6 +83,7 @@ def counts(rows, atoms):
         'atoms_with_source_flags': sum(1 for a in atoms if a['source_flags']),
         **evidence_counts(atoms),
         'atoms_with_overlaps': sum(1 for a in atoms if a['overlaps']),
+        **reviewed_counts(atoms),
     }
 
 

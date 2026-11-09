@@ -1,5 +1,6 @@
 % Table 2, generated from benchmark-data/reference-sets-v3 (commit adjudicated-snapshot) by make_tables.py.
-% "Stated" uses the raw input-evidence labels of v3: AI labels, human review pending; align Sect. 5 and the
+% "Stated" uses the raw-corpus evidence labels of v3 as adjudicated by the curator on 3 Nov 2026 after two AI reviews
+% (evidence-review/adjudication-2026-11-03.json); counting the pre-consolidation corpus too gives 137 (187). Align Sect. 5 and the
 % Use of Generative AI section with how they were made.
 \begin{table}[!t]
 \caption{The five cases. Base: the \dcatap\ release the extension's own documents cite. Inputs: the raw corpus, including base specifications listed in the raw-input allowlist. The three mobilityDCAT-AP files also tagged as background remain in that allowlist. Exact files, versions and hashes are in the benchmark's manifests. Rows: published reference rows plus rows added from the same document. Atoms: scored content atoms. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part). $^{\dagger}$: outputs compared with the reference during development; the workflow never reads references.}
@@ -9,13 +10,13 @@
 \toprule
 Case (base) & Inputs & Reference (date) & Rows & Atoms & Stated\\
 \midrule
-mobilityDCAT-AP (2.0.1) & 16 files: EU directives and strategies, reports on FAIR data and metadata, the INSPIRE metadata guidelines, GeoDCAT-AP, national-access-point project results; DCAT~2, DCAT-AP 2.0.0 and 2.1.0 (also tagged as background) & NAPCORE analysis~\cite{bures2022napcore} (2022) & 40 & 39 & 31 (37)\\
+mobilityDCAT-AP (2.0.1) & 16 files: EU directives and strategies, reports on FAIR data and metadata, the INSPIRE metadata guidelines, GeoDCAT-AP, national-access-point project results; DCAT~2, DCAT-AP 2.0.0 and 2.1.0 (also tagged as background) & NAPCORE analysis~\cite{bures2022napcore} (2022) & 40 & 39 & 30 (39)\\
 GeoDCAT-AP (1.1) & INSPIRE Directive, metadata and interoperability regulations and metadata guidelines 1.3; DCAT (2014) & GeoDCAT-AP 1.0~\cite{geodcatap10} (2015) & 7+39 & 37 & 37 (37)\\
-HealthDCAT-AP$^{\dagger}$ (3.0.0) & GDPR; EHDS proposal; HealthData@EU landscape analysis (MS6.1); DCAT~2; DCAT-AP 2.1.1 & HealthData@EU D6.2~\cite{healthdataeu2024d62} (2024) & 16+53 & 89 & 59 (84)\\
-StatDCAT-AP$^{\dagger}$ (1.1) & DCAT (2014); RDF Data Cube (2014) & StatDCAT-AP 1.0.0~\cite{statdcatap} (2016) & 7+15 & 14 & 4 (8)\\
-DCAT-AP-JRC$^{\dagger}$ (1.1) & JRC data policy (2015); DCAT (2014); DataCite 3.1 field synopsis & Perego et al.~\cite{perego2016jrc} (2016) & 5+6 & 17 & 6 (12)\\
+HealthDCAT-AP$^{\dagger}$ (3.0.0) & GDPR; EHDS proposal; HealthData@EU landscape analysis (MS6.1); DCAT~2; DCAT-AP 2.1.1 & HealthData@EU D6.2~\cite{healthdataeu2024d62} (2024) & 16+53 & 89 & 53 (85)\\
+StatDCAT-AP$^{\dagger}$ (1.1) & DCAT (2014); RDF Data Cube (2014) & StatDCAT-AP 1.0.0~\cite{statdcatap} (2016) & 7+15 & 14 & 4 (10)\\
+DCAT-AP-JRC$^{\dagger}$ (1.1) & JRC data policy (2015); DCAT (2014); DataCite 3.1 field synopsis & Perego et al.~\cite{perego2016jrc} (2016) & 5+6 & 17 & 4 (16)\\
 \midrule
-Total & & & 75+113 & 196 & 137 (178)\\
+Total & & & 75+113 & 196 & 128 (187)\\
 \bottomrule
 \end{tabularx}
 \end{table}

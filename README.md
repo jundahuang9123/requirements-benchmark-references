@@ -11,6 +11,7 @@ See [anonymous export instructions](ANONYMIZATION.md) to create a history-free c
 - [Merged reference sets v3](benchmark-data/reference-sets-v3/README.md): reference sets, atomic scoring units, source anchors and evidence labels.
 - [Standard form of the atom statements](benchmark-data/reference-sets-v3/standard-form/README.md) and [atom types](benchmark-data/reference-sets-v3/ATOM-TYPES.md): how every atom is worded, how its type (content, profile, system) was assigned, and the owner's review of each batch.
 - [Input-label review, 1 November 2026](docs/reviews/2026-11-01-label-review.md): assistant recommendations for all 196 scored atoms, with the original labels retained. These recommendations have not been applied to benchmark labels or scores.
+- [Evidence-label adjudication, 3 November 2026](benchmark-data/reference-sets-v3/evidence-review/README.md): the 22 October AI labels of the 196 scored atoms reviewed by two independent AI annotators (one blind) and adjudicated by the owner; applied as `input_evidence.human_review` and to `atoms-review.csv`. Claude's blind review table: [docs/reviews/2026-11-01-claude-blind-review.csv](docs/reviews/2026-11-01-claude-blind-review.csv).
 - [Corpus guide](benchmark-data/README.md) and [methodology](benchmark-data/BENCHMARK-METHODOLOGY.md).
 - [Review and provisional adjudication](benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md).
 - [Supplement tables and PDF](benchmark-data/reference-sets-v3/supplement/README.md).

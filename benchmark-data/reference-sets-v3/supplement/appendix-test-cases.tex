@@ -11,7 +11,7 @@
 \makeatother
 {\scriptsize\setlength{\tabcolsep}{2.5pt}\setlength{\LTcapwidth}{\textwidth}
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.25cm}>{\raggedright\arraybackslash}p{8.0cm}lcc@{}}
-\caption{The 76 scored reference requirements (atoms) of the two cases whose outputs were not compared with their references during development (mobilityDCAT-AP outputs alone were inspected); all are requirements in their source. Base: relation to the pinned \dcatap\ release. Raw, Cons.: whether the raw and the pre-consolidation corpus state the atom (S stated, P in part, U uncertain, N not stated). The other cases, unscored atoms and the rows are in the supplementary material.}\label{tab:app-references}\\
+\caption{The 76 scored reference requirements (atoms) of the two cases whose outputs were not compared with their references during development (mobilityDCAT-AP outputs alone were inspected); all are requirements in their source. Base: relation to the pinned \dcatap\ release. Raw, Cons.: whether the raw and the pre-consolidation corpus state the atom (S stated, P in part, U uncertain, N not stated). Raw labels are curator-adjudicated after two AI reviews; Cons. retains the original AI label where not explicitly reviewed. The other cases, unscored atoms and the rows are in the supplementary material.}\label{tab:app-references}\\
 \toprule
 ID & Reference requirement (atom) & Base & Raw & Cons.\\
 \midrule
@@ -33,7 +33,7 @@ ID & Reference requirement (atom) & Base & Raw & Cons.\\
 \req{Req-19.4} & Users can know the dataset type category, by logical clustering or by the EC Delegated Regulations. & beyond & S & S\\
 \req{Req-19.5} & Users can know the service type category listed in Delegated Regulation (EU) 2017/1926. & beyond & P & P\\
 \req{Req-19.6} & Users can know the language of a resource. & restates & S & S\\
-\req{Req-19.7} & Users can know the georeferencing method applied within the payload. & beyond & S & S\\
+\req{Req-19.7} & Users can know the georeferencing method applied within the payload. & beyond & P & S\\
 \req{Req-20.1} & Users can know which Delegated Regulation (MMTIS, RTTI, SRTI, SSTP) covers a dataset or service. & beyond & P & S\\
 \req{Req-22.1} & Users can know the period in which the published data do not expire. & extends & S & S\\
 \req{Req-23.1} & Users can know the area a dataset covers. & tightens & S & S\\
@@ -54,8 +54,8 @@ ID & Reference requirement (atom) & Base & Raw & Cons.\\
 \req{Req-29.1} & Users can know the data schema, so they can evaluate the data before setting up consumption. & beyond & S & S\\
 \req{Req-29.2} & Users can access data samples, so they can evaluate the data before setting up consumption. & extends & S & S\\
 \req{Req-30.1} & Users can know precisely the version of the data model a dataset adopts (e.g. the DATEX II version), to allow better searching. & beyond & P & S\\
-\req{Req-30.2} & Users can know the publication type of the data model a dataset adopts (e.g. the DATEX II publication type), to allow better searching. & beyond & U & S\\
-\req{Req-30.3} & Users can know the extensions of the data model a dataset adopts (e.g. DATEX II extensions), to allow better searching. & beyond & U & S\\
+\req{Req-30.2} & Users can know the publication type of the data model a dataset adopts (e.g. the DATEX II publication type), to allow better searching. & beyond & P & S\\
+\req{Req-30.3} & Users can know the extensions of the data model a dataset adopts (e.g. DATEX II extensions), to allow better searching. & beyond & P & S\\
 \req{Req-31.1} & Users can know the update rate of a dataset. & tightens & S & S\\
 \req{Req-31.2} & Users can know the quality criteria of a dataset. & beyond & S & S\\
 \req{Req-31.3} & Users can know the history of the procedures that assess compliance with the Delegated Regulations on providing data via a NAP. & beyond & P & S\\
