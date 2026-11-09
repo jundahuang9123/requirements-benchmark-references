@@ -1,0 +1,103 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "M15",
+ "name": "Refresh files_sha256 in IMPORT-PROVENANCE.json",
+ "time_order": "after the step whose files it covers; see reason",
+ "actors": [
+  {
+   "actor": "script:tools/trace/refresh_hashes.py#a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189"
+  },
+  {
+   "actor": "model:codex/manifest-refresh",
+   "role": "ran the script"
+  }
+ ],
+ "session": {
+  "model_id": "gpt-6",
+  "model_id_status": "recorded",
+  "claude_code_version": null,
+  "handoff_prompt_sha256": null,
+  "spec_working_copy_sha256": null,
+  "cleaned_spec_sha256": null,
+  "owner_decisions_sha256": null,
+  "tool_versions": {
+   "python": "3.11.2",
+   "git": "git version 2.44.0",
+   "pdftotext": "not available",
+   "claude_code": "not available"
+  },
+  "transcript_sha256": null,
+  "transcript_status": "not_recorded",
+  "written_at": "2026-11-09T14:49:02.993Z"
+ },
+ "scripts": [
+  {
+   "path": "tools/trace/refresh_hashes.py",
+   "sha256": "a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/trace/common.py",
+   "sha256": "ce04c1e3351f6f1532476b1c479545209cc48bc6c1055279ed3e20cd271fe21b",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "fac669ac58fc4878a80e3e98498c8a2d34c34b68a595bb98befe0bf9346855c7",
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 289
+  }
+ ],
+ "outputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": null,
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 290,
+   "note": "Written after this manifest and containing its hash, so its own hash cannot be recorded here; tools/export_anonymous.py checks every entry."
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-09T14:49:02.751Z",
+  "run_ended": "2026-11-09T14:49:02.994Z",
+  "run_by": "model:codex/manifest-refresh"
+ },
+ "seeds": {},
+ "counts": {
+  "in": 289,
+  "out": 290,
+  "changed": 5
+ },
+ "decision_values": [
+  "entry_added",
+  "entry_changed",
+  "entry_removed"
+ ],
+ "rationale_location": "reason below",
+ "reason": "Clarify PR3 appendix development exposure and the existing raw-input inclusion of the three mobilityDCAT-AP background files. Requirement data, labels, counts, input allowlists and scoring policy unchanged. M14 is reserved for the independently stacked evidence write-back PR.",
+ "entries_added": {},
+ "entries_changed": {
+  "benchmark-data/reference-sets-v3/supplement/README.md": "f08e39ff80d2886b6c98d122e6c8ab79b755edace4f86166553deed42a6fad18",
+  "benchmark-data/reference-sets-v3/supplement/appendix-test-cases.tex": "2b3b19007bfd89884b98ac37761ffe3c1e67633b11f2793c664ff819ddd55a82",
+  "benchmark-data/reference-sets-v3/supplement/make_tables.py": "7b4fa68c14ca3ca76d9de3c660a5a6fadddc76f66c9e241aa4ef6bdf61f3225d",
+  "benchmark-data/reference-sets-v3/supplement/table-benchmark.tex": "3969b63b64ffb3474eb9239eac3ba120c58ba18be8b9d992ad25676cccbc8a41"
+ },
+ "entries_removed": [],
+ "own_entry": "added to IMPORT-PROVENANCE.json after this manifest was written",
+ "evidence": [
+  "tools/export_anonymous.py:60-65"
+ ],
+ "gaps": [],
+ "notes": [
+  "The refresh script hard-codes the Claude actor. The new manifest actor was corrected to Codex after running it, then its canonical hash and provenance entry were recomputed. No earlier manifest was changed.",
+  "Session specification and owner-decision hashes were not available in this chat; null values do not assert verification."
+ ],
+ "manifest_sha256": "04d8047ce42ca2be701f5b9577df5f449b520ec3bc4537b1c25a24cae5b82108"
+}

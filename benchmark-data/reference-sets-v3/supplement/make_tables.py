@@ -2,7 +2,7 @@
 
 Writes
   table-benchmark.tex      Table 2 (summary per case), drop-in replacement in main.tex
-  appendix-test-cases.tex  Appendix A: scored atoms of the two cases not inspected against their reference during development (fits the 2-page appendix)
+  appendix-test-cases.tex  Appendix A: scored atoms of the two cases whose outputs were not compared with their references during development (fits the 2-page appendix)
   supplement-reference-requirements.tex  standalone document: every row and atom of all five cases
 """
 import json
@@ -14,9 +14,9 @@ REF = os.environ.get('RQ1_REF', os.path.join(os.path.dirname(os.path.abspath(__f
 COMMIT = os.environ.get('RQ1_REF_COMMIT', 'adjudicated-snapshot')
 OUT = os.path.dirname(os.path.abspath(__file__))
 
-CASES = [  # order of Table 2: the cases not inspected against their reference during development first; fields: id, name, reference (cited), reference (plain), inputs (the raw corpus, for Table 2), units, base release, what was inspected during development (outputs, reference, or nothing)
+CASES = [  # order of Table 2: the cases whose outputs were not compared with their references during development first; fields: id, name, reference (cited), reference (plain), inputs (the raw corpus, for Table 2), units, base release, what was inspected during development (outputs, reference, or nothing)
  ('mobilitydcat', 'mobilityDCAT-AP', 'NAPCORE analysis~\\cite{bures2022napcore} (2022)', 'NAPCORE requirement analysis (2022), Table~1',
-  '16 files: EU directives and strategies, reports on FAIR data and metadata, the INSPIRE metadata guidelines, GeoDCAT-AP, national-access-point project results; DCAT~2, DCAT-AP 2.0.0 and 2.1.0 as background', '822', '2.0.1', 'outputs'),
+  '16 files: EU directives and strategies, reports on FAIR data and metadata, the INSPIRE metadata guidelines, GeoDCAT-AP, national-access-point project results; DCAT~2, DCAT-AP 2.0.0 and 2.1.0 (also tagged as background)', '822', '2.0.1', 'outputs'),
  ('geodcat', 'GeoDCAT-AP', 'GeoDCAT-AP 1.0~\\cite{geodcatap10} (2015)', 'GeoDCAT-AP 1.0 (2015)',
   'INSPIRE Directive, metadata and interoperability regulations and metadata guidelines 1.3; DCAT (2014)', '271', '1.1', 'no'),
  ('healthdcat', 'HealthDCAT-AP', 'HealthData@EU D6.2~\\cite{healthdataeu2024d62} (2024)', 'HealthData@EU Pilot D6.2 (2024)',
@@ -91,7 +91,7 @@ def table_benchmark():
 % "Stated" uses the raw input-evidence labels of v3: AI labels, human review pending; align Sect. 5 and the
 % Use of Generative AI section with how they were made.
 \\begin{{table}}[!t]
-\\caption{{The five cases. Base: the \\dcatap\\ release the extension's own documents cite. Inputs: the raw corpus (base specifications among the inputs are evidence; mobilityDCAT-AP keeps three as background); exact files, versions and hashes are in the benchmark's manifests. Rows: published reference rows plus rows added from the same document. Atoms: scored content atoms. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part). $^{{\\dagger}}$: outputs compared with the reference during development; the workflow never reads references.}}
+\\caption{{The five cases. Base: the \\dcatap\\ release the extension's own documents cite. Inputs: the raw corpus, including base specifications listed in the raw-input allowlist. The three mobilityDCAT-AP files also tagged as background remain in that allowlist. Exact files, versions and hashes are in the benchmark's manifests. Rows: published reference rows plus rows added from the same document. Atoms: scored content atoms. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part). $^{{\\dagger}}$: outputs compared with the reference during development; the workflow never reads references.}}
 \\label{{tab:benchmark}}
 \\centering\\scriptsize\\setlength{{\\tabcolsep}}{{3pt}}
 \\begin{{tabularx}}{{\\textwidth}}{{@{{}}p{{2.0cm}}Xp{{2.3cm}}rrr@{{}}}}
@@ -129,7 +129,7 @@ def appendix():
 % reviewers need not read it, so the paper must not depend on it. Starting it on a new page keeps its length visible.
 \\clearpage
 \\appendix
-\\section{{Reference Requirements of the Cases Not Inspected During Development}}\\label{{app:references}}
+\\section{{Reference Requirements of mobilityDCAT-AP and GeoDCAT-AP}}\\label{{app:references}}
 
 % longtable captions in the LNCS style (bold ``Table n.'', small type), as for floating tables.
 \\makeatletter
@@ -137,7 +137,7 @@ def appendix():
 \\makeatother
 {{\\scriptsize\\setlength{{\\tabcolsep}}{{2.5pt}}\\setlength{{\\LTcapwidth}}{{\\textwidth}}
 \\begin{{longtable}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{1.25cm}}>{{\\raggedright\\arraybackslash}}p{{8.0cm}}lcc@{{}}}}
-\\caption{{The {n_total} scored reference requirements (atoms) of the two cases whose references were not inspected during development; all are requirements in their source. Base: relation to the pinned \\dcatap\\ release. Raw, Cons.: whether the raw and the pre-consolidation corpus state the atom (S stated, P in part, U uncertain, N not stated). The other cases, unscored atoms and the rows are in the supplementary material.}}\\label{{tab:app-references}}\\\\
+\\caption{{The {n_total} scored reference requirements (atoms) of the two cases whose outputs were not compared with their references during development (mobilityDCAT-AP outputs alone were inspected); all are requirements in their source. Base: relation to the pinned \\dcatap\\ release. Raw, Cons.: whether the raw and the pre-consolidation corpus state the atom (S stated, P in part, U uncertain, N not stated). The other cases, unscored atoms and the rows are in the supplementary material.}}\\label{{tab:app-references}}\\\\
 {head}\\endfirsthead
 {head}\\endhead
 \\bottomrule
