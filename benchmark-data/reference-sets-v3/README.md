@@ -149,7 +149,7 @@ python3 benchmark-data/reference-sets-v3/validate_v3.py
 
 - `input_evidence.human_review` of every scored atom is now an object: `label` (raw or consolidation corpus states the atom), `raw_label`, `consolidation_label`, the two reviews' labels, the kind of difference, the owner's decision and the record. The 22 October AI blocks `raw` and `consolidation` are unchanged. The 124 unscored atoms keep `"pending"`.
 - Method, rules and counts: [evidence-review/README.md](evidence-review/README.md); record: `evidence-review/adjudication-2026-11-03.json`; applied by `tools/evidence_review/apply.py`. Counts: `counts.reviewed_*`.
-- Table 2 "Stated" and the Raw / Cons. columns of Appendix A and the supplement now show the adjudicated labels (raw corpus: 128 stated, 187 at least in part; with the pre-consolidation corpus: 137, 187).
+- Table 2 "Stated" and scored atoms' Raw columns in Appendix A and the supplement use the adjudicated labels; Cons. uses them only where consolidation was explicitly reviewed and otherwise retains the original AI label. Unscored atoms retain their original AI labels. Among the 196 scored atoms, the raw corpus supports 128 fully and 187 at least in part; with the pre-consolidation corpus, those counts are 137 and 187.
 
 ## Standard form and atom types (1 November 2026)
 

@@ -1,0 +1,110 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "M16",
+ "name": "Refresh files_sha256 in IMPORT-PROVENANCE.json",
+ "time_order": "after the step whose files it covers; see reason",
+ "actors": [
+  {
+   "actor": "script:tools/trace/refresh_hashes.py#a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189"
+  },
+  {
+   "actor": "model:codex/manifest-refresh",
+   "role": "ran the script"
+  }
+ ],
+ "session": {
+  "model_id": "gpt-6",
+  "model_id_status": "recorded",
+  "claude_code_version": null,
+  "handoff_prompt_sha256": null,
+  "spec_working_copy_sha256": null,
+  "cleaned_spec_sha256": null,
+  "owner_decisions_sha256": null,
+  "tool_versions": {
+   "python": "3.11.2",
+   "git": "git version 2.44.0",
+   "pdftotext": "pdftotext version 26.05.0",
+   "claude_code": "not available"
+  },
+  "transcript_sha256": null,
+  "transcript_status": "not_recorded",
+  "written_at": "2026-11-09T14:56:05.325Z"
+ },
+ "scripts": [
+  {
+   "path": "tools/trace/refresh_hashes.py",
+   "sha256": "a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/trace/common.py",
+   "sha256": "ce04c1e3351f6f1532476b1c479545209cc48bc6c1055279ed3e20cd271fe21b",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "e8f18382820260b090b2cddc55858b368218dee5b6263da8ed15353c327f4e25",
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 292
+  }
+ ],
+ "outputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": null,
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 294,
+   "note": "Written after this manifest and containing its hash, so its own hash cannot be recorded here; tools/export_anonymous.py checks every entry."
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-09T14:56:05.018Z",
+  "run_ended": "2026-11-09T14:56:05.326Z",
+  "run_by": "model:codex/manifest-refresh"
+ },
+ "seeds": {},
+ "counts": {
+  "in": 292,
+  "out": 294,
+  "changed": 10
+ },
+ "decision_values": [
+  "entry_added",
+  "entry_changed",
+  "entry_removed"
+ ],
+ "rationale_location": "reason below",
+ "reason": "Reconcile evidence write-back with main including M15. Retain all 196 adjudicated decisions unchanged. Clarify raw-only versus combined comparison counts, applicable evidence denominators and unreviewed-label fallback; retain PR3 development-exposure and raw-input wording. Rebuild the supplement with portable dash encoding and a slightly narrower statement column.",
+ "entries_added": {
+  "benchmark-data/reference-sets-v3/trace/steps/M15.json": "36b7f57495ba3a7e19d1c8ba272a9c0e27b5174e1200d00746bd3d53d6718057"
+ },
+ "entries_changed": {
+  "benchmark-data/reference-sets-v3/README.md": "779672f38a60944a01313af2eed61c74dcf38317970c32c3513349ba6549079d",
+  "benchmark-data/reference-sets-v3/evidence-review/README.md": "0d5b315d44d098582c8995b0a94a732cfa81414def51207d48fddbd44c16cd2f",
+  "benchmark-data/reference-sets-v3/supplement/README.md": "c0d0c9776f332803bb2f5470c5ca4b5492fe899537198987a91654d5f44bf7ff",
+  "benchmark-data/reference-sets-v3/supplement/appendix-test-cases.tex": "2350e46b3bb06b7b49310293da1d085dcfacfae9d738988c229e14109b41bd4f",
+  "benchmark-data/reference-sets-v3/supplement/make_tables.py": "269f30becef31746394165442c3230a50e8eadb9475305e947a061dc732c7e26",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.pdf": "bd7d544367e387f185c0ada57b8abc4c6743cba36b10f66afd1f1738bda2c618",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.tex": "c3de197296a9684e7bb5077c7d995d01d80414e879a1cb933e20a80ccec60720",
+  "benchmark-data/reference-sets-v3/supplement/table-benchmark.tex": "968487093836d2f94edb774667122f19d1fa9c6a14576311638c44051c4513c9"
+ },
+ "entries_removed": [],
+ "own_entry": "added to IMPORT-PROVENANCE.json after this manifest was written",
+ "evidence": [
+  "tools/export_anonymous.py:60-65"
+ ],
+ "gaps": [],
+ "notes": [
+  "The refresh script hard-codes the Claude actor. The new manifest actor was corrected to Codex after running it, then its canonical hash and provenance entry were recomputed. Earlier manifests were preserved.",
+  "The original consolidated owner workbook was not available locally. All 196 review labels matched the included review CSVs; the available checked workbook matched its recorded hash. No new independent human validation is asserted.",
+  "All 394 review-A source passages were verified against allowlisted frozen inputs. Raw labels: 128 supported, 59 partial, 9 unsupported; combined: 137 supported, 50 partial, 9 unsupported."
+ ],
+ "manifest_sha256": "d28787467ec9781bb6cb027d4725ad158e8534486c51fc5a6d453846878d313e"
+}

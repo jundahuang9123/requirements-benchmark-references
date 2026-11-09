@@ -24,10 +24,10 @@
 
 This table lists every row and atom of the five reference sets (version 3). Rows are the published reference rows and rows added from the same reference document (marked $^{\dagger}$); each row is followed by its atoms, the scoring units. Row statements are curator paraphrases. Atom statements are written in one standard form: a content atom says what users can know, find, access, cite or use (\emph{Users can \dots}), a profile atom what the profile does (\emph{The profile \dots}), and a system atom names the system or role the source names. The reference documents' own wording is cited in the benchmark files. A provisional adjudication of reviewed items was applied on 23 October 2026: one duplicate merged, one umbrella atom left out of scoring, two compound atoms split, three evidence labels downgraded and one omitted need restored; each change is logged in the benchmark files.
 
-\paragraph{Columns.} \emph{Type}: content (c), information a catalog record should carry; profile (p), how the profile is specified (principles, scope, reuse and alignment, obligation levels, code lists, documentation); or system (s), the systems and processes around the profile (governance and maintenance, validation, interfaces, exchange, review)\citeneeded. Only content atoms are scored. \emph{Status} in the source: requirement (req.), proposal (prop.), open issue (open), guidance (guid.) or deferred to future work (def.). \emph{Base}: relation to the pinned \dcatap\ release: restates, tightens, extends, partly covered by, or beyond the base; -- for atoms that are not about metadata terms, ? if unresolved. \emph{Raw} and \emph{Cons.}: whether the raw corpus and, for mobilityDCAT-AP and HealthDCAT-AP, the pre-consolidation corpus state the atom: S stated, P in part, U uncertain, N not stated, -- no such corpus. Labels proposed by AI with verbatim quotations checked by program (22 Oct 2026), reviewed independently by two AI annotators and adjudicated by the curator (3 Nov 2026; see evidence-review/adjudication-2026-11-03.json). \emph{Sc.}: scored by default (\checkmark); m merged into an equivalent atom of another row (\req{Req-24.1} into \req{Req-19.7}); u an umbrella of separately scored atoms (\req{H-4.1} of \req{H-16.1}, \req{H-26.1}, \req{H-28.1}, \req{H-36.1}, \req{H-66.2}).
+\paragraph{Columns.} \emph{Type}: content (c), information a catalog record should carry; profile (p), how the profile is specified (principles, scope, reuse and alignment, obligation levels, code lists, documentation); or system (s), the systems and processes around the profile (governance and maintenance, validation, interfaces, exchange, review)\citeneeded. Only content atoms are scored. \emph{Status} in the source: requirement (req.), proposal (prop.), open issue (open), guidance (guid.) or deferred to future work (def.). \emph{Base}: relation to the pinned \dcatap\ release: restates, tightens, extends, partly covered by, or beyond the base; -- for atoms that are not about metadata terms, ? if unresolved. \emph{Raw} and \emph{Cons.}: whether the raw corpus and, for mobilityDCAT-AP and HealthDCAT-AP, the pre-consolidation corpus state the atom: S stated, P in part, U uncertain, N not stated, -- no such corpus. For the 196 scored atoms, Raw shows the curator-adjudicated label after two AI reviews (3 Nov 2026; one review was not blind). Cons. uses that adjudication only where consolidation was explicitly reviewed; otherwise it retains the original AI label. All 124 unscored atoms retain their original AI labels (22 Oct 2026). This is not independent human source validation; see evidence-review/adjudication-2026-11-03.json. \emph{Sc.}: scored by default (\checkmark); m merged into an equivalent atom of another row (\req{Req-24.1} into \req{Req-19.7}); u an umbrella of separately scored atoms (\req{H-4.1} of \req{H-16.1}, \req{H-26.1}, \req{H-28.1}, \req{H-36.1}, \req{H-66.2}).
 
 {\scriptsize\setlength{\tabcolsep}{3pt}
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.3cm}>{\raggedright\arraybackslash}p{5.5cm}cllccc@{}}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.3cm}>{\raggedright\arraybackslash}p{5.45cm}cllccc@{}}
 \toprule
 ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \midrule
@@ -41,7 +41,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{mobilityDCAT-AP}\quad\footnotesize NAPCORE requirement analysis (2022), Table~1; base \dcatap\ 2.0.1; inspected during development: outputs}\\*
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{40 rows (40 published), 98 atoms, 39 scored (39 requirements), 7 restate the base, 30 stated (39 at least in part); pre-consolidation corpus: 38 (39)}\\*
 \midrule
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-1}}\enspace Use sufficiently expressive, context-aware and modular descriptions with explicit structure, types and rules; distinguish entity identities, preserve references, and support persistent identifiers.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-1}}\enspace Use sufficiently expressive, context-aware and modular descriptions with explicit structure, types and rules; distinguish entity identities, preserve references, and support persistent identifiers.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-1.1} & The profile makes metadata descriptions expressive. & p & req. & -- & S & S & \\
 \req{Req-1.2} & The profile makes metadata descriptions rich. & p & req. & -- & S & U & \\
 \req{Req-1.3} & The profile describes the data adequately. & p & req. & -- & S & S & \\
@@ -53,7 +53,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{Req-1.9} & The profile keeps referential integrity. & p & req. & -- & S & U & \\
 \req{Req-1.10} & The profile enables persistent identifiers. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-2}}\enspace Make data findable and reusable; provide a basis for NAP metadata databases, describe catalogues, data and their delivery options, and support metadata federation.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-2}}\enspace Make data findable and reusable; provide a basis for NAP metadata databases, describe catalogues, data and their delivery options, and support metadata federation.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-2.1} & The profile makes datasets discoverable and searchable. & p & req. & -- & S & S & \\
 \req{Req-2.2} & The profile makes datasets reusable. & p & req. & -- & S & S & \\
 \req{Req-2.3} & The profile serves as a baseline for developing a NAP metadata database. & p & req. & -- & S & S & \\
@@ -62,66 +62,66 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{Req-2.6} & The profile allows a detailed description of the datasets' distributions and/or data services. & p & req. & -- & S & S & \\
 \req{Req-2.7} & The profile allows aggregation and exchange of metadata. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-3}}\enspace Expose descriptions in forms suitable for people and software.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-3}}\enspace Expose descriptions in forms suitable for people and software.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-3.1} & The profile provides for metadata in a human-readable format. & p & req. & -- & S & S & \\
 \req{Req-3.2} & The profile provides for metadata in a machine-readable format. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-4}}\enspace Accommodate descriptions in several languages.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-4}}\enspace Accommodate descriptions in several languages.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-4.1} & The profile provides for metadata information in multiple languages. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-5}}\enspace Use shared vocabularies so participants interpret metadata consistently.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-5}}\enspace Use shared vocabularies so participants interpret metadata consistently.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-5.1} & The profile adopts a standardised set of vocabularies to ensure semantic interoperability. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-6}}\enspace Use a common serialization that software agents can process automatically.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-6}}\enspace Use a common serialization that software agents can process automatically.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-6.1} & The profile adopts a standard format or serialisation, for technological interoperability and automated access by software agents. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-7}}\enspace Publish freely accessible documentation on the Web and, where feasible, provide digitally annotated repository documentation.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-7}}\enspace Publish freely accessible documentation on the Web and, where feasible, provide digitally annotated repository documentation.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-7.1} & The profile's documentation is publicly available on the Web without proprietary licences. & s & req. & -- & P & S & \\
 \req{Req-7.2} & The profile's documentation is annotated digitally in a public repository, where possible. & s & req. & -- & P & P & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-8}}\enspace Establish governance and revision procedures, public issue discussion and release planning, and incorporate resolved changes in later versions.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-8}}\enspace Establish governance and revision procedures, public issue discussion and release planning, and incorporate resolved changes in later versions.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-8.1} & The profile defines the governance processes for its maintenance. & s & req. & -- & S & S & \\
 \req{Req-8.2} & The profile defines its revision methodology. & s & req. & -- & S & S & \\
 \req{Req-8.3} & The profile allows public commenting on its development. & s & req. & -- & S & S & \\
 \req{Req-8.4} & The profile has an issues and releases planning tool. & s & req. & -- & S & S & \\
 \req{Req-8.5} & The profile's authors discuss and resolve issues and proposals and incorporate them into follow-up releases. & s & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-9}}\enspace Build on DCAT-AP terms when suitable and follow its extension rules for additions.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-9}}\enspace Build on DCAT-AP terms when suitable and follow its extension rules for additions.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-9.1} & The profile reuses DCAT-AP classes and properties where possible. & p & req. & -- & S & S & \\
 \req{Req-9.2} & The profile adds any further classes and properties according to the DCAT-AP extension rules. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-10}}\enspace Account for subsequent changes to the DCAT-AP baseline.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-10}}\enspace Account for subsequent changes to the DCAT-AP baseline.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-10.1} & The profile follows the ongoing evolution of DCAT-AP, considering its developments and revisions. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-11}}\enspace Review the complete CMC element set against mobility catalogue needs.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-11}}\enspace Review the complete CMC element set against mobility catalogue needs.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-11.1} & The profile considers all CMC metadata elements, to identify metadata that better fit the specific requirements of NAPs. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-12}}\enspace Account for other DCAT-AP profiles and INSPIRE metadata practice.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-12}}\enspace Account for other DCAT-AP profiles and INSPIRE metadata practice.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-12.1} & The profile considers existing DCAT-AP extensions (e.g. GeoDCAT-AP for geospatial data). & p & req. & -- & S & S & \\
 \req{Req-12.2} & The profile considers the metadata specifications of the INSPIRE Directive. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-13}}\enspace Preserve interoperability with code lists already deployed by NAP operators.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-13}}\enspace Preserve interoperability with code lists already deployed by NAP operators.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-13.1} & The profile takes into account the vocabularies already used in operational NAPs when defining controlled vocabularies, for interoperability with existing solutions. & p & req. & -- & P & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-14}}\enspace Describe the varied mobility domain in enough detail to distinguish its growing dataset inventory.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-14}}\enspace Describe the varied mobility domain in enough detail to distinguish its growing dataset inventory.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-14.1} & The profile provides exhaustive metadata descriptions for mobility data, given the growing number and variety of mobility datasets. & p & req. & -- & P & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-15}}\enspace Define a common essential element set while permitting deployment-specific additions.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-15}}\enspace Define a common essential element set while permitting deployment-specific additions.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-15.1} & The profile proposes essential metadata elements relevant to any NAP, as a minimum set of metadata for European NAPs. & p & req. & -- & S & S & \\
 \req{Req-15.2} & The profile allows further metadata elements in individual NAP deployments. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-16}}\enspace Examine the established CMC/DCAT-AP correspondences to identify unrepresented information.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-16}}\enspace Examine the established CMC/DCAT-AP correspondences to identify unrepresented information.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-16.1} & The profile uses the canonical mappings between DCAT-AP and the CMC to identify information that DCAT-AP cannot yet represent. & p & req. & -- & P & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-17}}\enspace Record creation and revision times, description language, and responsibility for maintaining a metadata record.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-17}}\enspace Record creation and revision times, description language, and responsibility for maintaining a metadata record.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-17.1} & Users can know the date and time a metadata record was created or last modified. & c & req. & restates & S & S & \checkmark\\
 \req{Req-17.2} & Users can know the language in which the metadata are written. & c & req. & tightens & S & S & \checkmark\\
 \req{Req-17.3} & Users can know who is responsible for creating and maintaining the metadata. & c & req. & extends & S & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-18}}\enspace State how the metadata record itself may be reused.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-18}}\enspace State how the metadata record itself may be reused.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-18.1} & Users can know the conditions of use of the metadata itself. & c & req. & restates & S & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-19}}\enspace Characterise the data using a title and synopsis, resource kind, dataset and service classifications including MMTIS service categories, language and payload georeferencing.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-19}}\enspace Characterise the data using a title and synopsis, resource kind, dataset and service classifications including MMTIS service categories, language and payload georeferencing.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-19.1} & Users can know the name of a resource. & c & req. & restates & S & S & \checkmark\\
 \req{Req-19.2} & Users can know a brief description of a resource. & c & req. & restates & S & S & \checkmark\\
 \req{Req-19.3} & Users can know the type of a resource (dataset or service). & c & req. & restates & S & S & \checkmark\\
@@ -130,93 +130,93 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{Req-19.6} & Users can know the language of a resource. & c & req. & restates & S & S & \checkmark\\
 \req{Req-19.7} & Users can know the georeferencing method applied within the payload. & c & req. & beyond & P & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-20}}\enspace Indicate which ITS delegated regulations apply to a resource.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-20}}\enspace Indicate which ITS delegated regulations apply to a resource.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-20.1} & Users can know which Delegated Regulation (MMTIS, RTTI, SRTI, SSTP) covers a dataset or service. & c & req. & beyond & P & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-21}}\enspace Coordinate, host, maintain and extend multilingual code lists for describing dataset and service content.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-21}}\enspace Coordinate, host, maintain and extend multilingual code lists for describing dataset and service content.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-21.1} & The profile supports the coordinated development of a controlled vocabulary for describing dataset and service content. & p & req. & -- & S & S & \\
 \req{Req-21.2} & The profile hosts the controlled vocabulary. & p & req. & -- & P & S & \\
 \req{Req-21.3} & The profile keeps the controlled vocabulary maintained. & p & req. & -- & S & S & \\
 \req{Req-21.4} & The profile keeps the controlled vocabulary extendable. & p & req. & -- & S & S & \\
 \req{Req-21.5} & The profile allows the controlled vocabulary to be translated into local languages, for harmonisation. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-22}}\enspace Represent the interval over which the published data remain valid.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-22}}\enspace Represent the interval over which the published data remain valid.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-22.1} & Users can know the period in which the published data do not expire. & c & req. & extends & S & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-23}}\enspace Describe spatial extent, applicable regions and network coverage using established functional classifications.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-23}}\enspace Describe spatial extent, applicable regions and network coverage using established functional classifications.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-23.1} & Users can know the area a dataset covers. & c & req. & tightens & S & S & \checkmark\\
 \req{Req-23.2} & Users can know the regions in which a dataset is valid. & c & req. & tightens & S & S & \checkmark\\
 \req{Req-23.3} & Users can know the transport network a dataset considers, following existing, widely applicable functional classifications. & c & req. & beyond & P & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-24}}\enspace Identify payload location-reference methods and coordinate reference systems.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-24}}\enspace Identify payload location-reference methods and coordinate reference systems.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-24.1} & Users can know the location referencing methods used in a dataset or service. & c & req. & beyond & S & S & m\\
 \req{Req-24.2} & Users can know the coordinate reference systems used in a dataset or service. & c & req. & tightens & S & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-25}}\enspace Identify the transport modes and operators represented by the data.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-25}}\enspace Identify the transport modes and operators represented by the data.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-25.1} & Users can know the transport modes a dataset deals with. & c & req. & beyond & S & S & \checkmark\\
 \req{Req-25.2} & Users can know the transport operators a dataset deals with. & c & req. & beyond & S & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-26}}\enspace Identify the publishing and owning parties for a dataset.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-26}}\enspace Identify the publishing and owning parties for a dataset.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-26.1} & Users can know who publishes a dataset. & c & req. & tightens & S & S & \checkmark\\
 \req{Req-26.2} & Users can know who owns a dataset. & c & req. & beyond & S & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-27}}\enspace Describe contractual, licensing and other conditions on data use.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-27}}\enspace Describe contractual, licensing and other conditions on data use.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-27.1} & Users can know whether a licence governs the use of the data. & c & req. & tightens & S & S & \checkmark\\
 \req{Req-27.2} & Users can know whether a contract governs the use of the data. & c & req. & extends & S & S & \checkmark\\
 \req{Req-27.3} & Users can know any other condition for using the data. & c & req. & extends & S & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-28}}\enspace Describe the encoding, syntax, grammar and underlying data model used for access.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-28}}\enspace Describe the encoding, syntax, grammar and underlying data model used for access.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-28.1} & Users can know the encoding of the data for access. & c & req. & beyond & S & S & \checkmark\\
 \req{Req-28.2} & Users can know the syntax of the data. & c & req. & tightens & S & S & \checkmark\\
 \req{Req-28.3} & Users can know the grammar of the data. & c & req. & beyond & S & S & \checkmark\\
 \req{Req-28.4} & Users can know the data model of the data. & c & req. & beyond & S & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-29}}\enspace Offer schema information and example data so consumers can assess suitability before integration.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-29}}\enspace Offer schema information and example data so consumers can assess suitability before integration.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-29.1} & Users can know the data schema, so they can evaluate the data before setting up consumption. & c & req. & beyond & S & S & \checkmark\\
 \req{Req-29.2} & Users can access data samples, so they can evaluate the data before setting up consumption. & c & req. & extends & S & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-30}}\enspace Distinguish precise data-model versions, publication types and extensions, such as those used in DATEX II, for discovery.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-30}}\enspace Distinguish precise data-model versions, publication types and extensions, such as those used in DATEX II, for discovery.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-30.1} & Users can know precisely the version of the data model a dataset adopts (e.g. the DATEX II version), to allow better searching. & c & req. & beyond & P & S & \checkmark\\
 \req{Req-30.2} & Users can know the publication type of the data model a dataset adopts (e.g. the DATEX II publication type), to allow better searching. & c & req. & beyond & P & S & \checkmark\\
 \req{Req-30.3} & Users can know the extensions of the data model a dataset adopts (e.g. DATEX II extensions), to allow better searching. & c & req. & beyond & P & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-31}}\enspace Record update cadence, quality criteria and the history and status of ITS-regulation compliance assessments.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-31}}\enspace Record update cadence, quality criteria and the history and status of ITS-regulation compliance assessments.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-31.1} & Users can know the update rate of a dataset. & c & req. & tightens & S & S & \checkmark\\
 \req{Req-31.2} & Users can know the quality criteria of a dataset. & c & req. & beyond & S & S & \checkmark\\
 \req{Req-31.3} & Users can know the history of the procedures that assess compliance with the Delegated Regulations on providing data via a NAP. & c & req. & beyond & P & S & \checkmark\\
 \req{Req-31.4} & Users can know the status of the procedures that assess compliance with the Delegated Regulations on providing data via a NAP. & c & req. & beyond & S & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-32}}\enspace Define occurrence limits and obligation levels and explain their consequences for database storage, user interfaces and harvesting, consistently with DCAT-AP.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-32}}\enspace Define occurrence limits and obligation levels and explain their consequences for database storage, user interfaces and harvesting, consistently with DCAT-AP.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-32.1} & The profile specifies the cardinality of each metadata element. & p & req. & -- & S & S & \\
 \req{Req-32.2} & The profile specifies the obligation of each metadata element (mandatory, recommended, optional). & p & req. & -- & S & S & \\
 \req{Req-32.3} & The profile establishes clear rules on the cardinalities of its metadata elements for NAP deployments (e.g. their implications for database set-ups, GUI designs and API or harvesting mechanisms). & p & req. & -- & P & S & \\
 \req{Req-32.4} & The profile considers the existing DCAT-AP rules on cardinalities. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-33}}\enspace Provide identifier guidance.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-33}}\enspace Provide identifier guidance.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-33.1} & The profile defines guidelines for identifiers. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-34}}\enspace Define permitted values for metadata elements, using suitable controlled vocabularies.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-34}}\enspace Define permitted values for metadata elements, using suitable controlled vocabularies.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-34.1} & The profile defines the expected value range of each metadata element (for example with controlled vocabularies). & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-35}}\enspace Track revisions and versions of catalogue metadata.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-35}}\enspace Track revisions and versions of catalogue metadata.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-35.1} & Users can know the changes of metadata records on a NAP. & c & req. & restates & S & S & \checkmark\\
 \req{Req-35.2} & Users can know the different versions of metadata records on a NAP. & c & req. & extends & P & S & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-36}}\enspace Enable automated conformance checking of metadata.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-36}}\enspace Enable automated conformance checking of metadata.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-36.1} & The profile supports the validation, possibly automatic, of metadata that adopts it. & s & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-37}}\enspace Explain element meanings and how to apply them within NAP operations.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-37}}\enspace Explain element meanings and how to apply them within NAP operations.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-37.1} & The profile provides usage rules in addition to the metadata definitions, explaining the semantics of each metadata element. & p & req. & -- & S & S & \\
 \req{Req-37.2} & The profile advises how to relate the metadata elements to NAP processes. & p & req. & -- & P & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-38}}\enspace Explain allocation of metadata between a dataset or service and its multiple delivery resources.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-38}}\enspace Explain allocation of metadata between a dataset or service and its multiple delivery resources.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-38.1} & The profile provides guidelines and solutions for dividing metadata between a dataset or service and its multiple resources. & p & req. & -- & S & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-39}}\enspace Explain exchange of mobility-specific descriptions with other-domain portals, including handling extensions during harvesting.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-39}}\enspace Explain exchange of mobility-specific descriptions with other-domain portals, including handling extensions during harvesting.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-39.1} & The profile provides guidelines on making NAP-specific metadata interoperable with other data portals (e.g. outside the mobility domain). & s & req. & -- & S & S & \\
 \req{Req-39.2} & The profile's interoperability guidelines cover how napDCAT-AP extensions are handled when harvesting from other portals. & s & req. & -- & P & S & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-40}}\enspace Give guidance for assuring the quality of metadata received by a NAP.\enspace\textit{(Table 1, PDF pp. 15–19)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-40}}\enspace Give guidance for assuring the quality of metadata received by a NAP.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-40.1} & The profile provides guidelines for a quality assurance process that checks the quality of metadata collected on a NAP. & s & req. & -- & S & S & \\
 \addlinespace[2pt]
 \midrule
@@ -416,7 +416,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-9}}\enspace Accompany sample data with definitions of its variables in a data dictionary.\enspace\textit{(D6.2 §5.2.6)}}\\*
 \req{H-9.1} & Users can access a data dictionary that defines all data elements of each sample distribution. & c & req. & beyond & P & N & \checkmark\\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-10}}\enspace Allow applicants to identify the variables they need, supporting data minimisation.\enspace\textit{(D6.2 §5.2.6 (pp. 43–44))}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-10}}\enspace Allow applicants to identify the variables they need, supporting data minimisation.\enspace\textit{(D6.2 §5.2.6 (pp. 43--44))}}\\*
 \req{H-10.1} & Data access applicants can list the specific variables they need, in line with data minimisation. & s & req. & -- & S & N & \\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-11}}\enspace Provide usable descriptions of data structures and coding so datasets can be understood and processed consistently.\enspace\textit{(D6.2 §5.2.6.1)}}\\*
@@ -480,7 +480,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{H-24.1} & Users can filter datasets by their geographical coverage, when considering populations. & c & prop. & tightens & S & P & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-25}}$^{\dagger}$\enspace Characterise each dataset with a few main keywords per language rather than long lists.\enspace\textit{(D6.2 §5.3.1.3 (Keyword))}}\\*
-\req{H-25.1} & Users can find each dataset by a few main keywords per language (10–15) rather than long lists. & c & prop. & tightens & P & N & \checkmark\\
+\req{H-25.1} & Users can find each dataset by a few main keywords per language (10--15) rather than long lists. & c & prop. & tightens & P & N & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-26}}$^{\dagger}$\enspace Describe a dataset's lineage: how it was created and modified, and by whom.\enspace\textit{(D6.2 §5.3.1.3 (Provenance))}}\\*
 \req{H-26.1} & Users can know a dataset's lineage: how it was created and modified, and by whom. & c & prop. & tightens & S & S & \checkmark\\
@@ -666,7 +666,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-8}}$^{\dagger}$\enspace Improve the discoverability of statistical datasets on general open data portals.\enspace\textit{(StatDCAT-AP 1.0.0 §2.2 (charter); §5.1)}}\\*
 \req{S-8.1} & The profile improves the discoverability of statistical datasets on general open data portals. & p & req. & -- & S & -- & \\
 \addlinespace[2pt]
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-9}}$^{\dagger}$\enspace Let statistical portals feed general open data portals by exporting their metadata in the profile, with guidance for SDMX-based systems.\enspace\textit{(StatDCAT-AP 1.0.0 §5.2; §8; Annexes IV–V)}}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-9}}$^{\dagger}$\enspace Let statistical portals feed general open data portals by exporting their metadata in the profile, with guidance for SDMX-based systems.\enspace\textit{(StatDCAT-AP 1.0.0 §5.2; §8; Annexes IV--V)}}\\*
 \req{S-9.1} & Statistical portals can export their metadata in the profile, so general open data portals can take it up. & s & req. & -- & S & -- & \\
 \req{S-9.2} & Organisations with SDMX-based systems get guidance for mapping and extracting their metadata into the profile. & s & req. & -- & U & -- & \\
 \addlinespace[2pt]

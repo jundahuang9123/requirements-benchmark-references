@@ -13,8 +13,7 @@ difference, the owner's decision and the final labels:
 - `final.raw`: does the raw corpus alone state the atom;
 - `final.consolidation`: does the pre-consolidation corpus alone state it (HealthDCAT-AP and
   mobilityDCAT-AP only; reviewed only where the combined label depends on it, else `not_reviewed`);
-- `final.combined`: raw and consolidation together. This is the label the evidence-eligible
-  denominators use.
+- `final.combined`: raw and consolidation together. Use this combined label only for runs that receive both corpora; raw-only runs use `final.raw`.
 
 ## How the labels were reviewed
 
@@ -39,9 +38,9 @@ difference, the owner's decision and the final labels:
 1. A passage counts only if it exists verbatim in the input text.
 2. A bare mention of the information item in the inputs (a field or element name in a list or schema)
    suffices for supported.
-3. A missing condition or scope does not by itself reduce the label (proposed as a rule, not adopted;
+3. No blanket rule for missing conditions or scope was adopted. The recorded per-atom decisions apply;
    three of A's concessions to partial on that ground, H-13.1, H-27.1, H-37.3, stand by the owner's
-   confirmation).
+   confirmation.
 4. Raw and consolidation labels are kept apart; the combined label counts support in either corpus.
 
 ## Result
@@ -51,10 +50,9 @@ difference, the owner's decision and the final labels:
 | Combined (raw or consolidation), 196 atoms | 137 | 50 | 9 | 0 |
 | Raw corpus alone | 128 | 59 | 9 | 0 |
 
-Test cases: mobilityDCAT-AP 38 / 1 / 0, GeoDCAT-AP 37 / 0 / 0 (combined). Against the 22 October labels,
-17 atoms changed, none upward (9 supported → partial, 6 uncertain → partial, 1 unsupported → partial,
-1 uncertain → unsupported); the supported count of 137 equals the 22 October raw figure by coincidence,
-not by identity of the sets.
+Cases without output-to-reference comparison during development: mobilityDCAT-AP 38 / 1 / 0, GeoDCAT-AP 37 / 0 / 0 (combined). Compared with the 22 October raw labels, 19 raw labels changed: 9 supported → partial, 8 uncertain → partial, 1 unsupported → partial and 1 uncertain → unsupported. Compared with the strongest original label across raw and consolidation, 17 combined labels changed: 9 supported → partial, 6 uncertain → partial, 1 unsupported → partial and 1 uncertain → unsupported. The combined supported count of 137 equals the original raw figure by coincidence, not by identity of the sets.
+
+The record's `final_differs_from_2026_10_22: 17` refers to that combined-to-combined comparison, not to the raw-only labels.
 
 ## Limits
 
@@ -72,3 +70,5 @@ sets `input_evidence.human_review` of each scored atom, adds `reviewed_*` counts
 `your_decision` / `your_note` of `atoms-review.csv`, and changes nothing else. The review workbooks
 (the consolidated workbook with the owner's decisions, and Astra's checked copy) stay outside the
 repository; the record holds their SHA-256.
+
+In the generated tables, scored atoms use the adjudicated raw label and, where explicitly reviewed, the adjudicated consolidation label. Consolidation entries marked `not_reviewed` and all 124 unscored atoms retain their original AI labels. The supplement distinguishes these scopes; it does not claim independent human source validation.
