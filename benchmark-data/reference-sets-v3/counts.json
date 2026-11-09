@@ -47,7 +47,24 @@
   },
   "scored_by_default_consolidation_supported": 38,
   "scored_by_default_consolidation_supported_or_partial": 39,
-  "atoms_with_overlaps": 8
+  "atoms_with_overlaps": 8,
+  "reviewed_evidence_labels": {
+   "supported": 38,
+   "partial": 1,
+   "unsupported": 0,
+   "uncertain": 0
+  },
+  "reviewed_raw_evidence_labels": {
+   "supported": 30,
+   "partial": 9,
+   "unsupported": 0,
+   "uncertain": 0
+  },
+  "scored_by_default_reviewed": 39,
+  "scored_by_default_reviewed_supported": 38,
+  "scored_by_default_reviewed_supported_or_partial": 39,
+  "scored_by_default_reviewed_raw_supported": 30,
+  "scored_by_default_reviewed_raw_supported_or_partial": 39
  },
  "healthdcat": {
   "rows": 69,
@@ -108,7 +125,24 @@
   },
   "scored_by_default_consolidation_supported": 5,
   "scored_by_default_consolidation_supported_or_partial": 22,
-  "atoms_with_overlaps": 35
+  "atoms_with_overlaps": 35,
+  "reviewed_evidence_labels": {
+   "supported": 54,
+   "partial": 31,
+   "unsupported": 4,
+   "uncertain": 0
+  },
+  "reviewed_raw_evidence_labels": {
+   "supported": 53,
+   "partial": 32,
+   "unsupported": 4,
+   "uncertain": 0
+  },
+  "scored_by_default_reviewed": 89,
+  "scored_by_default_reviewed_supported": 54,
+  "scored_by_default_reviewed_supported_or_partial": 85,
+  "scored_by_default_reviewed_raw_supported": 53,
+  "scored_by_default_reviewed_raw_supported_or_partial": 85
  },
  "statdcat": {
   "rows": 22,
@@ -156,7 +190,24 @@
   },
   "scored_by_default_raw_supported": 4,
   "scored_by_default_raw_supported_or_partial": 8,
-  "atoms_with_overlaps": 6
+  "atoms_with_overlaps": 6,
+  "reviewed_evidence_labels": {
+   "supported": 4,
+   "partial": 6,
+   "unsupported": 4,
+   "uncertain": 0
+  },
+  "reviewed_raw_evidence_labels": {
+   "supported": 4,
+   "partial": 6,
+   "unsupported": 4,
+   "uncertain": 0
+  },
+  "scored_by_default_reviewed": 14,
+  "scored_by_default_reviewed_supported": 4,
+  "scored_by_default_reviewed_supported_or_partial": 10,
+  "scored_by_default_reviewed_raw_supported": 4,
+  "scored_by_default_reviewed_raw_supported_or_partial": 10
  },
  "geodcat": {
   "rows": 46,
@@ -202,7 +253,24 @@
   },
   "scored_by_default_raw_supported": 37,
   "scored_by_default_raw_supported_or_partial": 37,
-  "atoms_with_overlaps": 9
+  "atoms_with_overlaps": 9,
+  "reviewed_evidence_labels": {
+   "supported": 37,
+   "partial": 0,
+   "unsupported": 0,
+   "uncertain": 0
+  },
+  "reviewed_raw_evidence_labels": {
+   "supported": 37,
+   "partial": 0,
+   "unsupported": 0,
+   "uncertain": 0
+  },
+  "scored_by_default_reviewed": 37,
+  "scored_by_default_reviewed_supported": 37,
+  "scored_by_default_reviewed_supported_or_partial": 37,
+  "scored_by_default_reviewed_raw_supported": 37,
+  "scored_by_default_reviewed_raw_supported_or_partial": 37
  },
  "jrc-research": {
   "rows": 11,
@@ -249,6 +317,23 @@
   },
   "scored_by_default_raw_supported": 6,
   "scored_by_default_raw_supported_or_partial": 12,
-  "atoms_with_overlaps": 6
+  "atoms_with_overlaps": 6,
+  "reviewed_evidence_labels": {
+   "supported": 4,
+   "partial": 12,
+   "unsupported": 1,
+   "uncertain": 0
+  },
+  "reviewed_raw_evidence_labels": {
+   "supported": 4,
+   "partial": 12,
+   "unsupported": 1,
+   "uncertain": 0
+  },
+  "scored_by_default_reviewed": 17,
+  "scored_by_default_reviewed_supported": 4,
+  "scored_by_default_reviewed_supported_or_partial": 16,
+  "scored_by_default_reviewed_raw_supported": 4,
+  "scored_by_default_reviewed_raw_supported_or_partial": 16
  }
 }
