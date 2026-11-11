@@ -75,7 +75,7 @@ def main():
 
     for r in recs:
         del r['_joined']
-        for key in [k for k in ('N1', 'N1_second') if any(key_in(p, k) for p in r['passages']) or (k + '_joined') in r]:
+        for key in ['N1'] + (['N1_second'] if args.second_model else []):
             vs = [p[key]['verdict'] for p in r['passages']]
             jv = r.get(key + '_joined', {}).get('verdict')
             ent_any = 'entailment' in vs or jv == 'entailment'
@@ -100,10 +100,6 @@ def main():
     paths.jdump({'part': 'B', 'reading': __doc__.strip().splitlines()[2:12], 'nli_models': model_records,
                  'provenance': paths.provenance(files)}, os.path.join(args.out, 'run-record.json'))
     print(f'written to {args.out} at {time.time() - t0:.0f}s', file=log, flush=True)
-
-
-def key_in(p, k):
-    return k in p
 
 
 def count(recs):
