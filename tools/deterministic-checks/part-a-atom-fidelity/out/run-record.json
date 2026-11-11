@@ -1,0 +1,56 @@
+{
+ "main_window": 700,
+ "nli_models": {
+  "main": {
+   "decision": "argmax, no threshold",
+   "device": "cpu",
+   "max_length": 512,
+   "model": "cross-encoder/nli-deberta-v3-base",
+   "revision": "6c749ce3425cd33b46d187e45b92bbf96ee12ec7",
+   "seed": 0,
+   "threads": 4,
+   "truncation": "only_first"
+  },
+  "second": {
+   "decision": "argmax, no threshold",
+   "device": "cpu",
+   "max_length": 512,
+   "model": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+   "revision": "b3546ea6b0346eb6f8d5d68b13c7dc6d0376b3d7",
+   "seed": 0,
+   "threads": 4,
+   "truncation": "only_first"
+  }
+ },
+ "part": "A",
+ "provenance": {
+  "inputs_sha256": {
+   "refs:benchmark-data/geodcat/reference-requirements/geo-final.pdf": "c52d1d2e74928f99165ee33623d519e55e214b6cd1091c8de3ab9b8794783dd7",
+   "refs:benchmark-data/healthdcat/reference-requirements/d6.2-requirements-and-profile.pdf": "590d9ec93a3dbeae571ce5cb4d7aac9b507fd4dff4c61acae268e030de34851a",
+   "refs:benchmark-data/reference-sets-v3/geodcat.json": "c058bf14f7fa7265717db5aa9ac505ca8e135e07abf8c4caa29f697d74236069",
+   "refs:benchmark-data/reference-sets-v3/healthdcat.json": "f8ae9d912c1bcc812bb43aa703c683c194ef115acd501d340c85372d23c5f250",
+   "refs:benchmark-data/reference-sets-v3/jrc-research.json": "9dc4e6883cd8a2fc2b31b89a75a1355d811abb9e26f443ec41adb1d9947886b2",
+   "refs:benchmark-data/reference-sets-v3/mobilitydcat.json": "ed599dd69c69d147560ec12d2ee8e6ba9376662de0b237c330296873aa2cb3e5",
+   "refs:benchmark-data/reference-sets-v3/statdcat.json": "a23c9f267a3970db69cb0418b4f4a21143c328249e3788b256cbf59fd8f09ed0",
+   "refs:benchmark-data/statdcat/reference-requirements/stat-final.pdf": "27cf14f71c843feda040c4f638d0d62a8c28f7ac87663d80fad7aaa48e689624"
+  },
+  "pipeline_commit": "8419bc8d60f3b9b6667f297f69f66f01eed6ccbb",
+  "references_commit": "524f65b641d13a392a569e64dab9e5aad8c12dae",
+  "run_store_commit": "f279d0b0eb907614b7930eba3eb220736c6dd4b0"
+ },
+ "reading": [
+  "`statement_before_standard` (T3 words added or dropped, N2 NLI in both directions). Fixed reading (see README):",
+  "  T1  flag when two or more content words are missing and at least half of them",
+  "  T2  flag when any number of the statement is not in the context",
+  "  T3  flag when the rewording added two or more content words, or dropped two or more",
+  "  N1  flag when the verdict context => statement is not entailment",
+  "  N2  flag when the two statements do not entail each other in both directions (either direction fails); the count",
+  "      with both directions failing is reported beside it",
+  "Sensitivity: windows of 300 and 1,500 characters (T1, T2, N1 depend on the window) and the second NLI model (N1, N2)."
+ ],
+ "windows": [
+  300,
+  700,
+  1500
+ ]
+}

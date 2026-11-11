@@ -1,0 +1,393 @@
+{
+ "all": {
+  "atoms": 196,
+  "disagreements": 51,
+  "partial": {
+   "T1_flagged": 33,
+   "any_passage_contradicts": 4,
+   "atoms": 59,
+   "entailed": 15,
+   "entailed_by_a_passage_or_joined": 15,
+   "with_passages": 58
+  },
+  "passages": 564,
+  "premise_truncated": 0,
+  "supported": {
+   "T1_flagged": 39,
+   "any_passage_contradicts": 2,
+   "atoms": 128,
+   "bare_mention_atoms": 7,
+   "entailed": 93,
+   "not_entailed": 35,
+   "not_entailed_bare_mention": 1,
+   "with_passages": 128
+  },
+  "unsupported": {
+   "T1_flagged": 1,
+   "any_passage_contradicts": 0,
+   "atoms": 9,
+   "entailed": 0,
+   "with_passages": 1,
+   "with_passages_listed": 1
+  }
+ },
+ "by_case": {
+  "geo": {
+   "atoms": 37,
+   "disagreements": 6,
+   "partial": {
+    "T1_flagged": 0,
+    "any_passage_contradicts": 0,
+    "atoms": 0,
+    "entailed": 0,
+    "entailed_by_a_passage_or_joined": 0,
+    "with_passages": 0
+   },
+   "passages": 81,
+   "premise_truncated": 0,
+   "supported": {
+    "T1_flagged": 7,
+    "any_passage_contradicts": 0,
+    "atoms": 37,
+    "bare_mention_atoms": 3,
+    "entailed": 31,
+    "not_entailed": 6,
+    "not_entailed_bare_mention": 0,
+    "with_passages": 37
+   },
+   "unsupported": {
+    "T1_flagged": 0,
+    "any_passage_contradicts": 0,
+    "atoms": 0,
+    "entailed": 0,
+    "with_passages": 0,
+    "with_passages_listed": 0
+   }
+  },
+  "health": {
+   "atoms": 89,
+   "disagreements": 30,
+   "partial": {
+    "T1_flagged": 19,
+    "any_passage_contradicts": 1,
+    "atoms": 32,
+    "entailed": 9,
+    "entailed_by_a_passage_or_joined": 9,
+    "with_passages": 32
+   },
+   "passages": 212,
+   "premise_truncated": 0,
+   "supported": {
+    "T1_flagged": 23,
+    "any_passage_contradicts": 1,
+    "atoms": 53,
+    "bare_mention_atoms": 2,
+    "entailed": 33,
+    "not_entailed": 20,
+    "not_entailed_bare_mention": 1,
+    "with_passages": 53
+   },
+   "unsupported": {
+    "T1_flagged": 1,
+    "any_passage_contradicts": 0,
+    "atoms": 4,
+    "entailed": 0,
+    "with_passages": 1,
+    "with_passages_listed": 1
+   }
+  },
+  "jrc": {
+   "atoms": 17,
+   "disagreements": 4,
+   "partial": {
+    "T1_flagged": 7,
+    "any_passage_contradicts": 2,
+    "atoms": 12,
+    "entailed": 3,
+    "entailed_by_a_passage_or_joined": 3,
+    "with_passages": 12
+   },
+   "passages": 32,
+   "premise_truncated": 0,
+   "supported": {
+    "T1_flagged": 2,
+    "any_passage_contradicts": 0,
+    "atoms": 4,
+    "bare_mention_atoms": 2,
+    "entailed": 3,
+    "not_entailed": 1,
+    "not_entailed_bare_mention": 0,
+    "with_passages": 4
+   },
+   "unsupported": {
+    "T1_flagged": 0,
+    "any_passage_contradicts": 0,
+    "atoms": 1,
+    "entailed": 0,
+    "with_passages": 0,
+    "with_passages_listed": 0
+   }
+  },
+  "mobility": {
+   "atoms": 39,
+   "disagreements": 9,
+   "partial": {
+    "T1_flagged": 7,
+    "any_passage_contradicts": 0,
+    "atoms": 9,
+    "entailed": 2,
+    "entailed_by_a_passage_or_joined": 2,
+    "with_passages": 9
+   },
+   "passages": 219,
+   "premise_truncated": 0,
+   "supported": {
+    "T1_flagged": 6,
+    "any_passage_contradicts": 1,
+    "atoms": 30,
+    "bare_mention_atoms": 0,
+    "entailed": 23,
+    "not_entailed": 7,
+    "not_entailed_bare_mention": 0,
+    "with_passages": 30
+   },
+   "unsupported": {
+    "T1_flagged": 0,
+    "any_passage_contradicts": 0,
+    "atoms": 0,
+    "entailed": 0,
+    "with_passages": 0,
+    "with_passages_listed": 0
+   }
+  },
+  "stat": {
+   "atoms": 14,
+   "disagreements": 2,
+   "partial": {
+    "T1_flagged": 0,
+    "any_passage_contradicts": 1,
+    "atoms": 6,
+    "entailed": 1,
+    "entailed_by_a_passage_or_joined": 1,
+    "with_passages": 5
+   },
+   "passages": 20,
+   "premise_truncated": 0,
+   "supported": {
+    "T1_flagged": 1,
+    "any_passage_contradicts": 0,
+    "atoms": 4,
+    "bare_mention_atoms": 0,
+    "entailed": 3,
+    "not_entailed": 1,
+    "not_entailed_bare_mention": 0,
+    "with_passages": 4
+   },
+   "unsupported": {
+    "T1_flagged": 0,
+    "any_passage_contradicts": 0,
+    "atoms": 4,
+    "entailed": 0,
+    "with_passages": 0,
+    "with_passages_listed": 0
+   }
+  }
+ },
+ "second_model": {
+  "all": {
+   "atoms": 196,
+   "disagreements": 44,
+   "partial": {
+    "T1_flagged": 33,
+    "any_passage_contradicts": 2,
+    "atoms": 59,
+    "entailed": 19,
+    "entailed_by_a_passage_or_joined": 19,
+    "with_passages": 58
+   },
+   "passages": 564,
+   "premise_truncated": 0,
+   "supported": {
+    "T1_flagged": 39,
+    "any_passage_contradicts": 1,
+    "atoms": 128,
+    "bare_mention_atoms": 7,
+    "entailed": 104,
+    "not_entailed": 24,
+    "not_entailed_bare_mention": 1,
+    "with_passages": 128
+   },
+   "unsupported": {
+    "T1_flagged": 1,
+    "any_passage_contradicts": 0,
+    "atoms": 9,
+    "entailed": 0,
+    "with_passages": 1,
+    "with_passages_listed": 1
+   }
+  },
+  "by_case": {
+   "geo": {
+    "atoms": 37,
+    "disagreements": 5,
+    "partial": {
+     "T1_flagged": 0,
+     "any_passage_contradicts": 0,
+     "atoms": 0,
+     "entailed": 0,
+     "entailed_by_a_passage_or_joined": 0,
+     "with_passages": 0
+    },
+    "passages": 81,
+    "premise_truncated": 0,
+    "supported": {
+     "T1_flagged": 7,
+     "any_passage_contradicts": 0,
+     "atoms": 37,
+     "bare_mention_atoms": 3,
+     "entailed": 32,
+     "not_entailed": 5,
+     "not_entailed_bare_mention": 0,
+     "with_passages": 37
+    },
+    "unsupported": {
+     "T1_flagged": 0,
+     "any_passage_contradicts": 0,
+     "atoms": 0,
+     "entailed": 0,
+     "with_passages": 0,
+     "with_passages_listed": 0
+    }
+   },
+   "health": {
+    "atoms": 89,
+    "disagreements": 24,
+    "partial": {
+     "T1_flagged": 19,
+     "any_passage_contradicts": 0,
+     "atoms": 32,
+     "entailed": 10,
+     "entailed_by_a_passage_or_joined": 10,
+     "with_passages": 32
+    },
+    "passages": 212,
+    "premise_truncated": 0,
+    "supported": {
+     "T1_flagged": 23,
+     "any_passage_contradicts": 1,
+     "atoms": 53,
+     "bare_mention_atoms": 2,
+     "entailed": 40,
+     "not_entailed": 13,
+     "not_entailed_bare_mention": 0,
+     "with_passages": 53
+    },
+    "unsupported": {
+     "T1_flagged": 1,
+     "any_passage_contradicts": 0,
+     "atoms": 4,
+     "entailed": 0,
+     "with_passages": 1,
+     "with_passages_listed": 1
+    }
+   },
+   "jrc": {
+    "atoms": 17,
+    "disagreements": 6,
+    "partial": {
+     "T1_flagged": 7,
+     "any_passage_contradicts": 1,
+     "atoms": 12,
+     "entailed": 4,
+     "entailed_by_a_passage_or_joined": 4,
+     "with_passages": 12
+    },
+    "passages": 32,
+    "premise_truncated": 0,
+    "supported": {
+     "T1_flagged": 2,
+     "any_passage_contradicts": 0,
+     "atoms": 4,
+     "bare_mention_atoms": 2,
+     "entailed": 2,
+     "not_entailed": 2,
+     "not_entailed_bare_mention": 1,
+     "with_passages": 4
+    },
+    "unsupported": {
+     "T1_flagged": 0,
+     "any_passage_contradicts": 0,
+     "atoms": 1,
+     "entailed": 0,
+     "with_passages": 0,
+     "with_passages_listed": 0
+    }
+   },
+   "mobility": {
+    "atoms": 39,
+    "disagreements": 7,
+    "partial": {
+     "T1_flagged": 7,
+     "any_passage_contradicts": 1,
+     "atoms": 9,
+     "entailed": 3,
+     "entailed_by_a_passage_or_joined": 3,
+     "with_passages": 9
+    },
+    "passages": 219,
+    "premise_truncated": 0,
+    "supported": {
+     "T1_flagged": 6,
+     "any_passage_contradicts": 0,
+     "atoms": 30,
+     "bare_mention_atoms": 0,
+     "entailed": 26,
+     "not_entailed": 4,
+     "not_entailed_bare_mention": 0,
+     "with_passages": 30
+    },
+    "unsupported": {
+     "T1_flagged": 0,
+     "any_passage_contradicts": 0,
+     "atoms": 0,
+     "entailed": 0,
+     "with_passages": 0,
+     "with_passages_listed": 0
+    }
+   },
+   "stat": {
+    "atoms": 14,
+    "disagreements": 2,
+    "partial": {
+     "T1_flagged": 0,
+     "any_passage_contradicts": 0,
+     "atoms": 6,
+     "entailed": 2,
+     "entailed_by_a_passage_or_joined": 2,
+     "with_passages": 5
+    },
+    "passages": 20,
+    "premise_truncated": 0,
+    "supported": {
+     "T1_flagged": 1,
+     "any_passage_contradicts": 0,
+     "atoms": 4,
+     "bare_mention_atoms": 0,
+     "entailed": 4,
+     "not_entailed": 0,
+     "not_entailed_bare_mention": 0,
+     "with_passages": 4
+    },
+    "unsupported": {
+     "T1_flagged": 0,
+     "any_passage_contradicts": 0,
+     "atoms": 4,
+     "entailed": 0,
+     "with_passages": 0,
+     "with_passages_listed": 0
+    }
+   }
+  },
+  "disagreement_changed": 39
+ }
+}
