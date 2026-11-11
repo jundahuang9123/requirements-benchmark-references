@@ -31,7 +31,7 @@ with unit tests on invented sentences in `../tests/`.
 Reading of N2: the spec's "not entailment in both directions" was read, before the run, as *the two wordings do not entail
 each other*, i.e. a flag when either direction fails; the stricter count (both directions fail) is reported too.
 
-## Results (first run; the rerun test and the curator's review are pending)
+## Results (first run; the rerun test is pending)
 
 Counts only; the per-atom record is `out/atoms.json`, the tables `out/counts.json`, the sensitivity runs `out/sensitivity.json`.
 
@@ -70,7 +70,14 @@ Sensitivity (how many flags change against the 700-character window):
 - The lexical rules were written from the spec's table; the earlier `atom_fidelity.py` of the project docs was not
   available, so its counts (62 of 320 flagged on 11 Nov) and these (68) come from two rule sets.
 
-## Review sheet
+## Curator's review (11 Nov 2026)
+
+The 61 atoms flagged by both kinds of test were shown to the curator in chat with their flagged words and NLI verdicts.
+Verdict: all 61 checked and faithful; no atom changes; no review sheet needed (`review-decision-2026-11-11.json`). The
+192 atoms flagged by one kind of test only were not reviewed. So the screen found no atom the curator would change, and
+the miss rate of the screen was not estimated (no unflagged sample was reviewed).
+
+## Review sheet (not used)
 
 `../make_sheet.py` writes `review/atom-fidelity-review.xlsx`: every atom with any flag, "both" first, then
 contradictions, then the rest shuffled with 30 random unflagged atoms (unmarked); the curator ticks *faithful / adds
