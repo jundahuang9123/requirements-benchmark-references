@@ -61,8 +61,9 @@
   },
   "atoms_by_relation_to_base": {
    "beyond_base": 9,
-   "restates_base": 4,
+   "restates_base": 3,
    "tightens_base": 3,
+   "partly_base": 1,
    "extends_base": 1,
    "not_term_level": 1
   },
@@ -73,7 +74,7 @@
    "restored in adjudication (JC-006)": 1
   },
   "scored_by_default": 17,
-  "scored_by_default_without_dcat_ap_restatements": 13,
+  "scored_by_default_without_dcat_ap_restatements": 14,
   "scored_by_default_without_rq2_rules": 17,
   "scored_by_default_requirement_status_only": 9,
   "atoms_merged_for_scoring": 0,
@@ -1254,8 +1255,19 @@
    "status_in_source": "requirement",
    "modality": "issue",
    "applicability": "Within the cited source scope; not an assertion of universal applicability.",
-   "relation_to_base": "restates_base",
+   "relation_to_base": "partly_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "restates_base",
+    "review_claude_blind": "partly_base",
+    "category": "restates changes",
+    "decision": "follows the blind review",
+    "final": "partly_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "Perego et al. 2016 (SDSVoc paper 27), \"Data citation\", \"Identifiers\"",
    "pr45_pdf_pages": [],
@@ -1274,7 +1286,7 @@
     "found_by": "audit pass A only"
    },
    "notes": "Met by the base (adms:Identifier carries the scheme); the paper questions this modelling because such identifiers are of little use for linking.",
-   "restates_dcat_ap": true,
+   "restates_dcat_ap": false,
    "derived_from": "Data citation practice (DataCite, DOI)",
    "origin": [
     "std",

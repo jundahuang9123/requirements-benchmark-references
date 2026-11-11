@@ -65,13 +65,13 @@
    "deferred": 1
   },
   "atoms_by_relation_to_base": {
-   "tightens_base": 30,
+   "tightens_base": 33,
    "not_term_level": 30,
-   "beyond_base": 42,
+   "beyond_base": 41,
    "partly_base": 1,
-   "extends_base": 4,
-   "restates_base": 13,
-   "unresolved": 1
+   "restates_base": 12,
+   "unresolved": 1,
+   "extends_base": 3
   },
   "atoms_by_found_by": {
    "v1 row (split by audit pass A)": 37,
@@ -81,7 +81,7 @@
    "both": 42
   },
   "scored_by_default": 89,
-  "scored_by_default_without_dcat_ap_restatements": 76,
+  "scored_by_default_without_dcat_ap_restatements": 77,
   "scored_by_default_without_rq2_rules": 89,
   "scored_by_default_requirement_status_only": 51,
   "atoms_merged_for_scoring": 0,
@@ -2909,8 +2909,19 @@
    "status_in_source": "requirement",
    "modality": "capability",
    "applicability": "Within the cited source scope; not an assertion of universal applicability.",
-   "relation_to_base": "extends_base",
+   "relation_to_base": "restates_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "extends_base",
+    "review_claude_blind": "restates_base",
+    "category": "restates changes",
+    "decision": "follows the blind review",
+    "final": "restates_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "D6.2 §5.2.3",
    "pr45_pdf_pages": [
@@ -2934,7 +2945,7 @@
     "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "DCAT-AP 3.0.0 already has dct:type on foaf:Agent (recommended); HealthDCAT-AP mints healthdcatap:publisherType with its own controlled vocabulary.",
-   "restates_dcat_ap": false,
+   "restates_dcat_ap": true,
    "derived_from": "EHDS Art. 33 health categories; HealthDCAT-AP faceted-search design",
    "origin": [
     "tech",
@@ -3809,8 +3820,19 @@
    "status_in_source": "requirement",
    "modality": "capability",
    "applicability": "Within the cited source scope; not an assertion of universal applicability.",
-   "relation_to_base": "beyond_base",
+   "relation_to_base": "restates_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "beyond_base",
+    "review_claude_blind": "restates_base",
+    "category": "restates changes",
+    "decision": "follows the blind review",
+    "final": "restates_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "D6.2 §5.2.4",
    "pr45_pdf_pages": [
@@ -3835,7 +3857,7 @@
     "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "",
-   "restates_dcat_ap": false,
+   "restates_dcat_ap": true,
    "derived_from": "Semantic annotation practice (Wikidata, SEMIC)",
    "origin": [
     "tech"
@@ -4597,6 +4619,17 @@
    "applicability": "Where available",
    "relation_to_base": "beyond_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "beyond_base",
+    "review_claude_blind": "restates_base",
+    "category": "restates changes",
+    "decision": "keeps the repository's code",
+    "final": "beyond_base",
+    "decided_by": "model:claude/assistant, to which human:curator left the row",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "D6.2 §5.2.6.1 (quoting Data Act Art. 33(1)(b))",
    "pr45_pdf_pages": [
@@ -4699,6 +4732,17 @@
    "applicability": "Where available",
    "relation_to_base": "beyond_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "beyond_base",
+    "review_claude_blind": "restates_base",
+    "category": "restates changes",
+    "decision": "keeps the repository's code",
+    "final": "beyond_base",
+    "decided_by": "model:claude/assistant, to which human:curator left the row",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "D6.2 §5.2.6.1 (quoting Data Act Art. 33(1)(b))",
    "pr45_pdf_pages": [
@@ -5207,8 +5251,19 @@
    "status_in_source": "requirement",
    "modality": "recommendation",
    "applicability": "Within the cited source scope; not an assertion of universal applicability.",
-   "relation_to_base": "restates_base",
+   "relation_to_base": "tightens_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "restates_base",
+    "review_claude_blind": "tightens_base",
+    "category": "obligation only",
+    "decision": "follows the blind review",
+    "final": "tightens_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "D6.2 §5.2.6.2",
    "pr45_pdf_pages": [
@@ -5230,7 +5285,7 @@
     "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "Each logical dataset is an ordinary dcat:Dataset with its own record; the source recommends this \"user-centric\" approach.",
-   "restates_dcat_ap": true,
+   "restates_dcat_ap": false,
    "derived_from": "EHDS Recital 39; French Health Data Hub mapping (Task 9.4); Finnish and Norwegian registry examples",
    "origin": [
     "exp",
@@ -10701,8 +10756,19 @@
    "status_in_source": "requirement",
    "modality": "capability",
    "applicability": "Within the cited source scope; not an assertion of universal applicability.",
-   "relation_to_base": "restates_base",
+   "relation_to_base": "tightens_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "restates_base",
+    "review_claude_blind": "tightens_base",
+    "category": "obligation only",
+    "decision": "follows the blind review",
+    "final": "tightens_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "D6.2 §5.2.1.1",
    "pr45_pdf_pages": [
@@ -10725,7 +10791,7 @@
     "found_by": "both"
    },
    "notes": "",
-   "restates_dcat_ap": true,
+   "restates_dcat_ap": false,
    "derived_from": "DCAT-AP 3.0 catalogue record",
    "origin": [
     "tech"
@@ -10897,8 +10963,19 @@
    "status_in_source": "requirement",
    "modality": "capability",
    "applicability": "Within the cited source scope; not an assertion of universal applicability.",
-   "relation_to_base": "restates_base",
+   "relation_to_base": "tightens_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "restates_base",
+    "review_claude_blind": "tightens_base",
+    "category": "obligation only",
+    "decision": "follows the blind review",
+    "final": "tightens_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "D6.2 §5.2.1.1",
    "pr45_pdf_pages": [
@@ -10921,7 +10998,7 @@
     "found_by": "both"
    },
    "notes": "",
-   "restates_dcat_ap": true,
+   "restates_dcat_ap": false,
    "derived_from": "DCAT-AP 3.0 catalogue record",
    "origin": [
     "tech"

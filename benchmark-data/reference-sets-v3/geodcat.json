@@ -62,10 +62,10 @@
   },
   "atoms_by_relation_to_base": {
    "not_term_level": 19,
-   "extends_base": 5,
-   "restates_base": 16,
-   "beyond_base": 11,
-   "partly_base": 5
+   "extends_base": 6,
+   "restates_base": 17,
+   "beyond_base": 10,
+   "partly_base": 4
   },
   "atoms_by_found_by": {
    "v1 row": 14,
@@ -73,7 +73,7 @@
    "Claude v2 only": 5
   },
   "scored_by_default": 37,
-  "scored_by_default_without_dcat_ap_restatements": 21,
+  "scored_by_default_without_dcat_ap_restatements": 20,
   "scored_by_default_without_rq2_rules": 37,
   "scored_by_default_requirement_status_only": 37,
   "atoms_merged_for_scoring": 0,
@@ -3855,8 +3855,19 @@
    "status_in_source": "requirement",
    "modality": "source_table_obligation",
    "applicability": "Use the dataset, series or service applicability and conditions of Annex II; not every element is mandatory for every resource.",
-   "relation_to_base": "beyond_base",
+   "relation_to_base": "restates_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "beyond_base",
+    "review_claude_blind": "restates_base",
+    "category": "restates changes",
+    "decision": "follows the blind review",
+    "final": "restates_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "GeoDCAT-AP 1.0 §4.2; Annex I (Table 5); Annex II.8",
    "pr45_pdf_pages": [
@@ -3885,7 +3896,7 @@
     "dcat_ap_coverage": "—",
     "geodcat_ap_representation": "full"
    },
-   "restates_dcat_ap": false,
+   "restates_dcat_ap": true,
    "derived_from": "INSPIRE metadata elements and ISO 19115 core profile (Annex I, Table 5)",
    "origin": [
     "law",
@@ -5166,6 +5177,17 @@
    "applicability": "Use the dataset, series or service applicability and conditions of Annex II; not every element is mandatory for every resource.",
    "relation_to_base": "partly_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "partly_base",
+    "review_claude_blind": "restates_base",
+    "category": "restates changes",
+    "decision": "keeps the repository's code",
+    "final": "partly_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "GeoDCAT-AP 1.0 §4.2; Annex I (Table 5); Annex II.3",
    "pr45_pdf_pages": [
@@ -5659,8 +5681,19 @@
    "status_in_source": "requirement",
    "modality": "source_table_obligation",
    "applicability": "Use the dataset, series or service applicability and conditions of Annex II; not every element is mandatory for every resource.",
-   "relation_to_base": "restates_base",
+   "relation_to_base": "extends_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "restates_base",
+    "review_claude_blind": "extends_base",
+    "category": "restates changes",
+    "decision": "follows the blind review",
+    "final": "extends_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "GeoDCAT-AP 1.0 §4.2; Annex I (Table 5); Annex II.15",
    "pr45_pdf_pages": [
@@ -5689,7 +5722,7 @@
     "dcat_ap_coverage": "Yes",
     "geodcat_ap_representation": "full"
    },
-   "restates_dcat_ap": true,
+   "restates_dcat_ap": false,
    "derived_from": "INSPIRE metadata elements and ISO 19115 core profile (Annex I, Table 5)",
    "origin": [
     "law"
@@ -5865,8 +5898,19 @@
    "status_in_source": "requirement",
    "modality": "source_table_obligation",
    "applicability": "Use the dataset, series or service applicability and conditions of Annex II; not every element is mandatory for every resource.",
-   "relation_to_base": "partly_base",
+   "relation_to_base": "restates_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "partly_base",
+    "review_claude_blind": "restates_base",
+    "category": "restates changes",
+    "decision": "follows the blind review",
+    "final": "restates_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "GeoDCAT-AP 1.0 §4.2; Annex I (Table 5); Annex II.27",
    "pr45_pdf_pages": [
@@ -5897,7 +5941,7 @@
     "dcat_ap_coverage": "Partially (only maintenance and update frequency)",
     "geodcat_ap_representation": "frequency_only"
    },
-   "restates_dcat_ap": false,
+   "restates_dcat_ap": true,
    "derived_from": "INSPIRE metadata elements and ISO 19115 core profile (Annex I, Table 5)",
    "origin": [
     "law"

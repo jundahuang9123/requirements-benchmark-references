@@ -62,9 +62,10 @@
   },
   "atoms_by_relation_to_base": {
    "beyond_base": 9,
-   "extends_base": 1,
-   "restates_base": 6,
-   "not_term_level": 11
+   "extends_base": 2,
+   "restates_base": 4,
+   "not_term_level": 11,
+   "tightens_base": 1
   },
   "atoms_by_found_by": {
    "v1 row (split by audit pass A)": 9,
@@ -73,7 +74,7 @@
    "both": 5
   },
   "scored_by_default": 14,
-  "scored_by_default_without_dcat_ap_restatements": 8,
+  "scored_by_default_without_dcat_ap_restatements": 10,
   "scored_by_default_without_rq2_rules": 14,
   "scored_by_default_requirement_status_only": 10,
   "atoms_merged_for_scoring": 0,
@@ -1567,8 +1568,19 @@
    "status_in_source": "guidance",
    "modality": "representation_guidance",
    "applicability": "Within the cited source scope; not an assertion of universal applicability.",
-   "relation_to_base": "restates_base",
+   "relation_to_base": "extends_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "restates_base",
+    "review_claude_blind": "extends_base",
+    "category": "restates changes",
+    "decision": "follows the blind review",
+    "final": "extends_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "StatDCAT-AP 1.0.0 §7.2.6",
    "pr45_pdf_pages": [
@@ -1589,7 +1601,7 @@
     "found_by": "v1 row (split by audit pass A)"
    },
    "notes": "",
-   "restates_dcat_ap": true,
+   "restates_dcat_ap": false,
    "derived_from": "National statistical institutes and Eurostat practice (time-series notation)",
    "origin": [
     "prac"
@@ -2415,6 +2427,17 @@
    "applicability": "",
    "relation_to_base": "restates_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "restates_base",
+    "review_claude_blind": "tightens_base",
+    "category": "obligation only",
+    "decision": "keeps the repository's code",
+    "final": "restates_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "StatDCAT-AP 1.0.0 §7.8.3",
    "pr45_pdf_pages": [],
@@ -2599,8 +2622,19 @@
    "status_in_source": "requirement",
    "modality": "requirement",
    "applicability": "",
-   "relation_to_base": "restates_base",
+   "relation_to_base": "tightens_base",
    "relation_note": "",
+   "relation_review": {
+    "status": "adjudicated",
+    "date": "2026-11-11",
+    "code_before": "restates_base",
+    "review_claude_blind": "tightens_base",
+    "category": "obligation only",
+    "decision": "follows the blind review",
+    "final": "tightens_base",
+    "decided_by": "human:curator",
+    "record": "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json"
+   },
    "reuse_or_alignment_rule": false,
    "source_locator": "StatDCAT-AP 1.0.0 §11; Annex III",
    "pr45_pdf_pages": [],
@@ -2619,7 +2653,7 @@
     "found_by": "Claude v2 only"
    },
    "notes": "",
-   "restates_dcat_ap": true,
+   "restates_dcat_ap": false,
    "derived_from": "Public review issue (resolution log)",
    "origin": [
     "exp"
