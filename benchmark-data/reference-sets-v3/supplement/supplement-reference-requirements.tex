@@ -24,7 +24,7 @@
 
 This table lists every row and atom of the five reference sets (version 3). Rows are the published reference rows and rows added from the same reference document (marked $^{\dagger}$); each row is followed by its atoms, the scoring units. Row statements are curator paraphrases. Atom statements are written in one standard form: a content atom says what users can know, find, access, cite or use (\emph{Users can \dots}), a profile atom what the profile does (\emph{The profile \dots}), and a system atom names the system or role the source names. The reference documents' own wording is cited in the benchmark files. A provisional adjudication of reviewed items was applied on 23 October 2026: one duplicate merged, one umbrella atom left out of scoring, two compound atoms split, three evidence labels downgraded and one omitted need restored; each change is logged in the benchmark files.
 
-\paragraph{Columns.} \emph{Type}: content (c), information a catalog record should carry; profile (p), how the profile is specified (principles, scope, reuse and alignment, obligation levels, code lists, documentation); or system (s), the systems and processes around the profile (governance and maintenance, validation, interfaces, exchange, review)\citeneeded. Only content atoms are scored. \emph{Status} in the source: requirement (req.), proposal (prop.), open issue (open), guidance (guid.) or deferred to future work (def.). \emph{Base}: relation to the pinned \dcatap\ release: restates, tightens, extends, partly covered by, or beyond the base; -- for atoms that are not about metadata terms, ? if unresolved. \emph{Raw} and \emph{Cons.}: whether the raw corpus and, for mobilityDCAT-AP and HealthDCAT-AP, the pre-consolidation corpus state the atom: S stated, P in part, U uncertain, N not stated, -- no such corpus. For the 196 scored atoms, Raw shows the curator-adjudicated label after two AI reviews (3 Nov 2026; one review was not blind). Cons. uses that adjudication only where consolidation was explicitly reviewed; otherwise it retains the original AI label. All 124 unscored atoms retain their original AI labels (22 Oct 2026). This is not independent human source validation; see evidence-review/adjudication-2026-11-03.json. \emph{Sc.}: scored by default (\checkmark); m merged into an equivalent atom of another row (\req{Req-24.1} into \req{Req-19.7}); u an umbrella of separately scored atoms (\req{H-4.1} of \req{H-16.1}, \req{H-26.1}, \req{H-28.1}, \req{H-36.1}, \req{H-66.2}).
+\paragraph{Columns.} \emph{Type}: content (c), information a catalog record should carry; profile (p), how the profile is specified (principles, scope, reuse and alignment, obligation levels, code lists, documentation); or system (s), the systems and processes around the profile (governance and maintenance, validation, interfaces, exchange, review)\citeneeded. Only content atoms are scored. \emph{Status} in the source: requirement (req.), proposal (prop.), open issue (open), guidance (guid.) or deferred to future work (def.). \emph{Base}: relation to the pinned \dcatap\ release: restates, tightens, extends, partly covered by, or beyond the base; -- for atoms that are not about metadata terms, ? if unresolved. For the 18 scored atoms on which a blind AI review (3--4 Nov 2026) and the earlier code differ on whether the atom restates the base, the code was adjudicated on 11 Nov 2026 (13 follow the review, 5 keep the earlier code); see base-relation-review/adjudication-2026-11-11.json. \emph{Raw} and \emph{Cons.}: whether the raw corpus and, for mobilityDCAT-AP and HealthDCAT-AP, the pre-consolidation corpus state the atom: S stated, P in part, U uncertain, N not stated, -- no such corpus. For the 196 scored atoms, Raw shows the curator-adjudicated label after two AI reviews (3 Nov 2026; one review was not blind). Cons. uses that adjudication only where consolidation was explicitly reviewed; otherwise it retains the original AI label. All 124 unscored atoms retain their original AI labels (22 Oct 2026). This is not independent human source validation; see evidence-review/adjudication-2026-11-03.json. \emph{Sc.}: scored by default (\checkmark); m merged into an equivalent atom of another row (\req{Req-24.1} into \req{Req-19.7}); u an umbrella of separately scored atoms (\req{H-4.1} of \req{H-16.1}, \req{H-26.1}, \req{H-28.1}, \req{H-36.1}, \req{H-66.2}).
 
 {\scriptsize\setlength{\tabcolsep}{3pt}
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.3cm}>{\raggedright\arraybackslash}p{5.45cm}cllccc@{}}
@@ -39,7 +39,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \bottomrule
 \endlastfoot
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{mobilityDCAT-AP}\quad\footnotesize NAPCORE requirement analysis (2022), Table~1; base \dcatap\ 2.0.1; inspected during development: outputs}\\*
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{40 rows (40 published), 98 atoms, 39 scored (39 requirements), 7 restate the base, 30 stated (39 at least in part); pre-consolidation corpus: 38 (39)}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{40 rows (40 published), 98 atoms, 39 scored (39 requirements), 5 restate the base, 30 stated (39 at least in part); pre-consolidation corpus: 38 (39)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-1}}\enspace Use sufficiently expressive, context-aware and modular descriptions with explicit structure, types and rules; distinguish entity identities, preserve references, and support persistent identifiers.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-1.1} & The profile makes metadata descriptions expressive. & p & req. & -- & S & S & \\
@@ -123,11 +123,11 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-19}}\enspace Characterise the data using a title and synopsis, resource kind, dataset and service classifications including MMTIS service categories, language and payload georeferencing.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
 \req{Req-19.1} & Users can know the name of a resource. & c & req. & restates & S & S & \checkmark\\
-\req{Req-19.2} & Users can know a brief description of a resource. & c & req. & restates & S & S & \checkmark\\
+\req{Req-19.2} & Users can know a brief description of a resource. & c & req. & tightens & S & S & \checkmark\\
 \req{Req-19.3} & Users can know the type of a resource (dataset or service). & c & req. & restates & S & S & \checkmark\\
 \req{Req-19.4} & Users can know the dataset type category, by logical clustering or by the EC Delegated Regulations. & c & req. & beyond & S & S & \checkmark\\
 \req{Req-19.5} & Users can know the service type category listed in Delegated Regulation (EU) 2017/1926. & c & req. & beyond & P & P & \checkmark\\
-\req{Req-19.6} & Users can know the language of a resource. & c & req. & restates & S & S & \checkmark\\
+\req{Req-19.6} & Users can know the language of a resource. & c & req. & tightens & S & S & \checkmark\\
 \req{Req-19.7} & Users can know the georeferencing method applied within the payload. & c & req. & beyond & P & S & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{Req-20}}\enspace Indicate which ITS delegated regulations apply to a resource.\enspace\textit{(Table 1, PDF pp. 15--19)}}\\*
@@ -221,7 +221,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{GeoDCAT-AP}\quad\footnotesize GeoDCAT-AP 1.0 (2015); base \dcatap\ 1.1; inspected during development: no}\\*
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{46 rows (7 published), 56 atoms, 37 scored (37 requirements), 16 restate the base, 37 stated (37 at least in part)}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{46 rows (7 published), 56 atoms, 37 scored (37 requirements), 17 restate the base, 37 stated (37 at least in part)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{G-1}}\enspace Provide RDF representations of spatial metadata that conform to DCAT-AP, retain meaning as far as practical and support cross-domain reuse.\enspace\textit{(GeoDCAT-AP 1.0 §1.1;4.1)}}\\*
 \req{G-1.1} & The profile provides a DCAT-AP-conformant representation of geospatial metadata. & p & req. & -- & P & -- & \\
@@ -287,7 +287,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{G-18.1} & Users can know the language or languages used in a resource. & c & req. & restates & S & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{G-19}}$^{\dagger}$\enspace Classify each resource by topic category.\enspace\textit{(GeoDCAT-AP 1.0 §4.2; Annex I (Table 5); Annex II.8)}}\\*
-\req{G-19.1} & Users can know the topic category of each resource. & c & req. & beyond & S & -- & \checkmark\\
+\req{G-19.1} & Users can know the topic category of each resource. & c & req. & restates & S & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{G-20}}$^{\dagger}$\enspace Give the geographic extent of a resource as a bounding box or a geographic identifier.\enspace\textit{(GeoDCAT-AP 1.0 §4.2; Annex I (Table 5); Annex II.10)}}\\*
 \req{G-20.1} & Users can know the geographic extent of a resource, as a bounding box or a geographic identifier. & c & req. & restates & S & -- & \checkmark\\
@@ -341,13 +341,13 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{G-36.1} & Users can know the unique identifier of each resource. & c & req. & restates & S & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{G-37}}$^{\dagger}$\enspace State the conditions for accessing and using a resource.\enspace\textit{(GeoDCAT-AP 1.0 §4.2; Annex I (Table 5); Annex II.15)}}\\*
-\req{G-37.1} & Users can know the conditions for accessing and using a resource. & c & req. & restates & S & -- & \checkmark\\
+\req{G-37.1} & Users can know the conditions for accessing and using a resource. & c & req. & extends & S & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{G-38}}$^{\dagger}$\enspace State any limitations on public access to a resource.\enspace\textit{(GeoDCAT-AP 1.0 §4.2; Annex I (Table 5); Annex II.15)}}\\*
 \req{G-38.1} & Users can know any limitations on public access to a resource. & c & req. & restates & S & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{G-39}}$^{\dagger}$\enspace State how often a resource is maintained and updated.\enspace\textit{(GeoDCAT-AP 1.0 §4.2; Annex I (Table 5); Annex II.27)}}\\*
-\req{G-39.1} & Users can know how often a resource is maintained and updated. & c & req. & partly & S & -- & \checkmark\\
+\req{G-39.1} & Users can know how often a resource is maintained and updated. & c & req. & restates & S & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{G-40}}$^{\dagger}$\enspace Report the topological consistency of a dataset as a data quality result.\enspace\textit{(GeoDCAT-AP 1.0 §4.2; Annex I (Table 5); Annex II.14; §5.3)}}\\*
 \req{G-40.1} & Users can know the topological consistency of a dataset, as a data quality result. & c & req. & beyond & S & -- & \checkmark\\
@@ -373,7 +373,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{HealthDCAT-AP}\quad\footnotesize HealthData@EU Pilot D6.2 (2024); base \dcatap\ 3.0.0; inspected during development: reference}\\*
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{69 rows (16 published), 121 atoms, 89 scored (51 requirements), 13 restate the base, 53 stated (85 at least in part); pre-consolidation corpus: 5 (22)}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{69 rows (16 published), 121 atoms, 89 scored (51 requirements), 12 restate the base, 53 stated (85 at least in part); pre-consolidation corpus: 5 (22)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-1}}\enspace Use stable, resolvable identifiers so metadata records and their relationships remain reliably identifiable across catalogues.\enspace\textit{(D6.2 §5.2.1.1)}}\\*
 \req{H-1.1} & Users can access each dataset's metadata record through a persistent, dereferenceable identifier (an HTTP URI). & c & req. & tightens & P & P & \checkmark\\
@@ -393,7 +393,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-5}}\enspace Allow dataset discovery to be refined using health categories, access bodies, holder types, personal-data categories, age ranges, population size, quality labels and coding information.\enspace\textit{(D6.2 §5.2.3)}}\\*
 \req{H-5.1} & Users can filter datasets by health category in a category facet, using the controlled list of EHDS Art. 33 categories. & c & req. & beyond & P & P & \checkmark\\
 \req{H-5.2} & Users can filter datasets by health data access body. & c & req. & beyond & P & P & \checkmark\\
-\req{H-5.3} & Users can filter datasets by publisher type. & c & req. & extends & P & P & \checkmark\\
+\req{H-5.3} & Users can filter datasets by publisher type. & c & req. & restates & P & P & \checkmark\\
 \req{H-5.4} & Users can filter datasets by the categories of personal data they contain. & c & req. & beyond & P & P & \checkmark\\
 \req{H-5.5} & Users can filter population datasets by the minimum typical age of their population. & c & req. & beyond & S & P & \checkmark\\
 \req{H-5.6} & Users can filter population datasets by the maximum typical age of their population. & c & req. & beyond & S & P & \checkmark\\
@@ -405,7 +405,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{H-6.1} & The catalogue adapts the displayed search filters to whether the user is looking for personal or non-personal data. & s & req. & -- & U & N & \\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-7}}\enspace Use semantic annotations and shared coding vocabularies to make health descriptions interoperable and searchable.\enspace\textit{(D6.2 §5.2.5)}}\\*
-\req{H-7.1} & Users can find the datasets about the same concept across the data space, through shared concepts with persistent identifiers. & c & req. & beyond & S & U & \checkmark\\
+\req{H-7.1} & Users can find the datasets about the same concept across the data space, through shared concepts with persistent identifiers. & c & req. & restates & S & U & \checkmark\\
 \req{H-7.2} & Users can know the health themes of a dataset, as HTTP URIs from an authoritative vocabulary. & c & req. & beyond & P & N & \checkmark\\
 \req{H-7.3} & Users can know the coding systems a dataset uses, as HTTP URIs. & c & req. & beyond & S & N & \checkmark\\
 \req{H-7.4} & Users can know the code values a dataset uses, linked to external standards such as ICD-10. & c & req. & beyond & S & N & \checkmark\\
@@ -428,7 +428,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{H-11.6} & Users can know the code lists of a dataset, described in a publicly available and consistent manner, where available. & c & req. & beyond & S & N & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-12}}\enspace Describe logical dataset subdivisions and their relationships where large holdings need to be partitioned.\enspace\textit{(D6.2 §5.2.6.2)}}\\*
-\req{H-12.1} & Users can know the coherent logical ('virtual') datasets within a large data warehouse, each with its own metadata record. & c & req. & restates & P & U & \checkmark\\
+\req{H-12.1} & Users can know the coherent logical ('virtual') datasets within a large data warehouse, each with its own metadata record. & c & req. & tightens & P & U & \checkmark\\
 \req{H-12.2} & Users can know how a data source breaks down into collections and datasets, from the dataset descriptions. & c & def. & ? & P & U & \\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-13}}\enspace State intellectual-property and reuse conditions, including those on sample distributions.\enspace\textit{(D6.2 §5.2.6.3)}}\\*
@@ -540,9 +540,9 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{H-42.1} & Users can know the spatial resolution of a dataset where it applies, mainly for geospatial data. & c & prop. & restates & S & N & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-43}}$^{\dagger}$\enspace Record when each catalogue entry was listed and last changed, and which original metadata it was created from.\enspace\textit{(D6.2 §5.2.1.1)}}\\*
-\req{H-43.1} & Users can know when each catalogue entry was listed. & c & req. & restates & S & N & \checkmark\\
+\req{H-43.1} & Users can know when each catalogue entry was listed. & c & req. & tightens & S & N & \checkmark\\
 \req{H-43.2} & Users can know when each catalogue entry was last modified. & c & req. & restates & S & N & \checkmark\\
-\req{H-43.3} & Users can know the original metadata an aggregated catalogue entry was created from. & c & req. & restates & S & U & \checkmark\\
+\req{H-43.3} & Users can know the original metadata an aggregated catalogue entry was created from. & c & req. & tightens & S & U & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{H-44}}$^{\dagger}$\enspace State which application profile a metadata record follows, so aggregators can validate it.\enspace\textit{(D6.2 §5.2.1.3)}}\\*
 \req{H-44.1} & Users can know which application profile a metadata record follows, so aggregators can validate it. & c & req. & restates & S & U & \checkmark\\
@@ -636,7 +636,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{StatDCAT-AP}\quad\footnotesize StatDCAT-AP 1.0.0 (2016); base \dcatap\ 1.1; inspected during development: reference}\\*
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{22 rows (7 published), 27 atoms, 14 scored (10 requirements), 6 restate the base, 4 stated (10 at least in part)}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{22 rows (7 published), 27 atoms, 14 scored (10 requirements), 4 restate the base, 4 stated (10 at least in part)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-1}}\enspace Expose the dimensions that distinguish observations, including time and demographic or regional dimensions.\enspace\textit{(StatDCAT-AP 1.0 §7.2.1)}}\\*
 \req{S-1.1} & Users can know the dimensions that identify observations in a statistical dataset (e.g. time, sex, age, region), described the same way whatever the distribution format. & c & req. & beyond & P & -- & \checkmark\\
@@ -661,7 +661,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-7}}\enspace Represent time-series coverage and periodicity without relying on an ambiguous shorthand.\enspace\textit{(StatDCAT-AP 1.0 §7.2.6)}}\\*
 \req{S-7.1} & Users can know the start of the period a time series covers. & c & guid. & restates & S & -- & \checkmark\\
 \req{S-7.2} & Users can know the end of the period a time series covers. & c & guid. & restates & S & -- & \checkmark\\
-\req{S-7.3} & Users can know the periodicity of a time series. & c & guid. & restates & P & -- & \checkmark\\
+\req{S-7.3} & Users can know the periodicity of a time series. & c & guid. & extends & P & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-8}}$^{\dagger}$\enspace Improve the discoverability of statistical datasets on general open data portals.\enspace\textit{(StatDCAT-AP 1.0.0 §2.2 (charter); §5.1)}}\\*
 \req{S-8.1} & The profile improves the discoverability of statistical datasets on general open data portals. & p & req. & -- & S & -- & \\
@@ -695,7 +695,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{S-17.1} & Users can know which data structure definition an RDF distribution follows. & c & guid. & restates & S & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-18}}$^{\dagger}$\enspace Record publication and modification times to the time of day when data are published more than once a day.\enspace\textit{(StatDCAT-AP 1.0.0 §11; Annex III)}}\\*
-\req{S-18.1} & Users can know the publication and modification times of a dataset to the time of day, when its data are published more than once a day. & c & req. & restates & P & -- & \checkmark\\
+\req{S-18.1} & Users can know the publication and modification times of a dataset to the time of day, when its data are published more than once a day. & c & req. & tightens & P & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{S-19}}$^{\dagger}$\enspace Identify the measures a statistical dataset contains, as SDMX and Data Cube define them.\enspace\textit{(StatDCAT-AP 1.0.0 Annex III (resolution log))}}\\*
 \req{S-19.1} & Users can know the measures a statistical dataset contains, as SDMX and Data Cube define them. & c & def. & beyond & S & -- & \\
@@ -711,7 +711,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \addlinespace[2pt]
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\normalsize\textbf{DCAT-AP-JRC}\quad\footnotesize Perego et al., SDSVoc 2016, paper 27; base \dcatap\ 1.1; inspected during development: reference}\\*
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{11 rows (5 published), 18 atoms, 17 scored (9 requirements), 4 restate the base, 4 stated (16 at least in part)}\\*
+\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{11 rows (5 published), 18 atoms, 17 scored (9 requirements), 3 restate the base, 4 stated (16 at least in part)}\\*
 \midrule
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-1}}\enspace Identify the people who created a dataset.\enspace\textit{(Metadata elements relevant for scientific data, numbered item 1)}}\\*
 \req{JRC-1.1} & Users can know the authors of a dataset. & c & req. & beyond & S & -- & \checkmark\\
@@ -733,7 +733,7 @@ ID & Reference requirement (atom) & Type & Status & Base & Raw & Cons. & Sc.\\
 \req{JRC-6.2} & Users can use identifiers encoded as HTTP URIs, wherever possible. & c & open & tightens & P & -- & \checkmark\\
 \req{JRC-6.3} & Users can know which of a dataset's identifiers is the primary one (e.g. a DOI) and which are alternative ones. & c & req. & restates & S & -- & \checkmark\\
 \req{JRC-6.4} & Users can cite a dataset by its DOI, when DataCite citations are generated. & c & req. & tightens & S & -- & \checkmark\\
-\req{JRC-6.5} & Users can know the scheme or type of each identifier. & c & req. & restates & P & -- & \checkmark\\
+\req{JRC-6.5} & Users can know the scheme or type of each identifier. & c & req. & partly & P & -- & \checkmark\\
 \addlinespace[2pt]
 \multicolumn{8}{@{}>{\raggedright\arraybackslash}p{\linewidth}@{}}{\textbf{\req{JRC-7}}$^{\dagger}$\enspace Express the roles that agents play for a dataset beyond publisher and contact point, consistently across catalogues.\enspace\textit{(Perego et al. 2016 (SDSVoc paper 27), ``Data citation'', ``Agent roles'')}}\\*
 \req{JRC-7.1} & Users can know the roles that agents play for a dataset beyond publisher and contact point, from a minimal, consistent set of unambiguous roles. & c & open & beyond & P & -- & \checkmark\\

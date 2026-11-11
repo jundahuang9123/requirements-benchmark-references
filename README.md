@@ -12,6 +12,7 @@ See [anonymous export instructions](ANONYMIZATION.md) to create a history-free c
 - [Standard form of the atom statements](benchmark-data/reference-sets-v3/standard-form/README.md) and [atom types](benchmark-data/reference-sets-v3/ATOM-TYPES.md): how every atom is worded, how its type (content, profile, system) was assigned, and the owner's review of each batch.
 - [Input-label review, 1 November 2026](docs/reviews/2026-11-01-label-review.md): assistant recommendations for all 196 scored atoms, with the original labels retained. These recommendations have not been applied to benchmark labels or scores.
 - [Evidence-label adjudication, 3 November 2026](benchmark-data/reference-sets-v3/evidence-review/README.md): the 22 October AI labels of the 196 scored atoms reviewed by two independent AI annotators (one blind) and adjudicated by the owner; applied as `input_evidence.human_review` and to `atoms-review.csv`. Claude's blind review table: [docs/reviews/2026-11-01-claude-blind-review.csv](docs/reviews/2026-11-01-claude-blind-review.csv).
+- [Base-relation adjudication, 11 November 2026](benchmark-data/reference-sets-v3/base-relation-review/README.md): a blind AI review of the relation to the DCAT-AP base of the 196 scored atoms; the 18 atoms on which it differs from the earlier code on whether the atom restates the base were adjudicated by the curator; applied as `relation_to_base`, `restates_dcat_ap` and `relation_review`.
 - [Corpus guide](benchmark-data/README.md) and [methodology](benchmark-data/BENCHMARK-METHODOLOGY.md).
 - [Review and provisional adjudication](benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md).
 - [Supplement tables and PDF](benchmark-data/reference-sets-v3/supplement/README.md).
@@ -28,6 +29,8 @@ python3 benchmark-data/reference-sets-v3/validate_v3.py
 (cd benchmark-data/reference-sets-v3/mock-benchmark && python3 verify.py)
 python3 -B tools/trace/check_backfill.py
 ```
+
+Since the base-relation adjudication of 11 November 2026, the mock check reports seven differences when it reads the current sets. All are in one slice of the JRC mock runs (supported atoms without restatements), where one atom no longer counts as a restatement. The mock results are a historical exercise and were not recomputed; the check passes against the sets as they were before (set `RQ1_REF` to a copy of that `reference-sets-v3` folder).
 
 See the archived [import verification](docs/import/IMPORT-VALIDATION.md): v3 and mock checks pass; the older corpus validator currently reports failures inherited from the source snapshot. These historical reports are not a current whole-corpus approval.
 
