@@ -31,7 +31,7 @@ with unit tests on invented sentences in `../tests/`.
 Reading of N2: the spec's "not entailment in both directions" was read, before the run, as *the two wordings do not entail
 each other*, i.e. a flag when either direction fails; the stricter count (both directions fail) is reported too.
 
-## Results (first run; the rerun test is pending)
+## Results (rerun test passed: `atoms.json`, `counts.json` and `sensitivity.json` byte-identical over two runs; `run-record.json` differed only in the checkout commits it records, the input hashes being the same)
 
 Counts only; the per-atom record is `out/atoms.json`, the tables `out/counts.json`, the sensitivity runs `out/sensitivity.json`.
 
