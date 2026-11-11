@@ -1,0 +1,80 @@
+{
+ "second_model": {
+  "N1": {
+   "changed": 183,
+   "flagged_main": 189,
+   "flagged_second": 50,
+   "gained": 22,
+   "lost": 161
+  },
+  "N1_contradiction_second": 5,
+  "N1_verdict_agreement": 0.415625,
+  "N2": {
+   "changed": 108,
+   "flagged_main": 130,
+   "flagged_second": 208,
+   "gained": 93,
+   "lost": 15
+  }
+ },
+ "windows": {
+  "1500": {
+   "N1": {
+    "changed": 39,
+    "flagged_at_window": 214,
+    "flagged_main": 189,
+    "gained": 32,
+    "lost": 7
+   },
+   "T1": {
+    "changed": 6,
+    "flagged_at_window": 21,
+    "flagged_main": 27,
+    "gained": 0,
+    "lost": 6
+   },
+   "T2": {
+    "changed": 0,
+    "flagged_at_window": 0,
+    "flagged_main": 0,
+    "gained": 0,
+    "lost": 0
+   },
+   "any": {
+    "changed": 22,
+    "flagged_at_window": 267,
+    "flagged_main": 253
+   },
+   "note": "JRC (anchor only) and Mobility (table1_text) have no window; their flags cannot change."
+  },
+  "300": {
+   "N1": {
+    "changed": 52,
+    "flagged_at_window": 155,
+    "flagged_main": 189,
+    "gained": 9,
+    "lost": 43
+   },
+   "T1": {
+    "changed": 12,
+    "flagged_at_window": 39,
+    "flagged_main": 27,
+    "gained": 12,
+    "lost": 0
+   },
+   "T2": {
+    "changed": 0,
+    "flagged_at_window": 0,
+    "flagged_main": 0,
+    "gained": 0,
+    "lost": 0
+   },
+   "any": {
+    "changed": 23,
+    "flagged_at_window": 238,
+    "flagged_main": 253
+   },
+   "note": "JRC (anchor only) and Mobility (table1_text) have no window; their flags cannot change."
+  }
+ }
+}
