@@ -48,5 +48,5 @@ How this reads:
 - The two NLI models disagree on most of the flags, so this is a soft screen; the first model stays the reported one.
 
 The 51 disagreements were shown to the curator in chat (atom, label, every passage with its verdict) on 11 Nov 2026;
-his decision is recorded in `review-decision-*.json` when given. Changes to labels are his and go through this repo's
+he signed them off the same day: every label stands, none changed (`review-decision-2026-11-11.json`). Changes to labels are his and go through this repo's
 own evidence-review process; none were made by this check.
