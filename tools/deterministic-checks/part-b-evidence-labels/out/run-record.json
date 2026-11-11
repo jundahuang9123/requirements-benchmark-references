@@ -1,0 +1,49 @@
+{
+ "nli_models": {
+  "main": {
+   "decision": "argmax, no threshold",
+   "device": "cpu",
+   "max_length": 512,
+   "model": "cross-encoder/nli-deberta-v3-base",
+   "revision": "6c749ce3425cd33b46d187e45b92bbf96ee12ec7",
+   "seed": 0,
+   "threads": 4,
+   "truncation": "only_first"
+  },
+  "second": {
+   "decision": "argmax, no threshold",
+   "device": "cpu",
+   "max_length": 512,
+   "model": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+   "revision": "b3546ea6b0346eb6f8d5d68b13c7dc6d0376b3d7",
+   "seed": 0,
+   "threads": 4,
+   "truncation": "only_first"
+  }
+ },
+ "part": "B",
+ "provenance": {
+  "inputs_sha256": {
+   "refs:benchmark-data/reference-sets-v3/geodcat.json": "c058bf14f7fa7265717db5aa9ac505ca8e135e07abf8c4caa29f697d74236069",
+   "refs:benchmark-data/reference-sets-v3/healthdcat.json": "f8ae9d912c1bcc812bb43aa703c683c194ef115acd501d340c85372d23c5f250",
+   "refs:benchmark-data/reference-sets-v3/jrc-research.json": "9dc4e6883cd8a2fc2b31b89a75a1355d811abb9e26f443ec41adb1d9947886b2",
+   "refs:benchmark-data/reference-sets-v3/mobilitydcat.json": "ed599dd69c69d147560ec12d2ee8e6ba9376662de0b237c330296873aa2cb3e5",
+   "refs:benchmark-data/reference-sets-v3/statdcat.json": "a23c9f267a3970db69cb0418b4f4a21143c328249e3788b256cbf59fd8f09ed0"
+  },
+  "pipeline_commit": "8419bc8d60f3b9b6667f297f69f66f01eed6ccbb",
+  "references_commit": "5746f905c772a3a4e039c2bc017fb17ae2dcc236",
+  "run_store_commit": "6eef24d4d93d592585d11f5c1e71f708b30f839b"
+ },
+ "reading": [
+  "For each scored atom (196) and each stored passage of its `input_evidence.raw.sources`: N1 with the passage as premise",
+  "and the atom statement as hypothesis; also N1 with the passages joined (in stored order, separated by a space), and",
+  "T1 of the statement against the passages joined. Compared with the adjudicated `human_review.raw_label`:",
+  "  supported    expects entailment from at least one passage or from the passages joined",
+  "  partial      expects no full entailment (neither a passage nor the joined passages entail)",
+  "  unsupported  has no passage to test (an unsupported atom with passages is listed)",
+  "A disagreement is a supported atom with no entailing passage, or a partial atom that a passage entails. Supported",
+  "atoms the adjudication filed under \"rule 2: bare mention\" are listed apart: the rule is more lenient than entailment.",
+  "",
+  "usage: python3 -I part_b.py --out part-b-evidence-labels/out [--second-model] [--log FILE]"
+ ]
+}
