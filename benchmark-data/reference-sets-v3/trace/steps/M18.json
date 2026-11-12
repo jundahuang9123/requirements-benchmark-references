@@ -1,0 +1,106 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "M18",
+ "name": "Refresh files_sha256 in IMPORT-PROVENANCE.json",
+ "time_order": "after the step whose files it covers; see reason",
+ "actors": [
+  {
+   "actor": "script:tools/trace/refresh_hashes.py#a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189"
+  },
+  {
+   "actor": "model:claude/manifest-refresh",
+   "role": "ran the script"
+  }
+ ],
+ "session": {
+  "model_id": "claude-fable-5-2",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.322",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "6847621519896430ba63702e250227fc458af638eba0455afd8c692026dccd29",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.322 (Claude Code)"
+  },
+  "transcript_sha256": "9ed2d5f937858abec728574111ef7797d7b6e266aa762688a1cdcec86accc7d1",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-12T11:49:48.581Z"
+ },
+ "scripts": [
+  {
+   "path": "tools/trace/refresh_hashes.py",
+   "sha256": "a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/trace/common.py",
+   "sha256": "ce04c1e3351f6f1532476b1c479545209cc48bc6c1055279ed3e20cd271fe21b",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "90f9f1d47e01d56252726bff8572dbea2a5c1129bf33667c1c8b588271e35276",
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 297
+  }
+ ],
+ "outputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": null,
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 300,
+   "note": "Written after this manifest and containing its hash, so its own hash cannot be recorded here; tools/export_anonymous.py checks every entry."
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-12T11:49:48.000Z",
+  "run_ended": "2026-11-12T11:49:48.581Z",
+  "run_by": "model:claude/manifest-refresh"
+ },
+ "seeds": {},
+ "counts": {
+  "in": 297,
+  "out": 300,
+  "changed": 11
+ },
+ "decision_values": [
+  "entry_added",
+  "entry_changed",
+  "entry_removed"
+ ],
+ "rationale_location": "reason below",
+ "reason": "Refresh after the correction of the roles of the cases on 12 November 2026 (curator's statement: HealthDCAT-AP is a test case, not a development case; DCAT-AP-JRC and StatDCAT-AP are the development cases): case-roles/ added, the line on development cases in README.md corrected and a dated section added, the case headings of the supplement and the dagger of Table 2 changed in make_tables.py, the three generated files regenerated and the supplement PDF rebuilt, two descriptions reworded in supplement/README.md and evidence-review/README.md. No row, atom, label, count or ID changes. The session's model ID is the configured model as stated by the environment; the serving model may differ.",
+ "entries_added": {
+  "benchmark-data/reference-sets-v3/case-roles/README.md": "43872f9e4c20a47de1bf6a711d917c5b2730a4ea417e4f28857551a17a3df08d",
+  "benchmark-data/reference-sets-v3/case-roles/statement-2026-11-12.json": "ee8b7d5202f6db6aec17f48bf6f5da44ebb29a99e23c9c58ddefaba4d2a46a8a"
+ },
+ "entries_changed": {
+  "benchmark-data/reference-sets-v3/README.md": "bdbcf7050438471d5d3379eec8b84fcdddb44ec09b53188b1dbffeef70ba7c81",
+  "benchmark-data/reference-sets-v3/evidence-review/README.md": "00076b7237b621c82cae0950e3c2c7a1a545808a7382187affb1b11aaf4db66a",
+  "benchmark-data/reference-sets-v3/supplement/README.md": "1ad4f435156e96b27324542e8c683d0c0e6a40068086f7870540af4bbbb048b3",
+  "benchmark-data/reference-sets-v3/supplement/appendix-test-cases.tex": "a88e9a5088ddc3ad69f16ac1afaac618b3804f2b534234db20a7fe5d8de3ca27",
+  "benchmark-data/reference-sets-v3/supplement/make_tables.py": "4fb092d2d2c64b3aa24c2e0087af4a042f336ae571f99a27d88df20b52e36a6f",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.pdf": "396053bde22d9b52976ab1f181a8b3aa8dd6d946fa173413f93f3697be55dc35",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.tex": "394b2e7f77b84b60bfd6227857d82ee153e2be2db73877a181c8b1c98abd9a13",
+  "benchmark-data/reference-sets-v3/supplement/table-benchmark.tex": "8c9746773525a828e1235195533f6de03f33ddf83afa9afaa219712365d25b02"
+ },
+ "entries_removed": [],
+ "own_entry": "added to IMPORT-PROVENANCE.json after this manifest was written",
+ "evidence": [
+  "tools/export_anonymous.py:60-65"
+ ],
+ "gaps": [],
+ "manifest_sha256": "fc8e53b773e65f54efce08029e795300ad564a18349e8c8d5653c42097a310bc"
+}

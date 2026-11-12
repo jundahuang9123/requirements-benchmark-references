@@ -50,7 +50,7 @@ difference, the owner's decision and the final labels:
 | Combined (raw or consolidation), 196 atoms | 137 | 50 | 9 | 0 |
 | Raw corpus alone | 128 | 59 | 9 | 0 |
 
-Cases without output-to-reference comparison during development: mobilityDCAT-AP 38 / 1 / 0, GeoDCAT-AP 37 / 0 / 0 (combined). Compared with the 22 October raw labels, 19 raw labels changed: 9 supported → partial, 8 uncertain → partial, 1 unsupported → partial and 1 uncertain → unsupported. Compared with the strongest original label across raw and consolidation, 17 combined labels changed: 9 supported → partial, 6 uncertain → partial, 1 unsupported → partial and 1 uncertain → unsupported. The combined supported count of 137 equals the original raw figure by coincidence, not by identity of the sets.
+For mobilityDCAT-AP and GeoDCAT-AP, two of the three test cases (`../case-roles/README.md`), the combined labels are 38 / 1 / 0 and 37 / 0 / 0. Compared with the 22 October raw labels, 19 raw labels changed: 9 supported → partial, 8 uncertain → partial, 1 unsupported → partial and 1 uncertain → unsupported. Compared with the strongest original label across raw and consolidation, 17 combined labels changed: 9 supported → partial, 6 uncertain → partial, 1 unsupported → partial and 1 uncertain → unsupported. The combined supported count of 137 equals the original raw figure by coincidence, not by identity of the sets.
 
 The record's `final_differs_from_2026_10_22: 17` refers to that combined-to-combined comparison, not to the raw-only labels.
 
