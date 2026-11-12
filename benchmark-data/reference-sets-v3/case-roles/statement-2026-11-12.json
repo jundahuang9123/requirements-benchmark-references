@@ -1,0 +1,206 @@
+{
+ "record": "case-roles-2026-11-12",
+ "date": "2026-11-12",
+ "decided_by": "human:curator",
+ "scope": "Which of the five cases are development cases and which are test cases, and what this repository says about what was seen of each case before the workflow was frozen. No row, atom, label, count or ID is concerned.",
+ "source": {
+  "label": "the curator's messages of 12 November 2026 in the paper session (three messages, the parts on the roles of the cases)",
+  "sha256": "6335df77a0e3bdfc37e5539492c36f9a9b977b71b829a3c6e5a7c49f7e21d109",
+  "location": "outside the repository"
+ },
+ "statement": [
+  "Looking at HealthDCAT-AP outputs before the workflow was frozen was allowed under a strict restriction, so that the case does not become a development case.",
+  "HealthDCAT-AP is not a development case. The earlier wording of this repository overstated the curator's decision.",
+  "DCAT-AP-JRC and StatDCAT-AP are development cases. The paper reports them apart and takes its main analysis from the other three cases.",
+  "The curator had asked earlier that the cases not be sorted into development and test cases. That request was not recorded in this repository."
+ ],
+ "restriction": {
+  "text": "No reference content goes into the workflow, and nothing is implemented for a single case.",
+  "status": "recorded",
+  "where": [
+   {
+    "label": "the curator's messages of 12 November 2026 (source above)",
+    "location": "outside the repository"
+   },
+   {
+    "label": "the freeze record of the workflow runs in the run store, decision of 1 November 2026 on HealthDCAT-AP",
+    "sha256": "6af7554617545f96a769083cee242c8a5c8ce47e1bed372733f65d1f2249aea1",
+    "location": "outside the repository"
+   },
+   {
+    "label": "benchmark-data/BENCHMARK-METHODOLOGY.md, section 'Train, development and held-out use'",
+    "location": "this repository"
+   }
+  ]
+ },
+ "roles": {
+  "mobilitydcat": "test",
+  "geodcat": "test",
+  "healthdcat": "test",
+  "statdcat": "development",
+  "jrc-research": "development"
+ },
+ "roles_basis": {
+  "development": "benchmark-data/BENCHMARK-METHODOLOGY.md names DCAT-AP-JRC and all of StatDCAT-AP as the cases for debugging and development (curator, 16 October 2026) and says that neither is reported as a test result. mock-benchmark/METHOD.md records that their outputs had been viewed and that earlier mock checks inspected the closest needs.",
+  "test": "The same section of the methodology takes mobilityDCAT-AP as the main external evaluation and reserves HealthDCAT-AP and GeoDCAT-AP as tests after the freeze. The curator's statement of 12 November 2026 confirms HealthDCAT-AP as a test case."
+ },
+ "seen_before_the_workflow_was_frozen": {
+  "mobilitydcat": {
+   "what": "outputs were looked at, without the reference",
+   "status": "recorded",
+   "where": "supplement/make_tables.py as of 7 November 2026 (trace step M12)"
+  },
+  "geodcat": {
+   "what": "the case was not run",
+   "status": "recorded",
+   "where": "supplement/make_tables.py as of 7 November 2026 (trace step M12)"
+  },
+  "healthdcat": {
+   "what": "outputs were looked at under the curator's restriction; one early run was compared with the 16 rows collected by then",
+   "status": "recorded",
+   "where": "the curator's messages of 12 November 2026 for the looking and the restriction; session notes of 19 October 2026 for the comparison with 16 rows (both outside the repository; the notes are a living document and are not hashed here)",
+   "dates_and_runs": "not_recorded in this repository"
+  },
+  "statdcat": {
+   "what": "the workflow was developed on the case; outputs were compared with the reference",
+   "status": "recorded",
+   "where": "benchmark-data/BENCHMARK-METHODOLOGY.md; mock-benchmark/METHOD.md"
+  },
+  "jrc-research": {
+   "what": "the workflow was developed on the case; outputs were compared with the reference",
+   "status": "recorded",
+   "where": "benchmark-data/BENCHMARK-METHODOLOGY.md; mock-benchmark/METHOD.md"
+  }
+ },
+ "in_the_paper": {
+  "decision": "The main analysis is over the three test cases; the two development cases are reported apart.",
+  "decided_on": "2026-11-12",
+  "note": "The decision was taken after the results were frozen on 11 November 2026. The role of the two cases as development cases is recorded in the methodology since 16 October 2026."
+ },
+ "corrected_in_this_repository": [
+  {
+   "file": "benchmark-data/reference-sets-v3/README.md",
+   "before": "- `base-relation-review/`: the blind review of the relation to the base and the adjudication of the 18 atoms on which it differs on \"restates\" (11 November 2026).\n",
+   "after": "- `base-relation-review/`: the blind review of the relation to the base and the adjudication of the 18 atoms on which it differs on \"restates\" (11 November 2026).\n- `case-roles/`: which cases are test cases and which are development cases, as the curator stated it on 12 November 2026.\n"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/README.md",
+   "before": "- `mock-benchmark/`: the mock benchmark of 23 October on evidence-eligible atoms (development cases only; machine reviewers).",
+   "after": "- `mock-benchmark/`: the mock benchmark of 23 October on evidence-eligible atoms (the two development cases only; machine reviewers)."
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/README.md",
+   "before": "- Health, Stat and JRC are development cases whose outputs had been viewed before this version. The decomposition was built from the source documents and the two completion passes, not from system outputs. Disclose the earlier exposure as the methodology requires.",
+   "after": "- Stat and JRC are development cases. Health is a test case: looking at its outputs was allowed under the curator's restriction, so that it does not become a development case (corrected on 12 November 2026; this line called all three development cases before, see [case-roles/README.md](case-roles/README.md)). Outputs of Health, Stat and JRC had been viewed before this version. The decomposition was built from the source documents and the two completion passes, not from system outputs. Disclose the earlier exposure as the methodology requires."
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/README.md",
+   "before": "(end of file)",
+   "after": "## Roles of the cases corrected (12 November 2026)\n\n- The curator's statement of 12 November 2026: DCAT-AP-JRC and StatDCAT-AP are the development cases; mobilityDCAT-AP, GeoDCAT-AP and HealthDCAT-AP are the test cases. Looking at HealthDCAT-AP outputs before the workflow was frozen was allowed under a restriction (no reference content into the workflow, nothing implemented for the case), so that it does not become a development case. Earlier wording in this folder overstated that decision.\n- Record, roles, what the files show about each case, and limits: [case-roles/README.md](case-roles/README.md); record: `case-roles/statement-2026-11-12.json`.\n- Corrected: the line on development cases under \"Not done\" above; the case headings of the supplement and the dagger of Table 2, which now say test case or development case (`supplement/make_tables.py`, files regenerated, PDF rebuilt); two descriptions that named mobilityDCAT-AP and GeoDCAT-AP by what had not been compared (`supplement/README.md`, `evidence-review/README.md`).\n- Not changed: every row, atom, label, count and ID; the historical files; trace steps M12 and M13, which record the marks of 7 November as they were made; the backfill, whose open gap G-061 this record answers."
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/README.md",
+   "before": "- `appendix-test-cases.tex`: Appendix A for the paper, the 76 scored atoms of mobilityDCAT-AP and GeoDCAT-AP, whose outputs were not compared with their references during development (mobilityDCAT-AP outputs alone were inspected) (about 1.9 pages with the standard-form statements, within the 2-page limit).",
+   "after": "- `appendix-test-cases.tex`: an appendix for the paper with the 76 scored atoms of mobilityDCAT-AP and GeoDCAT-AP, two of the three test cases (about 1.9 pages with the standard-form statements, within the 2-page limit; HealthDCAT-AP, the third test case, has 89 scored atoms, which are in the supplement table). Which cases are test cases: `../case-roles/README.md`."
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/README.md",
+   "before": "- `table-benchmark.tex`: Table 2 for the paper, one line per case.",
+   "after": "- `table-benchmark.tex`: Table 2 for the paper, one line per case; the dagger marks the two development cases."
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/evidence-review/README.md",
+   "before": "Cases without output-to-reference comparison during development: mobilityDCAT-AP 38 / 1 / 0, GeoDCAT-AP 37 / 0 / 0 (combined).",
+   "after": "For mobilityDCAT-AP and GeoDCAT-AP, two of the three test cases (`../case-roles/README.md`), the combined labels are 38 / 1 / 0 and 37 / 0 / 0."
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "  appendix-test-cases.tex  Appendix A: scored atoms of the two cases whose outputs were not compared with their references during development (fits the 2-page appendix)",
+   "after": "  appendix-test-cases.tex  Appendix A: scored atoms of mobilityDCAT-AP and GeoDCAT-AP, two of the three test cases (fits the 2-page appendix)"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "CASES = [  # order of Table 2: the cases whose outputs were not compared with their references during development first; fields: id, name, reference (cited), reference (plain), inputs (the raw corpus, for Table 2), units, base release, what was inspected during development (outputs, reference, or nothing)",
+   "after": "CASES = [  # order of Table 2: the three test cases first, then the two development cases; fields: id, name, reference (cited), reference (plain), inputs (the raw corpus, for Table 2), units, base release, role (test or development case: case-roles/README.md, the curator's statement of 12 November 2026)"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "national-access-point project results; DCAT~2, DCAT-AP 2.0.0 and 2.1.0 (also tagged as background)', '822', '2.0.1', 'outputs'),",
+   "after": "national-access-point project results; DCAT~2, DCAT-AP 2.0.0 and 2.1.0 (also tagged as background)', '822', '2.0.1', 'test'),"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "'INSPIRE Directive, metadata and interoperability regulations and metadata guidelines 1.3; DCAT (2014)', '271', '1.1', 'no'),",
+   "after": "'INSPIRE Directive, metadata and interoperability regulations and metadata guidelines 1.3; DCAT (2014)', '271', '1.1', 'test'),"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "'GDPR; EHDS proposal; HealthData@EU landscape analysis (MS6.1); DCAT~2; DCAT-AP 2.1.1', '\\\\tbd', '3.0.0', 'reference'),",
+   "after": "'GDPR; EHDS proposal; HealthData@EU landscape analysis (MS6.1); DCAT~2; DCAT-AP 2.1.1', '\\\\tbd', '3.0.0', 'test'),"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "'DCAT (2014); RDF Data Cube (2014)', '60', '1.1', 'reference'),",
+   "after": "'DCAT (2014); RDF Data Cube (2014)', '60', '1.1', 'development'),"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "'JRC data policy (2015); DCAT (2014); DataCite 3.1 field synopsis', '59', '1.1', 'reference'),\n]",
+   "after": "'JRC data policy (2015); DCAT (2014); DataCite 3.1 field synopsis', '59', '1.1', 'development'),\n]\nAPPENDIX_CASES = ('mobilitydcat', 'geodcat')  # the two test cases whose scored atoms fit the paper's 2-page appendix"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "    for case, name, ref, _, inputs, units, base, use in CASES:\n        d = load(case)\n        c = counts(d)\n        for k in tot:",
+   "after": "    for case, name, ref, _, inputs, units, base, role in CASES:\n        d = load(case)\n        c = counts(d)\n        for k in tot:"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "        mark = '$^{\\\\dagger}$' if use == 'reference' else ''  # the dagger of the results table: outputs compared with the reference during development",
+   "after": "        mark = '$^{\\\\dagger}$' if role == 'development' else ''  # the dagger marks the two development cases"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "$^{{\\\\dagger}}$: outputs compared with the reference during development; the workflow never reads references.}}",
+   "after": "$^{{\\\\dagger}}$: development case, on which the workflow was developed and whose outputs were compared with the reference; the other three are the test cases. The workflow never reads references.}}"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "    for case, name, _, _, _, _, base, use in CASES:\n        if use == 'reference':\n            continue",
+   "after": "    for case, name, _, _, _, _, base, role in CASES:\n        if case not in APPENDIX_CASES:\n            continue"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "\\\\caption{{The {n_total} scored reference requirements (atoms) of the two cases whose outputs were not compared with their references during development (mobilityDCAT-AP outputs alone were inspected); all are requirements in their source.",
+   "after": "\\\\caption{{The {n_total} scored reference requirements (atoms) of mobilityDCAT-AP and GeoDCAT-AP, two of the three test cases; all are requirements in their source."
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "    for case, name, _, refdoc, _, _, base, use in CASES:",
+   "after": "    for case, name, _, refdoc, _, _, base, role in CASES:"
+  },
+  {
+   "file": "benchmark-data/reference-sets-v3/supplement/make_tables.py",
+   "before": "{refdoc}; base \\\\dcatap\\\\ {base}; inspected during development: {use}}}\\\\\\\\*\")",
+   "after": "{refdoc}; base \\\\dcatap\\\\ {base}; {role} case}}\\\\\\\\*\")"
+  }
+ ],
+ "regenerated": [
+  "benchmark-data/reference-sets-v3/supplement/table-benchmark.tex",
+  "benchmark-data/reference-sets-v3/supplement/appendix-test-cases.tex",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.tex",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.pdf"
+ ],
+ "not_changed": [
+  "Every row, atom, label, count and ID.",
+  "The historical files (history/, INDEPENDENT-CHECK.md, CODEX-REVIEW-2026-10-23.md, the prompts). CODEX-REVIEW-2026-10-23.md still says that the README discloses prior exposure of Health, Stat and JRC outputs and that Health cannot be claimed as an untouched held-out test; the paper does not claim that.",
+  "Trace steps M12 and M13, which record the marks of 7 November 2026 as they were made.",
+  "The backfill. Its open gap G-061 ('The held-out cases are inconsistent') is the contradiction between the methodology and the README line corrected here; this record answers it without editing the backfill files.",
+  "benchmark-data/BENCHMARK-METHODOLOGY.md, whose section on development and held-out use agrees with the statement."
+ ],
+ "limits": [
+  "One person's statement about his own decisions; no second source.",
+  "The dates and the runs of the inspections are not recorded in this repository.",
+  "How the workflow changed during its development is recorded in the workflow's own repository, not here.",
+  "A case whose outputs were looked at is not an untouched case. The record says what was seen; it does not claim that nothing was."
+ ]
+}

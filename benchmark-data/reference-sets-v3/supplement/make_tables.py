@@ -2,7 +2,7 @@
 
 Writes
   table-benchmark.tex      Table 2 (summary per case), drop-in replacement in main.tex
-  appendix-test-cases.tex  Appendix A: scored atoms of the two cases whose outputs were not compared with their references during development (fits the 2-page appendix)
+  appendix-test-cases.tex  Appendix A: scored atoms of mobilityDCAT-AP and GeoDCAT-AP, two of the three test cases (fits the 2-page appendix)
   supplement-reference-requirements.tex  standalone document: every row and atom of all five cases
 """
 import json
@@ -14,18 +14,19 @@ REF = os.environ.get('RQ1_REF', os.path.join(os.path.dirname(os.path.abspath(__f
 COMMIT = os.environ.get('RQ1_REF_COMMIT', 'adjudicated-snapshot')
 OUT = os.path.dirname(os.path.abspath(__file__))
 
-CASES = [  # order of Table 2: the cases whose outputs were not compared with their references during development first; fields: id, name, reference (cited), reference (plain), inputs (the raw corpus, for Table 2), units, base release, what was inspected during development (outputs, reference, or nothing)
+CASES = [  # order of Table 2: the three test cases first, then the two development cases; fields: id, name, reference (cited), reference (plain), inputs (the raw corpus, for Table 2), units, base release, role (test or development case: case-roles/README.md, the curator's statement of 12 November 2026)
  ('mobilitydcat', 'mobilityDCAT-AP', 'NAPCORE analysis~\\cite{bures2022napcore} (2022)', 'NAPCORE requirement analysis (2022), Table~1',
-  '16 files: EU directives and strategies, reports on FAIR data and metadata, the INSPIRE metadata guidelines, GeoDCAT-AP, national-access-point project results; DCAT~2, DCAT-AP 2.0.0 and 2.1.0 (also tagged as background)', '822', '2.0.1', 'outputs'),
+  '16 files: EU directives and strategies, reports on FAIR data and metadata, the INSPIRE metadata guidelines, GeoDCAT-AP, national-access-point project results; DCAT~2, DCAT-AP 2.0.0 and 2.1.0 (also tagged as background)', '822', '2.0.1', 'test'),
  ('geodcat', 'GeoDCAT-AP', 'GeoDCAT-AP 1.0~\\cite{geodcatap10} (2015)', 'GeoDCAT-AP 1.0 (2015)',
-  'INSPIRE Directive, metadata and interoperability regulations and metadata guidelines 1.3; DCAT (2014)', '271', '1.1', 'no'),
+  'INSPIRE Directive, metadata and interoperability regulations and metadata guidelines 1.3; DCAT (2014)', '271', '1.1', 'test'),
  ('healthdcat', 'HealthDCAT-AP', 'HealthData@EU D6.2~\\cite{healthdataeu2024d62} (2024)', 'HealthData@EU Pilot D6.2 (2024)',
-  'GDPR; EHDS proposal; HealthData@EU landscape analysis (MS6.1); DCAT~2; DCAT-AP 2.1.1', '\\tbd', '3.0.0', 'reference'),
+  'GDPR; EHDS proposal; HealthData@EU landscape analysis (MS6.1); DCAT~2; DCAT-AP 2.1.1', '\\tbd', '3.0.0', 'test'),
  ('statdcat', 'StatDCAT-AP', 'StatDCAT-AP 1.0.0~\\cite{statdcatap} (2016)', 'StatDCAT-AP 1.0.0 (2016)',
-  'DCAT (2014); RDF Data Cube (2014)', '60', '1.1', 'reference'),
+  'DCAT (2014); RDF Data Cube (2014)', '60', '1.1', 'development'),
  ('jrc-research', 'DCAT-AP-JRC', 'Perego et al.~\\cite{perego2016jrc} (2016)', 'Perego et al., SDSVoc 2016, paper 27',
-  'JRC data policy (2015); DCAT (2014); DataCite 3.1 field synopsis', '59', '1.1', 'reference'),
+  'JRC data policy (2015); DCAT (2014); DataCite 3.1 field synopsis', '59', '1.1', 'development'),
 ]
+APPENDIX_CASES = ('mobilitydcat', 'geodcat')  # the two test cases whose scored atoms fit the paper's 2-page appendix
 LEVEL = {'content': 'c', 'profile': 'p', 'system': 's'}
 STATUS = {'requirement': 'req.', 'proposed': 'prop.', 'open_issue': 'open', 'guidance': 'guid.', 'deferred': 'def.'}
 REL = {'restates_base': 'restates', 'tightens_base': 'tightens', 'extends_base': 'extends', 'partly_base': 'partly',
@@ -88,13 +89,13 @@ def counts(d):
 def table_benchmark():
     lines = []
     tot = dict(v1=0, added=0, atoms=0, settled=0, in_base=0, stated=0, stated_or_partly=0)
-    for case, name, ref, _, inputs, units, base, use in CASES:
+    for case, name, ref, _, inputs, units, base, role in CASES:
         d = load(case)
         c = counts(d)
         for k in tot:
             tot[k] += c[k]
         rows = f"{c['v1']}" if not c['added'] else f"{c['v1']}+{c['added']}"
-        mark = '$^{\\dagger}$' if use == 'reference' else ''  # the dagger of the results table: outputs compared with the reference during development
+        mark = '$^{\\dagger}$' if role == 'development' else ''  # the dagger marks the two development cases
         lines.append(f"{name}{mark} ({base}) & {inputs} & {ref} & {rows} & {c['atoms']} & {c['stated']} ({c['stated_or_partly']})\\\\")
     body = '\n'.join(lines)
     return f"""% Table 2, generated from benchmark-data/reference-sets-v3 (commit {COMMIT}) by make_tables.py.
@@ -102,7 +103,7 @@ def table_benchmark():
 % (evidence-review/adjudication-2026-11-03.json); counting the pre-consolidation corpus too gives 137 (187). Align Sect. 5 and the
 % Use of Generative AI section with how they were made.
 \\begin{{table}}[!t]
-\\caption{{The five cases. Base: the \\dcatap\\ release the extension's own documents cite. Inputs: the raw corpus, including base specifications listed in the raw-input allowlist. The three mobilityDCAT-AP files also tagged as background remain in that allowlist. Exact files, versions and hashes are in the benchmark's manifests. Rows: published reference rows plus rows added from the same document. Atoms: scored content atoms. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part). $^{{\\dagger}}$: outputs compared with the reference during development; the workflow never reads references.}}
+\\caption{{The five cases. Base: the \\dcatap\\ release the extension's own documents cite. Inputs: the raw corpus, including base specifications listed in the raw-input allowlist. The three mobilityDCAT-AP files also tagged as background remain in that allowlist. Exact files, versions and hashes are in the benchmark's manifests. Rows: published reference rows plus rows added from the same document. Atoms: scored content atoms. Stated: atoms whose meaning the raw corpus states (in parentheses, at least in part). $^{{\\dagger}}$: development case, on which the workflow was developed and whose outputs were compared with the reference; the other three are the test cases. The workflow never reads references.}}
 \\label{{tab:benchmark}}
 \\centering\\scriptsize\\setlength{{\\tabcolsep}}{{3pt}}
 \\begin{{tabularx}}{{\\textwidth}}{{@{{}}p{{2.0cm}}Xp{{2.3cm}}rrr@{{}}}}
@@ -123,8 +124,8 @@ def appendix():
     head = ('\\toprule\nID & Reference requirement (atom) & Base & Raw & Cons.\\\\\n\\midrule\n')
     body = []
     n_total = 0
-    for case, name, _, _, _, _, base, use in CASES:
-        if use == 'reference':
+    for case, name, _, _, _, _, base, role in CASES:
+        if case not in APPENDIX_CASES:
             continue
         d = load(case)
         atoms = [a for a in d['atoms'] if a['scored_by_default']]
@@ -148,7 +149,7 @@ def appendix():
 \\makeatother
 {{\\scriptsize\\setlength{{\\tabcolsep}}{{2.5pt}}\\setlength{{\\LTcapwidth}}{{\\textwidth}}
 \\begin{{longtable}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{1.25cm}}>{{\\raggedright\\arraybackslash}}p{{8.0cm}}lcc@{{}}}}
-\\caption{{The {n_total} scored reference requirements (atoms) of the two cases whose outputs were not compared with their references during development (mobilityDCAT-AP outputs alone were inspected); all are requirements in their source. Base: relation to the pinned \\dcatap\\ release. Raw, Cons.: whether the raw and the pre-consolidation corpus state the atom (S stated, P in part, U uncertain, N not stated). Raw labels are curator-adjudicated after two AI reviews; Cons. retains the original AI label where not explicitly reviewed. The other cases, unscored atoms and the rows are in the supplementary material.}}\\label{{tab:app-references}}\\\\
+\\caption{{The {n_total} scored reference requirements (atoms) of mobilityDCAT-AP and GeoDCAT-AP, two of the three test cases; all are requirements in their source. Base: relation to the pinned \\dcatap\\ release. Raw, Cons.: whether the raw and the pre-consolidation corpus state the atom (S stated, P in part, U uncertain, N not stated). Raw labels are curator-adjudicated after two AI reviews; Cons. retains the original AI label where not explicitly reviewed. The other cases, unscored atoms and the rows are in the supplementary material.}}\\label{{tab:app-references}}\\\\
 {head}\\endfirsthead
 {head}\\endhead
 \\bottomrule
@@ -162,7 +163,7 @@ def appendix():
 def supplement():
     parts = []
     reviewed = followed = 0          # atoms whose relation to the base was adjudicated (base-relation-review/)
-    for case, name, _, refdoc, _, _, base, use in CASES:
+    for case, name, _, refdoc, _, _, base, role in CASES:
         d = load(case)
         c = counts(d)
         rr = [a['relation_review'] for a in d['atoms'] if isinstance(a.get('relation_review'), dict)]
@@ -172,7 +173,7 @@ def supplement():
         for a in d['atoms']:
             atoms_by_row.setdefault(a['parent_id'], []).append(a)
         has_cons = case in ('mobilitydcat', 'healthdcat')
-        parts.append(f"\\multicolumn{{8}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{\\linewidth}}@{{}}}}{{\\normalsize\\textbf{{{name}}}\\quad\\footnotesize {refdoc}; base \\dcatap\\ {base}; inspected during development: {use}}}\\\\*")
+        parts.append(f"\\multicolumn{{8}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{\\linewidth}}@{{}}}}{{\\normalsize\\textbf{{{name}}}\\quad\\footnotesize {refdoc}; base \\dcatap\\ {base}; {role} case}}\\\\*")
         parts.append(f"\\multicolumn{{8}}{{@{{}}>{{\\raggedright\\arraybackslash}}p{{\\linewidth}}@{{}}}}{{{c['rows']} rows ({c['v1']} published), {len(d['atoms'])} atoms, {c['atoms']} scored ({c['settled']} requirements), "
                      f"{c['in_base']} restate the base, {c['stated']} stated ({c['stated_or_partly']} at least in part)"
                      + (f"; pre-consolidation corpus: {c['cons']} ({c['cons_p']})" if has_cons else '') + "}\\\\*")
