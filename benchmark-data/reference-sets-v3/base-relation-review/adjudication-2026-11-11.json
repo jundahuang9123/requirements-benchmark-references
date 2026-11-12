@@ -1,0 +1,756 @@
+{
+ "record": "base-relation-review-2026-11-11",
+ "date": "2026-11-11",
+ "scope": "The 18 scored atoms on which the blind review of 3-4 November 2026 and the repository differ on whether the atom restates the pinned DCAT-AP base (relation_to_base = restates_base, restates_dcat_ap).",
+ "what_is_decided": "For each of the 18 atoms, whether it restates the base, and its relation_to_base. 13 follow the blind review and 5 keep the repository's code. The other 178 scored atoms are not decided here: the review agrees with the repository on restates for all of them. For 31 of them it gives another code among tightens_base, extends_base, partly_base and beyond_base; these differences are not adjudicated and not applied.",
+ "method": [
+  "Earlier coding. Until this record, the relation_to_base of the atoms of this record was the code given when the sets were built: the rows were split into atoms and coded in trace step R7 (22 October 2026 by the step's time order), and the independent check of the same date changed or confirmed some codes (next paragraph). The trace records who coded in R7 and the reasons as not recorded (gaps G-029 to G-032); relation_note is empty for every atom.",
+  "Earlier check, 22 October 2026. INDEPENDENT-CHECK.md records that a separate reviewer, who had not built the set, checked the draft atoms against the source texts and the DCAT-AP base files, among them all 45 atoms then coded as DCAT-AP restatements and all 111 term-level content atoms. Its table of findings names seven of the 18 atoms of this record: S-16.1, JRC-6.5, H-12.1, H-5.3, H-11.1 and H-11.2 (as H-11.x), and G-39.1 (for source flags only). Each item quotes the rows that name its atom in independent_check_2026_10_22.",
+  "Blind review, 3-4 November 2026. Eight Claude annotators (one per case; HealthDCAT-AP in three parts, mobilityDCAT-AP in two) coded the 196 scored atoms again. They saw the atom statements with their parts, the source's obligation wording and status, and the pinned base text. They did not see the repository's code, the extension profile or anything else in the repository. For each atom they answered restates or not first, then gave the seven-way code, the base class and property, the base obligation as read, a verbatim base quote and a rationale. According to the review's notes, every quoted base excerpt was checked by program to occur verbatim in the base text (whitespace-insensitive): 196 of 196, no failure.",
+  "Comparison, 4 November 2026. The review and the repository give the same code for 147 atoms and the same answer to restates for 178. Of the 49 differences, 11 change restates on the reading of the content, 7 change restates_base to tightens_base because the source asks more strongly than the base or adds a condition, and 31 leave restates as it is.",
+  "Decision sheet, 11 November 2026. The 18 atoms whose answer to restates differs were put before the curator with the statement, both codes, the base term, obligation and quote the review cited, and its rationale. The review fields were copied into the sheet and into this record by hand from the review table.",
+  "Curator's decisions, 11 November 2026, given in chat. First: all 18 follow the blind review except Req-18.1 and G-32.1, which keep the repository's code; the assistant that prepared the sheet had pointed to these two rows. Then, while this record was being made, the assistant found that several of the 18 atoms carry a note from the original curation that bears on the code; the blind reviewers had not seen the notes and the sheet had not shown them. Ten of the 18 atoms have a note. The assistant put five of them before the curator, in four questions: the curator kept the repository's code for S-16.1, followed the review for G-39.1 and JRC-6.5, and left H-11.1 and H-11.2 to the assistant, which kept the repository's code after reading the section of the reference document the notes point to. The other five notes were read by the assistant and not put before the curator: one agrees with the decision taken (Req-18.1), and in four the assistant found nothing against the review's reading (H-5.3, Req-19.2, Req-19.6, H-12.1). The field atom_note of each item says which.",
+  "After the decisions, while this record was being made, the assistant read INDEPENDENT-CHECK.md and found that the check of 22 October 2026 had settled the code of two atoms that now follow the blind review: H-5.3 (extends_base then, restates_base now) and H-12.1 (restates_base then, tightens_base now). The two findings were not before the curator at the decision. The pull request that carries this record asks the curator to confirm four rows before merging: these two, and H-11.1 and H-11.2, which the curator left to the assistant."
+ ],
+ "rule_in_force": {
+  "B1_obligation": "An atom whose source asks more strongly than the base (a requirement where the base recommends or allows) or adds a condition is tightens_base, not restates_base. The curator followed the review in six of the seven rows of this kind. In the seventh, S-16.1, the property stays recommended in the source according to the atom's note, so the source does not ask more strongly than the base, the rule does not apply and the atom keeps restates_base.",
+  "geo_obligation_levels": "Unchanged. The decision of 22 October 2026 (INDEPENDENT-CHECK.md, framing question) stands: INSPIRE and ISO obligation levels are kept as fields and are not part of each Geo need. No Geo atom changes on obligation grounds in this record; the three Geo atoms that change do so on the reading of the content."
+ },
+ "limits": "One blind AI review and the curator's adjudication of its differences from the earlier code on restates; two of the 18 rows were left to the assistant. No second human annotator took part. The findings of the independent check of 22 October 2026 were not shown to the blind reviewers and not in the decision sheet. The 31 differences that do not touch restates are not adjudicated. The review table (196 rows) is not in the repository. The base quotes of the mobilityDCAT-AP and HealthDCAT-AP atoms were not re-checked when this record was made, because the repository holds no copy of DCAT-AP 2.0.1 or 3.0.0. The blind reviewers did not see the notes field of the atoms; the notes of the 18 atoms were read when this record was made, those of the other 178 scored atoms were not compared with the review. Rows are not changed: the review read atoms, the scoring units.",
+ "agreement": {
+  "scored_atoms": 196,
+  "same_code": 147,
+  "same_answer_to_restates": 178,
+  "restates_differs": 18,
+  "restates_differs_on_content": 11,
+  "restates_differs_on_obligation": 7,
+  "code_differs_restates_same": 31
+ },
+ "review_over_196": {
+  "codes": {
+   "restates_base": 42,
+   "tightens_base": 59,
+   "extends_base": 13,
+   "partly_base": 7,
+   "beyond_base": 74,
+   "not_term_level": 1
+  },
+  "flags": {
+   "close_call": 94,
+   "multi_component": 13,
+   "obligation_unclear": 2
+  },
+  "model_id": "not_recorded",
+  "model_id_looked_in": "the review notes of 4 November 2026 name Claude annotators and no model identifier"
+ },
+ "base_texts": {
+  "DCAT-AP 1.1": {
+   "cases": [
+    "geodcat",
+    "statdcat",
+    "jrc-research"
+   ],
+   "file": "benchmark-data/geodcat/provenance/dcat-ap-1.1-later-snapshot.pdf",
+   "sha256": "dcbbb6d9a9364e7ce65c4590290ec851cab1c639fa9eadf20ecb81b4de372b36"
+  },
+  "DCAT-AP 2.0.1": {
+   "cases": [
+    "mobilitydcat"
+   ],
+   "file": "not in this repository",
+   "source": "the SEMIC DCAT-AP repository, releases/2.0.1/DCAT_AP_2.0.1.pdf",
+   "sha256": "not_recorded in full; the review notes give its first eight hexadecimal digits, 972b029e"
+  },
+  "DCAT-AP 3.0.0": {
+   "cases": [
+    "healthdcat"
+   ],
+   "file": "not in this repository",
+   "source": "the SEMIC DCAT-AP repository, releases/3.0.0/index.html",
+   "sha256": "not_recorded in full; the review notes give its first eight hexadecimal digits, faf60704"
+  }
+ },
+ "counts": {
+  "atoms_in_record": 18,
+  "follow_the_review": 13,
+  "keep_the_code": 5,
+  "decided_by_the_curator": 16,
+  "left_to_the_assistant": 2,
+  "atoms_with_a_note": 10,
+  "notes_put_before_the_curator": 5,
+  "named_by_the_independent_check_2026_10_22": 7,
+  "put_to_the_curator_with_the_pull_request": 4,
+  "restates_base_before": 46,
+  "restates_base_after": 41,
+  "no_longer_restate": 9,
+  "restate_now": 4,
+  "scored_without_restatements_before": 150,
+  "scored_without_restatements_after": 155,
+  "by_case": {
+   "mobilitydcat": {
+    "scored": 39,
+    "restates_base_before": 7,
+    "restates_base_after": 5
+   },
+   "geodcat": {
+    "scored": 37,
+    "restates_base_before": 16,
+    "restates_base_after": 17
+   },
+   "jrc-research": {
+    "scored": 17,
+    "restates_base_before": 4,
+    "restates_base_after": 3
+   },
+   "statdcat": {
+    "scored": 14,
+    "restates_base_before": 6,
+    "restates_base_after": 4
+   },
+   "healthdcat": {
+    "scored": 89,
+    "restates_base_before": 13,
+    "restates_base_after": 12
+   }
+  }
+ },
+ "files_outside_repository": {
+  "blind review table (196 rows, 3-4 November 2026)": {
+   "location": "the curator's project documents",
+   "sha256": "not_recorded",
+   "looked_in": "the table was read as text through a document service when this record was made; there was no file to hash"
+  },
+  "review notes of 4 November 2026": {
+   "location": "the curator's project documents",
+   "sha256": "not_recorded"
+  },
+  "decision sheet as sent to the curator (18 rows, no decision entered)": {
+   "file": "base-relation-decisions-2026-11-11.xlsx",
+   "sha256": "7173eb40ce8a90118f1315b2d6b931ff9b75bca152ab638f84f4c2b88bdee5fb"
+  },
+  "decision sheet with the decisions entered": {
+   "file": "base-relation-decisions-2026-11-11-recorded.xlsx",
+   "sha256": "602ae551da8a034e2627880607faf16b1a925306fdbeea6e6d505fd623408e53",
+   "note": "entered by the assistant from the curator's answers in chat; it adds a column with the atoms' notes"
+  }
+ },
+ "decided_by": "human:curator",
+ "put_to_the_curator_with_the_pull_request": {
+  "left_to_the_assistant": [
+   "H-11.1",
+   "H-11.2"
+  ],
+  "earlier_finding_not_in_view_at_the_decision": [
+   "H-12.1",
+   "H-5.3"
+  ]
+ },
+ "items": [
+  {
+   "atom_id": "Req-18.1",
+   "case": "mobilitydcat",
+   "pinned_base": "DCAT-AP 2.0.1",
+   "category": "restates changes",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "extends_base",
+    "restates": false,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Catalogue",
+    "base_property": "licence (dct:license)",
+    "base_obligation_as_read": "recommended 0..1",
+    "base_quote": "which the Catalogue can be used or reused.",
+    "rationale": "Licence/rights terms exist on Catalogue, Dataset's Distribution and Data Service, not on Catalogue Record; atom moves reuse conditions to the record level."
+   },
+   "base_quote_recheck": "not re-checked on 2026-11-11: the repository holds no copy of DCAT-AP 2.0.1",
+   "owner_decision": "keeps the repository's code",
+   "decided_by": "human:curator",
+   "decision_basis": "Kept by the curator on 11 November 2026. Raised by the assistant that prepared the sheet, before the decision: the review reads the atom as being about each record, while the statement speaks of the metadata itself, which the base's licence on the Catalogue may already cover. The atom's note says the same.",
+   "atom_note": "read by the assistant when this record was made; it agrees with the decision; not put before the curator",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "restates_base",
+    "restates_dcat_ap": true
+   }
+  },
+  {
+   "atom_id": "G-19.1",
+   "case": "geodcat",
+   "pinned_base": "DCAT-AP 1.1",
+   "category": "restates changes",
+   "code_before": "beyond_base",
+   "restates_before": false,
+   "review_claude_blind": {
+    "code": "restates_base",
+    "restates": true,
+    "confidence": "high",
+    "flags": [],
+    "base_class": "Dataset",
+    "base_property": "theme/category (dcat:theme)",
+    "base_obligation_as_read": "recommended, 0..n",
+    "base_quote": "This property refers to a category of the theme/ subproperty of skos:Concept Dataset. A Dataset may be associated with 0..n",
+    "rationale": "Topic category is the Dataset theme/category; atom names no particular vocabulary, so no tightening beyond the base."
+   },
+   "base_quote_recheck": "found verbatim in benchmark-data/geodcat/provenance/dcat-ap-1.1-later-snapshot.pdf on 2026-11-11 (whitespace-insensitive)",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review.",
+   "atom_note": "the atom has no note",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "restates_base",
+    "restates_dcat_ap": true
+   }
+  },
+  {
+   "atom_id": "G-32.1",
+   "case": "geodcat",
+   "pinned_base": "DCAT-AP 1.1",
+   "category": "restates changes",
+   "code_before": "partly_base",
+   "restates_before": false,
+   "review_claude_blind": {
+    "code": "restates_base",
+    "restates": true,
+    "confidence": "low",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Dataset",
+    "base_property": "type (dct:type)",
+    "base_obligation_as_read": "optional, 0..1",
+    "base_quote": "This property refers to the type of the Dataset. A controlled vocabulary",
+    "rationale": "dct:type carries a resource type with open vocabulary. But base has no series or service class, so a reviewer may prefer extends_base."
+   },
+   "base_quote_recheck": "found verbatim in benchmark-data/geodcat/provenance/dcat-ap-1.1-later-snapshot.pdf on 2026-11-11 (whitespace-insensitive)",
+   "owner_decision": "keeps the repository's code",
+   "decided_by": "human:curator",
+   "decision_basis": "Kept by the curator on 11 November 2026. Raised by the assistant that prepared the sheet, before the decision: the review's own confidence is low, and its rationale names extends_base as the code another reviewer may prefer.",
+   "atom_note": "the atom has no note",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "partly_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "G-37.1",
+   "case": "geodcat",
+   "pinned_base": "DCAT-AP 1.1",
+   "category": "restates changes",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "extends_base",
+    "restates": false,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Distribution",
+    "base_property": "licence (dct:license)",
+    "base_obligation_as_read": "recommended, 0..1",
+    "base_quote": "This property refers to the licence under 0..1 licence dct:license dct:LicenseDocument which the Distribution is made available.",
+    "rationale": "Conditions of access and use are licence/rights, which base puts on Distribution (and Catalogue), not on the resource/Dataset; atom moves them to the resource."
+   },
+   "base_quote_recheck": "found verbatim in benchmark-data/geodcat/provenance/dcat-ap-1.1-later-snapshot.pdf on 2026-11-11 (whitespace-insensitive)",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review.",
+   "atom_note": "the atom has no note",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "extends_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "G-39.1",
+   "case": "geodcat",
+   "pinned_base": "DCAT-AP 1.1",
+   "category": "restates changes",
+   "code_before": "partly_base",
+   "restates_before": false,
+   "review_claude_blind": {
+    "code": "restates_base",
+    "restates": true,
+    "confidence": "high",
+    "flags": [],
+    "base_class": "Dataset",
+    "base_property": "frequency (dct:accrualPeriodicity)",
+    "base_obligation_as_read": "optional, 0..1",
+    "base_quote": "This property refers to the frequency 0..1 frequency dct:accrualPeriodicity dct:Frequency at which the Dataset is updated.",
+    "rationale": "Maintenance/update frequency is dct:accrualPeriodicity on Dataset; same item and class."
+   },
+   "base_quote_recheck": "found verbatim in benchmark-data/geodcat/provenance/dcat-ap-1.1-later-snapshot.pdf on 2026-11-11 (whitespace-insensitive)",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review, and did so again after the assistant put the atom's note before the curator; the sheet had not shown the note.",
+   "atom_note": "put before the curator on 2026-11-11, after the sheet",
+   "independent_check_2026_10_22": [
+    {
+     "row": "25",
+     "atoms_or_rows": "G-9.1, G-27.1, G-39.1, G-41.1, G-41.2",
+     "finding": "Table inconsistencies not flagged",
+     "resolution": "Source flags added"
+    }
+   ],
+   "final": {
+    "relation_to_base": "restates_base",
+    "restates_dcat_ap": true
+   }
+  },
+  {
+   "atom_id": "JRC-6.5",
+   "case": "jrc-research",
+   "pinned_base": "DCAT-AP 1.1",
+   "category": "restates changes",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "partly_base",
+    "restates": false,
+    "confidence": "medium",
+    "flags": [
+     "close_call",
+     "multi_component",
+     "obligation_unclear"
+    ],
+    "base_class": "Identifier",
+    "base_property": "notation (skos:notation)",
+    "base_obligation_as_read": "stated mandatory, card. 0..1",
+    "base_quote": "identifier in the context of the identifier",
+    "rationale": "Scheme is carried for secondary identifiers via adms:Identifier notation datatype, but the main dct:identifier is a bare literal with no scheme."
+   },
+   "base_quote_recheck": "found verbatim in benchmark-data/geodcat/provenance/dcat-ap-1.1-later-snapshot.pdf on 2026-11-11 (whitespace-insensitive)",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review, and did so again after the assistant put the atom's note before the curator; the sheet had not shown the note. The note carries the finding of the independent check of 22 October 2026 that the need is met by the base (row 13 of its table).",
+   "atom_note": "put before the curator on 2026-11-11, after the sheet",
+   "independent_check_2026_10_22": [
+    {
+     "row": "13",
+     "atoms_or_rows": "JRC-6.5",
+     "finding": "The need is met by the base; the note misread the paper",
+     "resolution": "Status requirement; note corrected"
+    }
+   ],
+   "final": {
+    "relation_to_base": "partly_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "S-7.3",
+   "case": "statdcat",
+   "pinned_base": "DCAT-AP 1.1",
+   "category": "restates changes",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "extends_base",
+    "restates": false,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Dataset",
+    "base_property": "frequency (dct:accrualPeriodicity)",
+    "base_obligation_as_read": "optional 0..1",
+    "base_quote": "at which the Dataset is updated.",
+    "rationale": "Base frequency is the update frequency of the Dataset, not the observation interval of a time series; using it for periodicity widens the term. Not beyond: term exists."
+   },
+   "base_quote_recheck": "found verbatim in benchmark-data/geodcat/provenance/dcat-ap-1.1-later-snapshot.pdf on 2026-11-11 (whitespace-insensitive)",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review.",
+   "atom_note": "the atom has no note",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "extends_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "H-5.3",
+   "case": "healthdcat",
+   "pinned_base": "DCAT-AP 3.0.0",
+   "category": "restates changes",
+   "code_before": "extends_base",
+   "restates_before": false,
+   "review_claude_blind": {
+    "code": "restates_base",
+    "restates": true,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Agent",
+    "base_property": "type",
+    "base_obligation_as_read": "0..1 recommended",
+    "base_quote": "The nature of the agent.",
+    "rationale": "Publisher type is carried via Dataset publisher -> Agent type with the ADMS publisher type vocabulary; atom's obligation (capability) is not stricter than recommended."
+   },
+   "base_quote_recheck": "not re-checked on 2026-11-11: the repository holds no copy of DCAT-AP 3.0.0",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review. The independent check of 22 October 2026 had settled this atom's code otherwise (see independent_check_2026_10_22). That finding was not before the curator at the decision: the sheet did not show it, and the assistant found it afterwards, while making this record. The pull request puts it to the curator.",
+   "atom_note": "read by the assistant when this record was made, which found nothing in it against the decision; not put before the curator",
+   "independent_check_2026_10_22": [
+    {
+     "row": "36",
+     "atoms_or_rows": "H-5.3, H-28.2",
+     "finding": "DCAT-AP 3.0.0 has dct:type on foaf:Agent",
+     "resolution": "H-5.3 extends_base; H-28.2 tightens_base; notes added"
+    }
+   ],
+   "final": {
+    "relation_to_base": "restates_base",
+    "restates_dcat_ap": true
+   }
+  },
+  {
+   "atom_id": "H-7.1",
+   "case": "healthdcat",
+   "pinned_base": "DCAT-AP 3.0.0",
+   "category": "restates changes",
+   "code_before": "beyond_base",
+   "restates_before": false,
+   "review_claude_blind": {
+    "code": "restates_base",
+    "restates": true,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Dataset",
+    "base_property": "theme",
+    "base_obligation_as_read": "0..* recommended",
+    "base_quote": "A category of the Dataset.",
+    "rationale": "Theme already links datasets to shared concept URIs from a persistent vocabulary used across the harvesting network; atom names no stricter vocabulary or obligation."
+   },
+   "base_quote_recheck": "not re-checked on 2026-11-11: the repository holds no copy of DCAT-AP 3.0.0",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review.",
+   "atom_note": "the atom has no note",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "restates_base",
+    "restates_dcat_ap": true
+   }
+  },
+  {
+   "atom_id": "H-11.1",
+   "case": "healthdcat",
+   "pinned_base": "DCAT-AP 3.0.0",
+   "category": "restates changes",
+   "code_before": "beyond_base",
+   "restates_before": false,
+   "review_claude_blind": {
+    "code": "restates_base",
+    "restates": true,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Dataset",
+    "base_property": "conforms to",
+    "base_obligation_as_read": "0..* optional",
+    "base_quote": "An implementing rule or other specification.",
+    "rationale": "Data structure is carried by conforms to (data model) and linked schemas; atom's 'where available' is not stricter than optional."
+   },
+   "base_quote_recheck": "not re-checked on 2026-11-11: the repository holds no copy of DCAT-AP 3.0.0",
+   "owner_decision": "keeps the repository's code",
+   "decided_by": "model:claude/assistant, to which human:curator left the row",
+   "decision_basis": "The curator left this row to the assistant, asking for what is best for the truth (11 November 2026). The assistant kept the repository's code. The atom's note and the section of the reference document it points to (on harmonised data dictionaries) read the item as a description of the data's structures in a data dictionary, which the base's conforms to does not carry. The independent check of 22 October 2026 found the reading of the row's atoms ambiguous and had notes added (rows 34-35 of its table). The blind reviewers had not seen the note, and coded the four sibling atoms of the same source sentence (H-11.3 to H-11.6) beyond_base.",
+   "atom_note": "put before the curator on 2026-11-11, after the sheet",
+   "independent_check_2026_10_22": [
+    {
+     "row": "34–35",
+     "atoms_or_rows": "H-11.x, S-2.1, H-46.4",
+     "finding": "Ambiguous reading; unlinked near-duplicates",
+     "resolution": "Notes added; overlaps H-11.3/H-11.4↔H-7.3, H-11.6↔H-7.4, S-2.1↔S-6.1, H-46.4↔H-26.1"
+    }
+   ],
+   "final": {
+    "relation_to_base": "beyond_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "H-11.2",
+   "case": "healthdcat",
+   "pinned_base": "DCAT-AP 3.0.0",
+   "category": "restates changes",
+   "code_before": "beyond_base",
+   "restates_before": false,
+   "review_claude_blind": {
+    "code": "restates_base",
+    "restates": true,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Distribution",
+    "base_property": "format",
+    "base_obligation_as_read": "0..1 recommended",
+    "base_quote": "The file format of the Distribution.",
+    "rationale": "Base carries format (with File Type NAL) on each Distribution of the dataset; the atom asks nothing beyond that. Extends only if a dataset-level property were required."
+   },
+   "base_quote_recheck": "not re-checked on 2026-11-11: the repository holds no copy of DCAT-AP 3.0.0",
+   "owner_decision": "keeps the repository's code",
+   "decided_by": "model:claude/assistant, to which human:curator left the row",
+   "decision_basis": "The curator left this row to the assistant, asking for what is best for the truth (11 November 2026). The assistant kept the repository's code. The atom's note and the section of the reference document it points to (on harmonised data dictionaries) read the item as a description of the data's formats in a data dictionary, and the note says that the file formats of distributions are another atom (H-67.1); the base's format on Distribution does not carry it. The independent check of 22 October 2026 found the reading of the row's atoms ambiguous and had notes added (rows 34-35 of its table). The blind reviewers had not seen the note, and coded the four sibling atoms of the same source sentence (H-11.3 to H-11.6) beyond_base.",
+   "atom_note": "put before the curator on 2026-11-11, after the sheet",
+   "independent_check_2026_10_22": [
+    {
+     "row": "34–35",
+     "atoms_or_rows": "H-11.x, S-2.1, H-46.4",
+     "finding": "Ambiguous reading; unlinked near-duplicates",
+     "resolution": "Notes added; overlaps H-11.3/H-11.4↔H-7.3, H-11.6↔H-7.4, S-2.1↔S-6.1, H-46.4↔H-26.1"
+    }
+   ],
+   "final": {
+    "relation_to_base": "beyond_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "Req-19.2",
+   "case": "mobilitydcat",
+   "pinned_base": "DCAT-AP 2.0.1",
+   "category": "obligation only",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "tightens_base",
+    "restates": false,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Dataset",
+    "base_property": "description (dct:description)",
+    "base_obligation_as_read": "mandatory 1..n",
+    "base_quote": "This property contains a free-text account of the Dataset.",
+    "rationale": "Restated for Dataset (mandatory), but for Data Service the base has description only optional; mandatory atom therefore tightens."
+   },
+   "base_quote_recheck": "not re-checked on 2026-11-11: the repository holds no copy of DCAT-AP 2.0.1",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review; the rows of this kind were decided together (rule B1).",
+   "atom_note": "read by the assistant when this record was made, which found nothing in it against the decision; not put before the curator",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "tightens_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "Req-19.6",
+   "case": "mobilitydcat",
+   "pinned_base": "DCAT-AP 2.0.1",
+   "category": "obligation only",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "tightens_base",
+    "restates": false,
+    "confidence": "medium",
+    "flags": [
+     "close_call",
+     "multi_component"
+    ],
+    "base_class": "Dataset",
+    "base_property": "language (dct:language)",
+    "base_obligation_as_read": "optional 0..n",
+    "base_quote": "the Dataset. This property can be 0..n",
+    "rationale": "Dataset language is optional in base, atom mandatory, so tightens; for Data Service the base has no language term (extends). Dataset part taken as primary."
+   },
+   "base_quote_recheck": "not re-checked on 2026-11-11: the repository holds no copy of DCAT-AP 2.0.1",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review; the rows of this kind were decided together (rule B1).",
+   "atom_note": "read by the assistant when this record was made, which found nothing in it against the decision; not put before the curator",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "tightens_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "S-16.1",
+   "case": "statdcat",
+   "pinned_base": "DCAT-AP 1.1",
+   "category": "obligation only",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "tightens_base",
+    "restates": false,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Dataset",
+    "base_property": "theme/category (dcat:theme)",
+    "base_obligation_as_read": "recommended 0..n",
+    "base_quote": "This property refers to a category of the",
+    "rationale": "Base already binds dcat:theme to the EU data theme vocabulary, but only recommends the property; atom states it as a requirement, so stricter obligation."
+   },
+   "base_quote_recheck": "found verbatim in benchmark-data/geodcat/provenance/dcat-ap-1.1-later-snapshot.pdf on 2026-11-11 (whitespace-insensitive)",
+   "owner_decision": "keeps the repository's code",
+   "decided_by": "human:curator",
+   "decision_basis": "Kept by the curator on 11 November 2026, after the assistant put the atom's note before the curator; the sheet had not shown the note and the blind reviewers had not seen it. According to the note, the source uses the same controlled vocabularies as the base and the property stays recommended, so the source does not ask more strongly than the base. The independent check of 22 October 2026 had resolved the atom to restates_base on the same grounds (row 5 of its table).",
+   "atom_note": "put before the curator on 2026-11-11, after the sheet",
+   "independent_check_2026_10_22": [
+    {
+     "row": "5",
+     "atoms_or_rows": "S-16.1",
+     "finding": "StatDCAT-AP uses the DCAT-AP vocabularies; dcat:theme stays recommended",
+     "resolution": "restates_base; the Eurostat mapping is noted as guidance"
+    }
+   ],
+   "final": {
+    "relation_to_base": "restates_base",
+    "restates_dcat_ap": true
+   }
+  },
+  {
+   "atom_id": "S-18.1",
+   "case": "statdcat",
+   "pinned_base": "DCAT-AP 1.1",
+   "category": "obligation only",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "tightens_base",
+    "restates": false,
+    "confidence": "high",
+    "flags": [
+     "multi_component"
+    ],
+    "base_class": "Dataset",
+    "base_property": "release date (dct:issued)",
+    "base_obligation_as_read": "optional 0..1",
+    "base_quote": "formal issuance (e.g., publication) of",
+    "rationale": "Both dates exist on Dataset, optionally, as date or dateTime; atom requires them with time of day under a condition: narrower range plus condition, so tightens."
+   },
+   "base_quote_recheck": "found verbatim in benchmark-data/geodcat/provenance/dcat-ap-1.1-later-snapshot.pdf on 2026-11-11 (whitespace-insensitive)",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review; the rows of this kind were decided together (rule B1).",
+   "atom_note": "the atom has no note",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "tightens_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "H-12.1",
+   "case": "healthdcat",
+   "pinned_base": "DCAT-AP 3.0.0",
+   "category": "obligation only",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "tightens_base",
+    "restates": false,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Dataset Series",
+    "base_property": "(class definition)",
+    "base_obligation_as_read": "optional",
+    "base_quote": "A collection of datasets that are published separately, but share some characteristics that group them.",
+    "rationale": "Base can describe logical datasets grouped in a Dataset Series, but leaves it optional; atom recommends it for large warehouses, adding scope and obligation."
+   },
+   "base_quote_recheck": "not re-checked on 2026-11-11: the repository holds no copy of DCAT-AP 3.0.0",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review; the rows of this kind were decided together (rule B1). The independent check of 22 October 2026 had settled this atom's code otherwise (see independent_check_2026_10_22). That finding was not before the curator at the decision: the sheet did not show it, and the assistant found it afterwards, while making this record. The pull request puts it to the curator.",
+   "atom_note": "read by the assistant when this record was made, which found nothing in it against the decision; not put before the curator",
+   "independent_check_2026_10_22": [
+    {
+     "row": "15",
+     "atoms_or_rows": "H-12.1",
+     "finding": "Only content atom with not_term_level; a recommendation",
+     "resolution": "restates_base (each logical dataset is a dcat:Dataset); modality recommendation"
+    }
+   ],
+   "final": {
+    "relation_to_base": "tightens_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "H-43.1",
+   "case": "healthdcat",
+   "pinned_base": "DCAT-AP 3.0.0",
+   "category": "obligation only",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "tightens_base",
+    "restates": false,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Catalogue Record",
+    "base_property": "listing date",
+    "base_obligation_as_read": "0..1 recommended",
+    "base_quote": "The date on which the description of the Resource was included in the Catalogue.",
+    "rationale": "Base recommends listing date on Catalogue Record; atom states it as a requirement for each entry, read as stricter than recommended."
+   },
+   "base_quote_recheck": "not re-checked on 2026-11-11: the repository holds no copy of DCAT-AP 3.0.0",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review; the rows of this kind were decided together (rule B1).",
+   "atom_note": "the atom has no note",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "tightens_base",
+    "restates_dcat_ap": false
+   }
+  },
+  {
+   "atom_id": "H-43.3",
+   "case": "healthdcat",
+   "pinned_base": "DCAT-AP 3.0.0",
+   "category": "obligation only",
+   "code_before": "restates_base",
+   "restates_before": true,
+   "review_claude_blind": {
+    "code": "tightens_base",
+    "restates": false,
+    "confidence": "medium",
+    "flags": [
+     "close_call"
+    ],
+    "base_class": "Catalogue Record",
+    "base_property": "source metadata",
+    "base_obligation_as_read": "0..1 optional",
+    "base_quote": "The original metadata that was used in creating metadata for the Dataset, Data Service or Dataset Series.",
+    "rationale": "Base has source metadata on Catalogue Record as optional; atom requires it for aggregated entries, a stricter obligation with a scope."
+   },
+   "base_quote_recheck": "not re-checked on 2026-11-11: the repository holds no copy of DCAT-AP 3.0.0",
+   "owner_decision": "follows the blind review",
+   "decided_by": "human:curator",
+   "decision_basis": "The curator read the decision sheet on 11 November 2026 and followed the blind review; the rows of this kind were decided together (rule B1).",
+   "atom_note": "the atom has no note",
+   "independent_check_2026_10_22": "its table of findings does not name the atom",
+   "final": {
+    "relation_to_base": "tightens_base",
+    "restates_dcat_ap": false
+   }
+  }
+ ]
+}

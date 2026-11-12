@@ -1,0 +1,111 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "M17",
+ "name": "Refresh files_sha256 in IMPORT-PROVENANCE.json",
+ "time_order": "after the step whose files it covers; see reason",
+ "actors": [
+  {
+   "actor": "script:tools/trace/refresh_hashes.py#a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189"
+  },
+  {
+   "actor": "model:claude/manifest-refresh",
+   "role": "ran the script"
+  }
+ ],
+ "session": {
+  "model_id": "claude-fable-5-2",
+  "model_id_status": "recorded",
+  "claude_code_version": "2.1.322",
+  "handoff_prompt_sha256": "e4331239849a877eb43fec9c2e12dd2712cc8d209a4a19fb33342fdf84c0d1d5",
+  "spec_working_copy_sha256": "de02d41667635f54d1cdabd500c03d8c6dde40533f844d10e0c70a881728862b",
+  "cleaned_spec_sha256": "1a2c52ed7b9528b4b7048c853c48a4b2c4780d7a4f4c02600690e40cd367786b",
+  "owner_decisions_sha256": "6847621519896430ba63702e250227fc458af638eba0455afd8c692026dccd29",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.322 (Claude Code)"
+  },
+  "transcript_sha256": "2a19331a797fc64692d0b6502e34456b6e42f823ed4b8bcad8af07467e54a168",
+  "transcript_location": "outside the repository",
+  "written_at": "2026-11-11T22:13:15.533Z"
+ },
+ "scripts": [
+  {
+   "path": "tools/trace/refresh_hashes.py",
+   "sha256": "a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/trace/common.py",
+   "sha256": "ce04c1e3351f6f1532476b1c479545209cc48bc6c1055279ed3e20cd271fe21b",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "2c789740735db5dbf5938f478f9904040b868b509182afd9bb65c1ac43083092",
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 294
+  }
+ ],
+ "outputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": null,
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 297,
+   "note": "Written after this manifest and containing its hash, so its own hash cannot be recorded here; tools/export_anonymous.py checks every entry."
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-11T22:13:15.000Z",
+  "run_ended": "2026-11-11T22:13:15.533Z",
+  "run_by": "model:claude/manifest-refresh"
+ },
+ "seeds": {},
+ "counts": {
+  "in": 294,
+  "out": 297,
+  "changed": 16
+ },
+ "decision_values": [
+  "entry_added",
+  "entry_changed",
+  "entry_removed"
+ ],
+ "rationale_location": "reason below",
+ "reason": "Refresh after the base-relation adjudication of 11 November 2026: relation_to_base, restates_dcat_ap and relation_review on 18 scored atoms (13 codes change; 46 scored atoms restated the base before, 41 now), counts.json recounted, Appendix A and the supplement regenerated and the supplement PDF rebuilt, make_tables.py extended, READMEs updated, base-relation-review/ added. The session's model ID is the configured model as stated by the environment; the serving model may differ.",
+ "entries_added": {
+  "benchmark-data/reference-sets-v3/base-relation-review/README.md": "0fc56c7b3163212a9db1d8ee9077ee22a4050a045043aafd5a691b2282169c7c",
+  "benchmark-data/reference-sets-v3/base-relation-review/adjudication-2026-11-11.json": "fe44fa7ec6e7568dae2e2f9c8255ecce92d0ef9c8ef1df3c8219f366d9f8a76b"
+ },
+ "entries_changed": {
+  "benchmark-data/reference-sets-v3/README.md": "9100d534bb7a2dab7174411bfe3f2d2d2e27079cd20bbd5e73d0bd6ecd8eb192",
+  "benchmark-data/reference-sets-v3/atoms-review.csv": "d1b782acd1d86842d1dc3e3967a109e714e11348b9ee6940b3e7f9ced24597c5",
+  "benchmark-data/reference-sets-v3/counts.json": "14123ef795468c9e5e91c6308a354f875832458b9e009fc4b55d3fa1bcff4fd0",
+  "benchmark-data/reference-sets-v3/geodcat.json": "153a96f3cc69ef80fb1083b1dc9d09f1c0cf43acc06ce11ca04e1c2ad845cec7",
+  "benchmark-data/reference-sets-v3/healthdcat.json": "ad6caf3c3ea8873ad50530c0eb0e4e2048309976e93b0da6c801a78ba853c566",
+  "benchmark-data/reference-sets-v3/jrc-research.json": "c27395e41a9c5217f8c5bace564c0c32af32a1f7d766d541536383a362b8eaaa",
+  "benchmark-data/reference-sets-v3/mobilitydcat.json": "c0f1978967f7aa6bedfb522a3dd2f08a67cc2eb85bdeee168e41d79c2c5299ec",
+  "benchmark-data/reference-sets-v3/statdcat.json": "0a1977dde9daa71e4dce6256433ca8d90c2254f478ee54746986588d73226db1",
+  "benchmark-data/reference-sets-v3/supplement/README.md": "d5c638e8089a73bbeda149ccd8a6e51e1881191ca845d193f0494bd1c9a2bea9",
+  "benchmark-data/reference-sets-v3/supplement/appendix-test-cases.tex": "097ceafd9b7f51092ef57a37d28c52ea8fd194df767da1afa87b80df051d803e",
+  "benchmark-data/reference-sets-v3/supplement/make_tables.py": "3193c2f8ec9ce3531130c33772a8dcf27611ab58658337f64fbd884c92ce7155",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.pdf": "0c15c09bb542cccd5127127b04396ba0f3254586b31bce42bd012b477923da76",
+  "benchmark-data/reference-sets-v3/supplement/supplement-reference-requirements.tex": "dab6f6aa8a787c90a954b57e3e6c31ad43d9d9a03ff588f8e2c4c6269d62221d"
+ },
+ "entries_removed": [],
+ "own_entry": "added to IMPORT-PROVENANCE.json after this manifest was written",
+ "evidence": [
+  "tools/export_anonymous.py:60-65"
+ ],
+ "gaps": [],
+ "manifest_sha256": "a85f5e2f0b81fac14b88bbe91348312e102462cb4606be26bfd3a6f036314a8a"
+}
