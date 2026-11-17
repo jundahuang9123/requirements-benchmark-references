@@ -37,6 +37,8 @@ M became `content`, G `profile` and S `system` (`history/build-scripts/v2/build_
 | R9 | The independent check found Req-14.1 to be an umbrella over Mobility's content atoms; it was moved to profile. | independent check; resolution applied in v3 | `INDEPENDENT-CHECK.md`, finding 23 |
 | R10 | The labelling prompts were given each atom's type; they did not set it. | — | `history/labelling/labelling-prompts.md` |
 
+On the models: the curator's statement of 17 November 2026 names the assistant models used for the atoms and the labels (`trace/models-statement-2026-11-17.json`). The trace keeps "not recorded" where its files show no model.
+
 316 of the 320 atoms have their row's type. The four others:
 
 | Atom | Row type | Atom type | Reason |
