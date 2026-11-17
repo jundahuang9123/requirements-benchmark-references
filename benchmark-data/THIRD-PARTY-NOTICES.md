@@ -33,7 +33,8 @@ No source owner endorses this benchmark or its curator interpretations.
   acknowledgement, as stated on page 2.
 - **mobilityDCAT specification source:** NAPCORE;
   [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) in the pinned repository README.
-- **EPOS:** original repository MIT licence retained as `epos/provenance/EPOS-LICENSE.txt`.
+- **EPOS** (in `../archive/benchmark-data/epos/`, not one of the five cases): original repository MIT licence
+  retained there as `provenance/EPOS-LICENSE.txt`.
 
 NAPCORE's original report, CMC, SPRINT D2.3, the JRC workshop paper, DataCite 3.1 PDF,
 TransportDCAT report and other works whose original redistribution rights were not

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Offline integrity/readability checks for this benchmark snapshot; no app imports."""
+"""Offline integrity/readability checks for this benchmark snapshot; no app imports.
+
+Checks the five cases of the paper. EPOS, an exploratory sixth case with no scored run, is in
+archive/benchmark-data/epos/; it is checked as well when --epos names that folder."""
 import argparse
 import csv
 import hashlib
@@ -17,7 +20,7 @@ class PDFWarnings(logging.Handler):
         self.messages.append(record.getMessage())
 
 ROOT = Path(__file__).resolve().parent
-CASES = ('mobilitydcat', 'healthdcat', 'statdcat', 'geodcat', 'jrc-research', 'epos')
+CASES = ('mobilitydcat', 'healthdcat', 'statdcat', 'geodcat', 'jrc-research')
 ROLES = {'raw_input', 'preconsolidation_input', 'reference_requirement',
          'final_profile_reference', 'context_only'}
 
@@ -37,8 +40,11 @@ class VisibleText(HTMLParser):
             self.parts.append(data)
 
 
-def validate(deep_pdf=False):
+def validate(deep_pdf=False, epos=None):
     errors, checked, registered, stats = [], [], {}, {}
+    bases = {case: ROOT / case for case in CASES}
+    if epos is not None:
+        bases['epos'] = Path(epos).resolve()
     allowlist = json.loads((ROOT / 'runtime-inputs.json').read_text())['benchmarks']
     pdf_reader = None
     if deep_pdf:
@@ -47,8 +53,7 @@ def validate(deep_pdf=False):
             pdf_reader = PdfReader
         except ImportError:
             raise SystemExit('--deep-pdf requires pypdf; no PDF parsing claimed.')
-    for case in CASES:
-        base = ROOT / case
+    for case, base in bases.items():
         manifest = json.loads((base / 'provenance/manifest.json').read_text())
         assert manifest['benchmark'] == case
         assert manifest['corpus_completeness'] == 'partial'
@@ -138,11 +143,13 @@ def validate(deep_pdf=False):
                     assert mode in item['runtime_modes'], 'allowlist mode absent from manifest'
                 except AssertionError as exc:
                     errors.append(f + ': ' + str(exc))
-    for p in ROOT.rglob('*'):
+    files = [(p, p.relative_to(ROOT).as_posix()) for p in ROOT.rglob('*')]
+    if epos is not None:
+        files += [(p, 'epos/' + p.relative_to(bases['epos']).as_posix()) for p in bases['epos'].rglob('*')]
+    for p, relative in files:
         if not p.is_file():
             continue
-        relative = p.relative_to(ROOT).as_posix()
-        if relative.split('/')[0] in CASES and relative not in registered:
+        if relative.split('/')[0] in bases and relative not in registered:
             if p.name not in ('README.md', 'GAPS.md', 'manifest.json'):
                 errors.append(relative + ': unregistered source artifact')
         if p.suffix in ('.json', '.md', '.py', '.txt', '.html', '.csv'):
@@ -189,8 +196,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--deep-pdf', action='store_true')
     parser.add_argument('--report', type=Path, help='Optional JSON audit report path')
+    parser.add_argument('--epos', type=Path, help='The EPOS folder (archive/benchmark-data/epos), checked as well')
     args = parser.parse_args()
-    report = validate(args.deep_pdf)
+    report = validate(args.deep_pdf, args.epos)
     if args.report:
         args.report.write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps({k: v for k, v in report.items() if k not in ('artifacts', 'reference_counts')}, indent=2))

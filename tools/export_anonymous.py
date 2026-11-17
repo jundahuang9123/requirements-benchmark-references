@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Export tracked working-tree files without Git metadata or author history."""
+"""Export tracked working-tree files without Git metadata or author history.
+
+archive/ is left out. IMPORT-PROVENANCE.json keeps the paths of the import: an entry whose file was moved
+unchanged to archive/ (same path below it) is checked there and not exported; every exported file under
+benchmark-data/ must match its entry."""
 import argparse
 import hashlib
 import json
@@ -10,6 +14,7 @@ import subprocess
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
+ARCHIVE = 'archive'
 # These two figure images and their metadata were manually inspected.
 REVIEWED_PNGS = {'benchmark-data/figures/01-benchmark-evidence-map.png': '00a93a7f3bbfe3cb2918bf3ac2503d8dabfa5c5b4e873f42cad7fc5dd978c843', 'benchmark-data/figures/02-mobility-requirement-examples.png': '601873936e1479c03988182d4c9423effb5bbac6c0ce880ead9052bafb07661b'}
 
@@ -25,8 +30,10 @@ def main():
         parser.error('Write the export outside the checkout.')
     if output.exists():
         parser.error('Output already exists; choose a new filename.')
-    paths = [Path(p.decode()) for p in subprocess.check_output(
+    tracked = [Path(p.decode()) for p in subprocess.check_output(
         ['git', 'ls-files', '-z'], cwd=ROOT).split(b'\0') if p]
+    archived = {p.as_posix() for p in tracked if p.parts[0] == ARCHIVE}
+    paths = [p for p in tracked if p.parts[0] != ARCHIVE]
     payload = {}
     problems = []
     # The configuration below describes patterns, without embedding private identifiers.
@@ -61,7 +68,12 @@ def main():
     expected = manifest['files_sha256']
     actual = {name: hashlib.sha256(data).hexdigest() for name, data in payload.items()
               if name.startswith('benchmark-data/')}
-    if expected != actual:
+    for name, digest in sorted(expected.items()):
+        moved = ARCHIVE + '/' + name
+        if name not in actual and not (moved in archived and
+                                       hashlib.sha256((ROOT / moved).read_bytes()).hexdigest() == digest):
+            problems.append(name + ': manifest entry neither exported nor unchanged under archive/')
+    if {n: d for n, d in expected.items() if n in actual} != actual:
         problems.append('Snapshot manifest does not match the current benchmark files.')
     if problems:
         raise SystemExit('\n'.join(problems))

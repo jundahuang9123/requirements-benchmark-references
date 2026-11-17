@@ -30,6 +30,8 @@ python3 benchmark-data/reference-sets-v3/validate_v3.py
 python3 -B tools/trace/check_backfill.py
 ```
 
+The corpus validator checks the five cases; `--epos archive/benchmark-data/epos` adds EPOS, which is in the archive.
+
 Since the base-relation adjudication of 11 November 2026, the mock check reports seven differences when it reads the current sets. All are in one slice of the JRC mock runs (supported atoms without restatements), where one atom no longer counts as a restatement. The mock results are a historical exercise and were not recomputed; the check passes against the sets as they were before (set `RQ1_REF` to a copy of that `reference-sets-v3` folder).
 
 See the archived [import verification](archive/docs/import/IMPORT-VALIDATION.md): v3 and mock checks pass; the older corpus validator currently reports failures inherited from the source snapshot. These historical reports are not a current whole-corpus approval.

@@ -7,6 +7,8 @@ DESCRIPTION.json (kept outside the repository) names the step, its actors, scrip
 timing, counts, decision values, evidence and checks. This script adds the hashes: inputs with
 hash_time "import" are taken from IMPORT-PROVENANCE.json at the baseline tag, everything else is
 hashed now. It writes benchmark-data/reference-sets-v3/trace/steps/<step_id>.json.
+Optional: "moves" (files moved unchanged, as given) and "scripts_changed" (path, from_sha256 and the
+change; to_sha256 is the current hash). check_backfill.py accepts a pinned script whose change is recorded so.
 """
 import json
 import sys
@@ -45,6 +47,10 @@ def main(desc_path):
         'gaps': d.get('gaps', []),
         'notes': d.get('notes', []),
     }
+    if 'moves' in d:
+        manifest['moves'] = d['moves']
+    if 'scripts_changed' in d:
+        manifest['scripts_changed'] = [dict(c, to_sha256=sha256_file(c['path'])) for c in d['scripts_changed']]
     out = TRACE + f'steps/{d["step_id"]}.json'
     write_json(out, finalize_manifest(manifest))
     print('wrote', out)
