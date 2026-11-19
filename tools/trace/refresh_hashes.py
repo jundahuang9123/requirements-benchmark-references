@@ -8,6 +8,8 @@ manifest covers exactly the files git tracks or has staged. The step writes its 
 trace/steps/<ID>.json first, listing every entry it adds, changes or removes; then it writes
 IMPORT-PROVENANCE.json, including the entry for that manifest. IMPORT-PROVENANCE.json therefore cannot
 carry its own hash in the manifest: the export check (tools/export_anonymous.py) verifies it instead.
+An entry whose file was moved unchanged to archive/ (same path below it) keeps its import path and hash; the step
+lists it under entries_archived instead of removing it, and the export check finds it there.
 The script ends by re-checking that every file under benchmark-data/ matches its entry.
 """
 import argparse
@@ -19,12 +21,19 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import BM, POLICY, ROOT, TRACE, finalize_manifest, git, now_utc, session_block, sha256_file, write_json  # noqa: E402
 
 PROV = 'IMPORT-PROVENANCE.json'
+ARCHIVE = 'archive/'
 
 
 def tracked_bm():
     files = [p for p in git('ls-files', '-z', '--cached').decode().split('\0') if p.startswith(BM)]
     deleted = set(git('ls-files', '-z', '--deleted').decode().split('\0')) - {''}
     return sorted(p for p in files if p not in deleted)
+
+
+def tracked_archive():
+    files = [p for p in git('ls-files', '-z', '--cached').decode().split('\0') if p.startswith(ARCHIVE)]
+    deleted = set(git('ls-files', '-z', '--deleted').decode().split('\0')) - {''}
+    return {p for p in files if p not in deleted}
 
 
 def write_provenance(prov):
@@ -46,7 +55,10 @@ def main():
     after = {p: sha256_file(p) for p in files}
     added = {p: h for p, h in after.items() if p not in before}
     changed = {p: h for p, h in after.items() if p in before and before[p] != h}
-    removed = sorted(p for p in before if p not in after and p != own)
+    in_archive = tracked_archive()
+    archived = sorted(p for p in before if p not in after and p != own and ARCHIVE + p in in_archive
+                      and sha256_file(ARCHIVE + p) == before[p])
+    removed = sorted(p for p in before if p not in after and p != own and p not in archived)
     manifest = {
         'trace_policy': POLICY,
         'step_id': args.step_id, 'name': 'Refresh files_sha256 in IMPORT-PROVENANCE.json',
@@ -61,31 +73,34 @@ def main():
         'prompts': [],
         'inputs': [{'path': PROV, 'sha256': sha256_file(PROV), 'hash_time': 'step', 'stored': 'yes',
                     'count': len(before)}],
-        'outputs': [{'path': PROV, 'sha256': None, 'hash_time': 'step', 'stored': 'yes', 'count': len(after) + 1,
+        'outputs': [{'path': PROV, 'sha256': None, 'hash_time': 'step', 'stored': 'yes', 'count': len(after) + len(archived) + 1,
                      'note': 'Written after this manifest and containing its hash, so its own hash cannot be '
                              'recorded here; tools/export_anonymous.py checks every entry.'}],
         'timing': {'run_started': started, 'run_ended': None, 'run_by': 'model:claude/manifest-refresh'},
         'seeds': {},
-        'counts': {'in': len(before), 'out': len(after) + 1, 'changed': len(added) + len(changed) + len(removed) + 1},
-        'decision_values': ['entry_added', 'entry_changed', 'entry_removed'],
+        'counts': {'in': len(before), 'out': len(after) + len(archived) + 1, 'changed': len(added) + len(changed) + len(removed) + 1},
+        'decision_values': ['entry_added', 'entry_changed', 'entry_removed', 'entry_archived'],
         'rationale_location': 'reason below',
         'reason': args.reason,
         'entries_added': added, 'entries_changed': changed, 'entries_removed': removed,
+        'entries_archived': archived,
         'own_entry': 'added to IMPORT-PROVENANCE.json after this manifest was written',
-        'evidence': ['tools/export_anonymous.py:60-65'],
+        'evidence': ['tools/export_anonymous.py:67-77'],
         'gaps': [],
     }
     manifest['timing']['run_ended'] = now_utc()
     write_json(own, finalize_manifest(manifest))
     after[own] = sha256_file(own)
-    prov['files_sha256'] = after
+    prov['files_sha256'] = dict(after, **{p: before[p] for p in archived})
     write_provenance(prov)
     # Re-check: every tracked or staged file under benchmark-data/, plus this manifest, matches its entry.
     final = json.loads((ROOT / PROV).read_text(encoding='utf-8'))['files_sha256']
     expected = {p: sha256_file(p) for p in set(files) | {own}}
+    expected.update({p: sha256_file(ARCHIVE + p) for p in archived})
     if final != expected:
         raise SystemExit('files_sha256 does not match the tree after the refresh')
-    print(f'{args.step_id}: {len(added)} added, {len(changed)} changed, {len(removed)} removed, plus its own manifest')
+    print(f'{args.step_id}: {len(added)} added, {len(changed)} changed, {len(removed)} removed, '
+          f'{len(archived)} kept for files moved to archive/, plus its own manifest')
 
 
 if __name__ == '__main__':

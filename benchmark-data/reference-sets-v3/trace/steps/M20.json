@@ -1,0 +1,142 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "M20",
+ "name": "Refresh files_sha256 in IMPORT-PROVENANCE.json",
+ "time_order": "after the step whose files it covers; see reason",
+ "actors": [
+  {
+   "actor": "script:tools/trace/refresh_hashes.py#eea568b838e0ea7d0567a647284cb1504bf889ec1d8f8be74076022897762567"
+  },
+  {
+   "actor": "model:claude/manifest-refresh",
+   "role": "ran the script"
+  }
+ ],
+ "session": {
+  "model_id": null,
+  "model_id_status": "withheld",
+  "claude_code_version": "2.1.326 (Claude Code)",
+  "handoff_prompt_sha256": "31c4d185e872ed33bd5f6ed2c0f598c07edb96db72860734f53ff5d068f9dcef",
+  "spec_working_copy_sha256": "31c4d185e872ed33bd5f6ed2c0f598c07edb96db72860734f53ff5d068f9dcef",
+  "cleaned_spec_sha256": null,
+  "owner_decisions_sha256": "31c4d185e872ed33bd5f6ed2c0f598c07edb96db72860734f53ff5d068f9dcef",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.326 (Claude Code)"
+  },
+  "transcript_sha256": null,
+  "transcript_status": "not_recorded",
+  "written_at": "2026-11-17T15:28:10.694Z"
+ },
+ "scripts": [
+  {
+   "path": "tools/trace/refresh_hashes.py",
+   "sha256": "eea568b838e0ea7d0567a647284cb1504bf889ec1d8f8be74076022897762567",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  },
+  {
+   "path": "tools/trace/common.py",
+   "sha256": "ce04c1e3351f6f1532476b1c479545209cc48bc6c1055279ed3e20cd271fe21b",
+   "rerunnable": "yes",
+   "postdates_step": "no"
+  }
+ ],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "d818924c590447e1f95468acb2d96c6ce041ec7ee04f4d51f81ae75fe836ffb5",
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 303
+  }
+ ],
+ "outputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": null,
+   "hash_time": "step",
+   "stored": "yes",
+   "count": 307,
+   "note": "Written after this manifest and containing its hash, so its own hash cannot be recorded here; tools/export_anonymous.py checks every entry."
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-17T15:28:10.600Z",
+  "run_ended": "2026-11-17T15:28:10.694Z",
+  "run_by": "model:claude/manifest-refresh"
+ },
+ "seeds": {},
+ "counts": {
+  "in": 303,
+  "out": 307,
+  "changed": 6
+ },
+ "decision_values": [
+  "entry_added",
+  "entry_changed",
+  "entry_removed",
+  "entry_archived"
+ ],
+ "rationale_location": "reason below",
+ "reason": "Refresh after step C2 (17 November 2026): two statements of the curator recorded. Added: evidence-review/statement-2026-11-17.json (the sources of the evidence review were read; it corrects the phrase 'without re-reading the sources' of step 4) and trace/models-statement-2026-11-17.json (the assistant models used for the atoms and the labels; not mapped to single steps). Changed: one line under step 4 of evidence-review/README.md and one line after the table of ATOM-TYPES.md, each pointing to its record. Added: the manifest of step C2. No row, atom, label, count, rule or ID changes.",
+ "entries_added": {
+  "benchmark-data/reference-sets-v3/evidence-review/statement-2026-11-17.json": "a29a912cb831dd3e4c478c76e99dcd7eee24f47ae794a97d69ef08f3527b7344",
+  "benchmark-data/reference-sets-v3/trace/models-statement-2026-11-17.json": "448fa9973889b41666425c9ca184c0140b88beeeeb7b22a3e3bb6060a04b56c4",
+  "benchmark-data/reference-sets-v3/trace/steps/C2.json": "ace454e79e48c55ab2169f4d30ebcd72bbfd720fa2ef177333e6ea961b0754ac"
+ },
+ "entries_changed": {
+  "benchmark-data/reference-sets-v3/ATOM-TYPES.md": "a7a77b1ccdd5e4f839d937ce3758bc77c4fd09b88b70e7ad4cd24f2099e11028",
+  "benchmark-data/reference-sets-v3/evidence-review/README.md": "2e5f281897d6cf38431624d6815a0458dcb7debbb29cab6009f7a03b7d717f39"
+ },
+ "entries_removed": [],
+ "entries_archived": [
+  "benchmark-data/epos/README.md",
+  "benchmark-data/epos/exploratory/project-scope-and-references.md",
+  "benchmark-data/epos/exploratory/w3c-dcat-2014.html",
+  "benchmark-data/epos/provenance/EPOS-LICENSE.txt",
+  "benchmark-data/epos/provenance/GAPS.md",
+  "benchmark-data/epos/provenance/citations/epos-core.json",
+  "benchmark-data/epos/provenance/citations/epos-egu2019.json",
+  "benchmark-data/epos/provenance/manifest.json",
+  "benchmark-data/epos/reference-requirements/epos-final.pdf",
+  "benchmark-data/reference-sets-v3/mock-benchmark/METHOD.md",
+  "benchmark-data/reference-sets-v3/mock-benchmark/README.md",
+  "benchmark-data/reference-sets-v3/mock-benchmark/SUMMARY.md",
+  "benchmark-data/reference-sets-v3/mock-benchmark/build_adjudication.py",
+  "benchmark-data/reference-sets-v3/mock-benchmark/build_pools.py",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/INSTRUCTIONS.md",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/jrc-atoms.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/jrc-disagreements.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/jrc-needs-A.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/jrc-needs-B.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/out/jrc-A.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/out/jrc-B.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/out/jrc-adjudicated.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/out/stat-A.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/out/stat-B.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/out/stat-adjudicated.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/stat-atoms.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/stat-disagreements.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/stat-needs-A.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/judge/stat-needs-B.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/make_report.py",
+  "benchmark-data/reference-sets-v3/mock-benchmark/out/atom-by-run.csv",
+  "benchmark-data/reference-sets-v3/mock-benchmark/out/discussion-effect.csv",
+  "benchmark-data/reference-sets-v3/mock-benchmark/out/mock-benchmark-results.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/out/pair-labels.csv",
+  "benchmark-data/reference-sets-v3/mock-benchmark/private/need-id-map.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/runs.json",
+  "benchmark-data/reference-sets-v3/mock-benchmark/score.py",
+  "benchmark-data/reference-sets-v3/mock-benchmark/verify.py"
+ ],
+ "own_entry": "added to IMPORT-PROVENANCE.json after this manifest was written",
+ "evidence": [
+  "tools/export_anonymous.py:67-77"
+ ],
+ "gaps": [],
+ "manifest_sha256": "cd23f61b20dd39196f0f6c6321706e08b4015655da23c138143690647bb44ad6"
+}

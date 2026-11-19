@@ -1,0 +1,119 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "C2",
+ "name": "Two statements of the curator of 17 November 2026 recorded: the sources of the evidence review were read; the assistant models used for the atoms and the labels",
+ "time_order": "after M19 and before M20",
+ "actors": [
+  {
+   "actor": "model:claude/cleanup",
+   "role": "wrote the two records and the two lines, and this manifest"
+  },
+  {
+   "actor": "model:claude/paper-session",
+   "role": "worded the two statements in an addendum of 17 November 2026 (outside the repository; its sha256 is in session)"
+  },
+  {
+   "actor": "human:curator",
+   "role": "gave the two statements and confirmed their wording by handing the addendum over"
+  }
+ ],
+ "session": {
+  "model_id": null,
+  "model_id_status": "withheld",
+  "claude_code_version": "2.1.326 (Claude Code)",
+  "handoff_prompt_sha256": "31c4d185e872ed33bd5f6ed2c0f598c07edb96db72860734f53ff5d068f9dcef",
+  "spec_working_copy_sha256": "31c4d185e872ed33bd5f6ed2c0f598c07edb96db72860734f53ff5d068f9dcef",
+  "cleaned_spec_sha256": null,
+  "owner_decisions_sha256": "31c4d185e872ed33bd5f6ed2c0f598c07edb96db72860734f53ff5d068f9dcef",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.326 (Claude Code)"
+  },
+  "transcript_sha256": null,
+  "transcript_status": "not_recorded",
+  "written_at": "2026-11-17T15:28:03.447Z"
+ },
+ "scripts": [],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "d818924c590447e1f95468acb2d96c6ce041ec7ee04f4d51f81ae75fe836ffb5",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "read, not changed by this step; M20 refreshes it"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/case-roles/statement-2026-11-12.json",
+   "sha256": "ee8b7d5202f6db6aec17f48bf6f5da44ebb29a99e23c9c58ddefaba4d2a46a8a",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "the form the two records follow; not changed"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "benchmark-data/reference-sets-v3/ATOM-TYPES.md",
+   "sha256": "a7a77b1ccdd5e4f839d937ce3758bc77c4fd09b88b70e7ad4cd24f2099e11028",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "changed: one line added"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/evidence-review/README.md",
+   "sha256": "2e5f281897d6cf38431624d6815a0458dcb7debbb29cab6009f7a03b7d717f39",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "changed: one line added"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/evidence-review/statement-2026-11-17.json",
+   "sha256": "a29a912cb831dd3e4c478c76e99dcd7eee24f47ae794a97d69ef08f3527b7344",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "added"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/trace/models-statement-2026-11-17.json",
+   "sha256": "448fa9973889b41666425c9ca184c0140b88beeeeb7b22a3e3bb6060a04b56c4",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "added"
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-17T15:28:01.000Z",
+  "run_ended": "2026-11-17T15:28:01.269Z",
+  "run_by": "model:claude/cleanup"
+ },
+ "seeds": {},
+ "counts": {
+  "records_added": 2,
+  "descriptions_changed": 2,
+  "lines_added": 2
+ },
+ "decision_values": [
+  "added",
+  "changed: one line added"
+ ],
+ "rationale_location": "the two records and the notes below; the addendum stays outside the repository",
+ "evidence": [
+  "benchmark-data/reference-sets-v3/evidence-review/statement-2026-11-17.json",
+  "benchmark-data/reference-sets-v3/trace/models-statement-2026-11-17.json"
+ ],
+ "checks": {
+  "validate_v3.py": "run before the commit",
+  "tools/trace/check_backfill.py": "run before the commit, with M20",
+  "tools/export_anonymous.py": "run after M20 with the owner's deny terms (kept outside the repository), twice"
+ },
+ "gaps": [],
+ "notes": [
+  "evidence-review/statement-2026-11-17.json: the curator's statement that the sources were read and not read again each time two labels had to be compared. It corrects the phrase 'without re-reading the sources' of step 4 of evidence-review/README.md; step 4 stays as written and one line under it points to the record. The same phrase in the method of adjudication-2026-11-03.json is unchanged.",
+  "trace/models-statement-2026-11-17.json: the curator's statement on the assistant models used for the atoms of the reference sets and for the labels of needs against atoms. It is not mapped to single steps: the step and backfill files keep not_recorded where they had it. ATOM-TYPES.md, which lists the model of R4 as not recorded, gets one line that points to the statement.",
+  "No row, atom, label, count, rule or ID changes; no historical file is edited.",
+  "The model ID of the session is withheld; the session transcript is not recorded."
+ ],
+ "manifest_sha256": "f0975012ef89b98e93b4311de555268f1018b97a93f64ac9a5992be63e961525"
+}

@@ -16,7 +16,7 @@ See [anonymous export instructions](ANONYMIZATION.md) to create a history-free c
 - [Corpus guide](benchmark-data/README.md) and [methodology](benchmark-data/BENCHMARK-METHODOLOGY.md).
 - [Review and provisional adjudication](benchmark-data/reference-sets-v3/CODEX-REVIEW-2026-10-23.md).
 - [Supplement tables and PDF](benchmark-data/reference-sets-v3/supplement/README.md).
-- [Mock benchmark](benchmark-data/reference-sets-v3/mock-benchmark/README.md): development exercise using machine reviewers.
+- [Mock benchmark](archive/benchmark-data/reference-sets-v3/mock-benchmark/README.md): development exercise using machine reviewers.
 - [Build history](benchmark-data/reference-sets-v3/history/README.md).
 
 ## Validation
@@ -26,13 +26,15 @@ Run from this repository root:
 ```sh
 python3 benchmark-data/validate_corpus.py
 python3 benchmark-data/reference-sets-v3/validate_v3.py
-(cd benchmark-data/reference-sets-v3/mock-benchmark && python3 verify.py)
+(export RQ1_REF="$PWD/benchmark-data/reference-sets-v3"; cd archive/benchmark-data/reference-sets-v3/mock-benchmark && python3 verify.py)
 python3 -B tools/trace/check_backfill.py
 ```
 
+The corpus validator checks the five cases; `--epos archive/benchmark-data/epos` adds EPOS, which is in the archive.
+
 Since the base-relation adjudication of 11 November 2026, the mock check reports seven differences when it reads the current sets. All are in one slice of the JRC mock runs (supported atoms without restatements), where one atom no longer counts as a restatement. The mock results are a historical exercise and were not recomputed; the check passes against the sets as they were before (set `RQ1_REF` to a copy of that `reference-sets-v3` folder).
 
-See the archived [import verification](docs/import/IMPORT-VALIDATION.md): v3 and mock checks pass; the older corpus validator currently reports failures inherited from the source snapshot. These historical reports are not a current whole-corpus approval.
+See the archived [import verification](archive/docs/import/IMPORT-VALIDATION.md): v3 and mock checks pass; the older corpus validator currently reports failures inherited from the source snapshot. These historical reports are not a current whole-corpus approval.
 
 The trace checker requires the published `ref-trace-baseline` tag and its history. Use a full clone with tags (or `git fetch --tags` in an existing clone). Historical trace locators resolve against that baseline, even when a report has since moved. The history-free anonymous export has a more limited verification scope; see [anonymous export instructions](ANONYMIZATION.md).
 
@@ -40,7 +42,7 @@ Install Poppler (`pdftotext`) to verify PDF quotations. Full PDF parsing by the 
 
 Reference sets and evaluator annotations must stay outside extraction inputs, prompts and retrieval. The corpus is partial; AI evidence labels and provisional adjudications are not independent human validation. See the linked methodology for limitations and development-case exposure.
 
-The historical sets, raw label outputs, provisional adjudications, trace records and mock exercise are retained for reproducibility. The mock results predate the standardized statements and are a historical development exercise, not new results for the revised wording. Archived import reports live under `docs/import/`; current benchmark files and their integrity manifest retain their established paths.
+The historical sets, raw label outputs, provisional adjudications, trace records and mock exercise are retained for reproducibility. The mock results predate the standardized statements and are a historical development exercise, not new results for the revised wording. Archived import reports live under `archive/docs/import/`; current benchmark files and their integrity manifest retain their established paths.
 
 ## Attribution and reuse
 

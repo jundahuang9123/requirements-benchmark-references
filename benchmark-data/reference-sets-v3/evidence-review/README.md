@@ -33,6 +33,8 @@ difference, the owner's decision and the final labels:
    supported where A held against B (15), A's concessions to B accepted (10). The owner then skimmed all
    196 rows and changed nothing else.
 
+   The phrase "without re-reading the sources" is corrected by the curator's statement of 17 November 2026: `benchmark-data/reference-sets-v3/evidence-review/statement-2026-11-17.json`.
+
 ## Rules in force
 
 1. A passage counts only if it exists verbatim in the input text.

@@ -1,0 +1,43 @@
+{
+ "record": "evidence-review-statement-2026-11-17",
+ "date": "2026-11-17",
+ "stated_by": "human:curator",
+ "scope": "The owner decisions of 3 November 2026 in the evidence review (README.md, step 4): whether the sources were read. No rule, count, decision or label is concerned.",
+ "source": {
+  "label": "the curator's message of 17 November 2026 in the paper session (15:52); worded for the record in the paper session's addendum of 17 November 2026 (16:10); the curator confirmed that wording by handing the addendum over",
+  "sha256": "a4a6a8274439317a4cafad6b52ce1c5513730702abc12de47179916211112c11",
+  "sha256_of": "the curator's words as the paper session's addendum of 17 November 2026 quotes them (UTF-8, without the quotation marks)",
+  "location": "outside the repository"
+ },
+ "statement": [
+  "I read the sources. I did not read them again each time two labels had to be compared."
+ ],
+ "corrects": {
+  "file": "benchmark-data/reference-sets-v3/evidence-review/README.md",
+  "where": "'How the labels were reviewed', step 4 (owner decisions, 3 Nov 2026)",
+  "phrase": "without re-reading the sources"
+ },
+ "same_phrase_also_in": [
+  {
+   "file": "benchmark-data/reference-sets-v3/evidence-review/adjudication-2026-11-03.json",
+   "where": "method, the entry of 3 Nov 2026",
+   "changed": false
+  }
+ ],
+ "added_in_this_repository": [
+  {
+   "file": "benchmark-data/reference-sets-v3/evidence-review/README.md",
+   "after": "step 4",
+   "line": "The phrase \"without re-reading the sources\" is corrected by the curator's statement of 17 November 2026: `benchmark-data/reference-sets-v3/evidence-review/statement-2026-11-17.json`."
+  }
+ ],
+ "not_changed": [
+  "Step 4 as written, the phrase included.",
+  "The rules in force, the counts, \"skimmed all 196 rows\" and the instruction that review A had been given on a bare mention: no statement was given on them.",
+  "adjudication-2026-11-03.json, with every decision and label in it."
+ ],
+ "limits": [
+  "One person's statement about their own work; no second source.",
+  "It does not say which sources were read or when; nothing is inferred here."
+ ]
+}

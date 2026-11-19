@@ -6,6 +6,8 @@
 Read-only. Resolves every link of every fact and entry against the current tree (file hash, locator,
 the item it names, target hash), checks statuses, gaps, indexes, manifests and the step registry, and
 reruns recount.py. Outside evidence is checked against its registry only (the files stay outside).
+A script that a step pins may differ from its recorded hash only in D1 and M steps, or when later steps record
+the change (scripts_changed: path, from_sha256, to_sha256) from the pinned hash to the current one.
 Prints problems and counts; exits non-zero on any problem.
 """
 import collections
@@ -112,6 +114,19 @@ def main():
                 problem(f'index {name} {it.get("index_id") or it.get("prompt_id")}: line hash mismatch')
             counts['index_items'] += 1
     present = sorted(q.stem for q in (ROOT / TRACE / 'steps').glob('*.json'))
+    changes = collections.defaultdict(dict)
+    for q in (ROOT / TRACE / 'steps').glob('*.json'):
+        for c in json.loads(q.read_text(encoding='utf-8')).get('scripts_changed', []):
+            changes[c['path']][c['from_sha256']] = c['to_sha256']
+
+    def recorded_change(path, pinned, current):
+        seen, h = set(), pinned
+        while h in changes[path] and h not in seen:
+            seen.add(h)
+            h = changes[path][h]
+            if h == current:
+                return True
+        return False
     for step in REGISTRY + [s for s in present if s not in REGISTRY]:
         p = ROOT / TRACE / f'steps/{step}.json'
         if not p.exists():
@@ -122,8 +137,12 @@ def main():
         if sha256_json(body) != m.get('manifest_sha256'):
             problem(f'step {step}: manifest_sha256 mismatch')
         for s in m.get('scripts', []):
-            if sha256_file(s['path']) != s['sha256'] and not (step == 'D1' or step.startswith('M')):
-                problem(f'step {step}: script hash changed: {s["path"]}')
+            current = sha256_file(s['path'])
+            if current != s['sha256'] and not (step == 'D1' or step.startswith('M')):
+                if recorded_change(s['path'], s['sha256'], current):
+                    counts['scripts_changed_recorded'] += 1
+                else:
+                    problem(f'step {step}: script hash changed: {s["path"]}')
         for fid in m.get('facts', []):
             if fid not in facts:
                 problem(f'step {step}: unknown fact {fid}')

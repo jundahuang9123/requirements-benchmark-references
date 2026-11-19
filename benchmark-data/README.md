@@ -12,20 +12,22 @@ being used as quantitative gold.
 
 ## Cases and evaluation modes
 
-| Case | Raw evidence → requirements | Preconsolidation → consolidation | Reference scope / limitation |
-| --- | --- | --- | --- |
-| [mobilityDCAT](mobilitydcat/README.md) | Primary, partial historical reconstruction | Strongest case; preserved partner rows plus partial review/expert observations | All 40 Table 1 IDs; original report says 53 partner requirements but annex contains 60 labelled rows |
-| [HealthDCAT](healthdcat/README.md) | Heterogeneous-source case; partial 2023/2024 reconstruction | Partial curated TWG observation subset | 16 curated rationale requirements plus original D6.2; no complete official atomic gold list |
-| [StatDCAT](statdcat/README.md) | Partial standards-derived case; optional retrospective use-case variant | Not available | Seven requirement/resolution pairs; full licensed 2016 report retained |
-| [GeoDCAT](geodcat/README.md) | Partial standards/alignment case | Not available | Seven scoped alignment constraints; ISO documents citation-only |
-| [JRC research](jrc-research/README.md) | Small sanity/development case | Not available | Five explicitly enumerated core needs; private scientific stakeholder evidence missing |
-| [EPOS](epos/README.md) | Exploratory only; no scored raw run enabled | Not available | Frozen v1 specification and public context; original elicitation/gold not recovered |
+| Case | Role | Raw evidence → requirements | Preconsolidation → consolidation | Reference scope / limitation |
+| --- | --- | --- | --- | --- |
+| [mobilityDCAT](mobilitydcat/README.md) | test case | Primary, partial historical reconstruction | Strongest case; preserved partner rows plus partial review/expert observations | All 40 Table 1 IDs; original report says 53 partner requirements but annex contains 60 labelled rows |
+| [HealthDCAT](healthdcat/README.md) | test case | Heterogeneous-source case; partial 2023/2024 reconstruction | Partial curated TWG observation subset | 16 curated rationale requirements plus original D6.2; no complete official atomic gold list |
+| [StatDCAT](statdcat/README.md) | development case | Partial standards-derived case; optional retrospective use-case variant | Not available | Seven requirement/resolution pairs; full licensed 2016 report retained |
+| [GeoDCAT](geodcat/README.md) | test case | Partial standards/alignment case | Not available | Seven scoped alignment constraints; ISO documents citation-only |
+| [JRC research](jrc-research/README.md) | development case | Small sanity/development case | Not available | Five explicitly enumerated core needs; private scientific stakeholder evidence missing |
+
+The roles are those the curator stated on 12 November 2026
+([`reference-sets-v3/case-roles/`](reference-sets-v3/case-roles/README.md)). EPOS, an exploratory sixth case
+with no scored run, is in `../archive/benchmark-data/epos/` and is not one of the five cases.
 
 ## Structure
 
 Each case has `input-raw/`, `reference-requirements/`, `provenance/`, and a README.
-Mobility and Health additionally have `input-preconsolidation/`. EPOS uses `exploratory/`
-for its available context. Files in `provenance/citations/` are **URL/citation records,
+Mobility and Health additionally have `input-preconsolidation/`. Files in `provenance/citations/` are **URL/citation records,
 not source-document content**. Original documents with unclear redistribution rights
 are not committed; public facts may be represented by explicitly marked curator
 synopses. Original copies retain their notices and are not relicensed by this repository.
@@ -44,7 +46,8 @@ synopses. Original copies retain their notices and are not relicensed by this re
 - Each `provenance/manifest.json`: titles, original URLs, dates/versions, roles,
   explicit-input evidence, representation, limitations, licence, size and SHA-256.
 - [`validate_corpus.py`](validate_corpus.py): offline inventory, role, hash and readability
-  checks. [`VALIDATION-REPORT.json`](VALIDATION-REPORT.json) records the acquisition QA.
+  checks. [`VALIDATION-REPORT.json`](VALIDATION-REPORT.json) records the acquisition QA (of six cases, EPOS
+  included).
 
 **Never recursively import `benchmark-data/` into RAG or the workflow.** Copy only the
 chosen allowlisted documents into a separate run directory. Do not expose the
@@ -58,6 +61,8 @@ From the repository root:
 
 ```sh
 python3 benchmark-data/validate_corpus.py
+# EPOS, from the archive, as well:
+python3 benchmark-data/validate_corpus.py --epos archive/benchmark-data/epos
 # Full PDF parsing also requires pypdf:
 python3 benchmark-data/validate_corpus.py --deep-pdf
 ```

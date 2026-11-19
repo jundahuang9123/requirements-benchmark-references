@@ -1,0 +1,205 @@
+{
+ "trace_policy": "ref-trace-v1",
+ "step_id": "C1",
+ "name": "Clean-up for the supplementary material: files the paper does not use moved unchanged to archive/; export, manifest refresh, corpus validator and trace tools adapted; the criteria table added",
+ "time_order": "after M18 and before M19; the moves of 15 Nov 2026 had no step of their own and are recorded here",
+ "actors": [
+  {
+   "actor": "model:claude/cleanup",
+   "role": "moved the files, changed the tools and descriptions, wrote this manifest"
+  },
+  {
+   "actor": "model:claude/paper-session",
+   "role": "wrote the hand-off spec of 16 Nov 2026 (outside the repository; its sha256 is in session)"
+  },
+  {
+   "actor": "human:curator",
+   "role": "asked for the clean-up and handed over the spec and its bundle"
+  }
+ ],
+ "session": {
+  "model_id": null,
+  "model_id_status": "withheld",
+  "claude_code_version": "2.1.326 (Claude Code)",
+  "handoff_prompt_sha256": "f67d003c51e53f0cbe4a17fa214f9cf24b913a155ba151fc9c9891a678690112",
+  "spec_working_copy_sha256": "f67d003c51e53f0cbe4a17fa214f9cf24b913a155ba151fc9c9891a678690112",
+  "cleaned_spec_sha256": null,
+  "owner_decisions_sha256": "a8dd3f5ebb4d63257ef91cc7dd1783818e35fc334092c0086df9a9da73bd0d02",
+  "tool_versions": {
+   "python": "3.13.16",
+   "git": "git version 2.43.0",
+   "pdftotext": "pdftotext version 24.02.0",
+   "claude_code": "2.1.326 (Claude Code)"
+  },
+  "transcript_sha256": null,
+  "transcript_status": "not_recorded",
+  "written_at": "2026-11-17T10:02:15.608Z"
+ },
+ "scripts": [],
+ "prompts": [],
+ "inputs": [
+  {
+   "path": "IMPORT-PROVENANCE.json",
+   "sha256": "acf94da80877adde43386c00836dc5902a6c5fbe98e19b76e46a996e2ccebdcc",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "read, not changed by this step; M19 refreshes it"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "ANONYMIZATION.md",
+   "sha256": "15dbbd87037ba3b6615f8e88ff36b0d23abfcc4ded9052893a2b2a05b82c9972",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "changed"
+  },
+  {
+   "path": "README.md",
+   "sha256": "8a828f75bed70dfb26b3e27c62a9e2943b0e1dc21bc6161e09608a199cda02b1",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "changed"
+  },
+  {
+   "path": "benchmark-data/README.md",
+   "sha256": "e64b907f4b2a7ba24f858b90002a2d11ca27579bfd783553a03b4c7f20f0ce41",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "changed"
+  },
+  {
+   "path": "benchmark-data/THIRD-PARTY-NOTICES.md",
+   "sha256": "348f7aa80eb8b29174f04eefc6fa8093064585066e76257a9851de65416745cd",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "changed"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/README.md",
+   "sha256": "af3166da1882de6d565f4c8f6e424359c0b4c0dd6fc948a27217aba8e560805d",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "changed"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/supplement/README.md",
+   "sha256": "b4b947f27aacb2cc128730596953ecd86fa34b180acfeaa7bd876117fa70c9e3",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "changed"
+  },
+  {
+   "path": "archive/README.md",
+   "sha256": "322396ba448877c993ba6c93db441137461a4e04d7c98c528a863c84ed89b8db",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "added"
+  },
+  {
+   "path": "benchmark-data/reference-sets-v3/supplement/appendix-a-illustrations-2026-11-16.tex",
+   "sha256": "76640fdddda7fa3ede221f21eb2d55f17c6c1b3fbb58beb6c84a4562b0be7dbe",
+   "hash_time": "step",
+   "stored": "yes",
+   "note": "added"
+  }
+ ],
+ "timing": {
+  "run_started": "2026-11-17T09:47:00.000Z",
+  "run_ended": "2026-11-17T10:02:15.534Z",
+  "run_by": "model:claude/cleanup"
+ },
+ "seeds": {},
+ "counts": {
+  "files_moved_unchanged": 41,
+  "descriptions_changed": 6,
+  "scripts_changed": 5,
+  "files_added": 2
+ },
+ "decision_values": [
+  "moved unchanged",
+  "changed",
+  "added"
+ ],
+ "rationale_location": "notes below; the hand-off spec stays outside the repository",
+ "evidence": [
+  "archive/README.md",
+  "ANONYMIZATION.md",
+  "benchmark-data/README.md"
+ ],
+ "checks": {
+  "validate_v3.py": "run before the commit",
+  "tools/trace/check_backfill.py": "run before the commit, with M19",
+  "benchmark-data/validate_corpus.py": "run before the commit; with --epos archive/benchmark-data/epos the output equals the output before the move byte for byte",
+  "deterministic-check tests": "run before the commit",
+  "tools/export_anonymous.py": "run after M19 with the owner's deny terms (kept outside the repository), twice"
+ },
+ "gaps": [],
+ "notes": [
+  "No row, atom, label, count or ID changes; no historical file is edited.",
+  "IMPORT-PROVENANCE.json keeps the import paths of the files moved to archive/. The export check finds them there, unchanged, and leaves archive/ out of the export; M19 keeps their entries (entries_archived).",
+  "R0, R2 and R12 pin tools/export_anonymous.py and benchmark-data/validate_corpus.py. Their change is recorded under scripts_changed, which the trace checker reads.",
+  "The criteria table (supplement/appendix-a-illustrations-2026-11-16.tex) is the file of the hand-off bundle supplement-additions-2026-11-16.zip (sha256 df96fcff6f9e0e7b30714c4b5a6c9c8b78a01acd380ba14a796cf8d8adb74f55, outside the repository), unchanged.",
+  "benchmark-data/README.md: a Role column with the roles of the curator's statement of 12 November 2026; the EPOS row replaced by a line on where EPOS is.",
+  "The model ID of the session is withheld; the session transcript is not recorded."
+ ],
+ "moves": [
+  {
+   "from": "benchmark-data/reference-sets-v3/mock-benchmark/",
+   "to": "archive/benchmark-data/reference-sets-v3/mock-benchmark/",
+   "files": 29,
+   "content": "unchanged (git rename at 100% similarity)",
+   "date": "15 Nov 2026",
+   "what": "the mock benchmark of 23 October 2026, a development exercise with machine reviewers"
+  },
+  {
+   "from": "docs/import/",
+   "to": "archive/docs/import/",
+   "files": 3,
+   "content": "unchanged (git rename at 100% similarity)",
+   "date": "15 Nov 2026",
+   "what": "the import verification reports of the corpus"
+  },
+  {
+   "from": "benchmark-data/epos/",
+   "to": "archive/benchmark-data/epos/",
+   "files": 9,
+   "content": "unchanged (git rename at 100% similarity)",
+   "date": "17 Nov 2026",
+   "what": "EPOS, an exploratory sixth case with no scored run"
+  }
+ ],
+ "scripts_changed": [
+  {
+   "path": "tools/export_anonymous.py",
+   "from_sha256": "d37f379807fb462c4edb5140eaf3d3d91adad8a1f626d0affbe53737dec5e223",
+   "change": "leaves archive/ out; a manifest entry whose file was moved unchanged to archive/ is checked there and not exported",
+   "to_sha256": "9db60cb72c29066fc4e60419cc868df0371a5733deb058f364595c1117b27cf4"
+  },
+  {
+   "path": "benchmark-data/validate_corpus.py",
+   "from_sha256": "dd56610cdf584a92d9a3ca8320f6f73ffebaa59d8cf58074a98c11c3417cfca1",
+   "change": "checks the five cases; EPOS as well when --epos names its folder (archive/benchmark-data/epos)",
+   "to_sha256": "a22ee64597825b67966a8b2aae19d889d17f5f1a32fd60a8ec4c34b7c5dc92e5"
+  },
+  {
+   "path": "tools/trace/refresh_hashes.py",
+   "from_sha256": "a2d227f28da2bc71235304bb8f0d28d47d4b25f735cc3288a555af77979bb189",
+   "change": "keeps the entries of files moved unchanged to archive/ (entries_archived) instead of removing them",
+   "to_sha256": "eea568b838e0ea7d0567a647284cb1504bf889ec1d8f8be74076022897762567"
+  },
+  {
+   "path": "tools/trace/check_backfill.py",
+   "from_sha256": "ce41dd6906babeed2c77d693751c83891830ca2f007e6299a45912daf7428cb7",
+   "change": "accepts a pinned script whose change from the pinned hash to the current one a later step records (scripts_changed)",
+   "to_sha256": "5e73fadf84424e417810b0481273a217bc4cbedb8ee51ee3ae44ec5ae4276c23"
+  },
+  {
+   "path": "tools/trace/record_step.py",
+   "from_sha256": "e1070deb68d13ea0d1d1886dc3d0e6df2a5275627d270e7030443d633bba31e9",
+   "change": "passes moves and scripts_changed through to the manifest; to_sha256 is the current hash",
+   "to_sha256": "d0791f1ad35c8f989c7dfef3b6894ce42a27611e5677121ab46820dcd64941c1"
+  }
+ ],
+ "manifest_sha256": "f604d435327c0fff2f910f7bb4376b4eac3aa75903ac0bd5ad27c3138c9fe0ee"
+}

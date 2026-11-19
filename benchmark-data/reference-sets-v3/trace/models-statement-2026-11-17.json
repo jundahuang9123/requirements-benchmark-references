@@ -1,0 +1,34 @@
+{
+ "record": "models-statement-2026-11-17",
+ "date": "2026-11-17",
+ "stated_by": "human:curator",
+ "scope": "The assistant models used for the atoms of the reference sets and for the labels of needs against atoms. No row, atom, label, count or ID is concerned.",
+ "source": {
+  "label": "the curator's message of 17 November 2026 in the paper session (16:01); worded for the record in the paper session's addendum of 17 November 2026 (16:10); the curator confirmed that wording by handing the addendum over",
+  "sha256": "a6a76bf52dbc18b717c2994038a8f3eda89e860510fe31246348dbb49c20a657",
+  "sha256_of": "the curator's words as the paper session's addendum of 17 November 2026 quotes them (UTF-8, without the quotation marks)",
+  "location": "outside the repository"
+ },
+ "statement": [
+  "The assistant models used for the atoms of the reference sets and for the labels of needs against atoms were Claude Opus 5.5 (Anthropic) and GPT-6 Astra (OpenAI)."
+ ],
+ "mapped_to_steps": "no: the statement is not mapped to single steps of the trace",
+ "pointers_added": [
+  {
+   "file": "benchmark-data/reference-sets-v3/ATOM-TYPES.md",
+   "after": "the table 'How each atom got its type'",
+   "line": "On the models: the curator's statement of 17 November 2026 names the assistant models used for the atoms and the labels (`trace/models-statement-2026-11-17.json`). The trace keeps \"not recorded\" where its files show no model."
+  }
+ ],
+ "not_changed": [
+  "The step and backfill files of the trace: where they record a model as not_recorded, they still do; they say what the files show.",
+  "Every row, atom, label, count and ID."
+ ],
+ "notes": [
+  "The labels of needs against atoms are kept outside this repository, with the runs of the benchmark."
+ ],
+ "limits": [
+  "One person's statement; no second source.",
+  "It does not say which model made which atom or label; nothing is inferred here. A step that the statement does not name stays as it is."
+ ]
+}

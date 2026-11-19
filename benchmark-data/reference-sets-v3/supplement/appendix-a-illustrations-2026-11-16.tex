@@ -1,0 +1,57 @@
+% Appendix A of the paper until pass 100 (16 Nov 2026): Table 2 (illustrative statements) and the figure of one discussion case.
+% Moved out in pass 101 for the supplementary material; the appendix of the paper may be two pages long.
+\section{Illustrations}\label{app:illustrations}
+Table~\ref{tab:examples} illustrates the conditions of Sect.~\ref{sec:problem}; Fig.~\ref{fig:discussion} shows one discussion case of Sect.~\ref{sec:workflow}.
+
+\begin{table}[h]
+\caption{Illustrative statements and how the conditions apply. They restate content of published extensions and are not system output.}
+\label{tab:examples}
+\centering\scriptsize
+\begin{tabularx}{\textwidth}{@{}p{.38\textwidth}lYl@{}}
+\toprule
+Statement & R2 record & R3 / R4 & Outcome\\
+\midrule
+Users can find datasets by the transport modes they cover & dataset & find; new for \dcatap\ 2.0.1 & kept\\
+Users can see under which license a distribution is available & distribution & access; covered by the base & kept, flagged\\
+Users can filter datasets by how often they are updated (quoted obligation: mandatory) & dataset & find; domain use: stronger obligation & kept\\
+Users can know the legal basis under which a dataset's personal data are processed & dataset & access; new for \dcatap\ 3.0.0 & kept\\
+Data must be updated every five minutes & none & prescribes the data & set aside\\
+The profile reuses \dcatap\ classes and properties where possible & none & profile requirement: no record states it & set aside\\
+Catalogs validate metadata against the profile before publication & none & system requirement: behavior of a system & set aside\\
+The specification is a W3C Recommendation & none & fact about a source document & set aside\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[
+  font=\scriptsize,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=12mm, text width=21mm, inner sep=1.2pt, fill=white, execute at begin node={\hyphenpenalty=10000}},
+  med/.style={box, fill=gray!12},
+  prog/.style={box, fill=gray!28, minimum height=10.5mm},
+  outc/.style={draw, rounded corners=2pt, align=center, text width=36mm, inner sep=1.2pt, minimum height=4.8mm},
+  arr/.style={-{Stealth[length=1.6mm]}, semithick}]
+\node[box] (case) {\textbf{Case}: up to six needs with one task label};
+\node[box, right=2mm of case] (r1) {\textbf{Round 1}, roles alone: concerns, at most one experience claim};
+\node[med, right=2mm of r1] (draft) {\textbf{Mediator draft}: an action per need, a decision per claim};
+\node[box, dashed, right=2mm of draft] (r2) {\textbf{Round 2} if needed: roles reply};
+\node[med, dashed, right=2mm of r2] (final) {\textbf{Mediator}: final plan};
+\node[prog, below=8mm of final] (check) {\textbf{Separate check} of every action};
+\node[prog, left=2mm of check] (gates) {\textbf{Program gates}: sources, base labels, conflicts};
+\node[outc, left=6mm of gates] (rew) {Rewritten, then rechecked};
+\node[outc, above=1.1mm of rew] (kept) {Kept or set aside};
+\node[outc, below=1.1mm of rew] (person) {To a person};
+\draw[arr] (case) -- (r1); \draw[arr] (r1) -- (draft); \draw[arr] (draft) -- (r2); \draw[arr] (r2) -- (final);
+\draw[arr] (final) -- (check); \draw[arr] (check) -- (gates);
+\coordinate (bus) at ($(gates.west)+(-3mm,0)$);
+\draw[semithick] (gates.west) -- (bus);
+\draw[arr] (bus) |- (kept.east);
+\draw[arr] (bus) -- (rew.east);
+\draw[arr] (bus) |- (person.east);
+\end{tikzpicture}
+\caption{One discussion case, formed by the task labels. Concerns may cite the case's passages and, from round 2, passages retrieved for the roles' queries; an experience claim cites none. Round 2 and the final plan run only when the draft changes or proposes a need or meets an objection. Needs proposed from experience alone go to a person unapplied. Light: mediator; dark: checker and program rules.}
+\label{fig:discussion}
+\end{figure}
+
+
