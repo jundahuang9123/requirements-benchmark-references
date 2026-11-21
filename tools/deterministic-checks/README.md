@@ -9,6 +9,8 @@ Everything here reads the references at `524f65b` and, for Part C, the frozen la
 (`reports/benchmark-tools/final-scoring/saved/label-freeze-2026-11-11.json`), and writes new files only. No LLM calls.
 Parts A and B need only this repo; Part C needs the run store checked out next to it (`DC_RUNSTORE`).
 
+The tools and their outputs show the condition SP, the single prompt, as `OS` (in keys and earlier text: OS, one-shot prompt; `old-baseline`; single LLM, all evidence); the paper says *exact* for the label value `equivalent`.
+
 | Folder | What |
 |---|---|
 | `dc/` | The shared code: paths and provenance (`paths.py`), the text rules (`textrules.py`), the atoms and their contexts (`atoms.py`), the pools, runs and final labels (`pools.py`), the NLI wrapper (`nli.py`), Part C's relation mapping, separation rule and kappa (`relation.py`) |
